@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your Ultimate Guide to Navigating the World of Cryptocurrency">
+  <title>360Crypto - Community</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+      overflow-x: hidden;
+    }
+    header {
+      background-color: #0a0a0a;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+    header .logo a {
+      color: #fff;
+      font-size: 36px;
+      font-family: 'Orbitron', sans-serif;
+      text-decoration: none;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #00bfff;
+      text-decoration: none;
+      font-size: 18px;
+      position: relative;
+      text-shadow: 0 0 5px rgba(0, 191, 255, 0.8);
+    }
+    nav ul li a:hover::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: #007bff;
+      left: 0;
+      bottom: -5px;
+      animation: hoverEffect 0.5s;
+    }
+    @keyframes hoverEffect {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+    .newsletter {
+      display: flex;
+      align-items: center;
+    }
+    .newsletter input[type="email"] {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .newsletter button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .newsletter button:hover {
+      background-color: #0056b3;
+    }
+    .category-block {
+      padding: 40px 20px;
+      background-color: #2a2a2a;
+      margin: 20px auto;
+      max-width: 1200px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      position: relative;
+      text-align: center;
+    }
+    .category-block h2 {
+      font-size: 50px;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .coming-soon {
+      padding: 40px 20px;
+      background-color: #2a2a2a;
+      margin: 20px auto;
+      max-width: 1200px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      text-align: center;
+    }
+    .coming-soon h3 {
+      font-size: 32px;
+      font-family: 'Orbitron', sans-serif;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .coming-soon p {
+      font-size: 24px;
+      color: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html">360Crypto</a></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="guides.html">Guides</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="community.html">Community</a></li>
+      </ul>
+    </nav>
+    <div class="newsletter">
+      <input type="email" placeholder="Subscribe to our newsletter">
+      <button>Subscribe</button>
+    </div>
+  </header>
+
+  <section class="category-block">
+  <h2>Community</h2>
+  <img src="images/imagecommunity.png" alt="Community Image" style="display: block; margin: 0 auto; width: 50%; height: auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);">
+</section>
+
+  <section class="coming-soon">
+    <h3>Coming soon...</h3>
+  </section>
+</body>
+</html>
+
