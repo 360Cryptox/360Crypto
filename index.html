@@ -303,9 +303,13 @@
   <p>&copy; 2024 360Crypto. All rights reserved.</p>
 </footer>
   <!-- TinaCMS script -->
-  <script src="https://unpkg.com/@tinacms/core@latest/dist/tinacms.umd.production.min.js"></script>
+  <script src="https://unpkg.com/@tinacms/core@1.5.9/dist/tinacms.umd.production.min.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
+      if (typeof TinaCMS === 'undefined') {
+        console.error('TinaCMS script not loaded');
+        return;
+      }
       const tina = new TinaCMS({
         enabled: true,
         sidebar: {
@@ -323,7 +327,5 @@
       tina.enable();
     });
   </script>
-</body>
-</html>
 </body>
 </html>
