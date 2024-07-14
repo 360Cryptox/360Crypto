@@ -6,6 +6,6 @@
   },
   "dependencies": {
     "live-server": "^1.2.1",
-    "@tinacms/cli": "^0.64.0"
+    "@tinacms/cli": "^1.5.9"
   }
 }
