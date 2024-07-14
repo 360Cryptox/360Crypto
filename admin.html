@@ -9,6 +9,10 @@
   <script src="https://unpkg.com/@tinacms/core@latest/dist/tinacms.umd.production.min.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
+      if (typeof TinaCMS === 'undefined') {
+        console.error('TinaCMS script not loaded');
+        return;
+      }
       const tina = new TinaCMS({
         enabled: true,
         sidebar: {
@@ -28,4 +32,3 @@
   </script>
 </body>
 </html>
-
