@@ -8,21 +8,24 @@
 <body>
   <script src="https://unpkg.com/@tinacms/core@latest/dist/tinacms.umd.production.min.js"></script>
   <script>
-    const tina = new TinaCMS({
-      enabled: true,
-      sidebar: {
-        position: 'fixed'
-      }
-    });
+    document.addEventListener("DOMContentLoaded", function() {
+      const tina = new TinaCMS({
+        enabled: true,
+        sidebar: {
+          position: 'fixed'
+        }
+      });
 
-    tina.registerApi('tina', {
-      auth: {
-        clientId: 'b721f994-33a1-41ec-9787-a058081f5a05',
-        token: localStorage.getItem('tinaToken'),
-      },
-    });
+      tina.registerApi('tina', {
+        auth: {
+          clientId: 'b721f994-33a1-41ec-9787-a058081f5a05',
+          token: localStorage.getItem('tinaToken'),
+        },
+      });
 
-    tina.enable();
+      tina.enable();
+    });
   </script>
 </body>
 </html>
+
