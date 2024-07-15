@@ -219,8 +219,10 @@
       </ul>
     </nav>
     <div class="newsletter">
-      <input type="email" placeholder="Subscribe to our newsletter">
-      <button>Subscribe</button>
+      <form action="https://formspree.io/f/xnnangvw" method="POST">
+        <input type="email" name="email" placeholder="Subscribe to our newsletter" required>
+        <button type="submit">Subscribe</button>
+      </form>
     </div>
   </header>
 
@@ -293,13 +295,13 @@
   </section>
 
   <section class="subscribe-section">
-    <h2>Subscribe to Our Newsletter</h2>
-    <p>Join our newsletter for the latest updates and exclusive content.</p>
-    <form action="subscribe.php" method="POST">
-      <input type="email" name="email" placeholder="Enter your email" required>
-      <button type="submit">Subscribe</button>
-    </form>
-  </section>
+  <h2>Subscribe to Our Newsletter</h2>
+  <p>Join our newsletter for the latest updates and exclusive content.</p>
+  <form action="https://formspree.io/f/xnnangvw" method="POST">
+    <input type="email" name="email" placeholder="Enter your email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
 
   <footer>
     <p>&copy; 2024 360Crypto. All rights reserved.</p>
