@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your Ultimate Guide to Navigating the World of Cryptocurrency">
+  <title>360Crypto - Your Guide to Crypto Success</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+      overflow-x: hidden;
+    }
+    header {
+      background-color: #0a0a0a;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+    header .logo a {
+      color: #fff;
+      font-size: 36px;
+      font-family: 'Orbitron', sans-serif;
+      text-decoration: none;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #00bfff;
+      text-decoration: none;
+      font-size: 18px;
+      position: relative;
+      text-shadow: 0 0 5px rgba(0, 191, 255, 0.8);
+    }
+    nav ul li a:hover::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: #007bff;
+      left: 0;
+      bottom: -5px;
+      animation: hoverEffect 0.5s;
+    }
+    @keyframes hoverEffect {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+    .newsletter {
+      display: flex;
+      align-items: center;
+    }
+    .newsletter input[type="email"] {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .newsletter button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .newsletter button:hover {
+      background-color: #0056b3;
+    }
+    section {
+      padding: 40px 20px;
+      background-color: #2a2a2a;
+      margin: 20px auto;
+      max-width: 1200px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      position: relative;
+    }
+    section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, rgba(0, 123, 255, 0.3), rgba(0, 123, 255, 0.1));
+      z-index: -1;
+      animation: gradientShift 5s infinite;
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    section h3.subtitle {
+      font-size: 24px;
+      text-align: center;
+      margin-top: -10px;
+      margin-bottom: 30px;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    article {
+      margin-bottom: 40px;
+    }
+    article h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    article img {
+      max-width: 50%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      animation: fadeIn 1s;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    article p, article ol, article ul {
+      font-size: 18px;
+      line-height: 1.8;
+    }
+    article ol, article ul {
+      padding-left: 20px;
+    }
+    article a {
+      color: #00bfff;
+      text-decoration: underline;
+    }
+    footer {
+      background-color: #0a0a0a;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+      border-top: 2px solid #333;
+      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+    }
+    .subscribe-section {
+      padding: 40px 20px;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+    .subscribe-section input[type="email"] {
+      padding: 10px;
+      width: 300px;
+      max-width: 100%;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .subscribe-section button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .subscribe-section button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html">360Crypto</a></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="guides.html">Guides</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="community.html">Community</a></li>
+      </ul>
+    </nav>
+    <div class="newsletter">
+      <input type="email" placeholder="Subscribe to our newsletter">
+      <button>Subscribe</button>
+    </div>
+  </header>
+
+  <section>
+    <h2 style="font-size: 50px;">Welcome to 360Crypto</h2>
+    <h3 class="subtitle">Everything You Need for Crypto Success</h3>
+
+    <article>
+      <div style="display: flex; justify-content: space-around;">
+        <img src="images/image3.png" alt="Cryptocurrency" style="max-width: 45%; height: auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);">
+                <img src="images/image4.png" alt="Cryptocurrency" style="max-width: 45%; height: auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);">
+      </div>
+      <p>Whether you're just starting out or you're an experienced trader, our comprehensive platform offers everything you need to succeed in the crypto world. From detailed guides and the latest news to advanced trading strategies and community insights, 360Crypto is designed to help you navigate the dynamic landscape of digital currencies. Join our community and take advantage of our expert knowledge to maximize your profits and secure your financial future.</p>
+    </article>
+
+    <article>
+      <h3>Crypto is Now</h3>
+      <p>The future of finance is here, and it’s powered by cryptocurrency. As blockchain technology rapidly integrates into various sectors, the influence of digital currencies is undeniable. Cryptocurrencies are reshaping the global economy, offering unprecedented opportunities for innovation and growth. This is your chance to be a part of this revolutionary change. Don’t miss out – getting in early means you can ride the wave of this financial evolution and secure your place in the future economy.</p>
+    </article>
+    <article>
+      <h3>Make Profit and Passive Income with Crypto</h3>
+      <p>The potential for profit in the crypto market is immense, and at 360Crypto, we are dedicated to providing you with the best resources to make informed and profitable decisions. Whether you're a complete beginner or an experienced trader, our platform is tailored to help you succeed. Cryptocurrencies like <a href="https://www.bybit.com/invite?ref=KBJY1WO" target="_blank">Bitcoin</a> and Ethereum have already made millionaires out of early adopters, and every day, new altcoins and memecoins are skyrocketing, presenting fresh opportunities for substantial returns. Don’t let these chances slip away.</p>
+      <p>In addition to trading, the crypto world offers various passive income streams, enabling you to earn while you sleep. From staking and yield farming to liquidity pools, airdrops, and mining, the possibilities for building a steady income without constant active trading are endless.</p>
+      <p>Here are the best ways to make money with crypto, each linked to detailed guides and resources on our website:</p>
+      <ul>
+        <li><a href="guides.html#trading">Trading</a>: Learn the basics and advanced strategies for trading cryptocurrencies.</li>
+        <li><a href="guides.html#liquidity-pools">Liquidity Pools</a>: Earn fees by providing liquidity on decentralized exchanges like <a href="https://simpleswap.io/?ref=62601ac50714" target="_blank">Simple Swap</a>.</li>
+        <li><a href="guides.html#staking">Staking</a>: Support network operations and earn rewards by staking your coins.</li>
+        <li><a href="guides.html#airdrops">Airdrops</a>: Receive free tokens from new projects.</li>
+        <li><a href="guides.html#mining">Mining</a>: Earn cryptocurrencies by participating in mining, even without a substantial initial investment.</li>
+        <li><a href="guides.html#yield-farming">Yield Farming</a>: Lend your assets in DeFi platforms to earn interest.</li>
+      </ul>
+    </article>
+    <article>
+      <h3>Specialized Knowledge</h3>
+      <p>We offer specialized knowledge that goes beyond the basics. Explore the power of trading bots and gain social insider knowledge to stay ahead of the market trends. Our <a href="guides.html">Guides section</a> covers the best resources to do this and how to use them effectively. Delve into advanced strategies, discover innovative projects, and leverage community-driven insights to enhance your trading and investment experience.</p>
+      <p>For those specifically interested in memecoins, we have dedicated memecoins articles in our <a href="blog.html">blog section</a>. Our detailed guides on the Solana network and the world of memecoins provide you with the insights needed to navigate these unique areas of the market successfully. The memecoin market, in particular, holds tremendous potential for quick gains and innovative projects. Learn about the vibrant Player Pump Player (PPP) communities that focus on mutual success. This area of our website focuses exclusively on memecoins, offering all the information, tools, and resources you need to succeed in this exciting market. From in-depth guides and the latest news to the best trading strategies and community insights, our memecoins articles in the blog section are your one-stop hub for everything related to memecoins.</p>
+    </article>
+  </section>
+
+  <section>
+    <h2>Key Features</h2>
+    <article>
+      <h3><a href="guides.html#beginner-guide">Beginner’s Guide to Cryptocurrency</a></h3>
+      <p>Start your crypto journey with our easy-to-understand guide. Learn the basics, set up your first wallet, and make your first purchase. Visit our <a href="guides.html#beginner-guide">Beginner’s Guide to Cryptocurrency</a> to get started.</p>
+    </article>
+    <article>
+      <h3><a href="guides.html#advanced-trading">Advanced Trading Guides</a></h3>
+      <p>Enhance your trading skills with our advanced strategies. Learn how to analyze the market and make profitable trades. Visit our <a href="guides.html#advanced-trading">Advanced Trading Guides</a>.</p>
+    </article>
+    <article>
+      <h3><a href="guides.html#passive-income">Passive Income with Crypto</a></h3>
+      <p>Explore various passive income opportunities, including staking, yield farming, liquidity pools, and mining. Learn how to earn while you sleep with our comprehensive guides. Visit our <a href="guides.html#passive-income">Passive Income Guides</a>.</p>
+    </article>
+    <article>
+      <h3><a href="guides.html#crypto-tools">The Best Crypto Tools</a></h3>
+      <p>Learn how to use various crypto tools and resources to enhance your trading and investment strategies. Visit our <a href="guides.html#crypto-tools">Guides</a> for comprehensive how-to articles. Our <a href="tools.html">Tools section</a> provides a full list of links to all the tools mentioned on the website, with brief descriptions of what they do. This is your quick-access index to all the essential tools you need.</p>
+    </article>
+    <article>
+      <h3><a href="guides.html#security">Secure Your Assets</a></h3>
+      <p>Learn how to keep your investments safe with our comprehensive security guides. Discover the best wallets and practices to protect your crypto. Visit our <a href="guides.html#security">Guides</a> for detailed security strategies.</p>
+    </article>
+  </section>
+
+  <section>
+    <h2>Stay Informed and Connected</h2>
+    <article>
+      <p>Stay updated with the latest trends and news in the crypto world. Our <a href="blog.html">Blog</a> and expert insights help you make informed trading decisions. Join our community and subscribe to our newsletter for exclusive content and updates.</p>
+    </article>
+  </section>
+
+  <section class="subscribe-section">
+    <h2>Subscribe to Our Newsletter</h2>
+    <p>Join our newsletter for the latest updates and exclusive content.</p>
+    <form action="subscribe.php" method="POST">
+      <input type="email" name="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 360Crypto. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+

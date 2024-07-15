@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your Ultimate Guide to Navigating the World of Cryptocurrency">
+  <title>360Crypto - Tools</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+      overflow-x: hidden;
+    }
+    header {
+      background-color: #0a0a0a;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+    header .logo a {
+      color: #fff;
+      font-size: 36px;
+      font-family: 'Orbitron', sans-serif;
+      text-decoration: none;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #00bfff;
+      text-decoration: none;
+      font-size: 18px;
+      position: relative;
+      text-shadow: 0 0 5px rgba(0, 191, 255, 0.8);
+    }
+    nav ul li a:hover::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: #007bff;
+      left: 0;
+      bottom: -5px;
+      animation: hoverEffect 0.5s;
+    }
+    @keyframes hoverEffect {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+    .newsletter {
+      display: flex;
+      align-items: center;
+    }
+    .newsletter input[type="email"] {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .newsletter button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .newsletter button:hover {
+      background-color: #0056b3;
+    }
+    section {
+      padding: 40px 20px;
+      background-color: #2a2a2a;
+      margin: 20px auto;
+      max-width: 1200px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      position: relative;
+    }
+    section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, rgba(0, 123, 255, 0.3), rgba(0, 123, 255, 0.1));
+      z-index: -1;
+      animation: gradientShift 5s infinite;
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    section h2 {
+      font-size: 50px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    section h3 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .subcategory h4 {
+      font-size: 24px;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    ul li a {
+      color: #00bfff;
+      text-decoration: none;
+      font-size: 18px;
+      text-shadow: 0 0 5px rgba(0, 191, 255, 0.8);
+    }
+    footer {
+      background-color: #0a0a0a;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+      border-top: 2px solid #333;
+      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html">360Crypto</a></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="guides.html">Guides</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="community.html">Community</a></li>
+      </ul>
+    </nav>
+    <div class="newsletter">
+      <input type="email" placeholder="Subscribe to our newsletter">
+      <button>Subscribe</button>
+    </div>
+  </header>
+
+  <section>
+    <h2>Tools</h2>
+    <div style="text-align: center;">
+      <img src="images/imagetools.png" alt="Tools" style="max-width: 45%; height: auto; border-radius: 5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); margin-bottom: 20px;">
+    </div>
+    <p style="text-align: center; font-size: 18px;">Discover a comprehensive range of tools designed to enhance your cryptocurrency experience. From exchanges and wallets to trading bots and research platforms, find everything you need to succeed in the world of crypto.</p>
+  </section>
+
+  <section class="category-block">
+    <h3>Exchanges</h3>
+    <div class="subcategory">
+      <h4>Centralized Exchanges (CEX)</h4>
+      <ul>
+        <li><a href="https://www.bybit.com/invite?ref=KBJY1WO" target="_blank" style="color: #00bfff;">Bybit</a>: Offers a variety of cryptocurrencies with low trading fees and features like futures trading.</li>
+        <li><a href="https://www.kucoin.com/r/rf/QBAYXX17" target="_blank" style="color: #00bfff;">KuCoin</a>: Offers a variety of cryptocurrencies with low trading fees and features like futures trading.</li>
+        <li><a href="https://okx.com/join/28048724" target="_blank" style="color: #00bfff;">OKX</a>: Leading CEX with a robust trading platform and diverse cryptocurrency offerings.</li>
+        <li><a href="https://www.gate.io/signup/AQQRBFEJ?ref_type=103" target="_blank" style="color: #00bfff;">Gate.io</a>: Comprehensive exchange with extensive cryptocurrency listings and trading options.</li>
+      </ul>
+    </div>
+    <div class="subcategory">
+      <h4>Decentralized Exchanges (DEX)</h4>
+      <ul>
+        <li><a href="https://simpleswap.io/?ref=62601ac50714" target="_blank" style="color: #00bfff;">SimpleSwap</a>: Leading DEX for Ethereum-based tokens, offering decentralized trading and liquidity pools.</li>
+        <li><a href="https://referral.kyberswap.com/api/v3/shared-links/190A6E66DD5" target="_blank" style="color: #00bfff;">KyberSwap</a>: DEX offering liquidity incentives, rewards, and governance participation.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Wallets -->
+  <section class="category-block">
+    <h3>Wallets</h3>
+    <div class="subcategory">
+      <h4>Hot Wallets</h4>
+      <ul>
+        <li><a href="https://metamask.io/" target="_blank" style="color: #00bfff;">MetaMask</a>: Popular Ethereum wallet used for interacting with the Ethereum blockchain and decentralized applications.</li>
+        <li><a href="https://phantom.app/" target="_blank" style="color: #00bfff;">Phantom</a>: Solana wallet designed for DeFi and NFTs.</li>
+        <li><a href="https://tonkeeper.com/" target="_blank" style="color: #00bfff;">Tonkeeper</a>: Wallet for the TON blockchain supporting various assets and DeFi applications.</li>
+      </ul>
+    </div>
+    <div class="subcategory">
+      <h4>Cold Wallets</h4>
+      <ul>
+        <li><a href="https://www.ledger.com" target="_blank" style="color: #00bfff;">Ledger</a>: Hardware wallets for secure crypto storage with support for multiple cryptocurrencies.</li>
+        <li><a href="https://trezor.io" target="_blank" style="color: #00bfff;">Trezor</a>: Trusted hardware wallet for storing and managing cryptocurrencies securely.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Payment Services -->
+  <section class="category-block">
+    <h3>Payment Services</h3>
+    <ul>
+      <li><a href="https://www.moonpay.com" target="_blank" style="color: #00bfff;">MoonPay</a>: Buy crypto with a credit card and send directly to your wallet.</li>
+      <li><a href="https://www.simplex.com" target="_blank" style="color: #00bfff;">Simplex</a>: Facilitates the purchase of crypto using debit and credit cards with fraud protection and a user-friendly interface.</li>
+    </ul>
+  </section>
+  
+  <!-- Passive Income -->
+  <section class="category-block">
+    <h3>Passive Income</h3>
+    
+    <div class="subcategory">
+      <h4>Mining</h4>
+      <ul>
+        <li><a href="https://cryptotab.farm/go/G1UK2YJ9" target="_blank" style="color: #00bfff;">CryptoTab</a>: Earn Bitcoin by using a browser with built-in mining features.</li>
+      </ul>
+    </div>
+<div class="subcategory">
+  <h4>Indirect Mining</h4>
+  <ul>
+    <li><a href="http://cointiply.com/r/575OvJ" target="_blank" style="color: #00bfff;">Cointiply</a>: Earn cryptocurrency by completing surveys, watching videos, and playing games.</li>
+    <li><a href="https://pawns.app/?r=5821852" target="_blank" style="color: #00bfff;">Pawns</a>: Earn money and cryptocurrency by sharing your internet bandwidth.</li>
+    <li><a href="https://freecash.com/r/c206bbd175b1b90eb38a" target="_blank" style="color: #00bfff;">Freecash</a>: Complete tasks, surveys, and offers to earn cryptocurrency.</li>
+  </ul>
+</div>
+    
+    <div class="subcategory">
+      <h4>Staking</h4>
+      <ul>
+        <li><a href="https://www.bybit.com/invite?ref=KBJY1WO" target="_blank" style="color: #00bfff;">Bybit Staking</a>: Earn rewards by staking your crypto assets on Bybit.</li>
+        <li><a href="https://www.kucoin.com/r/rf/QBAYXX17" target="_blank" style="color: #00bfff;">KuCoin Staking</a>: Stake and earn rewards with KuCoin's wide range of supported coins.</li>
+      </ul>
+    </div>
+    
+    <div class="subcategory">
+      <h4>Yield Farming</h4>
+      <ul>
+        <li><a href="https://simpleswap.io/?ref=62601ac50714" target="_blank" style="color: #00bfff;">SimpleSwap Yield Farming</a>: Automated yield farming strategies that optimize returns across various protocols.</li>
+      </ul>
+    </div>
+
+    <div class="subcategory">
+      <h4>Liquidity Pools</h4>
+      <ul>
+        <li><a href="https://referral.kyberswap.com/api/v3/shared-links/190A6E66DD5" target="_blank" style="color: #00bfff;">KyberSwap Liquidity Pools</a>: Stablecoin liquidity pools offering low slippage and low fee swaps.</li>
+      </ul>
+    </div>
+
+    <div class="subcategory">
+      <h4>Airdrop Services</h4>
+      <ul>
+        <li><a href="https://airdropalert.com" target="_blank" style="color: #00bfff;">AirdropAlert</a>: Platform that aggregates and promotes various cryptocurrency airdrops, helping users earn free crypto tokens.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Bots -->
+  <section class="category-block">
+    <h3>Bots</h3>
+    
+    <div class="subcategory">
+      <h4>Trading Bots</h4>
+      <ul>
+        <li><a href="https://app.3commas.io/auth/registration?utm_source=referral&utm_medium=cabinet&c=tc1727013" target="_blank" style="color: #00bfff;">3Commas</a>: Advanced trading bot for automating trades on various exchanges.</li>
+        <li><a href="https://www.cryptohopper.com/?atid=35048" target="_blank" style="color: #00bfff;">Cryptohopper</a>: Trading bot that automates trades across multiple exchanges with advanced features.</li>
+        <li><a href="https://accounts.pionex.com/en/signUp?r=0Fih4L5BbCb" target="_blank" style="color: #00bfff;">Pionex</a>: Cloud-based trading bot offering automation across multiple exchanges and strategies.</li>
+        <li><a href="https://coinrule.com/ref.html?fpr=8d9xp" target="_blank" style="color: #00bfff;">Coinrule</a>: Automated trading bot with custom rules and strategies for portfolio management.</li>
+      </ul>
+    </div>
+    
+    <div class="subcategory">
+      <h4>Telegram Bots</h4>
+      <ul>
+        <li><a href="https://t.me/tontrade?start=ZcCbgSaM" target="_blank" style="color: #00bfff;">TON Trading Bot</a>: Automated trading bot for Telegram.</li>
+        <li><a href="https://t.me/stonks_sniper_bot?start=b4f107b809089ec9ede79e014cbad283" target="_blank" style="color: #00bfff;">Sol Trading Bot</a>: Advanced trading bot for Telegram with automation features.</li>
+        <li><a href="https://t.me/pepeboost_swap_bot?start=ref_0uvl1u" target="_blank" style="color: #00bfff;">Pepeboost ETH Bot</a>: Telegram bot offering automated trading solutions.</li>
+        <li><a href="https://t.me/pepeboost_sol05_bot?start=ref_0h7z1x" target="_blank" style="color: #00bfff;">Pepeboost SOL Bot</a>: Telegram bot offering automated trading solutions.</li>
+        <li><a href="https://t.me/solana_trojanbot?start=r-48576889637" target="_blank" style="color: #00bfff;">Trojan Bot</a>: Multifunctional trading bot for Telegram.</li>
+        <li><a href="https://t.me/ShurikenTradeBot?start=ref-96dc75ff" target="_blank" style="color: #00bfff;">Shuriken Bot</a>: Telegram bot for automating trading strategies.</li>
+        <li><a href="https://t.me/soul_sniper_bot?start=7avfDSyO06VG" target="_blank" style="color: #00bfff;">Soul Sniper</a>: Telegram bot for trading and market analysis.</li>
+        <li><a href="https://t.me/EtherDROPS_bot?start=promo_LP856X" target="_blank" style="color: #00bfff;">EtherDrops</a>: Portfolio management bot that automates trading based on predefined strategies.</li>
+        <li><a href="https://t.me/ray_blue_bot?start=ref_YAN0Gc" target="_blank" style="color: #00bfff;">Ray Silver</a>: Provides trading signals and market insights on Telegram.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Research and Analytics -->
+  <section class="category-block">
+    <h3>Research and Analytics</h3>
+    
+    <div class="subcategory">
+      <h4>Market Data</h4>
+      <ul>
+        <li><a href="https://www.tradingview.com/?aff_id=140833" target="_blank" style="color: #00bfff;">TradingView</a>: Comprehensive market data, charting tools, and social features for cryptocurrency traders.</li>
+      </ul>
+    </div>
+    
+    <div class="subcategory">
+      <h4>Portfolio Trackers</h4>
+      <ul>
+        <li><a href="https://cointracking.info" target="_blank" style="color: #00bfff;">CoinTracking</a>: Comprehensive portfolio tracking and tax reporting tool for crypto traders.</li>
+        <li><a href="https://www.blockfolio.com" target="_blank" style="color: #00bfff;">Blockfolio</a>: Mobile app for tracking cryptocurrency portfolios with real-time price updates.</li>
+        <li><a href="https://delta.app" target="_blank" style="color: #00bfff;">Delta</a>: Portfolio tracking app with support for multiple exchanges and wallets.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Educational Resources -->
+  <section class="category-block">
+    <h3>Educational Resources</h3>
+    <ul>
+      <li><a href="https://www.udemy.com" target="_blank" style="color: #00bfff;">Udemy</a>: Comprehensive online learning platform with a variety of cryptocurrency courses.</li>
+      <li><a href="https://www.coursera.org" target="_blank" style="color: #00bfff;">Coursera</a>: Online courses from top universities and companies, including crypto and blockchain courses.</li>
+      <li><a href="https://academy.binance.com" target="_blank" style="color: #00bfff;">Binance Academy</a>: Free educational platform offering a wide range of articles, videos, and courses on cryptocurrencies and blockchain.</li>
+      <li><a href="https://www.coinbase.com/learn" target="_blank" style="color: #00bfff;">Coinbase Learn</a>: Educational resources from Coinbase, providing tutorials and articles on cryptocurrency and blockchain technology.</li>
+      <li><a href="https://www.cryptocompare.com" target="_blank" style="color: #00bfff;">CryptoCompare</a>: Provides detailed information on cryptocurrencies, including guides and tutorials.</li>
+      <li><a href="https://www.coinmarketcap.com" target="_blank" style="color: #00bfff;">CoinMarketCap</a>: Offers cryptocurrency market data and educational resources.</li>
+      <li><a href="https://learn.swyftx.com.au" target="_blank" style="color: #00bfff;">Swyftx Learn</a>: Educational platform providing courses and articles on various aspects of cryptocurrency trading and investment.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Additional Resources</h3>
+    <article>
+      <p>For more detailed information on each tool, visit our comprehensive <a href="guides.html" style="color: #00bfff;">Guides section</a>. There you'll find in-depth articles and tutorials to help you get the most out of these resources.</p>
+    </article>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 360Crypto. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+
