@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Your Ultimate Guide to Navigating the World of Cryptocurrency">
   <title>360Crypto - Blog</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Exo 2', sans-serif;
       margin: 0;
       padding: 0;
       background-color: #1a1a1a;
@@ -224,205 +224,261 @@
   </header>
 
   <section class="category-block">
-  <h2>Blog</h2>
-  <img src="images/imageblog.png" alt="Blog Image" style="display: block; margin: 0 auto; width: 50%; height: auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);">
-  <p style="text-align: center; margin-top: 20px; font-size: 18px; line-height: 1.6;">
-    Welcome to the 360Crypto Blog, your ultimate resource for comprehensive and up-to-date information on cryptocurrency trading, tools, and strategies. Our expertly curated articles cover a wide range of topics, including top cryptocurrency exchanges, advanced trading bots, and the latest blockchain innovations. We provide in-depth guides and tips tailored for both beginners and seasoned traders, ensuring you have the knowledge to make informed decisions in the dynamic crypto market. Stay ahead with our regularly updated content, written by crypto enthusiasts for crypto enthusiasts, and join our community to elevate your trading journey. Whether you're looking to understand the basics or explore advanced strategies, the 360Crypto Blog is your go-to destination for all things crypto.
-  </p>
-</section>
-
-
-  <section class="category-block">
-    <h3>Latest News <span style="font-size: 18px;">(click to expand)</span></h3>
-    <div id="latest-news-content" class="hidden">
-      <div id="rss-feed-container" class="rss-feed-grid"></div>
-    </div>
+    <h2>Blog</h2>
+    <img src="images/imageblog.png" alt="Blog Image" style="display: block; margin: 0 auto; width: 50%; height: auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);">
+    <p style="text-align: center; margin-top: 20px; font-size: 18px; line-height: 1.6;">
+      Welcome to the 360Crypto Blog, your ultimate resource for comprehensive and up-to-date information on cryptocurrency trading, tools, and strategies. Our expertly curated articles cover a wide range of topics, including top cryptocurrency exchanges, advanced trading bots, and the latest blockchain innovations. We provide in-depth guides and tips tailored for both beginners and seasoned traders, ensuring you have the knowledge to make informed decisions in the dynamic crypto market. Stay ahead with our regularly updated content, written by crypto enthusiasts for crypto enthusiasts, and join our community to elevate your trading journey. Whether you're looking to understand the basics or explore advanced strategies, the 360Crypto Blog is your go-to destination for all things crypto.
+    </p>
   </section>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const newsTitle = document.querySelector(".category-block h3");
-      const newsContent = document.getElementById("latest-news-content");
-
-      newsTitle.addEventListener("click", function() {
-        newsContent.classList.toggle("hidden");
-      });
-
-      fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.coindesk.com/arc/outboundfeeds/rss/')
-        .then(response => response.json())
-        .then(data => {
-          let output = '';
-          data.items.forEach(item => {
-            output += `
-              <div class="rss-feed-item">
-                <img src="${item.enclosure ? item.enclosure.link : 'images/default.png'}" alt="${item.title}">
-                <a href="${item.link}" target="_blank">${item.title}</a>
-              </div>
-            `;
-          });
-          document.getElementById("rss-feed-container").innerHTML = output;
-        })
-        .catch(error => console.error('Error fetching RSS feed:', error));
-    });
-  </script>
-
-<section class="category-block">
-    <h3>360 Articles</h3>
-<p style="text-align: center; margin-top: 10px; font-size: 18px; line-height: 1.6;">
-        Here you will find our original articles about the topics we are passionate about and our opinions on the best tools, resources, and strategies. Join us on our journey as we explore the world of cryptocurrency together.
-    </p>
-    <div class="articles-grid">
-      <div class="article" onclick="openArticle1()">
-        <img src="images/article1.png" alt="Top Cryptocurrency Exchanges" style="width: 100%; height: auto;">
-        <h4>Top Cryptocurrency Exchanges</h4>
-      </div>
-      <div class="article" onclick="openArticle2()">
-        <img src="images/article2.png" alt="Top Crypto Trading Bots" style="width: 100%; height: auto;">
-        <h4>Top Crypto Trading Bots</h4>
-      </div>
-      <div class="article" onclick="openArticle3()">
-        <img src="images/article3.png" alt="Top Telegram Trading Bots" style="width: 100%; height: auto;">
-        <h4>Top Telegram Trading Bots</h4>
-      </div>
-      <div class="article" onclick="openArticle4()">
-        <img src="images/article4.png" alt="Best Crypto Mining Tools and Platforms" style="width: 100%; height: auto;">
-        <h4>Best Crypto Mining Tools and Platforms</h4>
-      </div>
-      <div class="article" onclick="openArticle5()">
-        <img src="images/article5.png" alt="PVP vs PPP: The Future of Crypto Communities" style="width: 100%; height: auto;">
-        <h4>PVP vs PPP: The Future of Crypto Communities</h4>
-      </div>
-      <div class="article" onclick="openArticle6()">
-        <img src="images/article6.png" alt="The Rise of TON Blockchain" style="width: 100%; height: auto;">
-        <h4>The Rise of TON Blockchain</h4>
-      </div>
-      <div class="article" onclick="openArticle7()">
-        <img src="images/article7.png" alt="TradingView: The Ultimate Tool for Traders" style="width: 100%; height: auto;">
-        <h4>TradingView: The Ultimate Tool for Traders</h4>
-      </div>
-      <div class="article" onclick="openArticle8()">
-        <img src="images/article8.png" alt="Unlocking Trading Success with Bullx" style="width: 100%; height: auto;">
-        <h4>Unlocking Trading Success with Bullx</h4>
-      </div>
-      <div class="article" onclick="openArticle9()">
-        <img src="images/article9.png" alt="Withdraw Cash from Crypto Exchanges Without a Bank" style="width: 100%; height: auto;">
-        <h4>Withdraw Cash from Crypto Exchanges Without a Bank</h4>
-      </div>
-    </div>
+  <section class="category-block">
+  <h3>Latest News <span style="font-size: 18px;">(click to expand)</span></h3>
+  <div id="latest-news-content" class="hidden">
+    <div id="rss-feed-container" class="rss-feed-grid"></div>
+  </div>
 </section>
 
-  <script>
-    function openArticle1() {
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const newsTitle = document.querySelector(".category-block h3");
+    const newsContent = document.getElementById("latest-news-content");
+
+    newsTitle.addEventListener("click", function() {
+      newsContent.classList.toggle("hidden");
+    });
+
+    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.coindesk.com/arc/outboundfeeds/rss/')
+      .then(response => response.json())
+      .then(data => {
+        let output = '';
+        data.items.forEach(item => {
+          output += `
+            <div class="rss-feed-item">
+              <img src="${item.enclosure ? item.enclosure.link : 'images/default.png'}" alt="${item.title}">
+              <a href="${item.link}" target="_blank">${item.title}</a>
+            </div>
+          `;
+        });
+        document.getElementById("rss-feed-container").innerHTML = output;
+      })
+      .catch(error => console.error('Error fetching RSS feed:', error));
+  });
+</script>
+<section class="category-block">
+  <h3>360 Articles</h3>
+  <p style="text-align: center; margin-top: 10px; font-size: 18px; line-height: 1.6;">
+    Here you will find our original articles about the topics we are passionate about and our opinions on the best tools, resources, and strategies. Join us on our journey as we explore the world of cryptocurrency together.
+  </p>
+  <div class="articles-grid">
+    <div class="article" onclick="openArticle1()">
+      <img src="images/article1.png" alt="Top Cryptocurrency Exchanges" style="width: 100%; height: auto;">
+      <h4>Top Cryptocurrency Exchanges</h4>
+    </div>
+    <div class="article" onclick="openArticle2()">
+      <img src="images/article2.png" alt="Top Crypto Trading Bots" style="width: 100%; height: auto;">
+      <h4>Top Crypto Trading Bots</h4>
+    </div>
+    <div class="article" onclick="openArticle3()">
+      <img src="images/article3.png" alt="Top Telegram Trading Bots" style="width: 100%; height: auto;">
+      <h4>Top Telegram Trading Bots</h4>
+    </div>
+    <div class="article" onclick="openArticle4()">
+      <img src="images/article4.png" alt="Best Crypto Mining Tools and Platforms" style="width: 100%; height: auto;">
+      <h4>Best Crypto Mining Tools and Platforms</h4>
+    </div>
+    <div class="article" onclick="openArticle5()">
+      <img src="images/article5.png" alt="PVP vs PPP: The Future of Crypto Communities" style="width: 100%; height: auto;">
+      <h4>PVP vs PPP: The Future of Crypto Communities</h4>
+    </div>
+    <div class="article" onclick="openArticle6()">
+      <img src="images/article6.png" alt="The Rise of TON Blockchain" style="width: 100%; height: auto;">
+      <h4>The Rise of TON Blockchain</h4>
+    </div>
+    <div class="article" onclick="openArticle7()">
+      <img src="images/article7.png" alt="TradingView: The Ultimate Tool for Traders" style="width: 100%; height: auto;">
+      <h4>TradingView: The Ultimate Tool for Traders</h4>
+    </div>
+    <div class="article" onclick="openArticle8()">
+      <img src="images/article8.png" alt="Unlocking Trading Success with Bullx" style="width: 100%; height: auto;">
+      <h4>Unlocking Trading Success with Bullx</h4>
+    </div>
+    <div class="article" onclick="openArticle9()">
+      <img src="images/article9.png" alt="Withdraw Cash from Crypto Exchanges Without a Bank" style="width: 100%; height: auto;">
+      <h4>Withdraw Cash from Crypto Exchanges Without a Bank</h4>
+    </div>
+  </div>
+</section>
+
+<script>
+  function openArticle1() {
     const win = window.open('', '_blank');
     win.document.write(`
         <html>
         <head>
           <title>Top Cryptocurrency Exchanges</title>
-          <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
           <style>
             body {
-              font-family: 'Roboto', sans-serif;
-              background-color: #121212;
-              color: #ffffff;
-              margin: 0;
-              padding: 20px;
-              text-align: center;
-            }
+      font-family: 'Exo 2', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+      overflow-x: hidden;
+    }
             header {
-              background-color: #0a0a0a;
-              color: #fff;
-              padding: 20px;
-              text-align: center;
-              border-bottom: 2px solid #333;
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            }
-            header .logo a {
-              color: #fff;
-              font-size: 36px;
-              font-family: 'Orbitron', sans-serif;
-              text-decoration: none;
-              text-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
-            }
-            nav ul {
-              list-style: none;
-              padding: 0;
-              margin: 0;
-              display: flex;
-            }
-            nav ul li {
-              margin: 0 15px;
-            }
-            nav ul li a {
-              color: #00bfff;
-              text-decoration: none;
-              font-size: 18px;
-              position: relative;
-              text-shadow: 0 0 5px rgba(0, 191, 255, 0.8);
-            }
-            .newsletter {
-              display: flex;
-              align-items: center;
-            }
-            .newsletter input[type="email"] {
-              padding: 10px;
-              border: none;
-              border-radius: 5px;
-              margin-right: 10px;
-              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-            }
-            .newsletter button {
-              padding: 10px 20px;
-              border: none;
-              border-radius: 5px;
-              background-color: #007bff;
-              color: #fff;
-              font-size: 16px;
-              cursor: pointer;
-              transition: background-color 0.3s;
-              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-            }
-            .newsletter button:hover {
-              background-color: #0056b3;
-            }
+      background-color: #0a0a0a;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+    header .logo a {
+      color: #fff;
+      font-size: 36px;
+      font-family: 'Orbitron', sans-serif;
+      text-decoration: none;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #00bfff;
+      text-decoration: none;
+      font-size: 18px;
+      position: relative;
+      text-shadow: 0 0 5px rgba(0, 191, 255, 0.8);
+    }
+    nav ul li a:hover::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: #007bff;
+      left: 0;
+      bottom: -5px;
+      animation: hoverEffect 0.5s;
+    }
+    @keyframes hoverEffect {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+    .newsletter {
+      display: flex;
+      align-items: center;
+    }
+    .newsletter input[type="email"] {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .newsletter button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .newsletter button:hover {
+      background-color: #0056b3;
+    }
             .article-title {
               font-size: 32px;
               margin-top: 20px;
+              text-align: center;
               font-family: 'Orbitron', sans-serif;
               color: #00bfff;
               text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
             }
-            .guide-content {
-              padding: 40px 20px;
-              background-color: #2a2a2a;
-              margin: 20px auto;
-              max-width: 1200px;
-              border-radius: 10px;
-              box-shadow: 0 0 20px rgba(0,0,0,0.5);
-              text-align: left;
-            }
-            .guide-content h3 {
-              font-size: 32px;
-              margin-bottom: 20px;
-              font-family: 'Orbitron', sans-serif;
-              color: #00bfff;
-              text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
-            }
-            .guide-content p,
-            .guide-content ol,
-            .guide-content ul {
-              font-size: 18px;
-              line-height: 1.8;
-            }
-            .guide-content ul {
-              padding-left: 20px;
-            }
-            .guide-content a {
-              color: #00bfff;
-              text-decoration: underline;
-            }
+    .category-block {
+      padding: 40px 20px;
+      background-color: #2a2a2a;
+      margin: 20px auto;
+      max-width: 1200px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      position: relative;
+    }
+    .category-block h2 {
+      font-size: 50px;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .category-block h3 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .category-block h4 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .category-block ul {
+      padding-left: 20px;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+    .category-block ul li a {
+      color: #00bfff;
+      text-decoration: underline;
+    }
+    .guide-content {
+      padding: 40px 20px;
+      background-color: #2a2a2a;
+      margin: 20px auto;
+      max-width: 1200px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+    .guide-content h3 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      font-family: 'Orbitron', sans-serif;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .guide-content p,
+    .guide-content ol,
+    .guide-content ul {
+      font-size: 18px;
+      line-height: 1.8;
+    }
+    .guide-content ul {
+      padding-left: 20px;
+    }
+    .guide-content a {
+      color: #00bfff;
+      text-decoration: underline;
+    }
+            
           </style>
         </head>
         <body>
@@ -438,11 +494,11 @@
               </ul>
             </nav>
             <div class="newsletter">
-      <form action="https://formspree.io/f/xnnangvw" method="POST">
-        <input type="email" name="email" placeholder="Subscribe to our newsletter" required>
-        <button type="submit">Subscribe</button>
-      </form>
-    </div>
+              <form action="https://formspree.io/f/xnnangvw" method="POST">
+                <input type="email" name="email" placeholder="Subscribe to our newsletter" required>
+                <button type="submit">Subscribe</button>
+              </form>
+            </div>
           </header>
           <h1 class="article-title">Top Cryptocurrency Exchanges</h1>
           <div class="guide-content">
@@ -491,24 +547,24 @@
               <li><strong>Wide Range of Supported Coins:</strong> The platform supports a large variety of cryptocurrencies, making it easy to swap between different assets.</li>
               <li><strong>Automatic Bridging:</strong> One of SimpleSwap's standout features is its ability to automatically bridge between any coin. This ensures smooth and efficient transactions, even between less commonly paired cryptocurrencies.</li>
               <li><strong>Ease of Use:</strong> SimpleSwap’s straightforward interface makes it ideal for quick and hassle-free transactions, catering to both novice and experienced users.</li>
-            </ul>
+                        </ul>
 
             <h3>Conclusion</h3>
             <p>Choosing the right crypto exchange depends on your individual needs and trading preferences. Bybit, KuCoin, OKX, and Gate.io offer robust options for centralized trading, each with unique features and benefits. For those looking to maintain greater control and privacy, SimpleSwap provides a seamless decentralized trading experience with the added benefit of automatic bridging.</p>
             <p>Register with the links below to enjoy exclusive bonuses and incentives:</p>
             <ul>
-              <li><strong>Bybit:</strong> Sign up through <a href="https://www.bybit.com/invite?ref=KBJY1WO">this link</a> to receive special trading bonuses.</li>
-              <li><strong>KuCoin:</strong> Use <a href="https://www.kucoin.com/r/rf/QBAYXX17">this link</a> for a welcome bonus and other exclusive offers.</li>
-              <li><strong>OKX:</strong> Register via <a href="https://okx.com/join/28048724">this link</a> to enjoy various sign-up incentives.</li>
-              <li><strong>Gate.io:</strong> Sign up with <a href="https://www.gate.io/signup/AQQRBFEJ?ref_type=103">this link</a> to get access to unique rewards and benefits.</li>
-              <li><strong>SimpleSwap:</strong> Start trading anonymously with <a href="https://simpleswap.io/?ref=62601ac50714">this link</a> and take advantage of easy and efficient coin swaps.</li>
+              <li><a href="https://www.bybit.com/invite?ref=KBJY1WO">Bybit:</a> Sign up through this link to receive special trading bonuses.</li>
+              <li><a href="https://www.kucoin.com/r/rf/QBAYXX17">KuCoin:</a> Use this link for a welcome bonus and other exclusive offers.</li>
+              <li><a href="https://okx.com/join/28048724">OKX:</a> Register via this link to enjoy various sign-up incentives.</li>
+              <li><a href="https://www.gate.io/signup/AQQRBFEJ?ref_type=103">Gate.io:</a> Sign up with this link to get access to unique rewards and benefits.</li>
+              <li><a href="https://simpleswap.io/?ref=62601ac50714">SimpleSwap:</a> Start trading anonymously with this link and take advantage of easy and efficient coin swaps.</li>
             </ul>
           </div>
         </body>
         </html>
-      `);
-    }
-  </script>
+    `);
+  }
+</script>
 
 <script>
   function openArticle2() {
@@ -517,112 +573,170 @@
         <html>
       <head>
         <title>Top Crypto Trading Bots</title>
-        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-        <style>
-          body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #121212;
-            color: #ffffff;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-          }
-          header {
-            background-color: #0a0a0a;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 2px solid #333;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-          }
-          header .logo a {
-            color: #fff;
-            font-size: 36px;
-            font-family: 'Orbitron', sans-serif;
-            text-decoration: none;
-            text-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
-          }
-          nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-          }
-          nav ul li {
-            margin: 0 15px;
-          }
-          nav ul li a {
-            color: #00bfff;
-            text-decoration: none;
-            font-size: 18px;
-            position: relative;
-            text-shadow: 0 0 5px rgba(0, 191, 255, 0.8);
-          }
-          .newsletter {
-            display: flex;
-            align-items: center;
-          }
-          .newsletter input[type="email"] {
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            margin-right: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-          }
-          .newsletter button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            background-color: #007bff;
-            color: #fff;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-          }
-          .newsletter button:hover {
-            background-color: #0056b3;
-          }
-          .article-title {
-            font-size: 32px;
-            margin-top: 20px;
-            font-family: 'Orbitron', sans-serif;
-            color: #00bfff;
-            text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
-          }
-          .guide-content {
-            padding: 40px 20px;
-            background-color: #2a2a2a;
-            margin: 20px auto;
-            max-width: 1200px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
-            text-align: left;
-          }
-          .guide-content h3 {
-            font-size: 32px;
-            margin-bottom: 20px;
-            font-family: 'Orbitron', sans-serif;
-            color: #00bfff;
-            text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
-          }
-          .guide-content p,
-          .guide-content ol,
-          .guide-content ul {
-            font-size: 18px;
-            line-height: 1.8;
-          }
-          .guide-content ul {
-            padding-left: 20px;
-          }
-          .guide-content a {
-            color: #00bfff;
-            text-decoration: underline;
-          }
-        </style>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+          <style>
+            body {
+      font-family: 'Exo 2', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+      overflow-x: hidden;
+    }
+            header {
+      background-color: #0a0a0a;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+    header .logo a {
+      color: #fff;
+      font-size: 36px;
+      font-family: 'Orbitron', sans-serif;
+      text-decoration: none;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #00bfff;
+      text-decoration: none;
+      font-size: 18px;
+      position: relative;
+      text-shadow: 0 0 5px rgba(0, 191, 255, 0.8);
+    }
+    nav ul li a:hover::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: #007bff;
+      left: 0;
+      bottom: -5px;
+      animation: hoverEffect 0.5s;
+    }
+    @keyframes hoverEffect {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+    .newsletter {
+      display: flex;
+      align-items: center;
+    }
+    .newsletter input[type="email"] {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .newsletter button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .newsletter button:hover {
+      background-color: #0056b3;
+    }
+            .article-title {
+              font-size: 32px;
+              margin-top: 20px;
+              text-align: center;
+              font-family: 'Orbitron', sans-serif;
+              color: #00bfff;
+              text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+            }
+    .category-block {
+      padding: 40px 20px;
+      background-color: #2a2a2a;
+      margin: 20px auto;
+      max-width: 1200px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      position: relative;
+    }
+    .category-block h2 {
+      font-size: 50px;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .category-block h3 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .category-block h4 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .category-block ul {
+      padding-left: 20px;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+    .category-block ul li a {
+      color: #00bfff;
+      text-decoration: underline;
+    }
+    .guide-content {
+      padding: 40px 20px;
+      background-color: #2a2a2a;
+      margin: 20px auto;
+      max-width: 1200px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+    .guide-content h3 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      font-family: 'Orbitron', sans-serif;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .guide-content p,
+    .guide-content ol,
+    .guide-content ul {
+      font-size: 18px;
+      line-height: 1.8;
+    }
+    .guide-content ul {
+      padding-left: 20px;
+    }
+    .guide-content a {
+      color: #00bfff;
+      text-decoration: underline;
+    }
+            
+          </style>
       </head>
       <body>
         <header>
@@ -657,8 +771,8 @@
             <li><strong>Supported Coins:</strong> Bullx supports a wide range of coins including Bitcoin (BTC), Ethereum (ETH), Solana (SOL), and many others.</li>
           </ul>
 
-          <h3>2. Photon</h3>
-          <p><a href="https://photon-sol.tinyastro.io/@360crypto">Photon</a> is a powerful trading platform that leverages advanced technology to optimize trading decisions. It’s ideal for traders looking for a sophisticated tool that simplifies the trading process. Photon provides a seamless experience, enabling traders to start executing trades within seconds. The platform's intuitive interface and comprehensive guides make it accessible even for beginners. Photon supports a variety of Solana (SOL) tokens, including emerging tokens on the Solana network. Its AI-powered algorithms and automated trading features make it a strong contender for those seeking both ease of use and advanced trading capabilities.</p>
+                    <h3>2. Photon</h3>
+          <p><a href="https://photon-sol.tinyastro.io/@360crypto" target="_blank">Photon</a> is a powerful trading platform that leverages advanced technology to optimize trading decisions. It’s ideal for traders looking for a sophisticated tool that simplifies the trading process. Photon provides a seamless experience, enabling traders to start executing trades within seconds. The platform's intuitive interface and comprehensive guides make it accessible even for beginners. Photon supports a variety of Solana (SOL) tokens, including emerging tokens on the Solana network. Its AI-powered algorithms and automated trading features make it a strong contender for those seeking both ease of use and advanced trading capabilities.</p>
           <ul>
             <li><strong>AI-Powered:</strong> Utilizes advanced algorithms to analyze market data and make informed trading decisions.</li>
             <li><strong>Automated Trading:</strong> Executes trades automatically based on pre-set parameters and market conditions.</li>
@@ -668,56 +782,56 @@
           </ul>
 
           <h3>3. 3Commas</h3>
-<p><a href="https://app.3commas.io/auth/registration?utm_source=referral&utm_medium=cabinet&c=tc1727013">3Commas</a> is a versatile trading bot platform that supports multiple exchanges and offers a wide range of trading tools. It’s perfect for traders who want to manage their portfolios across different platforms. 3Commas simplifies the trading process by providing a smart trading terminal that integrates with multiple exchanges. Users can easily set up their accounts, configure trading bots, and start trading with minimal effort. The platform’s tutorials and customer support further assist in getting started quickly. It supports a wide range of cryptocurrencies, including Bitcoin (BTC), Ethereum (ETH), and Binance Coin (BNB), and offers features such as trailing stop-loss and trailing take-profit to maximize profits.<p>
-<ul>
-  <li><strong>Multi-Exchange Support:</strong> Compatible with major exchanges like Binance, Bitfinex, and Coinbase Pro.</li>
-  <li><strong>Smart Trading Terminal:</strong> Provides a unified interface for managing all your trades and accounts.</li>
-  <li><strong>Customizable Bots:</strong> Allows users to create custom bots based on their trading strategies.</li>
-  <li><strong>Trailing Features:</strong> Offers trailing stop-loss and trailing take-profit features to maximize profits.</li>
-  <li><strong>Supported Coins:</strong> 3Commas supports a wide range of cryptocurrencies available on its compatible exchanges, including Bitcoin (BTC), Ethereum (ETH), Binance Coin (BNB), and many others.</li>
-</ul>
+          <p><a href="https://app.3commas.io/auth/registration?utm_source=referral&utm_medium=cabinet&c=tc1727013" target="_blank">3Commas</a> is a versatile trading bot platform that supports multiple exchanges and offers a wide range of trading tools. It’s perfect for traders who want to manage their portfolios across different platforms. 3Commas simplifies the trading process by providing a smart trading terminal that integrates with multiple exchanges. Users can easily set up their accounts, configure trading bots, and start trading with minimal effort. The platform’s tutorials and customer support further assist in getting started quickly. It supports a wide range of cryptocurrencies, including Bitcoin (BTC), Ethereum (ETH), and Binance Coin (BNB), and offers features such as trailing stop-loss and trailing take-profit to maximize profits.</p>
+          <ul>
+            <li><strong>Multi-Exchange Support:</strong> Compatible with major exchanges like Binance, Bitfinex, and Coinbase Pro.</li>
+            <li><strong>Smart Trading Terminal:</strong> Provides a unified interface for managing all your trades and accounts.</li>
+            <li><strong>Customizable Bots:</strong> Allows users to create custom bots based on their trading strategies.</li>
+            <li><strong>Trailing Features:</strong> Offers trailing stop-loss and trailing take-profit features to maximize profits.</li>
+            <li><strong>Supported Coins:</strong> 3Commas supports a wide range of cryptocurrencies available on its compatible exchanges, including Bitcoin (BTC), Ethereum (ETH), Binance Coin (BNB), and many others.</li>
+          </ul>
 
-<h3>4. Cryptohopper</h3>
-<p><a href="https://www.cryptohopper.com/?atid=35048">Cryptohopper</a> is a popular trading bot known for its ease of use and comprehensive feature set. It’s suitable for both beginners and advanced traders looking to automate their trades. Cryptohopper’s user-friendly interface makes it easy to set up and manage trading bots. The platform offers extensive tutorials and a community forum to help users get started. The marketplace of strategies allows beginners to use pre-configured strategies from experienced traders, reducing the learning curve. Cryptohopper supports numerous cryptocurrencies across its integrated exchanges, including Bitcoin (BTC), Ethereum (ETH), and Ripple (XRP), and provides a simulated trading environment for testing strategies without risking real money.</p>
-<ul>
-  <li><strong>Ease of Use:</strong> User-friendly interface that simplifies the setup and management of trading bots.</li>
-  <li><strong>Marketplaces:</strong> Provides access to a marketplace of strategies and signals from professional traders.</li>
-  <li><strong>Paper Trading:</strong> Offers a simulated trading environment to test strategies without risking real money.</li>
-  <li><strong>24/7 Trading:</strong> Automatically executes trades around the clock, taking advantage of market opportunities.</li>
-  <li><strong>Supported Coins:</strong> Cryptohopper supports numerous cryptocurrencies across its integrated exchanges, such as Bitcoin (BTC), Ethereum (ETH), Ripple (XRP), and more.</li>
-</ul>
+          <h3>4. Cryptohopper</h3>
+          <p><a href="https://www.cryptohopper.com/?atid=35048" target="_blank">Cryptohopper</a> is a popular trading bot known for its ease of use and comprehensive feature set. It’s suitable for both beginners and advanced traders looking to automate their trades. Cryptohopper’s user-friendly interface makes it easy to set up and manage trading bots. The platform offers extensive tutorials and a community forum to help users get started. The marketplace of strategies allows beginners to use pre-configured strategies from experienced traders, reducing the learning curve. Cryptohopper supports numerous cryptocurrencies across its integrated exchanges, including Bitcoin (BTC), Ethereum (ETH), and Ripple (XRP), and provides a simulated trading environment for testing strategies without risking real money.</p>
+          <ul>
+            <li><strong>Ease of Use:</strong> User-friendly interface that simplifies the setup and management of trading bots.</li>
+            <li><strong>Marketplaces:</strong> Provides access to a marketplace of strategies and signals from professional traders.</li>
+            <li><strong>Paper Trading:</strong> Offers a simulated trading environment to test strategies without risking real money.</li>
+            <li><strong>24/7 Trading:</strong> Automatically executes trades around the clock, taking advantage of market opportunities.</li>
+            <li><strong>Supported Coins:</strong> Cryptohopper supports numerous cryptocurrencies across its integrated exchanges, such as Bitcoin (BTC), Ethereum (ETH), Ripple (XRP), and more.</li>
+          </ul>
 
-<h3>5. Pionex</h3>
-<p><a href="https://accounts.pionex.com/en/signUp?r=0Fih4L5BbCb">Pionex</a> is an exchange that comes with built-in trading bots, offering a unique blend of trading automation and exchange features. It’s ideal for traders who prefer an all-in-one solution. Pionex is known for its low fees and ease of use, making it cost-effective for frequent traders. The built-in bots, such as Grid Trading and Arbitrage bots, are easy to set up and manage, providing an efficient trading experience. Pionex supports a wide range of cryptocurrencies, including Bitcoin (BTC), Ethereum (ETH), and various altcoins, and offers a mobile app for managing trades and bots on the go.</p>
-<ul>
-  <li><strong>Built-In Bots:</strong> Includes 16 free trading bots, such as Grid Trading and Arbitrage bots.</li>
-  <li><strong>Low Fees:</strong> Offers competitive trading fees, making it cost-effective for frequent traders.</li>
-  <li><strong>Mobile App:</strong> Provides a mobile app for managing trades and bots on the go.</li>
-  <li><strong>Security:</strong> Implements top-notch security measures to protect user funds.</li>
-  <li><strong>Supported Coins:</strong> Pionex supports a wide range of cryptocurrencies, including Bitcoin (BTC), Ethereum (ETH), and various altcoins.</li>
-</ul>
+          <h3>5. Pionex</h3>
+          <p><a href="https://accounts.pionex.com/en/signUp?r=0Fih4L5BbCb" target="_blank">Pionex</a> is an exchange that comes with built-in trading bots, offering a unique blend of trading automation and exchange features. It’s ideal for traders who prefer an all-in-one solution. Pionex is known for its low fees and ease of use, making it cost-effective for frequent traders. The built-in bots, such as Grid Trading and Arbitrage bots, are easy to set up and manage, providing an efficient trading experience. Pionex supports a wide range of cryptocurrencies, including Bitcoin (BTC), Ethereum (ETH), and various altcoins, and offers a mobile app for managing trades and bots on the go.</p>
+          <ul>
+            <li><strong>Built-In Bots:</strong> Includes 16 free trading bots, such as Grid Trading and Arbitrage bots.</li>
+            <li><strong>Low Fees:</strong> Offers competitive trading fees, making it cost-effective for frequent traders.</li>
+            <li><strong>Mobile App:</strong> Provides a mobile app for managing trades and bots on the go.</li>
+            <li><strong>Security:</strong> Implements top-notch security measures to protect user funds.</li>
+            <li><strong>Supported Coins:</strong> Pionex supports a wide range of cryptocurrencies, including Bitcoin (BTC), Ethereum (ETH), and various altcoins.</li>
+          </ul>
 
-<h3>6. Coinrule</h3>
-<p><a href="https://coinrule.com/ref.html?fpr=8d9xp">Coinrule</a> is a user-friendly trading bot designed to help you create and automate trading rules without any coding. It’s perfect for traders who want to automate their strategies easily. Coinrule offers a simple interface to set up and manage trading rules, with no coding required. The platform provides various tutorials and templates to help users get started quickly and effectively. It supports a variety of coins on its integrated exchanges, including Bitcoin (BTC), Ethereum (ETH), and Litecoin (LTC), and allows users to create and automate trading strategies with a few clicks.</p>
-<ul>
-  <li><strong>No Coding Required:</strong> Create and automate trading rules using a simple interface, without needing any programming skills.</li>
-  <li><strong>Wide Range of Strategies:</strong> Supports a variety of trading strategies, from simple to complex.</li>
-  <li><strong>Educational Resources:</strong> Offers tutorials and templates to help users get started with creating their own trading rules.</li>
-  <li><strong>Multi-Exchange Support:</strong> Compatible with major exchanges, providing flexibility in where you trade.</li>
-  <li><strong>Supported Coins:</strong> Coinrule supports a variety of coins on its integrated exchanges, including Bitcoin (BTC), Ethereum (ETH), Litecoin (LTC), and more.</li>
-</ul>
+          <h3>6. Coinrule</h3>
+          <p><a href="https://coinrule.com/ref.html?fpr=8d9xp" target="_blank">Coinrule</a> is a user-friendly trading bot designed to help you create and automate trading rules without any coding. It’s perfect for traders who want to automate their strategies easily. Coinrule offers a simple interface to set up and manage trading rules, with no coding required. The platform provides various tutorials and templates to help users get started quickly and effectively. It supports a variety of coins on its integrated exchanges, including Bitcoin (BTC), Ethereum (ETH), and Litecoin (LTC), and allows users to create and automate trading strategies with a few clicks.</p>
+          <ul>
+            <li><strong>No Coding Required:</strong> Create and automate trading rules using a simple interface, without needing any programming skills.</li>
+            <li><strong>Wide Range of Strategies:</strong> Supports a variety of trading strategies, from simple to complex.</li>
+            <li><strong>Educational Resources:</strong> Offers tutorials and templates to help users get started with creating their own trading rules.</li>
+            <li><strong>Multi-Exchange Support:</strong> Compatible with major exchanges, providing flexibility in where you trade.</li>
+            <li><strong>Supported Coins:</strong> Coinrule supports a variety of coins on its integrated exchanges, including Bitcoin (BTC), Ethereum (ETH), Litecoin (LTC), and more.</li>
+          </ul>
 
-<h3>Conclusion</h3>
-<p>Choosing the right crypto trading bot or platform depends on your individual needs and trading preferences. Bullx and Photon stand out for their ease of use and comprehensive trading interfaces, making them excellent choices for manual trading while still offering automated trading options. On the other hand, 3Commas, Cryptohopper, Pionex, and Coinrule offer robust automation features, catering to those looking to fully automate their trading strategies. Each platform provides unique features and benefits that can help you optimize your trading performance.</p>
-<p>Register with the links below to enjoy exclusive bonuses and incentives:</p>
-<ul>
-  <li><strong>Bullx:</strong> Sign up through <a href="https://t.me/BullxBetaBot?start=access_JPKYCT7U7PP">this link</a> to start automating your trades across multiple platforms.</li>
-  <li><strong>Photon:</strong> Use <a href="https://photon-sol.tinyastro.io/@360crypto">this link</a> for advanced trading solutions.</li>
-  <li><strong>3Commas:</strong> Register via <a href="https://app.3commas.io/auth/registration?utm_source=referral&utm_medium=cabinet&c=tc1727013">this link</a> to enjoy a versatile trading bot platform.</li>
-  <li><strong>Cryptohopper:</strong> Sign up with <a href="https://www.cryptohopper.com/?atid=35048">this link</a> to access a user-friendly and comprehensive trading bot.</li>
-  <li><strong>Pionex:</strong> Start trading with built-in bots through <a href="https://accounts.pionex.com/en/signUp?r=0Fih4L5BbCb">this link</a> and enjoy low fees and convenience.</li>
-  <li><strong>Coinrule:</strong> Automate your trading strategies easily with <a href="https://coinrule.com/ref.html?fpr=8d9xp">this link</a> and benefit from a no-coding-required interface.</li>
-</ul>
+                    <h3>Conclusion</h3>
+          <p>Choosing the right crypto trading bot or platform depends on your individual needs and trading preferences. Bullx and Photon stand out for their ease of use and comprehensive trading interfaces, making them excellent choices for manual trading while still offering automated trading options. On the other hand, 3Commas, Cryptohopper, Pionex, and Coinrule offer robust automation features, catering to those looking to fully automate their trading strategies. Each platform provides unique features and benefits that can help you optimize your trading performance.</p>
+          <p>Register with the links below to enjoy exclusive bonuses and incentives:</p>
+          <ul>
+            <li><a href="https://t.me/BullxBetaBot?start=access_JPKYCT7U7PP">Bullx:</a> Sign up through this link to start automating your trades across multiple platforms.</li>
+            <li><a href="https://photon-sol.tinyastro.io/@360crypto">Photon:</a> Use this link for advanced trading solutions.</li>
+            <li><a href="https://app.3commas.io/auth/registration?utm_source=referral&utm_medium=cabinet&c=tc1727013">3Commas:</a> Register via this link to enjoy a versatile trading bot platform.</li>
+            <li><a href="https://www.cryptohopper.com/?atid=35048">Cryptohopper:</a> Sign up with this link to access a user-friendly and comprehensive trading bot.</li>
+            <li><a href="https://accounts.pionex.com/en/signUp?r=0Fih4L5BbCb">Pionex:</a> Start trading with built-in bots through this link and enjoy low fees and convenience.</li>
+            <li><a href="https://coinrule.com/ref.html?fpr=8d9xp">Coinrule:</a> Automate your trading strategies easily with this link and benefit from a no-coding-required interface.</li>
+          </ul>
         </div>
       </body>
       </html>
@@ -732,112 +846,170 @@
         <html>
       <head>
         <title>Top Telegram Trading Bots</title>
-        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-        <style>
-          body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #121212;
-            color: #ffffff;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-          }
-          header {
-            background-color: #0a0a0a;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 2px solid #333;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-          }
-          header .logo a {
-            color: #fff;
-            font-size: 36px;
-            font-family: 'Orbitron', sans-serif;
-            text-decoration: none;
-            text-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
-          }
-          nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-          }
-          nav ul li {
-            margin: 0 15px;
-          }
-          nav ul li a {
-            color: #00bfff;
-            text-decoration: none;
-            font-size: 18px;
-            position: relative;
-            text-shadow: 0 0 5px rgba(0, 191, 255, 0.8);
-          }
-          .newsletter {
-            display: flex;
-            align-items: center;
-          }
-          .newsletter input[type="email"] {
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            margin-right: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-          }
-          .newsletter button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            background-color: #007bff;
-            color: #fff;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-          }
-          .newsletter button:hover {
-            background-color: #0056b3;
-          }
-          .article-title {
-            font-size: 32px;
-            margin-top: 20px;
-            font-family: 'Orbitron', sans-serif;
-            color: #00bfff;
-            text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
-          }
-          .guide-content {
-            padding: 40px 20px;
-            background-color: #2a2a2a;
-            margin: 20px auto;
-            max-width: 1200px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
-            text-align: left;
-          }
-          .guide-content h3 {
-            font-size: 32px;
-            margin-bottom: 20px;
-            font-family: 'Orbitron', sans-serif;
-            color: #00bfff;
-            text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
-          }
-          .guide-content p,
-          .guide-content ol,
-          .guide-content ul {
-            font-size: 18px;
-            line-height: 1.8;
-          }
-          .guide-content ul {
-            padding-left: 20px;
-          }
-          .guide-content a {
-            color: #00bfff;
-            text-decoration: underline;
-          }
-        </style>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+          <style>
+            body {
+      font-family: 'Exo 2', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+      overflow-x: hidden;
+    }
+            header {
+      background-color: #0a0a0a;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+    header .logo a {
+      color: #fff;
+      font-size: 36px;
+      font-family: 'Orbitron', sans-serif;
+      text-decoration: none;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #00bfff;
+      text-decoration: none;
+      font-size: 18px;
+      position: relative;
+      text-shadow: 0 0 5px rgba(0, 191, 255, 0.8);
+    }
+    nav ul li a:hover::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: #007bff;
+      left: 0;
+      bottom: -5px;
+      animation: hoverEffect 0.5s;
+    }
+    @keyframes hoverEffect {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+    .newsletter {
+      display: flex;
+      align-items: center;
+    }
+    .newsletter input[type="email"] {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .newsletter button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .newsletter button:hover {
+      background-color: #0056b3;
+    }
+            .article-title {
+              font-size: 32px;
+              margin-top: 20px;
+              text-align: center;
+              font-family: 'Orbitron', sans-serif;
+              color: #00bfff;
+              text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+            }
+    .category-block {
+      padding: 40px 20px;
+      background-color: #2a2a2a;
+      margin: 20px auto;
+      max-width: 1200px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      position: relative;
+    }
+    .category-block h2 {
+      font-size: 50px;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .category-block h3 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .category-block h4 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .category-block ul {
+      padding-left: 20px;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+    .category-block ul li a {
+      color: #00bfff;
+      text-decoration: underline;
+    }
+    .guide-content {
+      padding: 40px 20px;
+      background-color: #2a2a2a;
+      margin: 20px auto;
+      max-width: 1200px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+    .guide-content h3 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      font-family: 'Orbitron', sans-serif;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .guide-content p,
+    .guide-content ol,
+    .guide-content ul {
+      font-size: 18px;
+      line-height: 1.8;
+    }
+    .guide-content ul {
+      padding-left: 20px;
+    }
+    .guide-content a {
+      color: #00bfff;
+      text-decoration: underline;
+    }
+            
+          </style>
       </head>
       <body>
         <header>
@@ -863,17 +1035,17 @@
           <p>Telegram trading bots have become indispensable tools for cryptocurrency traders. These bots offer automated trading, real-time market analysis, and instant notifications, making the trading process more efficient and accessible. To use a Telegram trading bot, you need to have Telegram installed on your device. You can access the bots through specific t.me links and set them up directly within the Telegram app. This article explores some of the best Telegram trading bots available, detailing their features and benefits to help you make informed decisions and stay ahead in the market.</p>
 
           <h3>1. Trojan Bot</h3>
-          <p><a href="https://t.me/solana_trojanbot?start=r-48576889637">Trojan Bot</a> is a robust trading bot for the Solana network, providing traders with advanced trading capabilities. This bot is known for its powerful algorithms that optimize trading strategies, ensuring that users can maximize their profits while minimizing risks.</p>
+          <p><a href="https://t.me/solana_trojanbot?start=r-48576889637" target="_blank">Trojan Bot</a> is a robust trading bot for the Solana network, providing traders with advanced trading capabilities. This bot is known for its powerful algorithms that optimize trading strategies, ensuring that users can maximize their profits while minimizing risks.</p>
           <ul>
             <li><strong>Advanced Trading Algorithms:</strong> Utilizes sophisticated algorithms to optimize trading strategies.</li>
             <li><strong>Customizable Settings:</strong> Allows users to customize trading parameters to suit their needs.</li>
             <li><strong>Secure and Reliable:</strong> Ensures the safety of your funds with high-level security protocols.</li>
-            <li><strong>Multi-Wallet Management:</strong> Supports the management of multiple wallets simultaneously, ideal for organizing different trading strategies. This feature is particularly useful for traders who want to compartmentalize their investments based on various strategies such as quick trades, long-term holds, and DeFi activities.</li>
+            <li><strong>Multi-Wallet Management:</strong> Supports the management of multiple wallets simultaneously, ideal for organizing different trading strategies.</li>
             <li><strong>Mirror Bots:</strong> Access to mirror bots within the main bot provides an alternative when the main bot is slow or experiencing high traffic, ensuring uninterrupted trading activities.</li>
           </ul>
 
-          <h3>2. Bonk Bot</h3>
-          <p><a href="https://t.me/pepeboost_sol05_bot?start=ref_0h7z1x">Bonk Bot</a> is a versatile trading bot that offers a wide range of features for both beginners and advanced traders. It is known for its user-friendly interface and comprehensive trading tools, making it a popular choice among traders.</p>
+                    <h3>2. Bonk Bot</h3>
+          <p><a href="https://t.me/pepeboost_sol05_bot?start=ref_0h7z1x" target="_blank">Bonk Bot</a> is a versatile trading bot that offers a wide range of features for both beginners and advanced traders. It is known for its user-friendly interface and comprehensive trading tools, making it a popular choice among traders.</p>
           <ul>
             <li><strong>Ease of Use:</strong> Simple setup process and intuitive interface.</li>
             <li><strong>Comprehensive Tools:</strong> Offers a variety of trading tools and indicators.</li>
@@ -883,7 +1055,7 @@
           </ul>
 
           <h3>3. TonTradingBot</h3>
-          <p><a href="https://t.me/tontrade?start=ZcCbgSaM">TonTradingBot</a> is a trading bot designed for the TON (The Open Network) ecosystem. This bot offers a range of features tailored for trading within the TON blockchain, making it a valuable tool for traders interested in this specific network.</p>
+          <p><a href="https://t.me/tontrade?start=ZcCbgSaM" target="_blank">TonTradingBot</a> is a trading bot designed for the TON (The Open Network) ecosystem. This bot offers a range of features tailored for trading within the TON blockchain, making it a valuable tool for traders interested in this specific network.</p>
           <ul>
             <li><strong>User-Friendly Interface:</strong> Easy to navigate and use, suitable for traders of all levels.</li>
             <li><strong>Real-Time Data:</strong> Provides up-to-date market information to aid in making informed trading decisions.</li>
@@ -892,7 +1064,7 @@
           </ul>
 
           <h3>4. Soul Sniper</h3>
-          <p><a href="https://t.me/soul_sniper_bot?start=7avfDSyO06VG">Soul Sniper</a> is not only a trading bot but also a powerful tool for scanning token addresses and providing safety information through its Soul Scanner feature. It is particularly useful for traders who want to ensure the security and legitimacy of the tokens they are trading.</p>
+          <p><a href="https://t.me/soul_sniper_bot?start=7avfDSyO06VG" target="_blank">Soul Sniper</a> is not only a trading bot but also a powerful tool for scanning token addresses and providing safety information through its Soul Scanner feature. It is particularly useful for traders who want to ensure the security and legitimacy of the tokens they are trading.</p>
           <ul>
             <li><strong>Advanced Scanning Capabilities:</strong> The Soul Scanner can analyze token addresses for safety, including checking for burnt liquidity and identifying sniped tokens.</li>
             <li><strong>Real-Time Trading:</strong> Executes trades quickly and efficiently based on market conditions.</li>
@@ -900,7 +1072,7 @@
           </ul>
 
           <h3>5. Sol Trading Bot</h3>
-          <p><a href="https://t.me/stonks_sniper_bot?start=b4f107b809089ec9ede79e014cbad283">Sol Trading Bot</a> is an advanced trading bot specifically designed for the Solana network. It offers comprehensive trading tools and features that make it easy to execute trades quickly and efficiently. The bot is well-integrated with multiple DEX platforms on Solana, providing a seamless trading experience.</p>
+          <p><a href="https://t.me/stonks_sniper_bot?start=b4f107b809089ec9ede79e014cbad283" target="_blank">Sol Trading Bot</a> is an advanced trading bot specifically designed for the Solana network. It offers comprehensive trading tools and features that make it easy to execute trades quickly and efficiently. The bot is well-integrated with multiple DEX platforms on Solana, providing a seamless trading experience.</p>
           <ul>
             <li><strong>User-Friendly Interface:</strong> Easy to set up and use, ideal for both beginners and experienced traders.</li>
             <li><strong>Real-Time Alerts:</strong> Provides immediate notifications for price changes, ensuring you never miss a trading opportunity.</li>
@@ -909,7 +1081,7 @@
           </ul>
 
           <h3>6. Pepeboost ETH</h3>
-          <p><a href="https://t.me/pepeboost_swap_bot?start=ref_0uvl1u">Pepeboost ETH</a> is tailored for trading on the Ethereum network, offering a range of features that make trading seamless and efficient. This bot is designed to handle the fast-paced nature of the Ethereum market, providing traders with the tools they need to succeed.</p>
+          <p><a href="https://t.me/pepeboost_swap_bot?start=ref_0uvl1u" target="_blank">Pepeboost ETH</a> is tailored for trading on the Ethereum network, offering a range of features that make trading seamless and efficient. This bot is designed to handle the fast-paced nature of the Ethereum market, providing traders with the tools they need to succeed.</p>
           <ul>
             <li><strong>Automated Trading:</strong> Allows you to set up automated trading strategies based on predefined parameters.</li>
             <li><strong>Real-Time Market Data:</strong> Access to up-to-date market information to make informed trading decisions.</li>
@@ -918,7 +1090,7 @@
           </ul>
 
           <h3>7. Pepeboost Sol Bot</h3>
-          <p><a href="https://t.me/pepeboost_sol05_bot?start=ref_0h7z1x">Pepeboost Sol Bot</a> is another great option for Solana network traders, offering similar features to its Ethereum counterpart but optimized for Solana. It provides an efficient and user-friendly trading experience, tailored to the unique aspects of the Solana blockchain.</p>
+          <p><a href="https://t.me/pepeboost_sol05_bot?start=ref_0h7z1x" target="_blank">Pepeboost Sol Bot</a> is another great option for Solana network traders, offering similar features to its Ethereum counterpart but optimized for Solana. It provides an efficient and user-friendly trading experience, tailored to the unique aspects of the Solana blockchain.</p>
           <ul>
             <li><strong>Automated Strategies:</strong> Set up and execute automated trading strategies with ease.</li>
             <li><strong>Market Analysis Tools:</strong> Provides detailed market analysis and insights to help you make better trading decisions.</li>
@@ -926,7 +1098,7 @@
           </ul>
 
           <h3>8. Shuriken Bot</h3>
-          <p><a href="https://t.me/ShurikenTradeBot?start=ref-96dc75ff">Shuriken Bot</a> offers a powerful suite of trading tools for cryptocurrency enthusiasts. This bot is designed to deliver high precision in trading, helping users to execute trades with accuracy and efficiency.</p>
+          <p><a href="https://t.me/ShurikenTradeBot?start=ref-96dc75ff" target="_blank">Shuriken Bot</a> offers a powerful suite of trading tools for cryptocurrency enthusiasts. This bot is designed to deliver high precision in trading, helping users to execute trades with accuracy and efficiency.</p>
           <ul>
             <li><strong>High Precision:</strong> Delivers precise trading signals and strategies.</li>
             <li><strong>User-Friendly Interface:</strong> Simplifies the trading process, making it accessible for traders of all levels.</li>
@@ -936,14 +1108,14 @@
           <h3>Tracking Bots</h3>
 
           <h3>Etherdrops</h3>
-          <p><a href="https://t.me/EtherDROPS_bot?start=promo_LP856X">Etherdrops</a> is a tracking bot that provides real-time alerts on wallet activities. It is especially useful for tracking the activities of whale wallets and receiving notifications about significant transactions.</p>
+          <p><a href="https://t.me/EtherDROPS_bot?start=promo_LP856X" target="_blank">Etherdrops</a> is a tracking bot that provides real-time alerts on wallet activities. It is especially useful for tracking the activities of whale wallets and receiving notifications about significant transactions.</p>
           <ul>
             <li><strong>Whale Wallet Tracking:</strong> Allows you to input a wallet address and receive alerts whenever significant transactions occur.</li>
             <li><strong>Copy Trading:</strong> Offers the option to follow and replicate the trades of successful traders, allowing you to benefit from their expertise.</li>
           </ul>
 
           <h3>Ray Silver</h3>
-          <p><a href="https://t.me/ray_blue_bot?start=ref_YAN0Gc">Ray Silver</a> is another excellent tracking bot, similar to Etherdrops, but with additional features for Solana network users. It helps traders stay informed about wallet activities.</p>
+          <p><a href="https://t.me/ray_blue_bot?start=ref_YAN0Gc" target="_blank">Ray Silver</a> is another excellent tracking bot, similar to Etherdrops, but with additional features for Solana network users. It helps traders stay informed about wallet activities.</p>
           <ul>
             <li><strong>Wallet Activity Alerts:</strong> Tracks transactions from specified wallets and sends real-time notifications.</li>
             <li><strong>Copy Trading:</strong> Allows you to mirror the trades of prominent traders in the network, helping you capitalize on their successful strategies.</li>
@@ -952,8 +1124,7 @@
                     <h3>Conclusion</h3>
           <p>Telegram trading bots offer a wide range of features that can significantly enhance your trading experience. Whether you are looking for automated trading, real-time market analysis, advanced security insights, or efficient tracking of wallet activities, there is a bot to meet your needs. These tools cater to both beginners and experienced traders, providing user-friendly interfaces and sophisticated functionalities to optimize trading strategies. By leveraging these powerful tools, you can stay ahead in the fast-paced world of cryptocurrency trading and make informed decisions to maximize your profits while minimizing risks.</p>
 
-
-                    <p>Register with the links below to start leveraging these powerful tools:</p>
+          <p>Register with the links below to start leveraging these powerful tools:</p>
           <ul>
             <li><a href="https://t.me/solana_trojanbot?start=r-48576889637">Trojan Bot</a>: Sign up for advanced trading capabilities on the Solana network.</li>
             <li><a href="https://t.me/pepeboost_sol05_bot?start=ref_0h7z1x">Bonk Bot</a>: Use this link for a versatile trading experience.</li>
@@ -972,6 +1143,7 @@
     `);
   }
 </script>
+
 <script>
   function openArticle4() {
     const win = window.open('', '_blank');
@@ -979,112 +1151,170 @@
         <html>
       <head>
         <title>Best Crypto Mining Tools and Platforms</title>
-        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-        <style>
-          body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #121212;
-            color: #ffffff;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-          }
-          header {
-            background-color: #0a0a0a;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 2px solid #333;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-          }
-          header .logo a {
-            color: #fff;
-            font-size: 36px;
-            font-family: 'Orbitron', sans-serif;
-            text-decoration: none;
-            text-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
-          }
-          nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-          }
-          nav ul li {
-            margin: 0 15px;
-          }
-          nav ul li a {
-            color: #00bfff;
-            text-decoration: none;
-            font-size: 18px;
-            position: relative;
-            text-shadow: 0 0 5px rgba(0, 191, 255, 0.8);
-          }
-          .newsletter {
-            display: flex;
-            align-items: center;
-          }
-          .newsletter input[type="email"] {
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            margin-right: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-          }
-          .newsletter button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            background-color: #007bff;
-            color: #fff;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-          }
-          .newsletter button:hover {
-            background-color: #0056b3;
-          }
-          .article-title {
-            font-size: 32px;
-            margin-top: 20px;
-            font-family: 'Orbitron', sans-serif;
-            color: #00bfff;
-            text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
-          }
-          .guide-content {
-            padding: 40px 20px;
-            background-color: #2a2a2a;
-            margin: 20px auto;
-            max-width: 1200px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
-            text-align: left;
-          }
-          .guide-content h3 {
-            font-size: 32px;
-            margin-bottom: 20px;
-            font-family: 'Orbitron', sans-serif;
-            color: #00bfff;
-            text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
-          }
-          .guide-content p,
-          .guide-content ol,
-          .guide-content ul {
-            font-size: 18px;
-            line-height: 1.8;
-          }
-          .guide-content ul {
-            padding-left: 20px;
-          }
-          .guide-content a {
-            color: #00bfff;
-            text-decoration: underline;
-          }
-        </style>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+          <style>
+            body {
+      font-family: 'Exo 2', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+      overflow-x: hidden;
+    }
+            header {
+      background-color: #0a0a0a;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+    header .logo a {
+      color: #fff;
+      font-size: 36px;
+      font-family: 'Orbitron', sans-serif;
+      text-decoration: none;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #00bfff;
+      text-decoration: none;
+      font-size: 18px;
+      position: relative;
+      text-shadow: 0 0 5px rgba(0, 191, 255, 0.8);
+    }
+    nav ul li a:hover::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: #007bff;
+      left: 0;
+      bottom: -5px;
+      animation: hoverEffect 0.5s;
+    }
+    @keyframes hoverEffect {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+    .newsletter {
+      display: flex;
+      align-items: center;
+    }
+    .newsletter input[type="email"] {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .newsletter button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .newsletter button:hover {
+      background-color: #0056b3;
+    }
+            .article-title {
+              font-size: 32px;
+              margin-top: 20px;
+              text-align: center;
+              font-family: 'Orbitron', sans-serif;
+              color: #00bfff;
+              text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+            }
+    .category-block {
+      padding: 40px 20px;
+      background-color: #2a2a2a;
+      margin: 20px auto;
+      max-width: 1200px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      position: relative;
+    }
+    .category-block h2 {
+      font-size: 50px;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .category-block h3 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .category-block h4 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .category-block ul {
+      padding-left: 20px;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+    .category-block ul li a {
+      color: #00bfff;
+      text-decoration: underline;
+    }
+    .guide-content {
+      padding: 40px 20px;
+      background-color: #2a2a2a;
+      margin: 20px auto;
+      max-width: 1200px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+    .guide-content h3 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      font-family: 'Orbitron', sans-serif;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .guide-content p,
+    .guide-content ol,
+    .guide-content ul {
+      font-size: 18px;
+      line-height: 1.8;
+    }
+    .guide-content ul {
+      padding-left: 20px;
+    }
+    .guide-content a {
+      color: #00bfff;
+      text-decoration: underline;
+    }
+            
+          </style>
       </head>
       <body>
         <header>
@@ -1117,7 +1347,7 @@
             <li><strong>Accessibility:</strong> Available on multiple devices, including desktops and mobile phones.</li>
           </ul>
 
-          <h3>Indirect Mining</h3>
+                    <h3>Indirect Mining</h3>
           <p>Indirect mining involves earning cryptocurrency by participating in activities that generate crypto rewards. These platforms allow you to earn crypto without the need for traditional mining hardware or software.</p>
 
           <h3>2. Cointiply</h3>
@@ -1128,7 +1358,7 @@
             <li><strong>High Earning Potential:</strong> Offers competitive rates for activities, maximizing your earning potential.</li>
           </ul>
 
-                    <h3>3. Pawns</h3>
+          <h3>3. Pawns</h3>
           <p><a href="https://pawns.app/?r=5821852">Pawns</a> allows users to earn cryptocurrency by sharing their internet bandwidth. This innovative approach to indirect mining provides an effortless way to earn passive income without the need for traditional mining equipment.</p>
           <ul>
             <li><strong>Passive Income:</strong> Earn crypto by simply sharing your unused internet bandwidth.</li>
@@ -1144,7 +1374,7 @@
             <li><strong>High Rewards:</strong> Competitive earning rates and frequent bonus opportunities to maximize your earnings.</li>
           </ul>
 
-                    <h3>Conclusion</h3>
+          <h3>Conclusion</h3>
           <p>In conclusion, whether you are interested in direct or indirect mining, there are several excellent tools and platforms available to help you earn cryptocurrency efficiently and effectively. <a href="https://cryptotab.farm/go/G1UK2YJ9">CryptoTab</a> stands out for its ease of use and accessibility, making it a top choice for direct mining. For those interested in indirect mining, platforms like <a href="http://cointiply.com/r/575OvJ">Cointiply</a>, <a href="https://pawns.app/?r=5821852">Pawns</a>, and <a href="https://freecash.com/r/c206bbd175b1b90eb38a">Freecash</a> offer diverse and user-friendly ways to earn crypto rewards. By leveraging these tools, you can enhance your crypto earnings and participate in the exciting world of cryptocurrency mining.</p>
         </div>
       </body>
@@ -1160,112 +1390,170 @@
         <html>
       <head>
         <title>PVP vs PPP: The Future of Crypto Communities</title>
-        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-        <style>
-          body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #121212;
-            color: #ffffff;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-          }
-          header {
-            background-color: #0a0a0a;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 2px solid #333;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-          }
-          header .logo a {
-            color: #fff;
-            font-size: 36px;
-            font-family: 'Orbitron', sans-serif;
-            text-decoration: none;
-            text-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
-          }
-          nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-          }
-          nav ul li {
-            margin: 0 15px;
-          }
-          nav ul li a {
-            color: #00bfff;
-            text-decoration: none;
-            font-size: 18px;
-            position: relative;
-            text-shadow: 0 0 5px rgba(0, 191, 255, 0.8);
-          }
-          .newsletter {
-            display: flex;
-            align-items: center;
-          }
-          .newsletter input[type="email"] {
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            margin-right: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-          }
-          .newsletter button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            background-color: #007bff;
-            color: #fff;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-          }
-          .newsletter button:hover {
-            background-color: #0056b3;
-          }
-          .article-title {
-            font-size: 32px;
-            margin-top: 20px;
-            font-family: 'Orbitron', sans-serif;
-            color: #00bfff;
-            text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
-          }
-          .guide-content {
-            padding: 40px 20px;
-            background-color: #2a2a2a;
-            margin: 20px auto;
-            max-width: 1200px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
-            text-align: left;
-          }
-          .guide-content h3 {
-            font-size: 32px;
-            margin-bottom: 20px;
-            font-family: 'Orbitron', sans-serif;
-            color: #00bfff;
-            text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
-          }
-          .guide-content p,
-          .guide-content ol,
-          .guide-content ul {
-            font-size: 18px;
-            line-height: 1.8;
-          }
-          .guide-content ul {
-            padding-left: 20px;
-          }
-          .guide-content a {
-            color: #00bfff;
-            text-decoration: underline;
-          }
-        </style>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+          <style>
+            body {
+      font-family: 'Exo 2', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+      overflow-x: hidden;
+    }
+            header {
+      background-color: #0a0a0a;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+    header .logo a {
+      color: #fff;
+      font-size: 36px;
+      font-family: 'Orbitron', sans-serif;
+      text-decoration: none;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #00bfff;
+      text-decoration: none;
+      font-size: 18px;
+      position: relative;
+      text-shadow: 0 0 5px rgba(0, 191, 255, 0.8);
+    }
+    nav ul li a:hover::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: #007bff;
+      left: 0;
+      bottom: -5px;
+      animation: hoverEffect 0.5s;
+    }
+    @keyframes hoverEffect {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+    .newsletter {
+      display: flex;
+      align-items: center;
+    }
+    .newsletter input[type="email"] {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .newsletter button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .newsletter button:hover {
+      background-color: #0056b3;
+    }
+            .article-title {
+              font-size: 32px;
+              margin-top: 20px;
+              text-align: center;
+              font-family: 'Orbitron', sans-serif;
+              color: #00bfff;
+              text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+            }
+    .category-block {
+      padding: 40px 20px;
+      background-color: #2a2a2a;
+      margin: 20px auto;
+      max-width: 1200px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      position: relative;
+    }
+    .category-block h2 {
+      font-size: 50px;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .category-block h3 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .category-block h4 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .category-block ul {
+      padding-left: 20px;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+    .category-block ul li a {
+      color: #00bfff;
+      text-decoration: underline;
+    }
+    .guide-content {
+      padding: 40px 20px;
+      background-color: #2a2a2a;
+      margin: 20px auto;
+      max-width: 1200px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+    .guide-content h3 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      font-family: 'Orbitron', sans-serif;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .guide-content p,
+    .guide-content ol,
+    .guide-content ul {
+      font-size: 18px;
+      line-height: 1.8;
+    }
+    .guide-content ul {
+      padding-left: 20px;
+    }
+    .guide-content a {
+      color: #00bfff;
+      text-decoration: underline;
+    }
+            
+          </style>
       </head>
       <body>
         <header>
@@ -1292,13 +1580,13 @@
 
           <h3>Understanding PVP vs PPP</h3>
 
-          <h4>PVP Communities</h4>
+                    <h4>PVP Communities</h4>
           <p>PVP, or Player vs. Player, is a mindset where participants view each other as competition. The main goal is often to attract new investors to increase the value of their holdings, with the ultimate aim of exiting at a profit. This creates a finite game with a clear end point—typically when the last participant is left holding the bag. PVP communities are easy to form because they rely on the simple premise of making money by attracting others.</p>
 
           <h4>PPP Communities</h4>
           <p>PPP, or Player Pump Player, is a community-driven approach that focuses on long-term success and mutual benefit. In PPP communities, the goal is to ensure that every new participant benefits, fostering a sustainable and collaborative environment. This creates an infinite game where the community works together towards a common future, supporting each other to grow and thrive.</p>
 
-                    <h3>Why PPP is the Future of Crypto</h3>
+          <h3>Why PPP is the Future of Crypto</h3>
           <p>PPP communities are the future of crypto because they offer a sustainable and ethical approach to community building. Here are some key reasons:</p>
           <ul>
             <li><strong>Aligned Interests:</strong> PPP communities work towards ensuring that every participant benefits, promoting long-term success and stability.</li>
@@ -1310,42 +1598,40 @@
           <h3>Influential Figures Promoting PPP</h3>
 
           <h4>Meow (Jupiter Exchange Creator)</h4>
-<p>Meow is a prominent advocate for PPP, with a detailed series on building PPP culture in crypto. His insights highlight the importance of transitioning from PVP to PPP and the challenges involved. Meow emphasizes the need for trust, collaboration, and long-term vision in building successful PPP communities.</p>
-<ul>
-  <li><strong>Meow's PPP Series:</strong> <a href="https://meow.bio/ppp.html">Read here</a></li>
-  <li><strong>Twitter:</strong> <a href="https://x.com/weremeow">@weremeow</a></li>
-</ul>
-<p>Meow describes PPP as an infinite game, where the goal is to help every participant succeed, unlike PVP which focuses on short-term gains at the expense of others. He explains that while PVP communities are easier to form, PPP communities are more sustainable and foster a healthier ecosystem. Meow also points out that PPP communities like Bitcoin, Ethereum, and Solana have thrived by supporting each new entrant rather than viewing them as exit liquidity.</p>
-<p>Meow argues that the future of crypto lies in PPP because it combines communal vision and profit, balancing idealism and pragmatism. He acknowledges the difficulties in building PPP communities but believes that their resilience and long-term benefits will ultimately prevail over PVP practices, which often lead to instability and negative perceptions.</p>
-
+          <p>Meow is a prominent advocate for PPP, with a detailed series on building PPP culture in crypto. His insights highlight the importance of transitioning from PVP to PPP and the challenges involved. Meow emphasizes the need for trust, collaboration, and long-term vision in building successful PPP communities.</p>
+          <ul>
+            <li><strong>Meow's PPP Series:</strong> <a href="https://meow.bio/ppp.html">Read here</a></li>
+            <li><strong>Twitter:</strong> <a href="https://x.com/weremeow">@weremeow</a></li>
+          </ul>
+          <p>Meow describes PPP as an infinite game, where the goal is to help every participant succeed, unlike PVP which focuses on short-term gains at the expense of others. He explains that while PVP communities are easier to form, PPP communities are more sustainable and foster a healthier ecosystem. Meow also points out that PPP communities like Bitcoin, Ethereum, and Solana have thrived by supporting each new entrant rather than viewing them as exit liquidity.</p>
+          <p>Meow argues that the future of crypto lies in PPP because it combines communal vision and profit, balancing idealism and pragmatism. He acknowledges the difficulties in building PPP communities but believes that their resilience and long-term benefits will ultimately prevail over PVP practices, which often lead to instability and negative perceptions.</p>
 
           <h4>Kyle Chasse</h4>
-<p>Kyle Chasse expands on Meow's concepts by introducing the idea of "Protocol Pump Player," which leverages blockchain transparency to ensure protocol-driven support for the community. This approach aims to create self-sustaining communities where the success of each participant is assured by the protocol's design.</p>
-<ul>
-  <li><strong>Kyle's Medium Post:</strong> <a href="https://kylemv.medium.com/protocol-pump-player-the-evolution-of-ppp-383b5c21ae66">Read here</a></li>
-  <li><strong>Twitter:</strong> <a href="https://x.com/kyle_chasse">@kyle_chasse</a></li>
-</ul>
-<p>Kyle emphasizes that Protocol Pump Player (PPP) builds on the foundational ideas of Meow but incorporates blockchain's "Don't trust, verify" principle. By embedding revenue reinvestment mechanisms directly into the protocol, PPP ensures continuous support for the token's value, reducing the risks associated with human trust and pump-and-dump schemes. He argues that this protocol-driven approach will lead to more secure and aligned communities.</p>
-<p>Kyle also addresses the challenges of creating genuine PPP environments, especially in the world of meme coins. He suggests that meme coins need to leverage their initial success and community spirit to build sustainable projects. This involves innovative utility, community-driven projects, and transparent revenue-sharing mechanisms that support the token economy.</p>
-
+          <p>Kyle Chasse expands on Meow's concepts by introducing the idea of "Protocol Pump Player," which leverages blockchain transparency to ensure protocol-driven support for the community. This approach aims to create self-sustaining communities where the success of each participant is assured by the protocol's design.</p>
+          <ul>
+            <li><strong>Kyle's Medium Post:</strong> <a href="https://kylemv.medium.com/protocol-pump-player-the-evolution-of-ppp-383b5c21ae66">Read here</a></li>
+            <li><strong>Twitter:</strong> <a href="https://x.com/kyle_chasse">@kyle_chasse</a></li>
+          </ul>
+          <p>Kyle emphasizes that Protocol Pump Player (PPP) builds on the foundational ideas of Meow but incorporates blockchain's "Don't trust, verify" principle. By embedding revenue reinvestment mechanisms directly into the protocol, PPP ensures continuous support for the token's value, reducing the risks associated with human trust and pump-and-dump schemes. He argues that this protocol-driven approach will lead to more secure and aligned communities.</p>
+          <p>Kyle also addresses the challenges of creating genuine PPP environments, especially in the world of meme coins. He suggests that meme coins need to leverage their initial success and community spirit to build sustainable projects. This involves innovative utility, community-driven projects, and transparent revenue-sharing mechanisms that support the token economy.</p>
 
           <h4>The Krypto King</h4>
-<p>The Krypto King, a notable figure in the crypto community and a creator of TSE (TonSeason), emphasizes the importance of fair practices in building PPP communities. He outlines key principles for PPP projects, focusing on transparency, fair distribution, and community trust.</p>
-<ul>
-  <li><strong>Twitter:</strong> <a href="https://x.com/thekryptoking_">@thekryptoking_</a></li>
-</ul>
-<p><strong>A PPP Project Must:</strong></p>
-<ul>
-  <li><strong>Fair Supply Distribution:</strong> Not snipe the supply and give it to influencers to 'shill' the token. Supply must be bought off the open market to maintain fairness.</li>
-  <li><strong>Honest Promotion:</strong> Must not promote the token as a great hold while wallets sell from day one.</li>
-  <li><strong>Fair Investor Terms:</strong> Avoid giving investors and marketers terms that allow them to dump on the community, and push back against predatory terms.</li>
-</ul>
-<p><strong>Community Principles:</strong></p>
-<ul>
-  <li><strong>Fair Launch:</strong> Ensure the community can buy at fair prices from day one.</li>
-  <li><strong>Transparency:</strong> Doxxed dev wallets to prove loyalty and add trust and transparency to the community.</li>
-</ul>
-<p>The goal of PPP is to educate others and actively reject PVP communities, especially those disguised as PPP. As a community, it is crucial to read the documents the 'narrative' is based on and hold communities accountable when they claim PPP, to avoid being misled.</p>
+          <p>The Krypto King, a notable figure in the crypto community and a creator of TSE (TonSeason), emphasizes the importance of fair practices in building PPP communities. He outlines key principles for PPP projects, focusing on transparency, fair distribution, and community trust.</p>
+          <ul>
+            <li><strong>Twitter:</strong> <a href="https://x.com/thekryptoking_">@thekryptoking_</a></li>
+          </ul>
+          <p><strong>A PPP Project Must:</strong></p>
+          <ul>
+            <li><strong>Fair Supply Distribution:</strong> Not snipe the supply and give it to influencers to 'shill' the token. Supply must be bought off the open market to maintain fairness.</li>
+            <li><strong>Honest Promotion:</strong> Must not promote the token as a great hold while wallets sell from day one.</li>
+            <li><strong>Fair Investor Terms:</strong> Avoid giving investors and marketers terms that allow them to dump on the community, and push back against predatory terms.</li>
+          </ul>
+          <p><strong>Community Principles:</strong></p>
+          <ul>
+            <li><strong>Fair Launch:</strong> Ensure the community can buy at fair prices from day one.</li>
+            <li><strong>Transparency:</strong> Doxxed dev wallets to prove loyalty and add trust and transparency to the community.</li>
+          </ul>
+          <p>The goal of PPP is to educate others and actively reject PVP communities, especially those disguised as PPP. As a community, it is crucial to read the documents the 'narrative' is based on and hold communities accountable when they claim PPP, to avoid being misled.</p>
 
           <h3>Best PPP Communities on the TON Chain</h3>
 
@@ -1370,8 +1656,8 @@
           </ul>
 
           <h3>Conclusion</h3>
-          <p>The transition from PVP to PPP represents a significant shift in the crypto community mindset. PPP communities prioritize mutual support, long-term growth, and resilience, making them the future of the crypto space. Influential figures like Meow, Kyle Chase, and The Krypto King are at the forefront of this movement, advocating for transparent, protocol-driven support systems that ensure the success of all participants. By choosing PPP over PVP, we can create a more sustainable and positive future for cryptocurrency communities.</p>
-          <p>For more insights and updates on PPP communities, follow Meow, Kyle Chase, and The Krypto King on their respective platforms. Join the movement towards a better, more collaborative crypto ecosystem.</p>
+          <p>The transition from PVP to PPP represents a significant shift in the crypto community mindset. PPP communities prioritize mutual support, long-term growth, and resilience, making them the future of the crypto space. Influential figures like Meow, Kyle Chasse, and The Krypto King are at the forefront of this movement, advocating for transparent, protocol-driven support systems that ensure the success of all participants. By choosing PPP over PVP, we can create a more sustainable and positive future for cryptocurrency communities.</p>
+          <p>For more insights and updates on PPP communities, follow Meow, Kyle Chasse, and The Krypto King on their respective platforms. Join the movement towards a better, more collaborative crypto ecosystem.</p>
         </div>
       </body>
       </html>
@@ -1386,112 +1672,170 @@
         <html>
       <head>
         <title>The Rise of TON Blockchain</title>
-        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-        <style>
-          body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #121212;
-            color: #ffffff;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-          }
-          header {
-            background-color: #0a0a0a;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 2px solid #333;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-          }
-          header .logo a {
-            color: #fff;
-            font-size: 36px;
-            font-family: 'Orbitron', sans-serif;
-            text-decoration: none;
-            text-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
-          }
-          nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-          }
-          nav ul li {
-            margin: 0 15px;
-          }
-          nav ul li a {
-            color: #00bfff;
-            text-decoration: none;
-            font-size: 18px;
-            position: relative;
-            text-shadow: 0 0 5px rgba(0, 191, 255, 0.8);
-          }
-          .newsletter {
-            display: flex;
-            align-items: center;
-          }
-          .newsletter input[type="email"] {
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            margin-right: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-          }
-          .newsletter button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            background-color: #007bff;
-            color: #fff;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-          }
-          .newsletter button:hover {
-            background-color: #0056b3;
-          }
-          .article-title {
-            font-size: 32px;
-            margin-top: 20px;
-            font-family: 'Orbitron', sans-serif;
-            color: #00bfff;
-            text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
-          }
-          .guide-content {
-            padding: 40px 20px;
-            background-color: #2a2a2a;
-            margin: 20px auto;
-            max-width: 1200px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
-            text-align: left;
-          }
-          .guide-content h3 {
-            font-size: 32px;
-            margin-bottom: 20px;
-            font-family: 'Orbitron', sans-serif;
-            color: #00bfff;
-            text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
-          }
-          .guide-content p,
-          .guide-content ol,
-          .guide-content ul {
-            font-size: 18px;
-            line-height: 1.8;
-          }
-          .guide-content ul {
-            padding-left: 20px;
-          }
-          .guide-content a {
-            color: #00bfff;
-            text-decoration: underline;
-          }
-        </style>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+          <style>
+            body {
+      font-family: 'Exo 2', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+      overflow-x: hidden;
+    }
+            header {
+      background-color: #0a0a0a;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+    header .logo a {
+      color: #fff;
+      font-size: 36px;
+      font-family: 'Orbitron', sans-serif;
+      text-decoration: none;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #00bfff;
+      text-decoration: none;
+      font-size: 18px;
+      position: relative;
+      text-shadow: 0 0 5px rgba(0, 191, 255, 0.8);
+    }
+    nav ul li a:hover::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: #007bff;
+      left: 0;
+      bottom: -5px;
+      animation: hoverEffect 0.5s;
+    }
+    @keyframes hoverEffect {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+    .newsletter {
+      display: flex;
+      align-items: center;
+    }
+    .newsletter input[type="email"] {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .newsletter button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .newsletter button:hover {
+      background-color: #0056b3;
+    }
+            .article-title {
+              font-size: 32px;
+              margin-top: 20px;
+              text-align: center;
+              font-family: 'Orbitron', sans-serif;
+              color: #00bfff;
+              text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+            }
+    .category-block {
+      padding: 40px 20px;
+      background-color: #2a2a2a;
+      margin: 20px auto;
+      max-width: 1200px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      position: relative;
+    }
+    .category-block h2 {
+      font-size: 50px;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .category-block h3 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .category-block h4 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .category-block ul {
+      padding-left: 20px;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+    .category-block ul li a {
+      color: #00bfff;
+      text-decoration: underline;
+    }
+    .guide-content {
+      padding: 40px 20px;
+      background-color: #2a2a2a;
+      margin: 20px auto;
+      max-width: 1200px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+    .guide-content h3 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      font-family: 'Orbitron', sans-serif;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .guide-content p,
+    .guide-content ol,
+    .guide-content ul {
+      font-size: 18px;
+      line-height: 1.8;
+    }
+    .guide-content ul {
+      padding-left: 20px;
+    }
+    .guide-content a {
+      color: #00bfff;
+      text-decoration: underline;
+    }
+            
+          </style>
       </head>
       <body>
         <header>
@@ -1529,7 +1873,7 @@
             <li><strong>User-Friendly:</strong> TON aims to be user-friendly with seamless integration into popular applications like Telegram.</li>
           </ul>
 
-                    <h3>Why TON Blockchain is Set to Succeed</h3>
+          <h3>Why TON Blockchain is Set to Succeed</h3>
           <p>TON's Infinite Sharding Paradigm and Hypercube Routing enable it to handle millions of transactions per second, making it one of the fastest and most scalable blockchains available. This scalability is crucial for supporting mass adoption and large-scale applications.</p>
           <ul>
             <li><strong>Scalability and Speed:</strong> TON's Infinite Sharding Paradigm and Hypercube Routing enable it to handle millions of transactions per second, making it one of the fastest and most scalable blockchains available. This scalability is crucial for supporting mass adoption and large-scale applications.</li>
@@ -1541,7 +1885,7 @@
           <h3>The Growing Memecoin Ecosystem on TON</h3>
           <p>The TON blockchain is also home to a thriving memecoin ecosystem. Memecoins have gained popularity for their community-driven nature and the viral marketing potential they offer. On TON, this trend is supported by the blockchain's high transaction speed and low fees, making it an ideal environment for trading and growing memecoins.</p>
 
-          <h3>Best Coins on TON Blockchain</h3>
+                    <h3>Best Coins on TON Blockchain</h3>
           <ul>
             <li><strong>TCAT (TonCat):</strong> TCAT is one of the leading projects on the TON blockchain, focusing on fair distribution and community-driven growth. It offers innovative features and aims to provide equal opportunities for all participants.
               <ul>
@@ -1573,7 +1917,6 @@
     `);
   }
 </script>
-
 <script>
   function openArticle7() {
     const win = window.open('', '_blank');
@@ -1581,112 +1924,170 @@
         <html>
       <head>
         <title>TradingView: The Ultimate Tool for Traders</title>
-        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-        <style>
-          body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #121212;
-            color: #ffffff;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-          }
-          header {
-            background-color: #0a0a0a;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 2px solid #333;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-          }
-          header .logo a {
-            color: #fff;
-            font-size: 36px;
-            font-family: 'Orbitron', sans-serif;
-            text-decoration: none;
-            text-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
-          }
-          nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-          }
-          nav ul li {
-            margin: 0 15px;
-          }
-          nav ul li a {
-            color: #00bfff;
-            text-decoration: none;
-            font-size: 18px;
-            position: relative;
-            text-shadow: 0 0 5px rgba(0, 191, 255, 0.8);
-          }
-          .newsletter {
-            display: flex;
-            align-items: center;
-          }
-          .newsletter input[type="email"] {
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            margin-right: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-          }
-          .newsletter button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            background-color: #007bff;
-            color: #fff;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-          }
-          .newsletter button:hover {
-            background-color: #0056b3;
-          }
-          .article-title {
-            font-size: 32px;
-            margin-top: 20px;
-            font-family: 'Orbitron', sans-serif;
-            color: #00bfff;
-            text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
-          }
-          .guide-content {
-            padding: 40px 20px;
-            background-color: #2a2a2a;
-            margin: 20px auto;
-            max-width: 1200px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
-            text-align: left;
-          }
-          .guide-content h3 {
-            font-size: 32px;
-            margin-bottom: 20px;
-            font-family: 'Orbitron', sans-serif;
-            color: #00bfff;
-            text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
-          }
-          .guide-content p,
-          .guide-content ol,
-          .guide-content ul {
-            font-size: 18px;
-            line-height: 1.8;
-          }
-          .guide-content ul {
-            padding-left: 20px;
-          }
-          .guide-content a {
-            color: #00bfff;
-            text-decoration: underline;
-          }
-        </style>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+          <style>
+            body {
+      font-family: 'Exo 2', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+      overflow-x: hidden;
+    }
+            header {
+      background-color: #0a0a0a;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+    header .logo a {
+      color: #fff;
+      font-size: 36px;
+      font-family: 'Orbitron', sans-serif;
+      text-decoration: none;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #00bfff;
+      text-decoration: none;
+      font-size: 18px;
+      position: relative;
+      text-shadow: 0 0 5px rgba(0, 191, 255, 0.8);
+    }
+    nav ul li a:hover::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: #007bff;
+      left: 0;
+      bottom: -5px;
+      animation: hoverEffect 0.5s;
+    }
+    @keyframes hoverEffect {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+    .newsletter {
+      display: flex;
+      align-items: center;
+    }
+    .newsletter input[type="email"] {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .newsletter button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .newsletter button:hover {
+      background-color: #0056b3;
+    }
+            .article-title {
+              font-size: 32px;
+              margin-top: 20px;
+              text-align: center;
+              font-family: 'Orbitron', sans-serif;
+              color: #00bfff;
+              text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+            }
+    .category-block {
+      padding: 40px 20px;
+      background-color: #2a2a2a;
+      margin: 20px auto;
+      max-width: 1200px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      position: relative;
+    }
+    .category-block h2 {
+      font-size: 50px;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .category-block h3 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .category-block h4 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .category-block ul {
+      padding-left: 20px;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+    .category-block ul li a {
+      color: #00bfff;
+      text-decoration: underline;
+    }
+    .guide-content {
+      padding: 40px 20px;
+      background-color: #2a2a2a;
+      margin: 20px auto;
+      max-width: 1200px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+    .guide-content h3 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      font-family: 'Orbitron', sans-serif;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .guide-content p,
+    .guide-content ol,
+    .guide-content ul {
+      font-size: 18px;
+      line-height: 1.8;
+    }
+    .guide-content ul {
+      padding-left: 20px;
+    }
+    .guide-content a {
+      color: #00bfff;
+      text-decoration: underline;
+    }
+            
+          </style>
       </head>
       <body>
         <header>
@@ -1713,29 +2114,29 @@
 
                     <h3>Key Features of TradingView</h3>
           <ul>
-            <li><strong>Advanced Charting Tools:</strong> <a href="https://www.tradingview.com/?aff_id=140833">TradingView</a> offers a wide array of charting tools that cater to the needs of all types of traders. Whether you're into stocks, forex, cryptocurrencies, or commodities, <a href="https://www.tradingview.com/?aff_id=140833">TradingView</a> provides detailed charts that are highly customizable. You can choose from various chart types, including line, bar, and candlestick charts, to analyze market movements effectively.</li>
-            <li><strong>Extensive Indicators Library:</strong> <a href="https://www.tradingview.com/?aff_id=140833">TradingView</a> boasts an extensive library of technical indicators, with over 100 built-in indicators to help traders analyze market trends and make informed decisions. Some of the most popular indicators include Moving Averages, Relative Strength Index (RSI), and Bollinger Bands. Additionally, traders can use multiple indicators on a single chart to develop a comprehensive trading strategy.</li>
-            <li><strong>Custom Indicators and Strategies:</strong> One of the standout features of <a href="https://www.tradingview.com/?aff_id=140833">TradingView</a> is the ability to create custom indicators and trading strategies using Pine Script, <a href="https://www.tradingview.com/?aff_id=140833">TradingView</a>'s proprietary scripting language. This feature allows traders to tailor their analysis tools to their specific needs, giving them a competitive edge. Whether you want to modify an existing indicator or develop a new one from scratch, Pine Script makes it possible.</li>
-            <li><strong>Social Network for Traders:</strong> <a href="https://www.tradingview.com/?aff_id=140833">TradingView</a> is more than just a charting tool; it is also a social network for traders. Users can share their ideas, charts, and strategies with the community, follow other traders, and engage in discussions. This collaborative environment helps traders learn from each other and stay updated on market trends.</li>
-            <li><strong>Real-Time Data and Alerts:</strong> <a href="https://www.tradingview.com/?aff_id=140833">TradingView</a> provides real-time market data and offers customizable alerts to keep traders informed about important market movements. You can set alerts for price levels, indicators, and even custom conditions defined by your scripts. This ensures that you never miss a trading opportunity.</li>
-            <li><strong>Multi-Device Accessibility:</strong> <a href="https://www.tradingview.com/?aff_id=140833">TradingView</a> is accessible on multiple devices, including desktops, tablets, and smartphones. This cross-platform compatibility allows traders to monitor the markets and manage their trades from anywhere, ensuring they stay connected and responsive to market changes.</li>
-            <li><strong>Paper Trading:</strong> For those new to trading or looking to test their strategies without risking real money, <a href="https://www.tradingview.com/?aff_id=140833">TradingView</a> offers a paper trading feature. This allows users to practice trading in a simulated environment using virtual funds, helping them build confidence and refine their strategies.</li>
+            <li><strong>Advanced Charting Tools:</strong> <a href="https://www.tradingview.com/?aff_id=140833" target="_blank">TradingView</a> offers a wide array of charting tools that cater to the needs of all types of traders. Whether you're into stocks, forex, cryptocurrencies, or commodities, <a href="https://www.tradingview.com/?aff_id=140833" target="_blank">TradingView</a> provides detailed charts that are highly customizable. You can choose from various chart types, including line, bar, and candlestick charts, to analyze market movements effectively.</li>
+            <li><strong>Extensive Indicators Library:</strong> <a href="https://www.tradingview.com/?aff_id=140833" target="_blank">TradingView</a> boasts an extensive library of technical indicators, with over 100 built-in indicators to help traders analyze market trends and make informed decisions. Some of the most popular indicators include Moving Averages, Relative Strength Index (RSI), and Bollinger Bands. Additionally, traders can use multiple indicators on a single chart to develop a comprehensive trading strategy.</li>
+            <li><strong>Custom Indicators and Strategies:</strong> One of the standout features of <a href="https://www.tradingview.com/?aff_id=140833" target="_blank">TradingView</a> is the ability to create custom indicators and trading strategies using Pine Script, <a href="https://www.tradingview.com/?aff_id=140833" target="_blank">TradingView</a>'s proprietary scripting language. This feature allows traders to tailor their analysis tools to their specific needs, giving them a competitive edge. Whether you want to modify an existing indicator or develop a new one from scratch, Pine Script makes it possible.</li>
+            <li><strong>Social Network for Traders:</strong> <a href="https://www.tradingview.com/?aff_id=140833" target="_blank">TradingView</a> is more than just a charting tool; it is also a social network for traders. Users can share their ideas, charts, and strategies with the community, follow other traders, and engage in discussions. This collaborative environment helps traders learn from each other and stay updated on market trends.</li>
+            <li><strong>Real-Time Data and Alerts:</strong> <a href="https://www.tradingview.com/?aff_id=140833" target="_blank">TradingView</a> provides real-time market data and offers customizable alerts to keep traders informed about important market movements. You can set alerts for price levels, indicators, and even custom conditions defined by your scripts. This ensures that you never miss a trading opportunity.</li>
+            <li><strong>Multi-Device Accessibility:</strong> <a href="https://www.tradingview.com/?aff_id=140833" target="_blank">TradingView</a> is accessible on multiple devices, including desktops, tablets, and smartphones. This cross-platform compatibility allows traders to monitor the markets and manage their trades from anywhere, ensuring they stay connected and responsive to market changes.</li>
+            <li><strong>Paper Trading:</strong> For those new to trading or looking to test their strategies without risking real money, <a href="https://www.tradingview.com/?aff_id=140833" target="_blank">TradingView</a> offers a paper trading feature. This allows users to practice trading in a simulated environment using virtual funds, helping them build confidence and refine their strategies.</li>
           </ul>
 
           <h3>Why TradingView is the Best Tool for Real Traders</h3>
           <ul>
-            <li><strong>Comprehensive Analysis Capabilities:</strong> <a href="https://www.tradingview.com/?aff_id=140833">TradingView</a>'s extensive range of indicators, charting tools, and customization options make it an indispensable tool for comprehensive market analysis. Traders can delve deep into market data, identify trends, and develop strategies that are finely tuned to their trading style.</li>
-            <li><strong>Community and Collaboration:</strong> The social aspect of <a href="https://www.tradingview.com/?aff_id=140833">TradingView</a> sets it apart from other trading platforms. The ability to share ideas and strategies, follow successful traders, and participate in discussions fosters a collaborative learning environment. This community-driven approach helps traders improve their skills and stay informed about market developments.</li>
+            <li><strong>Comprehensive Analysis Capabilities:</strong> <a href="https://www.tradingview.com/?aff_id=140833" target="_blank">TradingView</a>'s extensive range of indicators, charting tools, and customization options make it an indispensable tool for comprehensive market analysis. Traders can delve deep into market data, identify trends, and develop strategies that are finely tuned to their trading style.</li>
+            <li><strong>Community and Collaboration:</strong> The social aspect of <a href="https://www.tradingview.com/?aff_id=140833" target="_blank">TradingView</a> sets it apart from other trading platforms. The ability to share ideas and strategies, follow successful traders, and participate in discussions fosters a collaborative learning environment. This community-driven approach helps traders improve their skills and stay informed about market developments.</li>
             <li><strong>Flexibility and Customization:</strong> The ability to create custom indicators and strategies using Pine Script provides traders with unparalleled flexibility. This feature allows traders to develop unique tools that align perfectly with their trading methodologies, giving them a significant advantage in the market.</li>
             <li><strong>Real-Time Data and Alerts:</strong> Access to real-time data and customizable alerts ensures that traders can react swiftly to market changes. This immediacy is crucial for capitalizing on trading opportunities and minimizing risks.</li>
-            <li><strong>Accessibility and Convenience:</strong> <a href="https://www.tradingview.com/?aff_id=140833">TradingView</a>'s multi-device accessibility ensures that traders can stay connected to the markets at all times. Whether you are at your desk or on the go, <a href="https://www.tradingview.com/?aff_id=140833">TradingView</a> provides a seamless trading experience across all devices.</li>
+            <li><strong>Accessibility and Convenience:</strong> <a href="https://www.tradingview.com/?aff_id=140833" target="_blank">TradingView</a>'s multi-device accessibility ensures that traders can stay connected to the markets at all times. Whether you are at your desk or on the go, <a href="https://www.tradingview.com/?aff_id=140833" target="_blank">TradingView</a> provides a seamless trading experience across all devices.</li>
           </ul>
 
           <h3>Getting Started with TradingView</h3>
-          <p>To start leveraging the powerful features of <a href="https://www.tradingview.com/?aff_id=140833">TradingView</a>, you can sign up for an account using <a href="https://www.tradingview.com/?aff_id=140833">this link</a>. This will give you access to all the basic features, and you can upgrade to a premium plan to unlock advanced tools and capabilities.</p>
+          <p>To start leveraging the powerful features of <a href="https://www.tradingview.com/?aff_id=140833" target="_blank">TradingView</a>, you can sign up for an account using <a href="https://www.tradingview.com/?aff_id=140833" target="_blank">this link</a>. This will give you access to all the basic features, and you can upgrade to a premium plan to unlock advanced tools and capabilities.</p>
 
           <h3>The Benefits of Upgrading to a Premium Plan</h3>
-          <p>While the free version of <a href="https://www.tradingview.com/?aff_id=140833">TradingView</a> is incredibly powerful, upgrading to a premium plan unlocks a plethora of additional features that can significantly enhance your trading experience:</p>
+          <p>While the free version of <a href="https://www.tradingview.com/?aff_id=140833" target="_blank">TradingView</a> is incredibly powerful, upgrading to a premium plan unlocks a plethora of additional features that can significantly enhance your trading experience:</p>
           <ul>
             <li><strong>More Indicators Per Chart:</strong> The premium plans allow you to use more indicators on a single chart, giving you deeper insights and more comprehensive analysis.</li>
             <li><strong>Advanced Alert Options:</strong> Premium users get access to advanced alert conditions, ensuring that you stay on top of the most critical market movements.</li>
@@ -1746,14 +2147,13 @@
           </ul>
 
           <h3>Conclusion</h3>
-          <p><a href="https://www.tradingview.com/?aff_id=140833">TradingView</a> is a comprehensive, flexible, and user-friendly trading platform that caters to the needs of all traders. Its advanced charting tools, extensive library of indicators, custom scripting capabilities, and vibrant community make it the best tool for real traders. Whether you are just starting or are an experienced trader, <a href="https://www.tradingview.com/?aff_id=140833">TradingView</a> offers the features and potential to enhance your trading strategies and improve your market analysis. Sign up with <a href="https://www.tradingview.com/?aff_id=140833">this link</a> to start your journey with <a href="https://www.tradingview.com/?aff_id=140833">TradingView</a> today and consider upgrading to a premium plan to unlock its full potential.</p>
+          <p><a href="https://www.tradingview.com/?aff_id=140833" target="_blank">TradingView</a> is a comprehensive, flexible, and user-friendly trading platform that caters to the needs of all traders. Its advanced charting tools, extensive library of indicators, custom scripting capabilities, and vibrant community make it the best tool for real traders. Whether you are just starting or are an experienced trader, <a href="https://www.tradingview.com/?aff_id=140833" target="_blank">TradingView</a> offers the features and potential to enhance your trading strategies and improve your market analysis. Sign up with <a href="https://www.tradingview.com/?aff_id=140833" target="_blank">this link</a> to start your journey with <a href="https://www.tradingview.com/?aff_id=140833" target="_blank">TradingView</a> today and consider upgrading to a premium plan to unlock its full potential.</p>
         </div>
       </body>
       </html>
     `);
   }
 </script>
-
 <script>
   function openArticle8() {
     const win = window.open('', '_blank');
@@ -1761,112 +2161,170 @@
         <html>
       <head>
         <title>Unlocking Trading Success with Bullx</title>
-        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-        <style>
-          body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #121212;
-            color: #ffffff;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-          }
-          header {
-            background-color: #0a0a0a;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 2px solid #333;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-          }
-          header .logo a {
-            color: #fff;
-            font-size: 36px;
-            font-family: 'Orbitron', sans-serif;
-            text-decoration: none;
-            text-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
-          }
-          nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-          }
-          nav ul li {
-            margin: 0 15px;
-          }
-          nav ul li a {
-            color: #00bfff;
-            text-decoration: none;
-            font-size: 18px;
-            position: relative;
-            text-shadow: 0 0 5px rgba(0, 191, 255, 0.8);
-          }
-          .newsletter {
-            display: flex;
-            align-items: center;
-          }
-          .newsletter input[type="email"] {
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            margin-right: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-          }
-          .newsletter button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            background-color: #007bff;
-            color: #fff;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-          }
-          .newsletter button:hover {
-            background-color: #0056b3;
-          }
-          .article-title {
-            font-size: 32px;
-            margin-top: 20px;
-            font-family: 'Orbitron', sans-serif;
-            color: #00bfff;
-            text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
-          }
-          .guide-content {
-            padding: 40px 20px;
-            background-color: #2a2a2a;
-            margin: 20px auto;
-            max-width: 1200px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
-            text-align: left;
-          }
-          .guide-content h3 {
-            font-size: 32px;
-            margin-bottom: 20px;
-            font-family: 'Orbitron', sans-serif;
-            color: #00bfff;
-            text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
-          }
-          .guide-content p,
-          .guide-content ol,
-          .guide-content ul {
-            font-size: 18px;
-            line-height: 1.8;
-          }
-          .guide-content ul {
-            padding-left: 20px;
-          }
-          .guide-content a {
-            color: #00bfff;
-            text-decoration: underline;
-          }
-        </style>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+          <style>
+            body {
+      font-family: 'Exo 2', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+      overflow-x: hidden;
+    }
+            header {
+      background-color: #0a0a0a;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+    header .logo a {
+      color: #fff;
+      font-size: 36px;
+      font-family: 'Orbitron', sans-serif;
+      text-decoration: none;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #00bfff;
+      text-decoration: none;
+      font-size: 18px;
+      position: relative;
+      text-shadow: 0 0 5px rgba(0, 191, 255, 0.8);
+    }
+    nav ul li a:hover::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: #007bff;
+      left: 0;
+      bottom: -5px;
+      animation: hoverEffect 0.5s;
+    }
+    @keyframes hoverEffect {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+    .newsletter {
+      display: flex;
+      align-items: center;
+    }
+    .newsletter input[type="email"] {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .newsletter button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .newsletter button:hover {
+      background-color: #0056b3;
+    }
+            .article-title {
+              font-size: 32px;
+              margin-top: 20px;
+              text-align: center;
+              font-family: 'Orbitron', sans-serif;
+              color: #00bfff;
+              text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+            }
+    .category-block {
+      padding: 40px 20px;
+      background-color: #2a2a2a;
+      margin: 20px auto;
+      max-width: 1200px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      position: relative;
+    }
+    .category-block h2 {
+      font-size: 50px;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .category-block h3 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .category-block h4 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .category-block ul {
+      padding-left: 20px;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+    .category-block ul li a {
+      color: #00bfff;
+      text-decoration: underline;
+    }
+    .guide-content {
+      padding: 40px 20px;
+      background-color: #2a2a2a;
+      margin: 20px auto;
+      max-width: 1200px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+    .guide-content h3 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      font-family: 'Orbitron', sans-serif;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .guide-content p,
+    .guide-content ol,
+    .guide-content ul {
+      font-size: 18px;
+      line-height: 1.8;
+    }
+    .guide-content ul {
+      padding-left: 20px;
+    }
+    .guide-content a {
+      color: #00bfff;
+      text-decoration: underline;
+    }
+            
+          </style>
       </head>
       <body>
         <header>
@@ -1894,7 +2352,7 @@
           <h3>What is Bullx?</h3>
           <p><a href="https://t.me/BullxBetaBot?start=access_JPKYCT7U7PP">Bullx</a> is a state-of-the-art, multi-chain and multi-wallet trading platform that allows users to trade tokens quickly across various blockchains, including Solana, Ethereum, Base, Binance, Arbitrum, and Blast. A unique feature of Bullx is its availability as both a web app and a Telegram bot, offering flexibility and convenience for traders.</p>
 
-                    <h3>Key Features of Bullx</h3>
+          <h3>Key Features of Bullx</h3>
           <ul>
             <li><strong>Multi-Platform Support:</strong> Bullx is accessible via both web and mobile platforms, offering flexibility and convenience. Traders can monitor and manage their trades from any device, ensuring they never miss an opportunity.</li>
             <li><strong>Customizable Strategies:</strong> One of Bullx's standout features is the ability to create and implement custom trading strategies. This allows traders to tailor their approach based on their unique preferences and market insights, optimizing their potential for profit.</li>
@@ -1913,24 +2371,23 @@
           </ol>
 
           <h3>Effective Trading Strategies with Bullx</h3>
-          <ul>
-            <li><strong>Trend Following:</strong> Develop a trend-following strategy that takes advantage of sustained market movements. Use indicators such as Moving Averages to identify trends and set your bot to buy during upward trends and sell during downward trends.</li>
-            <li><strong>Mean Reversion:</strong> Create a mean reversion strategy that capitalizes on the market’s tendency to revert to its mean price over time. Set your bot to buy when prices are below the mean and sell when they are above it.</li>
-            <li><strong>Arbitrage:</strong> Exploit price differences across different exchanges by setting up an arbitrage strategy. Bullx can help automate the process of buying low on one exchange and selling high on another.</li>
-            <li><strong>Scalping:</strong> For those looking to make quick profits on small price movements, a scalping strategy can be effective. Configure Bullx to execute multiple trades within short time frames, capturing small gains that add up over time.</li>
-          </ul>
+<ul>
+  <li><strong>Trend Following:</strong> Develop a trend-following strategy that takes advantage of sustained market movements. Use indicators such as Moving Averages to identify trends and set your bot to buy during upward trends and sell during downward trends.</li>
+  <li><strong>Mean Reversion:</strong> Create a mean reversion strategy that capitalizes on the market’s tendency to revert to its mean price over time. Set your bot to buy when prices are below the mean and sell when they are above it.</li>
+  <li><strong>Arbitrage:</strong> Exploit price differences across different exchanges by setting up an arbitrage strategy. Bullx can help automate the process of buying low on one exchange and selling high on another.</li>
+  <li><strong>Scalping:</strong> For those looking to make quick profits on small price movements, a scalping strategy can be effective. Configure Bullx to execute multiple trades within short time frames, capturing small gains that add up over time.</li>
+</ul>
 
-          <h3>Learning from the Experts</h3>
-          <p>To maximize the effectiveness of Bullx, follow advice and strategies shared by top influencers and experienced traders. Here are some key insights from popular trading communities and social media:</p>
-          <ul>
-            <li><strong>@CryptoGuru:</strong> On Twitter, @CryptoGuru emphasizes using Bullx for trend-following strategies, particularly on volatile assets like memecoins. He suggests setting tight stop-loss orders to minimize risk.</li>
-            <li><strong>@TradingMaster:</strong> @TradingMaster recommends using Bullx’s Pump Vision feature to identify promising new tokens. By getting in early on these tokens, traders can capitalize on significant price movements.</li>
-            <li><strong>Reddit’s r/cryptotrading:</strong> The community often shares custom Pine Script strategies for Bullx, allowing users to benefit from collective expertise. Regularly check for updates and modifications to stay ahead of market trends.</li>
-          </ul>
+<h3>Learning from the Experts</h3>
+<p>To maximize the effectiveness of Bullx, follow advice and strategies shared by top influencers and experienced traders. Here are some key insights from popular trading communities and social media:</p>
+<ul>
+  <li><strong>@CryptoGuru:</strong> On Twitter, @CryptoGuru emphasizes using Bullx for trend-following strategies, particularly on volatile assets like memecoins. He suggests setting tight stop-loss orders to minimize risk.</li>
+  <li><strong>@TradingMaster:</strong> @TradingMaster recommends using Bullx’s Pump Vision feature to identify promising new tokens. By getting in early on these tokens, traders can capitalize on significant price movements.</li>
+  <li><strong>Reddit’s r/cryptotrading:</strong> The community often shares custom Pine Script strategies for Bullx, allowing users to benefit from collective expertise. Regularly check for updates and modifications to stay ahead of market trends.</li>
+</ul>
 
-          <h3>Conclusion</h3>
-          <p><a href="https://t.me/BullxBetaBot?start=access_JPKYCT7U7PP">Bullx</a> is a powerful tool that can transform your trading experience. By automating your strategies, staying informed with real-time alerts, and leveraging its customizable features, you can significantly enhance your trading success. Start using Bullx today to unlock your trading potential and achieve consistent profits. Sign up using <a href="https://t.me/BullxBetaBot?start=access_JPKYCT7U7PP">this link</a> and embark on a more efficient and profitable trading journey.</p>
-        </div>
+<h3>Conclusion</h3>
+<p><a href="https://t.me/BullxBetaBot?start=access_JPKYCT7U7PP">Bullx</a> is a powerful tool that can transform your trading experience. By automating your strategies, staying informed with real-time alerts, and leveraging its customizable features, you can significantly enhance your trading success. Start using Bullx today to unlock your trading potential and achieve consistent profits. Sign up using <a href="https://t.me/BullxBetaBot?start=access_JPKYCT7U7PP">this link</a> and embark on a more efficient and profitable trading journey.</p>
       </body>
       </html>
     `);
@@ -1944,112 +2401,170 @@
         <html>
       <head>
         <title>Withdraw Cash from Crypto Exchanges Without a Bank</title>
-        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-        <style>
-          body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #121212;
-            color: #ffffff;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-          }
-          header {
-            background-color: #0a0a0a;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 2px solid #333;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-          }
-          header .logo a {
-            color: #fff;
-            font-size: 36px;
-            font-family: 'Orbitron', sans-serif;
-            text-decoration: none;
-            text-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
-          }
-          nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-          }
-          nav ul li {
-            margin: 0 15px;
-          }
-          nav ul li a {
-            color: #00bfff;
-            text-decoration: none;
-            font-size: 18px;
-            position: relative;
-            text-shadow: 0 0 5px rgba(0, 191, 255, 0.8);
-          }
-          .newsletter {
-            display: flex;
-            align-items: center;
-          }
-          .newsletter input[type="email"] {
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            margin-right: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-          }
-          .newsletter button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            background-color: #007bff;
-            color: #fff;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-          }
-          .newsletter button:hover {
-            background-color: #0056b3;
-          }
-          .article-title {
-            font-size: 32px;
-            margin-top: 20px;
-            font-family: 'Orbitron', sans-serif;
-            color: #00bfff;
-            text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
-          }
-          .guide-content {
-            padding: 40px 20px;
-            background-color: #2a2a2a;
-            margin: 20px auto;
-            max-width: 1200px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
-            text-align: left;
-          }
-          .guide-content h3 {
-            font-size: 32px;
-            margin-bottom: 20px;
-            font-family: 'Orbitron', sans-serif;
-            color: #00bfff;
-            text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
-          }
-          .guide-content p,
-          .guide-content ol,
-          .guide-content ul {
-            font-size: 18px;
-            line-height: 1.8;
-          }
-          .guide-content ul {
-            padding-left: 20px;
-          }
-          .guide-content a {
-            color: #00bfff;
-            text-decoration: underline;
-          }
-        </style>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+          <style>
+            body {
+      font-family: 'Exo 2', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+      overflow-x: hidden;
+    }
+            header {
+      background-color: #0a0a0a;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+    header .logo a {
+      color: #fff;
+      font-size: 36px;
+      font-family: 'Orbitron', sans-serif;
+      text-decoration: none;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #00bfff;
+      text-decoration: none;
+      font-size: 18px;
+      position: relative;
+      text-shadow: 0 0 5px rgba(0, 191, 255, 0.8);
+    }
+    nav ul li a:hover::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: #007bff;
+      left: 0;
+      bottom: -5px;
+      animation: hoverEffect 0.5s;
+    }
+    @keyframes hoverEffect {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+    .newsletter {
+      display: flex;
+      align-items: center;
+    }
+    .newsletter input[type="email"] {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .newsletter button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .newsletter button:hover {
+      background-color: #0056b3;
+    }
+            .article-title {
+              font-size: 32px;
+              margin-top: 20px;
+              text-align: center;
+              font-family: 'Orbitron', sans-serif;
+              color: #00bfff;
+              text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+            }
+    .category-block {
+      padding: 40px 20px;
+      background-color: #2a2a2a;
+      margin: 20px auto;
+      max-width: 1200px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      position: relative;
+    }
+    .category-block h2 {
+      font-size: 50px;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .category-block h3 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .category-block h4 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .category-block ul {
+      padding-left: 20px;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+    .category-block ul li a {
+      color: #00bfff;
+      text-decoration: underline;
+    }
+    .guide-content {
+      padding: 40px 20px;
+      background-color: #2a2a2a;
+      margin: 20px auto;
+      max-width: 1200px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+    .guide-content h3 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      font-family: 'Orbitron', sans-serif;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    }
+    .guide-content p,
+    .guide-content ol,
+    .guide-content ul {
+      font-size: 18px;
+      line-height: 1.8;
+    }
+    .guide-content ul {
+      padding-left: 20px;
+    }
+    .guide-content a {
+      color: #00bfff;
+      text-decoration: underline;
+    }
+            
+          </style>
       </head>
       <body>
         <header>
@@ -2074,7 +2589,7 @@
         <div class="guide-content">
           <p>Withdrawing funds from cryptocurrency exchanges without using a traditional bank account can be a hassle-free process, especially for European users. This guide will explore how to withdraw money from exchanges to a Revolut or PayPal account, providing a convenient alternative for those who prefer not to use a traditional bank. While it’s possible to withdraw funds to an official bank account, we will focus primarily on Revolut and PayPal.</p>
 
-                    <h3>Why Choose Revolut or PayPal?</h3>
+          <h3>Why Choose Revolut or PayPal?</h3>
           <p>Revolut and PayPal are popular financial platforms that offer flexible and fast transactions. They are particularly useful for individuals who do not want to deal with traditional banks or those who seek additional privacy and convenience.</p>
           <ul>
             <li><strong>Revolut:</strong> 
@@ -2129,36 +2644,56 @@
 
           <h3>Conclusion</h3>
           <p>Withdrawing funds from cryptocurrency exchanges without using a traditional bank account is a straightforward process when using Revolut or PayPal. These platforms offer speed, convenience, and security, making them ideal choices for crypto traders. By following the steps outlined above, you can efficiently manage your crypto earnings and enjoy the flexibility of modern financial services. Sign up for Revolut today using <a href="https://revolut.com/referral/?referral-code=marian4kl4!JUL1-24-AR">this link</a> to get started.</p>
-        </div>
       </body>
       </html>
     `);
   }
 </script>
 
-  <style>
-    .articles-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-    .article {
-      width: 25%;
-      cursor: pointer;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-      text-align: center;
-    }
-    .article img {
-      width: 100%;
-      height: auto;
-    }
-    .article h4 {
-      margin: 10px 0;
-      color: #00bfff;
-      text-shadow: 0 0 5px rgba(0, 191, 255, 0.8);
-    }
-  </style>
+<style>
+  .articles-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .article {
+    width: calc(33.33% - 40px); /* Adjusting width to fit three articles per row */
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #1c1c1c;
+    padding: 20px; /* Added padding */
+    box-sizing: border-box; /* Ensures padding is included in the width calculation */
+  }
+
+  .article:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  }
+
+  .article img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #00bfff;
+  }
+
+  .article h4 {
+    margin: 15px 0;
+    color: #00bfff;
+    text-shadow: 0 0 5px rgba(0, 191, 255, 0.8);
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  .article p {
+    color: #ccc;
+    font-size: 16px;
+  }
+</style>
+
 
 </body>
 </html>
