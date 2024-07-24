@@ -32,35 +32,26 @@
       justify-content: space-between;
       align-items: center;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-      flex-wrap: wrap;
     }
     header .logo a {
       color: #fff;
       font-size: 36px;
       text-decoration: none;
       text-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
-      flex-grow: 1;
-      text-align: left;
-    }
-    nav {
-      flex-grow: 2;
-      text-align: right;
     }
     nav ul {
       list-style: none;
       padding: 0;
       margin: 0;
       display: flex;
-      justify-content: flex-end;
-      flex-wrap: wrap;
     }
     nav ul li {
-      margin: 0 10px;
+      margin: 0 15px;
     }
     nav ul li a {
       color: #00bfff;
       text-decoration: none;
-      font-size: 16px;
+      font-size: 18px;
       position: relative;
       text-shadow: 0 0 5px rgba(0, 191, 255, 0.8);
     }
@@ -83,9 +74,7 @@
       }
     }
     .newsletter {
-      flex-grow: 1;
       display: flex;
-      justify-content: center;
       align-items: center;
     }
     .newsletter input[type="email"] {
@@ -94,8 +83,6 @@
       border-radius: 5px;
       margin-right: 10px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-      width: 100%;
-      max-width: 200px;
     }
     .newsletter button {
       padding: 10px 20px;
@@ -161,7 +148,7 @@
       text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
     }
     article img {
-      max-width: 100%;
+      max-width: 50%;
       height: auto;
       border-radius: 5px;
       margin-bottom: 20px;
@@ -235,14 +222,15 @@
       }
       nav ul {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        width: 100%;
       }
       nav ul li {
         margin: 5px 0;
       }
       .newsletter {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         width: 100%;
       }
       .newsletter input[type="email"] {
@@ -262,7 +250,7 @@
       }
       nav ul {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
       }
       nav ul li {
         margin: 5px 0;
@@ -272,7 +260,7 @@
       }
       .newsletter {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         width: 100%;
       }
       .newsletter input[type="email"] {
