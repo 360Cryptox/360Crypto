@@ -8,207 +8,246 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Exo 2', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #1a1a1a;
-      color: #e0e0e0;
-      overflow-x: hidden;
-    }
-    header .logo a,
-    section h2,
-    section h3.subtitle,
-    article h3,
-    .get-started-btn {
-      font-family: 'Orbitron', sans-serif;
-    }
-    header {
-      background-color: #0a0a0a;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 2px solid #333;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    }
-    header .logo a {
-      color: #fff;
-      font-size: 36px;
-      text-decoration: none;
-      text-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
-    }
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-    }
-    nav ul li {
-      margin: 0 15px;
-    }
-    nav ul li a {
-      color: #00bfff;
-      text-decoration: none;
-      font-size: 18px;
-      position: relative;
-      text-shadow: 0 0 5px rgba(0, 191, 255, 0.8);
-    }
-    nav ul li a:hover::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      background: #007bff;
-      left: 0;
-      bottom: -5px;
-      animation: hoverEffect 0.5s;
-    }
-    @keyframes hoverEffect {
-      from {
-        width: 0;
-      }
-      to {
-        width: 100%;
-      }
-    }
-    .newsletter {
-      display: flex;
-      align-items: center;
-    }
-    .newsletter input[type="email"] {
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      margin-right: 10px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    }
-    .newsletter button {
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      background-color: #007bff;
-      color: #fff;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    }
-    .newsletter button:hover {
-      background-color: #0056b3;
-    }
-    section {
-      padding: 40px 20px;
-      background-color: #2a2a2a;
-      margin: 20px auto;
-      max-width: 1200px;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
-      position: relative;
-    }
-    section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(45deg, rgba(0, 123, 255, 0.3), rgba(0, 123, 255, 0.1));
-      z-index: -1;
-      animation: gradientShift 5s infinite;
-    }
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    section h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
-      text-align: center;
-      color: #00bfff;
-      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
-    }
-    section h3.subtitle {
-      font-size: 24px;
-      text-align: center;
-      margin-top: -10px;
-      margin-bottom: 30px;
-      color: #00bfff;
-      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
-    }
-    article {
-      margin-bottom: 40px;
-    }
-    article h3 {
-      font-size: 24px;
-      margin-bottom: 10px;
-      color: #00bfff;
-      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
-    }
-    article img {
-      max-width: 50%;
-      height: auto;
-      border-radius: 5px;
-      margin-bottom: 20px;
-      animation: fadeIn 1s;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    article p, article ol, article ul {
-      font-size: 18px;
-      line-height: 1.8;
-    }
-    article ol, article ul {
-      padding-left: 20px;
-    }
-    article a {
-      color: #00bfff;
-      text-decoration: underline;
-    }
-    footer {
-      background-color: #0a0a0a;
-      color: #fff;
-      text-align: center;
-      padding: 20px 0;
-      margin-top: 40px;
-      border-top: 2px solid #333;
-      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
-    }
-    .subscribe-section {
-      padding: 40px 20px;
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    }
-    .subscribe-section input[type="email"] {
-      padding: 10px;
-      width: 300px;
-      max-width: 100%;
-      border: none;
-      border-radius: 5px;
-      margin-right: 10px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    }
-    .subscribe-section button {
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      background-color: #007bff;
-      color: #fff;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    }
-    .subscribe-section button:hover {
-      background-color: #0056b3;
-    }
+  font-family: 'Exo 2', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  overflow-x: hidden;
+}
+
+header .logo a,
+section h2,
+section h3.subtitle,
+article h3,
+.get-started-btn {
+  font-family: 'Orbitron', sans-serif;
+}
+
+header {
+  background-color: #0a0a0a;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  height: 40px; /* Adjust the height as needed */
+  margin-right: 10px; /* Space between logo and text */
+}
+
+header .logo a {
+  color: #fff;
+  font-size: 36px;
+  text-decoration: none;
+  text-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #00bfff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+  text-shadow: 0 0 5px rgba(0, 191, 255, 0.8);
+}
+
+nav ul li a:hover::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #007bff;
+  left: 0;
+  bottom: -5px;
+  animation: hoverEffect 0.5s;
+}
+
+@keyframes hoverEffect {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.newsletter {
+  display: flex;
+  align-items: center;
+}
+
+.newsletter input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.newsletter button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.newsletter button:hover {
+  background-color: #0056b3;
+}
+
+section {
+  padding: 40px 20px;
+  background-color: #2a2a2a;
+  margin: 20px auto;
+  max-width: 1200px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(0, 123, 255, 0.3), rgba(0, 123, 255, 0.1));
+  z-index: -1;
+  animation: gradientShift 5s infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #00bfff;
+  text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+}
+
+section h3.subtitle {
+  font-size: 24px;
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: 30px;
+  color: #00bfff;
+  text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+}
+
+article {
+  margin-bottom: 40px;
+}
+
+article h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #00bfff;
+  text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+}
+
+article img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  animation: fadeIn 1s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+article p, article ol, article ul {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+article ol, article ul {
+  padding-left: 20px;
+}
+
+article a {
+  color: #00bfff;
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #0a0a0a;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  border-top: 2px solid #333;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.subscribe-section {
+  padding: 40px 20px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.subscribe-section input[type="email"] {
+  padding: 10px;
+  width: 300px;
+  max-width: 100%;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.subscribe-section button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.subscribe-section button:hover {
+  background-color: #0056b3;
+}
   </style>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MXFRFKXZC"></script>
@@ -227,23 +266,28 @@
 </head>
 <body>
   <header>
-    <div class="logo"><a href="index.html">360Crypto</a></div>
+    <div class="logo">
+        <a href="index.html">
+            <img src="images/favicon/android-chrome-512x512.png" alt="360Crypto Logo" style="height: 40px;">
+            <span>360Crypto</span>
+        </a>
+    </div>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="guides.html">Guides</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="tools.html">Tools</a></li>
-        <li><a href="community.html">Community</a></li>
-      </ul>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="guides.html">Guides</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="tools.html">Tools</a></li>
+            <li><a href="community.html">Community</a></li>
+        </ul>
     </nav>
     <div class="newsletter">
-      <form action="https://formspree.io/f/xnnangvw" method="POST">
-        <input type="email" name="email" placeholder="Subscribe to our newsletter" required>
-        <button type="submit">Subscribe</button>
-      </form>
+        <form action="https://formspree.io/f/xnnangvw" method="POST">
+            <input type="email" name="email" placeholder="Subscribe to our newsletter" required>
+            <button type="submit">Subscribe</button>
+        </form>
     </div>
-  </header>
+</header>
 </html>
 
 
@@ -254,17 +298,16 @@
   </h2>
 </div>
 
-    <h3 class="subtitle" style="margin-top: 20px; font-size: 14px; padding: 20px; background-color: rgba(0, 0, 0, 0.2); background-image: linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2)); border-radius: 10px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5), 0 0 10px rgba(255, 255, 255, 0.2); color: #00bfff; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); display: inline-block; max-width: 90%; margin: 10px auto; text-align: center;">
+    <h3 class="subtitle" style="margin-top: 20px; font-size: 18px; padding: 20px; background-color: rgba(0, 0, 0, 0.2); background-image: linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2)); border-radius: 10px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5), 0 0 10px rgba(255, 255, 255, 0.2); color: #00bfff; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); display: inline-block; max-width: 90%; margin: 10px auto; text-align: center;">
   We are a passionate team of crypto enthusiasts and advanced AI, dedicated to sharing our experiences and insights in the ever-evolving crypto realm. Join us as we work towards a successful, wealthy future for everyone. Embark on this journey with us, where the more we collaborate, the easier it becomes to manifest a reality of collective wealth and prosperity.
 </h3>
 
     <article>
-      <div style="display: flex; justify-content: center; align-items: center; position: relative; padding: 20px; max-width: 90%; margin: 0 auto;">
-  <img src="images/image3.png" alt="Cryptocurrency" style="max-width: 37%; height: auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); position: relative; z-index: 1; margin-right: -5%;">
-  <img src="images/cryptoship.png" alt="Crypto Ship" style="max-width: 47%; height: auto; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); position: relative; z-index: 2;">
-  <img src="images/image4.png" alt="Cryptocurrency" style="max-width: 37%; height: auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); position: relative; z-index: 1; margin-left: -5%;">
+      <div style="display: flex; justify-content: center; align-items: center; position: relative;">
+  <img src="images/image3.png" alt="Cryptocurrency" style="max-width: 40%; height: auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); position: relative; z-index: 1; margin-right: -10%; margin-left: -10%;">
+  <img src="images/cryptoship.png" alt="Crypto Ship" style="max-width: 50%; height: auto; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); position: relative; z-index: 2;">
+  <img src="images/image4.png" alt="Cryptocurrency" style="max-width: 40%; height: auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); position: relative; z-index: 1; margin-right: -10%; margin-left: -10%;">
 </div>
-
       <p>Whether you're just starting out or you're an experienced trader, our comprehensive platform offers everything you need to succeed in the crypto world. From detailed guides and the latest news to advanced trading strategies and community insights, 360Crypto is designed to help you navigate the dynamic landscape of digital currencies. Join our community and take advantage of our expert knowledge to maximize your profits and secure your financial future.</p>
     </article>
 
