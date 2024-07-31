@@ -213,101 +213,105 @@
     }
 
     /* Responsive styles */
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: center;
-      }
-      header .logo a {
-        text-align: center;
-        width: 100%;
-      }
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-      }
-      nav ul li {
-        margin: 5px 0;
-      }
-      .newsletter {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-      }
-      .newsletter input[type="email"] {
-        width: 100%;
-        max-width: none;
-        margin-right: 0;
-        margin-bottom: 10px;
-      }
-      .newsletter button {
-        width: 100%;
-      }
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: center;
     }
+    header .logo a {
+      text-align: center;
+      width: 100%;
+    }
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    nav ul li {
+      margin: 5px 0;
+    }
+    .newsletter {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    .newsletter input[type="email"] {
+      width: 100%;
+      max-width: none;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+    .newsletter button {
+      width: 100%;
+      padding: 8px 16px; /* Smaller padding for mobile */
+      font-size: 14px; /* Smaller font size for mobile */
+    }
+  }
 
-    @media (max-width: 480px) {
-      header .logo a {
-        font-size: 28px;
-      }
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-      }
-      nav ul li {
-        margin: 5px 0;
-      }
-      nav ul li a {
-        font-size: 14px;
-      }
-      .newsletter {
-        flex-direction: column;
-                align-items: center;
-        width: 100%;
-      }
-      .newsletter input[type="email"] {
-        width: 100%;
-        max-width: none;
-        margin-right: 0;
-        margin-bottom: 10px;
-      }
-      .newsletter button {
-        width: 100%;
-      }
-      section {
-        padding: 20px 10px;
-      }
-      section h2 {
-        font-size: 24px;
-      }
-      section h3.subtitle {
-        font-size: 18px;
-      }
-      article h3 {
-        font-size: 20px;
-      }
-      article p, article ol, article ul {
-        font-size: 16px;
-      }
-      .subscribe-section input[type="email"] {
-        width: 100%;
-      }
-      .subscribe-section button {
-        width: 100%;
-      }
-      article img {
-        max-width: 90%;
-      }
+  @media (max-width: 480px) {
+    header .logo a {
+      font-size: 28px;
     }
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+    nav ul li {
+      margin: 5px 0;
+    }
+    nav ul li a {
+      font-size: 14px;
+    }
+    .newsletter {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    .newsletter input[type="email"] {
+      width: 100%;
+      max-width: none;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+    .newsletter button {
+      width: 100%;
+      padding: 8px 16px; /* Smaller padding for mobile */
+      font-size: 14px; /* Smaller font size for mobile */
+    }
+    section {
+      padding: 20px 10px;
+    }
+    section h2 {
+      font-size: 24px;
+    }
+    section h3.subtitle {
+      font-size: 18px;
+    }
+    article h3 {
+      font-size: 20px;
+    }
+    article p, article ol, article ul {
+      font-size: 16px;
+    }
+    .subscribe-section input[type="email"] {
+      width: 100%;
+    }
+    .subscribe-section button {
+      width: 100%;
+    }
+    article img {
+      max-width: 90%;
+    }
+  }
 
-    /* Lazy Loading Styles */
-    .lazyload {
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-    .lazyloaded {
-      opacity: 1;
-    }
+  /* Lazy Loading Styles */
+  .lazyload {
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .lazyloaded {
+    opacity: 1;
+  }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MXFRFKXZC"></script>
