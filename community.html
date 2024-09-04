@@ -158,6 +158,159 @@
       text-decoration: none;
       text-shadow: 0 0 5px rgba(0, 191, 255, 0.8);
     }
+    /* Responsive styles for medium screens (max-width: 768px) */
+@media (max-width: 768px) {
+  /* HEADER */
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+  }
+
+  header .logo a {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 32px; /* Adjusted font size for medium screens */
+  }
+
+  /* NAVIGATION */
+  nav ul {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center; /* Ensure the navigation links are centered */
+    margin-top: 15px;
+  }
+
+  nav ul li {
+    margin: 0 10px;
+    margin-top: 15px;
+  }
+
+  /* NEWSLETTER */
+  .newsletter {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0; /* Add padding to the top and bottom */
+  }
+
+  .newsletter input[type="email"] {
+    width: 90%;
+    max-width: 300px; /* Limit max width */
+    margin-right: 0;
+    margin-bottom: 10px;
+    padding: 8px; /* Adjust padding */
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .newsletter button {
+    width: 90%;
+    max-width: 300px; /* Limit max width */
+    padding: 8px 16px; /* Smaller padding for mobile */
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+
+  /* CATEGORY BLOCK AND SECTIONS */
+  .category-block,
+  .coming-soon,
+  .content-section {
+    padding: 20px;
+    margin: 20px 10px; /* Adjusted margin for medium screens */
+  }
+
+  .category-block h2,
+  .coming-soon h3,
+  .content-section h3 {
+    font-size: 36px;
+  }
+
+  .coming-soon p,
+  .content-section {
+    font-size: 16px;
+  }
+}
+
+/* Responsive styles for small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  /* HEADER */
+  header .logo a {
+    font-size: 28px; /* Smaller font size for small screens */
+    margin-bottom: 15px;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* NAVIGATION */
+  nav ul {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* Center the navigation items */
+    margin-top: 15px;
+  }
+
+  nav ul li {
+    margin: 0 10px;
+    margin-top: 15px;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+
+  /* NEWSLETTER */
+  .newsletter {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0; /* Add padding to the top and bottom */
+  }
+
+  .newsletter input[type="email"] {
+    width: 90%;
+    max-width: 300px; /* Limit max width */
+    margin-right: 0;
+    margin-bottom: 10px;
+    padding: 8px; /* Adjust padding */
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .newsletter button {
+    width: 90%;
+    max-width: 300px; /* Limit max width */
+    padding: 8px 16px; /* Smaller padding for mobile */
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+
+  /* CATEGORY BLOCK AND SECTIONS */
+  .category-block,
+  .coming-soon,
+  .content-section {
+    padding: 20px;
+    margin: 15px 10px; /* Reduced margin for smaller screens */
+  }
+
+  .category-block h2,
+  .coming-soon h3,
+  .content-section h3 {
+    font-size: 30px;
+  }
+
+  .coming-soon p,
+  .content-section {
+    font-size: 14px;
+  }
+}
+/* Lazy Loading Styles */
+  .lazyload {
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .lazyloaded {
+    opacity: 1;
+  }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MXFRFKXZC"></script>
