@@ -1,11 +1,12 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Link from 'next/link';
 import AffiliateCard from '@/components/AffiliateCard';
+import TrackedAffiliateLink from '@/components/TrackedAffiliateLink';
 import NewsletterInline from '@/components/NewsletterInline';
 import { affiliates } from '@/lib/affiliates';
 
 export const metadata: Metadata = {
-  title: '360Crypto — Navigate Crypto. Build Wealth.',
+  title: '360Crypto â€” Navigate Crypto. Build Wealth.',
   description:
     'Expert crypto guides, curated trading tools, passive income strategies, and a community built for serious traders.',
 };
@@ -24,7 +25,7 @@ const FEATURES = [
       </svg>
     ),
     title: 'Expert Guides',
-    description: 'From beginner basics to advanced DeFi strategies — our guides are written by traders who actually use the tools.',
+    description: 'From beginner basics to advanced DeFi strategies â€” our guides are written by traders who actually use the tools.',
   },
   {
     icon: (
@@ -33,7 +34,7 @@ const FEATURES = [
       </svg>
     ),
     title: 'Best-in-Class Tools',
-    description: 'Every tool we recommend has been personally tested. We curate only what delivers real results — no fluff, no paid placements.',
+    description: 'Every tool we recommend has been personally tested. We curate only what delivers real results â€” no fluff, no paid placements.',
   },
   {
     icon: (
@@ -59,17 +60,17 @@ const STORE_PREVIEWS = [
   {
     name: 'Premium Trading Bots',
     description: 'Fully automated Solana and ETH memecoin bots with pre-configured strategies. Plug in your wallet, set your risk, and let the bot hunt for alpha.',
-    icon: '🤖',
+    icon: 'ðŸ¤–',
   },
   {
     name: 'Insider Wallet Lists',
     description: 'Curated lists of top-performing sniper and whale wallets on Solana. Copy their moves before the rest of the market notices.',
-    icon: '📋',
+    icon: 'ðŸ“‹',
   },
   {
     name: 'VIP Signal Access',
     description: 'Join our private signal channel where we share real-time entry and exit calls, upcoming launches, and exclusive alpha.',
-    icon: '⚡',
+    icon: 'âš¡',
   },
 ];
 
@@ -80,7 +81,7 @@ export default function HomePage() {
 
   return (
     <>
-      {/* ── HERO ─────────────────────────────────────────────────────────── */}
+      {/* â”€â”€ HERO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden grid-bg">
         {/* Radial glow */}
         <div
@@ -94,7 +95,7 @@ export default function HomePage() {
           <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[rgba(0,191,255,0.25)] bg-[rgba(0,191,255,0.07)] px-4 py-1.5">
             <span className="h-2 w-2 rounded-full bg-[#00bfff] animate-pulse-glow" aria-hidden="true" />
             <span className="font-orbitron text-xs font-bold text-[#00bfff] tracking-wider uppercase">
-              Live — Join 10,000+ Traders
+              Live â€” Join 10,000+ Traders
             </span>
           </div>
 
@@ -104,15 +105,15 @@ export default function HomePage() {
           </h1>
 
           <p className="mx-auto max-w-2xl text-[#a0a0a0] text-lg md:text-xl leading-relaxed mb-10">
-            360Crypto is your all-in-one platform for crypto education, curated trading tools, passive income strategies, and a community that trades together. From your first Bitcoin to memecoins on Solana — we&apos;ve got you covered.
+            360Crypto is your all-in-one platform for crypto education, curated trading tools, passive income strategies, and a community that trades together. From your first Bitcoin to memecoins on Solana â€” we&apos;ve got you covered.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/guides" className="cyber-btn text-sm py-3 px-8">
-              Explore Guides →
+              Explore Guides â†’
             </Link>
             <Link href="/tools" className="cyber-btn-outline text-sm py-3 px-8">
-              Best Tools →
+              Best Tools â†’
             </Link>
           </div>
         </div>
@@ -124,7 +125,7 @@ export default function HomePage() {
         />
       </section>
 
-      {/* ── STATS BAR ────────────────────────────────────────────────────── */}
+      {/* â”€â”€ STATS BAR â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="bg-[#111] border-y border-[rgba(255,255,255,0.06)]">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-3 divide-x divide-[rgba(255,255,255,0.06)]">
@@ -140,7 +141,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── FEATURED TOOLS ───────────────────────────────────────────────── */}
+      {/* â”€â”€ FEATURED TOOLS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-12">
           <span className="badge-cyan mb-4 inline-block">Top Picks</span>
@@ -148,7 +149,7 @@ export default function HomePage() {
             Our Top Recommended Tools
           </h2>
           <p className="text-[#666] max-w-xl mx-auto">
-            These are the platforms we actually use. Start here to maximize your edge — whether you&apos;re trading, automating, or earning passively.
+            These are the platforms we actually use. Start here to maximize your edge â€” whether you&apos;re trading, automating, or earning passively.
           </p>
         </div>
 
@@ -157,35 +158,44 @@ export default function HomePage() {
             name={pionex.name}
             url={pionex.url}
             description={pionex.description}
+            affiliateName="pionex"
+            category="passive_income"
             badge={pionex.badge}
             highlight={pionex.highlight}
+            placement="homepage-featured"
           />
           <AffiliateCard
             name={bybit.name}
             url={bybit.url}
             description={bybit.description}
+            affiliateName="bybit"
+            category="exchanges_cex"
             badge={bybit.badge}
             highlight={bybit.highlight}
+            placement="homepage-featured"
           />
           <AffiliateCard
             name={bullx.name}
             url={bullx.url}
             description={bullx.description}
+            affiliateName="bullx"
+            category="trading_bots"
             badge={bullx.badge}
             highlight={bullx.highlight}
+            placement="homepage-featured"
           />
         </div>
 
         <div className="text-center mt-8">
           <Link href="/tools" className="cyber-btn-outline text-sm py-2.5 px-6">
-            View All Tools →
+            View All Tools â†’
           </Link>
         </div>
       </section>
 
       <hr className="section-divider mx-auto max-w-7xl" />
 
-      {/* ── WHY 360CRYPTO ────────────────────────────────────────────────── */}
+      {/* â”€â”€ WHY 360CRYPTO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-12">
           <h2 className="font-orbitron text-3xl md:text-4xl font-bold text-white mb-4">
@@ -209,7 +219,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── MEMECOIN CTA ─────────────────────────────────────────────────── */}
+      {/* â”€â”€ MEMECOIN CTA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-10">
         <div className="relative overflow-hidden rounded-2xl bg-[#1a1a1a] border border-[rgba(0,191,255,0.2)] px-8 py-12 md:px-14">
           <div
@@ -222,16 +232,16 @@ export default function HomePage() {
               The Memecoin Wave Is <span className="glow-text">Now</span>
             </h2>
             <p className="text-[#a0a0a0] mb-8 leading-relaxed">
-              Solana memecoins are creating life-changing returns for early movers. From Pump.fun launches to Raydium listings — the window is open right now. Learn how to identify, snipe, and exit winning memecoins before the crowd arrives.
+              Solana memecoins are creating life-changing returns for early movers. From Pump.fun launches to Raydium listings â€” the window is open right now. Learn how to identify, snipe, and exit winning memecoins before the crowd arrives.
             </p>
             <Link href="/guides" className="cyber-btn text-sm py-3 px-8 inline-flex">
-              Learn Memecoin Trading →
+              Learn Memecoin Trading â†’
             </Link>
           </div>
         </div>
       </section>
 
-      {/* ── PASSIVE INCOME STRIP ─────────────────────────────────────────── */}
+      {/* â”€â”€ PASSIVE INCOME STRIP â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
         <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#0d1a1f] to-[#0a1520] border border-[rgba(0,191,255,0.25)] px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
           <div
@@ -246,21 +256,23 @@ export default function HomePage() {
               Earn While You Sleep
             </h2>
             <p className="text-[#a0a0a0] text-sm max-w-lg leading-relaxed">
-              Pionex grid trading bots buy low and sell high automatically — 24/7. No manual trades. No emotion. Just consistent, compounding returns. Over $5 billion in daily trading volume processed by Pionex bots.
+              Pionex grid trading bots buy low and sell high automatically â€” 24/7. No manual trades. No emotion. Just consistent, compounding returns. Over $5 billion in daily trading volume processed by Pionex bots.
             </p>
           </div>
-          <a
+                    {/* tracked link — fires affiliate_click GA4 event */}
+          <TrackedAffiliateLink
             href={affiliates.pionex.url}
-            target="_blank"
-            rel="noopener noreferrer sponsored"
+            affiliateName="pionex"
+            category="passive_income"
+            placement="homepage-passive-strip"
             className="cyber-btn shrink-0 text-sm py-3 px-8 animate-pulse-glow"
           >
             Start Grid Bot Trading →
-          </a>
+          </TrackedAffiliateLink>
         </div>
       </section>
 
-      {/* ── STORE TEASER ─────────────────────────────────────────────────── */}
+      {/* â”€â”€ STORE TEASER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-12">
           <span className="badge-cyan mb-4 inline-block">Coming Soon</span>
@@ -290,7 +302,7 @@ export default function HomePage() {
                   href="/store"
                   className="text-xs text-[#00bfff] font-semibold hover:underline"
                 >
-                  Notify Me →
+                  Notify Me â†’
                 </Link>
               </div>
             </div>
@@ -299,18 +311,20 @@ export default function HomePage() {
 
         <div className="text-center">
           <Link href="/store" className="cyber-btn-outline text-sm py-2.5 px-6">
-            View Full Store →
+            View Full Store â†’
           </Link>
         </div>
       </section>
 
-      {/* ── NEWSLETTER ───────────────────────────────────────────────────── */}
+      {/* â”€â”€ NEWSLETTER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pb-24">
         <NewsletterInline
           title="Get Exclusive Signals & Early Access"
-          subtitle="Get exclusive signals, early access to store products, and weekly alpha — straight to your inbox. Join 10,000+ traders already subscribed."
+          subtitle="Get exclusive signals, early access to store products, and weekly alpha â€” straight to your inbox. Join 10,000+ traders already subscribed."
         />
       </section>
     </>
   );
 }
+
+

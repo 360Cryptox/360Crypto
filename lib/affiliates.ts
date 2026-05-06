@@ -1,14 +1,18 @@
-export type AffiliateCategory =
+﻿export type AffiliateCategory =
   | 'exchanges_cex'
   | 'exchanges_dex'
   | 'passive_income'
   | 'trading_bots'
   | 'telegram_bots'
   | 'wallets'
+  | 'hardware_wallets'
+  | 'tax_software'
   | 'research'
   | 'resources';
 
 export interface Affiliate {
+  /** Record key — used as affiliateName in GA4 tracking */
+  slug?: string;
   name: string;
   url: string;
   description: string;
@@ -19,7 +23,7 @@ export interface Affiliate {
 }
 
 export const affiliates: Record<string, Affiliate> = {
-  // ── CEX Exchanges ──────────────────────────────────────────────────────────
+  // â”€â”€ CEX Exchanges â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   bybit: {
     name: 'Bybit',
     url: 'https://link.360crypto.site/56f',
@@ -33,7 +37,7 @@ export const affiliates: Record<string, Affiliate> = {
     name: 'KuCoin',
     url: 'https://link.360crypto.site/13m',
     description:
-      '"The People\'s Exchange" — 700+ altcoins including early-stage gems before they hit mainstream platforms. Great for discovering low-cap opportunities with strong trading tools.',
+      '"The People\'s Exchange" â€” 700+ altcoins including early-stage gems before they hit mainstream platforms. Great for discovering low-cap opportunities with strong trading tools.',
     category: 'exchanges_cex',
   },
   okx: {
@@ -50,8 +54,34 @@ export const affiliates: Record<string, Affiliate> = {
       'Access 1,700+ trading pairs including the smallest altcoins and new project listings. Gate.io is the go-to for early-stage gem hunters and high-volume altcoin traders.',
     category: 'exchanges_cex',
   },
+  // ── Sign up at https://www.binance.com/en/activity/referral to get your affiliate link ──
+  binance: {
+    name: 'Binance',
+    url: 'https://accounts.binance.com/register',
+    description:
+      'The world\'s largest crypto exchange by volume. Industry-leading 0.1% spot fees (reducible to 0.07% with BNB), 350+ trading pairs, futures, earn products, and the deepest liquidity on the planet.',
+    category: 'exchanges_cex',
+    badge: 'Largest Exchange',
+  },
+  // ── Sign up at https://www.mexc.com/affiliate to get your affiliate link (70% commission rate) ──
+  mexc: {
+    name: 'MEXC',
+    url: 'https://www.mexc.com/register',
+    description:
+      'The highest-commission exchange for affiliates — 70% revenue share. For traders: 1,500+ listed tokens including ultra-early altcoins, zero-fee spot trading on select pairs, and lightning-fast listings.',
+    category: 'exchanges_cex',
+    badge: 'Early Listings',
+  },
+  // ── Sign up at https://partner.bitget.com/ for affiliate access ──
+  bitget: {
+    name: 'Bitget',
+    url: 'https://www.bitget.com/register',
+    description:
+      'The #1 copy trading exchange. One-click mirror elite traders with verified track records, $5B+ daily volume, and a full suite of spot and futures markets. Top choice for beginners entering the market.',
+    category: 'exchanges_cex',
+  },
 
-  // ── DEX / Swaps ───────────────────────────────────────────────────────────
+  // â”€â”€ DEX / Swaps â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   simpleswap: {
     name: 'SimpleSwap',
     url: 'https://link.360crypto.site/4hh',
@@ -61,22 +91,23 @@ export const affiliates: Record<string, Affiliate> = {
     badge: 'Best DEX',
     highlight: true,
   },
-  kyberswap: {
-    name: 'KyberSwap',
-    url: 'https://link.360crypto.site/eqn',
+  // ── Sign up at https://changelly.com/referral for your affiliate link ──
+  changelly: {
+    name: 'Changelly',
+    url: 'https://changelly.com',
     description:
-      'Multi-chain DEX aggregator that finds the best swap rates across 15+ blockchains. Smart routing ensures you always get the most for your tokens, with minimal slippage.',
+      'Swap 700+ cryptocurrencies instantly with no registration and competitive flat fees. Backed by Binance and trusted since 2015 — the most well-known no-KYC instant swap service with a solid affiliate program.',
     category: 'exchanges_dex',
   },
 
-  // ── Passive Income ────────────────────────────────────────────────────────
+  // â”€â”€ Passive Income â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   pionex: {
     name: 'Pionex',
     url: 'https://link.360crypto.site/jkw',
     description:
-      'The #1 platform for crypto grid trading bots. 16 free built-in bots let you automate buying low and selling high 24/7 — no coding required. The easiest hands-off income strategy in crypto.',
+      'The #1 platform for crypto grid trading bots. 16 free built-in bots let you automate buying low and selling high 24/7 â€” no coding required. The easiest hands-off income strategy in crypto.',
     category: 'passive_income',
-    badge: 'TOP PICK — Passive Income',
+    badge: 'TOP PICK â€” Passive Income',
     highlight: true,
   },
   cryptotab: {
@@ -97,7 +128,7 @@ export const affiliates: Record<string, Affiliate> = {
     name: 'Pawns.app',
     url: 'https://pawns.app/?r=5821852',
     description:
-      'Earn passive crypto by sharing your unused internet bandwidth. Set it and forget it — Pawns.app pays you 24/7 in the background with no technical setup required.',
+      'Earn passive crypto by sharing your unused internet bandwidth. Set it and forget it â€” Pawns.app pays you 24/7 in the background with no technical setup required.',
     category: 'passive_income',
   },
   freecash: {
@@ -107,15 +138,15 @@ export const affiliates: Record<string, Affiliate> = {
       'The highest-paying rewards platform in crypto. Complete offers, surveys, and game challenges to earn cash, Bitcoin, or gift cards. Payouts are instant and withdrawals start at $1.',
     category: 'passive_income',
   },
-  claimyoursol: {
-    name: 'ClaimYourSOL',
-    url: 'https://link.360crypto.site/rgr',
+  rollercoin: {
+    name: 'RollerCoin',
+    url: 'https://rollercoin.com',
     description:
-      'Claim free Solana rewards and participate in SOL ecosystem airdrops and reward programs. A quick way to stack SOL without investing capital.',
+      'The original crypto mining simulator game. Play mini-games, build your virtual mining empire, and earn real BTC, ETH, and SOL. Millions of players — the most engaging passive earner with a true referral system.',
     category: 'passive_income',
   },
 
-  // ── Trading Bots ──────────────────────────────────────────────────────────
+  // â”€â”€ Trading Bots â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   gmgn: {
     name: 'GMGN',
     url: 'https://link.360crypto.site/fpc',
@@ -143,7 +174,7 @@ export const affiliates: Record<string, Affiliate> = {
     name: '3Commas',
     url: 'https://link.360crypto.site/cf6',
     description:
-      'Professional trading automation platform trusted by 150,000+ traders. DCA bots, grid bots, signal bots, and portfolio management — all connected to your existing exchange via API.',
+      'Professional trading automation platform trusted by 150,000+ traders. DCA bots, grid bots, signal bots, and portfolio management â€” all connected to your existing exchange via API.',
     category: 'trading_bots',
   },
   cryptohopper: {
@@ -161,7 +192,7 @@ export const affiliates: Record<string, Affiliate> = {
     category: 'trading_bots',
   },
 
-  // ── Telegram Bots ────────────────────────────────────────────────────────
+  // â”€â”€ Telegram Bots â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   tonbot: {
     name: 'TON Trading Bot',
     url: 'https://link.360crypto.site/hhx',
@@ -173,7 +204,7 @@ export const affiliates: Record<string, Affiliate> = {
     name: 'Sol Trading Bot',
     url: 'https://link.360crypto.site/lo6',
     description:
-      'Trade Solana tokens without leaving Telegram. One-tap buying, automatic take-profit/stop-loss, and wallet monitoring — all inside your Telegram app.',
+      'Trade Solana tokens without leaving Telegram. One-tap buying, automatic take-profit/stop-loss, and wallet monitoring â€” all inside your Telegram app.',
     category: 'telegram_bots',
   },
   pepeboosteth: {
@@ -187,7 +218,7 @@ export const affiliates: Record<string, Affiliate> = {
     name: 'Pepeboost SOL',
     url: 'https://t.me/pepeboost_sol05_bot?start=ref_0h7z1x',
     description:
-      'Solana-specific version of Pepeboost with Pump.fun integration. Snipe new launches, set auto-sells, and track your positions — all from Telegram.',
+      'Solana-specific version of Pepeboost with Pump.fun integration. Snipe new launches, set auto-sells, and track your positions â€” all from Telegram.',
     category: 'telegram_bots',
   },
   trojan: {
@@ -226,7 +257,7 @@ export const affiliates: Record<string, Affiliate> = {
     category: 'telegram_bots',
   },
 
-  // ── Research / Analytics ─────────────────────────────────────────────────
+  // â”€â”€ Research / Analytics â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   tradingview: {
     name: 'TradingView',
     url: 'https://link.360crypto.site/p67',
@@ -236,15 +267,59 @@ export const affiliates: Record<string, Affiliate> = {
     badge: 'Essential',
     highlight: true,
   },
+
+  // ── Hardware Wallets ──────────────────────────────────────────────────────────────────────────
+  // Sign up at https://affiliate.ledger.com/ for your affiliate link (10% commission, 30-day cookie)
+  ledger: {
+    name: 'Ledger',
+    url: 'https://www.ledger.com',
+    description:
+      'The global gold standard in hardware wallets. A secure element chip keeps your private keys completely offline. Supports 5,500+ coins and integrates with MetaMask, DeFi, and NFT platforms. One-time purchase, lifetime security.',
+    category: 'hardware_wallets',
+    badge: '#1 Cold Wallet',
+    highlight: true,
+  },
+  // Sign up at https://trezor.io/affiliate for your affiliate link (~12% commission)
+  trezor: {
+    name: 'Trezor',
+    url: 'https://trezor.io',
+    description:
+      'The original hardware wallet — 100% open-source since 2014. Every line of firmware is publicly auditable. Trezor is the choice for maximum transparency and serious self-custody advocates.',
+    category: 'hardware_wallets',
+  },
+
+  // ── Tax Software ──────────────────────────────────────────────────────────────────────────────
+  // Sign up at https://koinly.io/affiliates/ for your affiliate link (30% RECURRING commission)
+  koinly: {
+    name: 'Koinly',
+    url: 'https://koinly.io',
+    description:
+      'The most used crypto tax software — supports 700+ exchanges and 170+ countries. Auto-imports your full transaction history and generates IRS, HMRC, ATO, and EU-compliant tax reports in minutes.',
+    category: 'tax_software',
+    badge: 'Best Tax Tool',
+    highlight: true,
+  },
+  // Sign up at https://coinledger.io/affiliate for your affiliate link (25% commission)
+  coinledger: {
+    name: 'CoinLedger',
+    url: 'https://coinledger.io',
+    description:
+      'Generate accurate crypto tax reports in under 20 minutes. Integrates with Coinbase, Binance, Kraken, MetaMask, and 500+ exchanges. Trusted by 500,000+ crypto investors. Works directly inside TurboTax and TaxAct.',
+    category: 'tax_software',
+  },
 };
 
-// ── Category-filtered helpers ──────────────────────────────────────────────
+// â”€â”€ Category-filtered helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 export function getAffiliatesByCategory(category: AffiliateCategory): Affiliate[] {
-  return Object.values(affiliates).filter((a) => a.category === category);
+  return Object.entries(affiliates)
+    .filter(([, a]) => a.category === category)
+    .map(([slug, a]) => ({ ...a, slug }));
 }
 
 export function getHighlightedAffiliates(): Affiliate[] {
-  return Object.values(affiliates).filter((a) => a.highlight);
+  return Object.entries(affiliates)
+    .filter(([, a]) => a.highlight)
+    .map(([slug, a]) => ({ ...a, slug }));
 }
 
 export const SOCIAL = {
@@ -253,3 +328,24 @@ export const SOCIAL = {
   facebook: 'https://www.facebook.com/profile.php?id=61562049504886',
   email: 'admin@360crypto.site',
 } as const;
+
+
+// ── Slug-aware helpers ─────────────────────────────────────────────────────────
+
+/**
+ * Returns all affiliates as an array with the slug populated from the record key.
+ * Use this instead of Object.values(affiliates) when you need the slug for tracking.
+ */
+export function getAffiliatesWithSlug(): Affiliate[] {
+  return Object.entries(affiliates).map(([slug, affiliate]) => ({
+    ...affiliate,
+    slug,
+  }));
+}
+
+/**
+ * Returns affiliates for a category with slugs populated.
+ */
+export function getAffiliatesByCategoryWithSlug(category: AffiliateCategory): Affiliate[] {
+  return getAffiliatesWithSlug().filter((a) => a.category === category);
+}

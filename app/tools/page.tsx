@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import AffiliateCard from '@/components/AffiliateCard';
+import TrackedAffiliateLink from '@/components/TrackedAffiliateLink';
 import NewsletterInline from '@/components/NewsletterInline';
 import { affiliates } from '@/lib/affiliates';
 import { SOCIAL } from '@/lib/affiliates';
@@ -7,10 +8,10 @@ import { SOCIAL } from '@/lib/affiliates';
 export const metadata: Metadata = {
   title: 'Best Crypto Tools — Curated & Tested',
   description:
-    'Every crypto tool you need in one place. Exchanges, trading bots, passive income platforms, Telegram bots, and research tools — all curated and tested by 360Crypto.',
+    'Every crypto tool you need in one place. Exchanges, trading bots, passive income platforms, hardware wallets, tax software, and research tools — all curated and tested by 360Crypto.',
 };
 
-const SECTION_IDS = ['exchanges', 'bots', 'passive', 'wallets', 'research'] as const;
+const SECTION_IDS = ['exchanges', 'bots', 'passive', 'wallets', 'tax', 'research'] as const;
 
 const CEX_COMPARISON = [
   {
@@ -25,15 +26,15 @@ const CEX_COMPARISON = [
     badge: 'Best CEX',
   },
   {
-    name: 'KuCoin',
-    url: affiliates.kucoin.url,
-    fees: '0.10% / 0.06%',
-    coins: '700+',
+    name: 'Binance',
+    url: affiliates.binance.url,
+    fees: '0.10% / 0.10%',
+    coins: '350+',
     futures: true,
     copy: false,
-    bonus: 'Up to $500',
+    bonus: 'Up to $100',
     highlight: false,
-    badge: undefined,
+    badge: 'Largest Volume',
   },
   {
     name: 'OKX',
@@ -43,6 +44,39 @@ const CEX_COMPARISON = [
     futures: true,
     copy: true,
     bonus: 'Up to $10,000',
+    highlight: false,
+    badge: undefined,
+  },
+  {
+    name: 'Bitget',
+    url: affiliates.bitget.url,
+    fees: '0.10% / 0.06%',
+    coins: '800+',
+    futures: true,
+    copy: true,
+    bonus: 'Up to $6,200',
+    highlight: false,
+    badge: 'Best Copy Trading',
+  },
+  {
+    name: 'MEXC',
+    url: affiliates.mexc.url,
+    fees: '0.00% / 0.05%',
+    coins: '1500+',
+    futures: true,
+    copy: false,
+    bonus: 'Up to $1,000',
+    highlight: false,
+    badge: 'Early Listings',
+  },
+  {
+    name: 'KuCoin',
+    url: affiliates.kucoin.url,
+    fees: '0.10% / 0.06%',
+    coins: '700+',
+    futures: true,
+    copy: false,
+    bonus: 'Up to $500',
     highlight: false,
     badge: undefined,
   },
@@ -71,12 +105,12 @@ const DEX_COMPARISON = [
     badge: 'Best DEX',
   },
   {
-    name: 'KyberSwap',
-    url: affiliates.kyberswap.url,
+    name: 'Changelly',
+    url: affiliates.changelly.url,
     kyc: false,
-    chains: '15+',
-    pairs: 'All EVM',
-    minSwap: 'None',
+    chains: '40+',
+    pairs: '700+',
+    minSwap: '$10',
     highlight: false,
     badge: undefined,
   },
@@ -103,10 +137,37 @@ const HOT_WALLETS = [
   },
 ];
 
+const FREE_TOOLS = [
+  {
+    name: 'CoinGecko',
+    url: 'https://coingecko.com',
+    description: 'The most comprehensive free crypto data platform. Track prices, market caps, on-chain metrics, and developer activity across 13,000+ tokens with no account required.',
+    slug: 'coingecko',
+  },
+  {
+    name: 'DexScreener',
+    url: 'https://dexscreener.com',
+    description: 'Real-time DEX pair analytics across 50+ blockchains. Find new liquidity pool launches the moment they go live, track holder counts, and spot early pumps before they trend.',
+    slug: 'dexscreener',
+  },
+  {
+    name: 'Pump.fun',
+    url: 'https://pump.fun',
+    description: 'The launch platform for Solana memecoins. Watch new tokens launch in real time, track bonding curve progress, and identify which coins are graduating to Raydium.',
+    slug: 'pumpfun',
+  },
+  {
+    name: 'Birdeye',
+    url: 'https://birdeye.so',
+    description: 'Solana-focused analytics aggregator with real-time price charts, holder tracking, smart money flow, and token discovery. The Bloomberg Terminal for Solana degens.',
+    slug: 'birdeye',
+  },
+];
+
 export default function ToolsPage() {
   return (
     <>
-      {/* ── HERO ──────────────────────────────────────────────────────────── */}
+      {/* ── HERO ──────────────────────────────────────────────────────────────────── */}
       <section className="relative overflow-hidden bg-[#0a0a0a] grid-bg pt-16 pb-16">
         <div
           aria-hidden="true"
@@ -120,12 +181,12 @@ export default function ToolsPage() {
             The Best Crypto Tools
           </h1>
           <p className="text-[#a0a0a0] text-lg max-w-xl mx-auto leading-relaxed">
-            We test every platform so you don&apos;t have to. From CEX exchanges to Telegram sniping bots — this is the complete toolkit of a serious crypto trader.
+            We test every platform so you don&apos;t have to. From CEX exchanges to Telegram sniping bots, hardware wallets, and tax software — this is the complete toolkit of a serious crypto trader.
           </p>
 
           {/* Jump links */}
           <div className="mt-8 flex flex-wrap justify-center gap-2">
-            {['Exchanges', 'Bots', 'Passive Income', 'Wallets', 'Research'].map((label, i) => (
+            {['Exchanges', 'Bots', 'Passive Income', 'Wallets', 'Tax', 'Research'].map((label, i) => (
               <a
                 key={label}
                 href={`#${SECTION_IDS[i]}`}
@@ -144,7 +205,7 @@ export default function ToolsPage() {
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-24 pb-24">
 
-        {/* ── EXCHANGES ──────────────────────────────────────────────────── */}
+        {/* ── EXCHANGES ──────────────────────────────────────────────────────────── */}
         <section id="exchanges" className="scroll-mt-24">
           <div className="mb-10">
             <span className="badge-cyan mb-3 inline-block">Exchanges</span>
@@ -213,14 +274,15 @@ export default function ToolsPage() {
                       </td>
                       <td className="px-5 py-4 text-[#00bfff] font-semibold text-xs">{ex.bonus}</td>
                       <td className="px-5 py-4">
-                        <a
+                        <TrackedAffiliateLink
                           href={ex.url}
-                          target="_blank"
-                          rel="noopener noreferrer sponsored"
+                          affiliateName={ex.name.toLowerCase().replace(/\./g, '')}
+                          category="exchanges_cex"
+                          placement="tools-cex-comparison"
                           className="cyber-btn text-xs py-1.5 px-4"
                         >
                           Open →
-                        </a>
+                        </TrackedAffiliateLink>
                       </td>
                     </tr>
                   ))}
@@ -272,14 +334,15 @@ export default function ToolsPage() {
                       <td className="px-5 py-4 text-[#a0a0a0]">{dex.pairs}</td>
                       <td className="px-5 py-4 text-[#a0a0a0]">{dex.minSwap}</td>
                       <td className="px-5 py-4">
-                        <a
+                        <TrackedAffiliateLink
                           href={dex.url}
-                          target="_blank"
-                          rel="noopener noreferrer sponsored"
+                          affiliateName={dex.name.toLowerCase().replace(/\./g, '')}
+                          category="exchanges_dex"
+                          placement="tools-dex-comparison"
                           className="cyber-btn text-xs py-1.5 px-4"
                         >
                           Swap Now →
-                        </a>
+                        </TrackedAffiliateLink>
                       </td>
                     </tr>
                   ))}
@@ -291,7 +354,7 @@ export default function ToolsPage() {
 
         <hr className="section-divider" />
 
-        {/* ── BOTS ──────────────────────────────────────────────────────────── */}
+        {/* ── BOTS ───────────────────────────────────────────────────────────────── */}
         <section id="bots" className="scroll-mt-24">
           <div className="mb-10">
             <span className="badge-cyan mb-3 inline-block">Automated Trading</span>
@@ -314,8 +377,11 @@ export default function ToolsPage() {
                 name={a.name}
                 url={a.url}
                 description={a.description}
+                affiliateName={a.slug ?? a.name.toLowerCase()}
+                category={a.category}
                 badge={a.badge}
                 highlight={a.highlight}
+                placement="tools-page"
               />
             ))}
           </div>
@@ -344,6 +410,9 @@ export default function ToolsPage() {
                 name={a.name}
                 url={a.url}
                 description={a.description}
+                affiliateName={a.slug ?? a.name.toLowerCase()}
+                category={a.category}
+                placement="tools-page"
               />
             ))}
           </div>
@@ -351,7 +420,7 @@ export default function ToolsPage() {
 
         <hr className="section-divider" />
 
-        {/* ── PASSIVE INCOME ───────────────────────────────────────────────── */}
+        {/* ── PASSIVE INCOME ─────────────────────────────────────────────────────── */}
         <section id="passive" className="scroll-mt-24">
           <div className="mb-10">
             <span className="badge-cyan mb-3 inline-block">Passive Income</span>
@@ -394,27 +463,31 @@ export default function ToolsPage() {
                   ))}
                 </ul>
               </div>
-              <a
+              <TrackedAffiliateLink
                 href={affiliates.pionex.url}
-                target="_blank"
-                rel="noopener noreferrer sponsored"
+                affiliateName="pionex"
+                category="passive_income"
+                placement="tools-passive-strip"
                 className="cyber-btn shrink-0 text-sm py-3 px-8 animate-pulse-glow"
               >
                 Start Grid Bot →
-              </a>
+              </TrackedAffiliateLink>
             </div>
           </div>
 
           {/* Other passive income */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {[affiliates.cryptotab, affiliates.cointiply, affiliates.pawns, affiliates.freecash, affiliates.claimyoursol].map((a) => (
+            {[affiliates.cryptotab, affiliates.cointiply, affiliates.pawns, affiliates.freecash, affiliates.rollercoin].map((a) => (
               <AffiliateCard
                 key={a.name}
                 name={a.name}
                 url={a.url}
                 description={a.description}
+                affiliateName={a.slug ?? a.name.toLowerCase()}
+                category={a.category}
                 badge={a.badge}
                 highlight={a.highlight}
+                placement="tools-page"
               />
             ))}
           </div>
@@ -422,7 +495,7 @@ export default function ToolsPage() {
 
         <hr className="section-divider" />
 
-        {/* ── WALLETS ──────────────────────────────────────────────────────── */}
+        {/* ── WALLETS ────────────────────────────────────────────────────────────── */}
         <section id="wallets" className="scroll-mt-24">
           <div className="mb-10">
             <span className="badge-cyan mb-3 inline-block">Security First</span>
@@ -444,14 +517,15 @@ export default function ToolsPage() {
                 <h3 className="font-orbitron text-sm font-bold text-white">{w.name}</h3>
                 <p className="text-xs text-[#00bfff] font-semibold">{w.chains}</p>
                 <p className="text-sm text-[#666] leading-relaxed flex-1">{w.description}</p>
-                <a
+                <TrackedAffiliateLink
                   href={w.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  affiliateName={w.name.toLowerCase()}
+                  category="wallets"
+                  placement="tools-hot-wallets"
                   className="cyber-btn-outline text-xs py-2 w-full text-center mt-auto"
                 >
                   Download Free →
-                </a>
+                </TrackedAffiliateLink>
               </div>
             ))}
           </div>
@@ -461,38 +535,70 @@ export default function ToolsPage() {
             Cold Wallets (Hardware)
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {[
-              {
-                name: 'Ledger',
-                url: 'https://www.ledger.com',
-                description: 'The gold standard in hardware wallets. Ledger devices store your private keys offline in a secure element chip — completely air-gapped from the internet. Supports 5,500+ coins and integrates with MetaMask.',
-              },
-              {
-                name: 'Trezor',
-                url: 'https://trezor.io',
-                description: 'Open-source hardware wallet trusted by millions since 2014. 100% open-source firmware lets security experts verify every line of code. Trezor is the choice for maximum transparency and self-custody.',
-              },
-            ].map((w) => (
-              <div key={w.name} className="cyber-card p-6 flex flex-col gap-3">
-                <h3 className="font-orbitron text-sm font-bold text-white">{w.name}</h3>
-                <p className="text-xs text-[#00bfff] font-semibold">Hardware — Cold Storage</p>
-                <p className="text-sm text-[#666] leading-relaxed flex-1">{w.description}</p>
-                <a
-                  href={w.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="cyber-btn-outline text-xs py-2 w-full text-center mt-auto"
-                >
-                  Shop Hardware Wallet →
-                </a>
-              </div>
-            ))}
+            <AffiliateCard
+              name={affiliates.ledger.name}
+              url={affiliates.ledger.url}
+              description={affiliates.ledger.description}
+              affiliateName="ledger"
+              category="hardware_wallets"
+              badge={affiliates.ledger.badge}
+              highlight={affiliates.ledger.highlight}
+              placement="tools-cold-wallets"
+              ctaLabel="Shop Ledger →"
+            />
+            <AffiliateCard
+              name={affiliates.trezor.name}
+              url={affiliates.trezor.url}
+              description={affiliates.trezor.description}
+              affiliateName="trezor"
+              category="hardware_wallets"
+              placement="tools-cold-wallets"
+              ctaLabel="Shop Trezor →"
+            />
           </div>
         </section>
 
         <hr className="section-divider" />
 
-        {/* ── RESEARCH ─────────────────────────────────────────────────────── */}
+        {/* ── TAX SOFTWARE ───────────────────────────────────────────────────────── */}
+        <section id="tax" className="scroll-mt-24">
+          <div className="mb-10">
+            <span className="badge-cyan mb-3 inline-block">Tax & Compliance</span>
+            <h2 className="font-orbitron text-2xl md:text-3xl font-bold text-white mb-3">
+              Crypto Tax Software
+            </h2>
+            <p className="text-[#666] max-w-2xl leading-relaxed">
+              Ignore your taxes and the IRS won&apos;t ignore you. These tools auto-import your entire transaction history and generate compliant tax reports in minutes — not days.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <AffiliateCard
+              name={affiliates.koinly.name}
+              url={affiliates.koinly.url}
+              description={affiliates.koinly.description}
+              affiliateName="koinly"
+              category="tax_software"
+              badge={affiliates.koinly.badge}
+              highlight={affiliates.koinly.highlight}
+              placement="tools-tax"
+              ctaLabel="Try Koinly Free →"
+            />
+            <AffiliateCard
+              name={affiliates.coinledger.name}
+              url={affiliates.coinledger.url}
+              description={affiliates.coinledger.description}
+              affiliateName="coinledger"
+              category="tax_software"
+              placement="tools-tax"
+              ctaLabel="Try CoinLedger Free →"
+            />
+          </div>
+        </section>
+
+        <hr className="section-divider" />
+
+        {/* ── RESEARCH ───────────────────────────────────────────────────────────── */}
         <section id="research" className="scroll-mt-24">
           <div className="mb-10">
             <span className="badge-cyan mb-3 inline-block">Analysis & Research</span>
@@ -509,49 +615,31 @@ export default function ToolsPage() {
               name={affiliates.tradingview.name}
               url={affiliates.tradingview.url}
               description={affiliates.tradingview.description}
+              affiliateName="tradingview"
+              category="research"
               badge={affiliates.tradingview.badge}
               highlight={affiliates.tradingview.highlight}
+              placement="tools-research"
             />
-            <div className="cyber-card p-6 flex flex-col gap-3">
-              <h3 className="font-orbitron text-sm font-bold text-white">CoinGecko</h3>
-              <p className="text-sm text-[#666] leading-relaxed flex-1">
-                The most comprehensive free crypto data platform. Track prices, market caps, on-chain metrics, and developer activity across 13,000+ tokens with no account required.
-              </p>
-              <a href="https://coingecko.com" target="_blank" rel="noopener noreferrer" className="cyber-btn-outline text-xs py-2 w-full text-center mt-auto">
-                Open Free →
-              </a>
-            </div>
-            <div className="cyber-card p-6 flex flex-col gap-3">
-              <h3 className="font-orbitron text-sm font-bold text-white">DexScreener</h3>
-              <p className="text-sm text-[#666] leading-relaxed flex-1">
-                Real-time DEX pair analytics across 50+ blockchains. Find new liquidity pool launches the moment they go live, track holder counts, and spot early pumps before they trend.
-              </p>
-              <a href="https://dexscreener.com" target="_blank" rel="noopener noreferrer" className="cyber-btn-outline text-xs py-2 w-full text-center mt-auto">
-                Open Free →
-              </a>
-            </div>
-            <div className="cyber-card p-6 flex flex-col gap-3">
-              <h3 className="font-orbitron text-sm font-bold text-white">Pump.fun</h3>
-              <p className="text-sm text-[#666] leading-relaxed flex-1">
-                The launch platform for Solana memecoins. Watch new tokens launch in real time, track bonding curve progress, and identify which coins are graduating to Raydium.
-              </p>
-              <a href="https://pump.fun" target="_blank" rel="noopener noreferrer" className="cyber-btn-outline text-xs py-2 w-full text-center mt-auto">
-                Open Free →
-              </a>
-            </div>
-            <div className="cyber-card p-6 flex flex-col gap-3">
-              <h3 className="font-orbitron text-sm font-bold text-white">Birdeye</h3>
-              <p className="text-sm text-[#666] leading-relaxed flex-1">
-                Solana-focused analytics aggregator with real-time price charts, holder tracking, smart money flow, and token discovery. The Bloomberg Terminal for Solana degens.
-              </p>
-              <a href="https://birdeye.so" target="_blank" rel="noopener noreferrer" className="cyber-btn-outline text-xs py-2 w-full text-center mt-auto">
-                Open Free →
-              </a>
-            </div>
+            {FREE_TOOLS.map((tool) => (
+              <div key={tool.name} className="cyber-card p-6 flex flex-col gap-3">
+                <h3 className="font-orbitron text-sm font-bold text-white">{tool.name}</h3>
+                <p className="text-sm text-[#666] leading-relaxed flex-1">{tool.description}</p>
+                <TrackedAffiliateLink
+                  href={tool.url}
+                  affiliateName={tool.slug}
+                  category="research"
+                  placement="tools-research-free"
+                  className="cyber-btn-outline text-xs py-2 w-full text-center mt-auto"
+                >
+                  Open Free →
+                </TrackedAffiliateLink>
+              </div>
+            ))}
           </div>
         </section>
 
-        {/* ── NEWSLETTER + CONTACT ──────────────────────────────────────────── */}
+        {/* ── NEWSLETTER + CONTACT ───────────────────────────────────────────────── */}
         <section>
           <NewsletterInline
             title="Get Notified About New Tools"
