@@ -54,7 +54,8 @@ export const affiliates: Record<string, Affiliate> = {
       'Access 1,700+ trading pairs including the smallest altcoins and new project listings. Gate.io is the go-to for early-stage gem hunters and high-volume altcoin traders.',
     category: 'exchanges_cex',
   },
-  // ── Sign up at https://www.binance.com/en/activity/referral to get your affiliate link ──
+  // ⚡ TODAY — accounts.binance.com/register → Dashboard → Referral → copy link
+  // Replace URL with: https://accounts.binance.com/register?ref=YOUR_CODE
   binance: {
     name: 'Binance',
     url: 'https://accounts.binance.com/register',
@@ -63,7 +64,8 @@ export const affiliates: Record<string, Affiliate> = {
     category: 'exchanges_cex',
     badge: 'Largest Exchange',
   },
-  // ── Sign up at https://www.mexc.com/affiliate to get your affiliate link (70% commission rate) ──
+  // ⚡ TODAY — mexc.com/register → Profile → Referral → copy link (40-70% commission)
+  // Replace URL with: https://promote.mexc.com/r/YOUR_CODE
   mexc: {
     name: 'MEXC',
     url: 'https://www.mexc.com/register',
@@ -72,7 +74,8 @@ export const affiliates: Record<string, Affiliate> = {
     category: 'exchanges_cex',
     badge: 'Early Listings',
   },
-  // ── Sign up at https://partner.bitget.com/ for affiliate access ──
+  // ⚡ TODAY — bitget.com/register → Profile → Referral → copy link
+  // Replace URL with: https://www.bitget.com/register?referralCode=YOUR_CODE
   bitget: {
     name: 'Bitget',
     url: 'https://www.bitget.com/register',
@@ -91,7 +94,8 @@ export const affiliates: Record<string, Affiliate> = {
     badge: 'Best DEX',
     highlight: true,
   },
-  // ── Sign up at https://changelly.com/referral for your affiliate link ──
+  // ⚡ TODAY — affiliate.changelly.com → signup → instant link (50% of fees)
+  // Replace URL with: https://changelly.com/?ref=YOUR_CODE
   changelly: {
     name: 'Changelly',
     url: 'https://changelly.com',
@@ -138,6 +142,8 @@ export const affiliates: Record<string, Affiliate> = {
       'The highest-paying rewards platform in crypto. Complete offers, surveys, and game challenges to earn cash, Bitcoin, or gift cards. Payouts are instant and withdrawals start at $1.',
     category: 'passive_income',
   },
+  // ⚡ TODAY — rollercoin.com → sign up → Profile → Referral link (instant)
+  // Replace URL with: https://rollercoin.com/?r=YOUR_CODE
   rollercoin: {
     name: 'RollerCoin',
     url: 'https://rollercoin.com',
@@ -269,7 +275,8 @@ export const affiliates: Record<string, Affiliate> = {
   },
 
   // ── Hardware Wallets ──────────────────────────────────────────────────────────────────────────
-  // Sign up at https://affiliate.ledger.com/ for your affiliate link (10% commission, 30-day cookie)
+  // 🟡 MEDIUM (3-7 days) — apply at affiliate.ledger.com (10% commission, 30-day cookie)
+  // Replace URL with: https://shop.ledger.com/?r=YOUR_CODE
   ledger: {
     name: 'Ledger',
     url: 'https://www.ledger.com',
@@ -279,7 +286,8 @@ export const affiliates: Record<string, Affiliate> = {
     badge: '#1 Cold Wallet',
     highlight: true,
   },
-  // Sign up at https://trezor.io/affiliate for your affiliate link (~12% commission)
+  // 🟡 MEDIUM (3-7 days) — apply at trezor.io/affiliate (~12% commission)
+  // Replace URL with affiliate link once approved
   trezor: {
     name: 'Trezor',
     url: 'https://trezor.io',
@@ -289,7 +297,8 @@ export const affiliates: Record<string, Affiliate> = {
   },
 
   // ── Tax Software ──────────────────────────────────────────────────────────────────────────────
-  // Sign up at https://koinly.io/affiliates/ for your affiliate link (30% RECURRING commission)
+  // 🟢 FAST (24-48h) — koinly.io/affiliates → via Impact network (30% RECURRING commission)
+  // Replace URL with your Impact affiliate link once approved
   koinly: {
     name: 'Koinly',
     url: 'https://koinly.io',
@@ -299,7 +308,8 @@ export const affiliates: Record<string, Affiliate> = {
     badge: 'Best Tax Tool',
     highlight: true,
   },
-  // Sign up at https://coinledger.io/affiliate for your affiliate link (25% commission)
+  // 🟢 FAST (24-48h) — coinledger.io/affiliate → apply → get link (25% commission)
+  // Replace URL with your affiliate link once approved
   coinledger: {
     name: 'CoinLedger',
     url: 'https://coinledger.io',
