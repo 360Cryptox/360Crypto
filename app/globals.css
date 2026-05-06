@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --background-secondary: #1a1a1a;
+  --background-tertiary: #2a2a2a;
+  --foreground: #ededed;
+  --foreground-muted: #a0a0a0;
+  --accent: #00bfff;
+  --accent-dim: rgba(0, 191, 255, 0.15);
+  --accent-glow: rgba(0, 191, 255, 0.5);
+  --accent-glow-strong: rgba(0, 191, 255, 0.8);
+  --border: rgba(255, 255, 255, 0.08);
+  --border-accent: rgba(0, 191, 255, 0.3);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: 'Exo 2', system-ui, sans-serif;
+  --font-orbitron: 'Orbitron', system-ui, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Exo 2', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Utility Classes ── */
+
+.font-orbitron {
+  font-family: 'Orbitron', system-ui, sans-serif;
+}
+
+.glow-text {
+  color: #00bfff;
+  text-shadow:
+    0 0 10px rgba(0, 191, 255, 0.8),
+    0 0 20px rgba(0, 191, 255, 0.5),
+    0 0 40px rgba(0, 191, 255, 0.3);
+}
+
+.glow-text-sm {
+  color: #00bfff;
+  text-shadow:
+    0 0 6px rgba(0, 191, 255, 0.6),
+    0 0 12px rgba(0, 191, 255, 0.3);
+}
+
+.cyber-card {
+  background: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.cyber-card:hover {
+  border-color: rgba(0, 191, 255, 0.35);
+  box-shadow: 0 0 24px rgba(0, 191, 255, 0.12), 0 8px 32px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+.cyber-card-highlight {
+  background: #1a1a1a;
+  border: 1px solid rgba(0, 191, 255, 0.45);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.15), inset 0 0 20px rgba(0, 191, 255, 0.03);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.cyber-card-highlight:hover {
+  border-color: rgba(0, 191, 255, 0.7);
+  box-shadow: 0 0 36px rgba(0, 191, 255, 0.3), 0 8px 32px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+.cyber-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.5rem;
+  background: #00bfff;
+  color: #0a0a0a;
+  font-family: 'Orbitron', system-ui, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+  white-space: nowrap;
+}
+
+.cyber-btn:hover {
+  background: #33ccff;
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.6), 0 4px 16px rgba(0, 0, 0, 0.4);
+  transform: translateY(-1px);
+}
+
+.cyber-btn:active {
+  transform: translateY(0);
+}
+
+.cyber-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.5rem;
+  background: transparent;
+  color: #00bfff;
+  font-family: 'Orbitron', system-ui, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 191, 255, 0.5);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+  white-space: nowrap;
+}
+
+.cyber-btn-outline:hover {
+  background: rgba(0, 191, 255, 0.1);
+  border-color: #00bfff;
+  box-shadow: 0 0 16px rgba(0, 191, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+/* ── Grid Background Pattern ── */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(0, 191, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 191, 255, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* ── Gradient Text ── */
+.gradient-text {
+  background: linear-gradient(135deg, #00bfff 0%, #ffffff 60%, #00bfff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Section Divider ── */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 191, 255, 0.3), transparent);
+  border: none;
+  margin: 0;
+}
+
+/* ── Custom Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 191, 255, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 191, 255, 0.6);
+}
+
+/* ── Selection ── */
+::selection {
+  background: rgba(0, 191, 255, 0.25);
+  color: #ffffff;
+}
+
+/* ── Animations ── */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 10px rgba(0, 191, 255, 0.3); }
+  50%       { box-shadow: 0 0 28px rgba(0, 191, 255, 0.7); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* ── Badge ── */
+.badge-cyan {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.65rem;
+  background: rgba(0, 191, 255, 0.15);
+  color: #00bfff;
+  border: 1px solid rgba(0, 191, 255, 0.35);
+  border-radius: 999px;
+  font-size: 0.65rem;
+  font-family: 'Orbitron', system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* ── Input ── */
+.cyber-input {
+  background: #2a2a2a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #ededed;
+  font-family: 'Exo 2', system-ui, sans-serif;
+  padding: 0.625rem 1rem;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cyber-input:focus {
+  border-color: rgba(0, 191, 255, 0.5);
+  box-shadow: 0 0 12px rgba(0, 191, 255, 0.15);
+}
+
+.cyber-input::placeholder {
+  color: rgba(160, 160, 160, 0.6);
+}
