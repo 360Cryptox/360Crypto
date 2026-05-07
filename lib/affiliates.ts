@@ -42,7 +42,7 @@ export const affiliates: Record<string, Affiliate> = {
   },
   okx: {
     name: 'OKX',
-    url: 'https://link.360crypto.site/3f5ca1',
+    url: 'https://www.okx.com/join/28048724',
     description:
       'Top-tier global exchange with advanced derivatives, a built-in Web3 wallet, and one of the best mobile trading apps in the space. Ideal for both spot and futures traders.',
     category: 'exchanges_cex',
@@ -155,26 +155,19 @@ export const affiliates: Record<string, Affiliate> = {
   // â”€â”€ Trading Bots â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   gmgn: {
     name: 'GMGN',
-    url: 'https://link.360crypto.site/fpc',
+    url: 'https://gmgn.ai/trend/SGDi9Uqy4?chain=sol',
     description:
       'AI-powered memecoin analytics and automated trading for Solana. Real-time token tracking, smart wallet copy trading, and profit-maximizing entry/exit signals.',
     category: 'trading_bots',
   },
   bullx: {
     name: 'BullX',
-    url: 'https://link.360crypto.site/50p',
+    url: 'https://t.me/BullxBetaBot?start=access_JPKYCT7U7PP',
     description:
       'The most advanced Solana memecoin terminal. Snipe new launches, set limit orders, copy top wallets, and trade with surgical precision on Pump.fun and Raydium.',
     category: 'trading_bots',
     badge: 'Best Solana Bot',
     highlight: true,
-  },
-  photon: {
-    name: 'Photon',
-    url: 'https://link.360crypto.site/gox',
-    description:
-      'Lightning-fast Solana trading terminal for memecoin sniping. Sub-second execution, anti-rug filters, and advanced wallet tracking. Built for speed when every millisecond counts.',
-    category: 'trading_bots',
   },
   threecommas: {
     name: '3Commas',
@@ -185,7 +178,7 @@ export const affiliates: Record<string, Affiliate> = {
   },
   cryptohopper: {
     name: 'Cryptohopper',
-    url: 'https://link.360crypto.site/a4p',
+    url: 'https://www.cryptohopper.com/?atid=35048',
     description:
       'Cloud-based trading bot platform with a strategy marketplace. Paper trade to test your strategies risk-free, then deploy live across 17 exchanges with automated backtesting.',
     category: 'trading_bots',
@@ -199,20 +192,6 @@ export const affiliates: Record<string, Affiliate> = {
   },
 
   // â”€â”€ Telegram Bots â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-  tonbot: {
-    name: 'TON Trading Bot',
-    url: 'https://link.360crypto.site/hhx',
-    description:
-      'Snipe and trade TON ecosystem tokens directly in Telegram. Fast execution, anti-MEV protection, and real-time tracking of TON chain opportunities.',
-    category: 'telegram_bots',
-  },
-  solbot: {
-    name: 'Sol Trading Bot',
-    url: 'https://link.360crypto.site/lo6',
-    description:
-      'Trade Solana tokens without leaving Telegram. One-tap buying, automatic take-profit/stop-loss, and wallet monitoring â€” all inside your Telegram app.',
-    category: 'telegram_bots',
-  },
   pepeboosteth: {
     name: 'Pepeboost ETH',
     url: 'https://t.me/pepeboost_swap_bot?start=ref_0uvl1u',
@@ -295,8 +274,6 @@ export const affiliates: Record<string, Affiliate> = {
   },
 
   // ── Tax Software ──────────────────────────────────────────────────────────────────────────────
-  // 🟢 FAST (24-48h) — koinly.io/affiliates → via Impact network (30% RECURRING commission)
-  // Replace URL with your Impact affiliate link once approved
   koinly: {
     name: 'Koinly',
     url: 'https://koinly.io',
