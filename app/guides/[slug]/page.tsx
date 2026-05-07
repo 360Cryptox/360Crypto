@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Script from 'next/script';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { getGuide, getGuideSlugs, formatDate } from '@/lib/content';
 import { notFound } from 'next/navigation';
@@ -71,6 +72,18 @@ export default async function GuidePostPage({ params }: Props) {
 
   return (
     <>
+      <Script id="jsonld-guide" type="application/ld+json" strategy="beforeInteractive">
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: guide.title,
+          description: guide.description,
+          datePublished: guide.date,
+          author: { '@type': 'Organization', name: '360Crypto', url: 'https://360crypto.site' },
+          publisher: { '@type': 'Organization', name: '360Crypto', url: 'https://360crypto.site' },
+          url: `https://360crypto.site/guides/${slug}`,
+        })}
+      </Script>
       {/* ── HERO ──────────────────────────────────────────────────────────── */}
       <section className="relative overflow-hidden bg-[#0a0a0a] grid-bg border-b border-[rgba(255,255,255,0.06)]">
         <div

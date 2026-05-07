@@ -173,7 +173,7 @@ export default function ToolsPage() {
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 flex items-center justify-center"
         >
-          <div className="h-96 w-96 rounded-full bg-[#00bfff] opacity-[0.05] blur-[100px]" />
+          <div className="h-96 w-96 rounded-full bg-[#00bfff] opacity-[0.03] blur-[120px]" />
         </div>
         <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center py-14">
           <span className="badge-cyan mb-4 inline-block">Curated & Tested</span>
@@ -466,7 +466,7 @@ export default function ToolsPage() {
                 affiliateName="pionex"
                 category="passive_income"
                 placement="tools-passive-strip"
-                className="cyber-btn shrink-0 text-sm py-3 px-8 animate-pulse-glow"
+                className="cyber-btn shrink-0 text-sm py-3 px-8"
               >
                 Start Grid Bot →
               </TrackedAffiliateLink>

@@ -183,8 +183,7 @@ export default function Footer() {
         {/* Bottom row */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#444]">
           <p>
-            © 2025 360Crypto · Powered by{' '}
-            <span className="text-[#00bfff]">360Crypto</span>
+            © 2026 360Crypto · All rights reserved
           </p>
           <p className="text-center sm:text-right max-w-md leading-relaxed">
             <strong className="text-[#555]">Affiliate Disclosure:</strong> Some links on this site are affiliate links. We may earn a commission at no extra cost to you. We only recommend tools we genuinely use and trust.

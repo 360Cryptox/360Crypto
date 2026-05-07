@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Script from 'next/script';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { getBlogPost, getBlogSlugs, formatDate } from '@/lib/content';
 import { notFound } from 'next/navigation';
@@ -63,6 +64,18 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <>
+      <Script id="jsonld-article" type="application/ld+json" strategy="beforeInteractive">
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: post.title,
+          description: post.description,
+          datePublished: post.date,
+          author: { '@type': 'Organization', name: '360Crypto', url: 'https://360crypto.site' },
+          publisher: { '@type': 'Organization', name: '360Crypto', url: 'https://360crypto.site' },
+          url: `https://360crypto.site/blog/${slug}`,
+        })}
+      </Script>
       {/* ── HERO ──────────────────────────────────────────────────────────── */}
       <section className="relative overflow-hidden bg-[#0a0a0a] grid-bg border-b border-[rgba(255,255,255,0.06)]">
         <div

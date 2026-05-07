@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://360crypto.site'),
   title: {
     template: '%s | 360Crypto',
     default: '360Crypto — Navigate Crypto. Build Wealth.',
@@ -12,19 +13,25 @@ export const metadata: Metadata = {
   description:
     'Expert crypto guides, curated trading tools, passive income strategies, and a community built for serious traders. Start your crypto journey with 360Crypto.',
   keywords: [
-    'crypto',
-    'cryptocurrency',
+    'crypto trading',
+    'cryptocurrency guide',
     'trading bots',
-    'passive income',
-    'Solana',
-    'memecoin',
-    'DeFi',
-    'grid bots',
-    'Pionex',
-    'Bybit',
-    'trading signals',
+    'passive income crypto',
+    'Solana memecoins',
+    'memecoin trading',
+    'DeFi strategies',
+    'Pionex grid bot',
+    'Bybit exchange',
+    'BullX trading',
+    'crypto signals',
+    'crypto for beginners',
+    'how to trade crypto',
+    'best crypto exchanges 2026',
   ],
   authors: [{ name: '360Crypto', url: 'https://360crypto.site' }],
+  alternates: {
+    canonical: 'https://360crypto.site',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -33,15 +40,23 @@ export const metadata: Metadata = {
     title: '360Crypto — Navigate Crypto. Build Wealth.',
     description:
       'Expert crypto guides, curated trading tools, passive income strategies, and a community built for serious traders.',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: '360Crypto' }],
   },
   twitter: {
     card: 'summary_large_image',
     site: '@360CryptoSite',
     creator: '@360CryptoSite',
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
   verification: {
     google: 'Ld7tjVTbBhrPNB50pPG7CnyTM68tWhv10aVSKcuh_hU',
@@ -58,6 +73,21 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
+        {/* JSON-LD structured data */}
+        <Script id="jsonld-org" type="application/ld+json" strategy="beforeInteractive">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: '360Crypto',
+            url: 'https://360crypto.site',
+            description: 'Expert crypto guides, curated trading tools, passive income strategies, and a community built for serious traders.',
+            potentialAction: {
+              '@type': 'SearchAction',
+              target: 'https://360crypto.site/blog?q={search_term_string}',
+              'query-input': 'required name=search_term_string',
+            },
+          })}
+        </Script>
         {/* Google Analytics */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
