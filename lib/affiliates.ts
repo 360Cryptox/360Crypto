@@ -78,7 +78,7 @@ export const affiliates: Record<string, Affiliate> = {
   // Replace URL with: https://www.bitget.com/register?referralCode=YOUR_CODE
   bitget: {
     name: 'Bitget',
-    url: 'https://www.bitget.com/register',
+    url: 'https://share.bitget.com/u/RMW4GJ56',
     description:
       'The #1 copy trading exchange. One-click mirror elite traders with verified track records, $5B+ daily volume, and a full suite of spot and futures markets. Top choice for beginners entering the market.',
     category: 'exchanges_cex',
