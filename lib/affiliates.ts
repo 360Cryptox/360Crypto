@@ -275,11 +275,9 @@ export const affiliates: Record<string, Affiliate> = {
   },
 
   // ── Hardware Wallets ──────────────────────────────────────────────────────────────────────────
-  // 🟡 MEDIUM (3-7 days) — apply at affiliate.ledger.com (10% commission, 30-day cookie)
-  // Replace URL with: https://shop.ledger.com/?r=YOUR_CODE
   ledger: {
     name: 'Ledger',
-    url: 'https://www.ledger.com',
+    url: 'https://shop.ledger.com/?r=b9f30c13e7bc',
     description:
       'The global gold standard in hardware wallets. A secure element chip keeps your private keys completely offline. Supports 5,500+ coins and integrates with MetaMask, DeFi, and NFT platforms. One-time purchase, lifetime security.',
     category: 'hardware_wallets',
@@ -308,11 +306,9 @@ export const affiliates: Record<string, Affiliate> = {
     badge: 'Best Tax Tool',
     highlight: true,
   },
-  // 🟢 FAST (24-48h) — coinledger.io/affiliate → apply → get link (25% commission)
-  // Replace URL with your affiliate link once approved
   coinledger: {
     name: 'CoinLedger',
-    url: 'https://coinledger.io',
+    url: 'https://coinledger.io?fpr=btn3d2',
     description:
       'Generate accurate crypto tax reports in under 20 minutes. Integrates with Coinbase, Binance, Kraken, MetaMask, and 500+ exchanges. Trusted by 500,000+ crypto investors. Works directly inside TurboTax and TaxAct.',
     category: 'tax_software',
