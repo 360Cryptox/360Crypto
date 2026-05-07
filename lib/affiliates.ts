@@ -68,7 +68,7 @@ export const affiliates: Record<string, Affiliate> = {
   // Replace URL with: https://promote.mexc.com/r/YOUR_CODE
   mexc: {
     name: 'MEXC',
-    url: 'https://www.mexc.com/register',
+    url: 'https://promote.mexc.com/r/qYTd2OgK5q',
     description:
       'The highest-commission exchange for affiliates — 70% revenue share. For traders: 1,500+ listed tokens including ultra-early altcoins, zero-fee spot trading on select pairs, and lightning-fast listings.',
     category: 'exchanges_cex',
@@ -98,7 +98,7 @@ export const affiliates: Record<string, Affiliate> = {
   // Replace URL with: https://changelly.com/?ref=YOUR_CODE
   changelly: {
     name: 'Changelly',
-    url: 'https://changelly.com',
+    url: 'https://changelly.com/?ref_id=ITx3zWCiSO9qp4Zc',
     description:
       'Swap 700+ cryptocurrencies instantly with no registration and competitive flat fees. Backed by Binance and trusted since 2015 — the most well-known no-KYC instant swap service with a solid affiliate program.',
     category: 'exchanges_dex',
