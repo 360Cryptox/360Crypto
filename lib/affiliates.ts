@@ -146,7 +146,7 @@ export const affiliates: Record<string, Affiliate> = {
   // Replace URL with: https://rollercoin.com/?r=YOUR_CODE
   rollercoin: {
     name: 'RollerCoin',
-    url: 'https://rollercoin.com',
+    url: 'https://rollercoin.com/?r=mov92sdg',
     description:
       'The original crypto mining simulator game. Play mini-games, build your virtual mining empire, and earn real BTC, ETH, and SOL. Millions of players — the most engaging passive earner with a true referral system.',
     category: 'passive_income',
