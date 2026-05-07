@@ -43,6 +43,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  verification: {
+    google: 'Ld7tjVTbBhrPNB50pPG7CnyTM68tWhv10aVSKcuh_hU',
+  },
 };
 
 const GA_ID = 'G-0MXFRFKXZC';
