@@ -215,6 +215,187 @@ body {
   animation: float 4s ease-in-out infinite;
 }
 
+/* ── Prose / Article Styles ── */
+.prose-crypto {
+  color: #c0c0c0;
+  font-size: 1.0625rem;
+  line-height: 1.8;
+}
+
+.prose-crypto h2 {
+  font-family: 'Orbitron', system-ui, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(0, 191, 255, 0.2);
+}
+
+.prose-crypto h3 {
+  font-family: 'Orbitron', system-ui, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #e0e0e0;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-crypto h4 {
+  font-family: 'Orbitron', system-ui, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #00bfff;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.prose-crypto p {
+  margin-bottom: 1.25rem;
+}
+
+.prose-crypto a {
+  color: #00bfff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+
+.prose-crypto a:hover {
+  color: #33ccff;
+}
+
+.prose-crypto strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.prose-crypto em {
+  color: #a0a0a0;
+  font-style: italic;
+}
+
+.prose-crypto ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.25rem;
+}
+
+.prose-crypto ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose-crypto ul li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #00bfff;
+  font-size: 0.75rem;
+  top: 0.25rem;
+}
+
+.prose-crypto ol {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.25rem;
+  counter-reset: ol-counter;
+}
+
+.prose-crypto ol li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.5rem;
+  counter-increment: ol-counter;
+}
+
+.prose-crypto ol li::before {
+  content: counter(ol-counter) '.';
+  position: absolute;
+  left: 0;
+  color: #00bfff;
+  font-family: 'Orbitron', system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  top: 0.15rem;
+}
+
+.prose-crypto blockquote {
+  border-left: 3px solid #00bfff;
+  padding-left: 1.25rem;
+  margin: 1.5rem 0;
+  color: #888;
+  font-style: italic;
+}
+
+.prose-crypto code {
+  background: rgba(0, 191, 255, 0.08);
+  border: 1px solid rgba(0, 191, 255, 0.15);
+  border-radius: 4px;
+  padding: 0.15rem 0.4rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.875rem;
+  color: #00bfff;
+}
+
+.prose-crypto pre {
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 1.25rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.prose-crypto pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #a0a0a0;
+  font-size: 0.875rem;
+}
+
+.prose-crypto table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+.prose-crypto table th {
+  font-family: 'Orbitron', system-ui, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #00bfff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid rgba(0, 191, 255, 0.3);
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  background: rgba(0, 191, 255, 0.04);
+}
+
+.prose-crypto table td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: #b0b0b0;
+}
+
+.prose-crypto table tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.prose-crypto hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 191, 255, 0.3), transparent);
+  margin: 2.5rem 0;
+}
+
 /* ── Badge ── */
 .badge-cyan {
   display: inline-flex;

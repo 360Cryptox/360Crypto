@@ -371,7 +371,7 @@ export default function ToolsPage() {
             Bot Platforms
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
-            {[affiliates.gmgn, affiliates.bullx, affiliates.photon, affiliates.threecommas, affiliates.cryptohopper, affiliates.coinrule].map((a) => (
+            {[affiliates.gmgn, affiliates.bullx, affiliates.threecommas, affiliates.cryptohopper, affiliates.coinrule].map((a) => (
               <AffiliateCard
                 key={a.name}
                 name={a.name}
@@ -395,8 +395,6 @@ export default function ToolsPage() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
-              affiliates.tonbot,
-              affiliates.solbot,
               affiliates.pepeboosteth,
               affiliates.pepeboostsol,
               affiliates.trojan,

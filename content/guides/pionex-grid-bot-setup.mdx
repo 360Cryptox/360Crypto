@@ -1,0 +1,181 @@
+---
+title: "Pionex Grid Bot: Complete Setup Guide for Beginners (2025)"
+description: "Step-by-step guide to setting up your first Pionex grid trading bot. Covers account creation, funding, parameter configuration, pair selection, and risk management."
+date: "2025-03-25"
+category: "Passive Income"
+level: "Beginner"
+readTime: "12 min read"
+icon: "🤖"
+keywords: ["pionex grid bot setup", "how to set up pionex grid bot", "pionex tutorial 2025", "grid trading bot beginners", "pionex guide"]
+---
+
+Pionex grid bots are one of the most beginner-friendly ways to earn passive crypto income. Once configured, they trade 24/7 without any input from you. This guide walks through the complete setup from zero.
+
+## What You'll Need
+
+- A Pionex account (free to create)
+- At least $100 worth of USDT or the base currency for your trading pair
+- 10–15 minutes for the initial setup
+
+## Step 1: Create Your Pionex Account
+
+Go to [Pionex](https://www.pionex.com/en/sign/ref/mLZMTGSD) and sign up with your email. The registration takes under 2 minutes.
+
+After signing up:
+1. Verify your email address
+2. Enable 2-factor authentication (Google Authenticator or SMS) — this is required before trading
+3. Complete basic identity verification (KYC) — takes 5–30 minutes depending on your country
+
+KYC is required to withdraw funds above basic limits. Complete it now so it doesn't block you later.
+
+## Step 2: Fund Your Account
+
+Pionex supports multiple deposit methods:
+
+**Crypto deposit (fastest, zero fees)**:
+1. Go to **Assets → Deposit**
+2. Select USDT and your preferred network (TRC-20 is cheapest for transfers)
+3. Copy the deposit address
+4. Send USDT from your exchange or wallet to this address
+
+**Credit/debit card**: More expensive (2–5% fee) but instant. Good if you don't have crypto already.
+
+**Bank transfer**: Varies by region. Cheapest but slowest.
+
+**Recommended starting amount**: $200–$500 for your first bot. Enough to generate meaningful returns while keeping risk manageable.
+
+## Step 3: Understand Grid Bot Parameters
+
+Before configuring your bot, understand what each parameter does:
+
+**Lower Price**: The lowest price in your grid range. The bot will place buy orders starting here. If price falls below this level, the bot stops trading (all capital is deployed in the base asset).
+
+**Upper Price**: The highest price in your grid range. The bot will place sell orders up to here. If price rises above this level, the bot stops trading (all capital converted to quote asset = you're in profit, just no more trades).
+
+**Grid Number**: How many grid levels between your upper and lower price. Each grid = one buy-sell pair. More grids = more frequent, smaller trades. Fewer grids = less frequent, larger trades.
+
+**Investment Amount**: How much capital to deploy in this bot.
+
+## Step 4: Choose Your Trading Pair
+
+For your first bot, stick to major pairs with high liquidity:
+
+**BTC/USDT**: Most stable, easiest to analyze. Lower APR in quiet markets, but very consistent.
+
+**ETH/USDT**: Higher volatility than BTC, often generates better grid returns. Good default choice.
+
+**SOL/USDT**: High volatility = potentially higher APR. More risk of price breaking the grid range.
+
+**BNB/USDT**: Consistent oscillation, integrates naturally with the Pionex ecosystem.
+
+For beginners: **ETH/USDT** is the sweet spot — enough volatility to generate returns, enough liquidity to avoid slippage issues.
+
+## Step 5: Configure the Grid Bot
+
+From the Pionex app or web:
+
+1. Tap **Trade** → **Bot**
+2. Select **Grid Trading**
+3. Choose your pair (e.g., ETH/USDT)
+
+### Option A: Use Pionex AI Strategy (Recommended for Beginners)
+
+Pionex analyzes the last 7 or 30 days of price data and automatically recommends optimal parameters. Tap **AI Strategy** to generate a recommendation.
+
+The AI suggestion is a solid starting point. Review it before accepting:
+- Does the range look reasonable on the chart?
+- Is the lower price at or below a strong support level?
+- Is the expected APR above 15%?
+
+If yes to all three, accept and proceed.
+
+### Option B: Manual Configuration
+
+If you want to set your own parameters:
+
+**1. Check the chart**
+
+Look at the 30-day and 90-day chart for your pair. Identify:
+- Strong support levels (price has bounced here multiple times)
+- Strong resistance levels (price has struggled to break through)
+- The current price position in the historical range
+
+**2. Set your lower price**
+
+Place it 10–20% below the current price, at a clear support level. You want to be confident price is unlikely to go below this point in your intended time horizon.
+
+Example: ETH at $3,000 with strong support at $2,400 → lower price = $2,400–$2,500.
+
+**3. Set your upper price**
+
+Place it 15–30% above current price, at a clear resistance level or recent high.
+
+Example: ETH at $3,000, recent resistance at $3,800 → upper price = $3,700–$3,800.
+
+**4. Set grid count**
+
+Use this formula as a starting point:
+```
+Grid count = (Upper - Lower) / (Upper × 0.003)
+```
+
+This targets ~0.3% profit per grid, which comfortably covers the 0.05% trading fee and leaves room for profit.
+
+For ETH $2,500–$3,800: (3,800 - 2,500) / (3,800 × 0.003) = 1,300 / 11.4 ≈ **114 grids**
+
+That's a lot — Pionex caps at 99 or 160 depending on plan. Adjust to 50–80 if the formula returns a very high number.
+
+**5. Set investment amount**
+
+Never put your entire account into one bot. Start with 50–60% of your available capital on a single bot. Keep the rest available for new opportunities or additional bots.
+
+## Step 6: Review and Launch
+
+Before confirming:
+
+- **Estimated grid profit per trade**: Should be > 0.1% (after fees). Below that, fee drag becomes significant.
+- **Estimated APR**: Pionex shows this based on historical volatility. Any number above 15% annually is solid for a stablecoin-base grid.
+- **Total investment**: Confirm this is an amount you're comfortable holding in a range-bound strategy.
+
+Tap **Create Bot**. The bot is now live.
+
+## Step 7: Monitor During the First Week
+
+You don't need to watch it constantly, but check in daily during the first week:
+
+**What to look for**:
+- Is the bot executing trades? You should see activity in the trade history.
+- Is price staying within your range? If it approaches your lower or upper limit, consider whether to adjust.
+- What's the actual APR vs. estimated APR?
+
+**When to intervene**:
+- Price breaks out above upper limit: The bot stops, you're 100% in quote asset (USDT). Decide: wait for a pullback into the range, or close the bot and reset at new levels.
+- Price drops below lower limit: The bot stops, you're 100% in base asset (ETH). You're effectively just holding ETH. Decide: wait for recovery or close with a loss.
+
+## Adjusting and Optimizing
+
+After running for 2–4 weeks:
+
+**If the bot is performing well**: Leave it alone. Consistency beats optimization.
+
+**If price has moved significantly outside your range**: Close the bot, realize the profit or loss, and start a new bot calibrated to current market conditions.
+
+**To compound**: Withdraw profits regularly and start a second bot with the additional capital. Running multiple bots across different pairs diversifies your income source.
+
+## Common Mistakes to Avoid
+
+**Setting the range too tight**: A 5% range on a volatile asset will see price break out constantly, requiring frequent resets. Give yourself breathing room.
+
+**Not checking support/resistance**: Placing the lower limit at an arbitrary round number instead of a real support level means the bot might get stuck with all capital deployed in a falling asset.
+
+**Putting too much in one bot**: If the trade goes wrong (sustained price movement outside the range), you want to have capital available to adapt.
+
+**Closing the bot too early**: Grid bots need time to accumulate enough trades to generate meaningful returns. Give any bot at least 2–4 weeks before evaluating performance.
+
+---
+
+Your first bot is now running. From here, the key is patience — grid trading compounds slowly and consistently. It's not going to 10x your money. It's going to earn you 20–60% annually on capital you'd be holding anyway.
+
+That's not a lottery. That's a business.
+
+[Start on Pionex →](https://www.pionex.com/en/sign/ref/mLZMTGSD)

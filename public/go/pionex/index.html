@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Redirecting to Pionex | 360Crypto</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <!-- Canonical affiliate destination for GA4 go-page tracking -->
+  <meta http-equiv="refresh" content="0; url=https://link.360crypto.site/jkw" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MXFRFKXZC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0MXFRFKXZC');
+
+    // Fire affiliate_click event before redirect
+    gtag('event', 'affiliate_click', {
+      affiliate_name:     'pionex',
+      destination_url:    'https://link.360crypto.site/jkw',
+      affiliate_category: 'go_redirect',
+      page_name:          'go_pionex',
+      placement:          'go-redirect-page'
+    });
+
+    // Redirect after a brief delay to allow GA4 hit to send
+    setTimeout(function() {
+      window.location.replace('https://link.360crypto.site/jkw');
+    }, 150);
+  </script>
+</head>
+<body style="margin:0;background:#0a0a0a;color:#ededed;font-family:sans-serif;display:flex;align-items:center;justify-content:center;min-height:100vh;">
+  <div style="text-align:center;">
+    <p style="color:#00bfff;font-size:1.1rem;">Redirecting to <strong>Pionex</strong>…</p>
+    <p style="color:#666;font-size:0.85rem;">If you are not redirected automatically, <a href="https://link.360crypto.site/jkw" style="color:#00bfff;">click here</a>.</p>
+  </div>
+</body>
+</html>
