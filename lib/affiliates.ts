@@ -228,17 +228,17 @@ export const affiliates: Record<string, Affiliate> = {
     category: 'telegram_bots',
   },
   etherdrops: {
-    name: 'EtherDrops',
+    name: 'Drops Bot',
     url: 'https://t.me/EtherDROPS_bot?start=promo_LP856X',
     description:
-      'Ethereum-focused Telegram trading bot with real-time DeFi alerts, wallet tracking, and one-click swapping. Stay ahead of smart money movements on ETH.',
+      'All-in-one crypto tool for Telegram. Track wallets, trade on Solana, monitor Polymarket events, and follow coins and NFTs across 20+ chains — all from one bot.',
     category: 'telegram_bots',
   },
   raysilver: {
-    name: 'Ray Silver',
+    name: 'Ray Blue',
     url: 'https://t.me/ray_blue_bot?start=ref_YAN0Gc',
     description:
-      'Raydium-specialized trading bot for Solana. Ideal for trading new liquidity pool launches directly on Raydium with automated strategies and wallet analytics.',
+      'Real-time Solana and EVM wallet tracker on Telegram. Get instant transaction notifications the moment a wallet you follow moves — ideal for copy trading and smart money tracking.',
     category: 'telegram_bots',
   },
 
