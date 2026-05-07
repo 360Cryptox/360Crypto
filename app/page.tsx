@@ -34,7 +34,7 @@ const FEATURES = [
       </svg>
     ),
     title: 'Best-in-Class Tools',
-    description: 'Every tool we recommend has been personally tested. We curate only what delivers real results — no fluff, no paid placements.',
+    description: 'Every tool we recommend has been personally tested by traders who actually use them. Only what works.',
   },
   {
     icon: (
@@ -202,7 +202,7 @@ export default function HomePage() {
             Why <span className="glow-text">360Crypto?</span>
           </h2>
           <p className="text-[#666] max-w-lg mx-auto">
-            We&apos;re not another generic crypto news site. We&apos;re traders helping traders get real results.
+            Traders building for traders. Real strategies, tested tools, and a community that moves fast.
           </p>
         </div>
 
