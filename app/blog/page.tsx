@@ -1,16 +1,16 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Link from 'next/link';
 import NewsletterInline from '@/components/NewsletterInline';
 import { getAllBlogPosts, formatDate } from '@/lib/content';
 
 export const metadata: Metadata = {
-  title: 'Blog — Crypto Alpha & Insights',
+  title: 'Blog â€” Crypto Alpha & Insights',
   description:
     'In-depth crypto articles, trading guides, and market insights from the 360Crypto team. Memecoins, passive income, exchange reviews, trading bots, and more.',
   openGraph: {
-    title: 'Blog — Crypto Alpha & Insights | 360Crypto',
+    title: 'Blog â€” Crypto Alpha & Insights | 360Crypto',
     description:
-      'In-depth crypto articles, trading guides, and market insights. No hype — just actionable alpha.',
+      'In-depth crypto articles, trading guides, and market insights. No hype â€” just actionable alpha.',
     url: 'https://360crypto.site/blog',
   },
 };
@@ -19,7 +19,7 @@ const CATEGORY_COLORS: Record<string, string> = {
   Memecoins:        'text-orange-400 bg-orange-400/10 border-orange-400/20',
   'Passive Income': 'text-emerald-400 bg-emerald-400/10 border-emerald-400/20',
   Community:        'text-purple-400 bg-purple-400/10 border-purple-400/20',
-  'Trading Bots':   'text-[#7b5cf5] bg-[rgba(123,92,245,0.1)] border-[rgba(123,92,245,0.2)]',
+  'Trading Bots':   'text-[#5599dd] bg-[rgba(85,153,221,0.1)] border-[rgba(85,153,221,0.2)]',
   Exchanges:        'text-yellow-400 bg-yellow-400/10 border-yellow-400/20',
   Security:         'text-red-400 bg-red-400/10 border-red-400/20',
 };
@@ -44,13 +44,13 @@ export default function BlogPage() {
 
   return (
     <>
-      {/* ── HERO ──────────────────────────────────────────────────────────── */}
+      {/* â”€â”€ HERO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="relative overflow-hidden bg-[#0a0a0a] grid-bg">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 flex items-center justify-center"
         >
-          <div className="h-96 w-96 rounded-full bg-[#7b5cf5] opacity-[0.04] blur-[100px]" />
+          <div className="h-96 w-96 rounded-full bg-[#5599dd] opacity-[0.04] blur-[100px]" />
         </div>
         <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center py-20">
           <span className="badge-cyan mb-4 inline-block">360Crypto Blog</span>
@@ -70,10 +70,10 @@ export default function BlogPage() {
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 space-y-16">
 
-        {/* ── FEATURED POSTS ───────────────────────────────────────────────── */}
+        {/* â”€â”€ FEATURED POSTS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
         {featured.length > 0 && (
           <section>
-            <h2 className="font-orbitron text-sm font-bold text-[#7b5cf5] uppercase tracking-widest mb-6">
+            <h2 className="font-orbitron text-sm font-bold text-[#5599dd] uppercase tracking-widest mb-6">
               Featured
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -91,9 +91,9 @@ export default function BlogPage() {
                     <span className="text-xs text-[#444]">{formatDate(post.date)}</span>
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="text-sm text-[#7b5cf5] font-semibold font-orbitron hover:underline"
+                      className="text-sm text-[#5599dd] font-semibold font-orbitron hover:underline"
                     >
-                      Read More →
+                      Read More â†’
                     </Link>
                   </div>
                 </article>
@@ -102,9 +102,9 @@ export default function BlogPage() {
           </section>
         )}
 
-        {/* ── ALL POSTS ────────────────────────────────────────────────────── */}
+        {/* â”€â”€ ALL POSTS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
         <section>
-          <h2 className="font-orbitron text-sm font-bold text-[#7b5cf5] uppercase tracking-widest mb-6">
+          <h2 className="font-orbitron text-sm font-bold text-[#5599dd] uppercase tracking-widest mb-6">
             Latest Posts
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -122,9 +122,9 @@ export default function BlogPage() {
                   <span className="text-xs text-[#444]">{formatDate(post.date)}</span>
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="text-xs text-[#7b5cf5] font-semibold font-orbitron hover:underline"
+                    className="text-xs text-[#5599dd] font-semibold font-orbitron hover:underline"
                   >
-                    Read More →
+                    Read More â†’
                   </Link>
                 </div>
               </article>
@@ -132,14 +132,15 @@ export default function BlogPage() {
           </div>
         </section>
 
-        {/* ── NEWSLETTER ───────────────────────────────────────────────────── */}
+        {/* â”€â”€ NEWSLETTER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
         <section>
           <NewsletterInline
             title="Never Miss a Post"
-            subtitle="Get new articles, market insights, and tool reviews delivered directly to your inbox. No spam — just quality crypto content."
+            subtitle="Get new articles, market insights, and tool reviews delivered directly to your inbox. No spam â€” just quality crypto content."
           />
         </section>
       </div>
     </>
   );
 }
+

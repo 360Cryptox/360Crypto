@@ -31,7 +31,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-[rgba(10,10,10,0.95)] backdrop-blur-md border-b border-[rgba(123,92,245,0.1)] shadow-[0_0_30px_rgba(0,0,0,0.5)]'
+          ? 'bg-[rgba(10,10,10,0.95)] backdrop-blur-md border-b border-[rgba(85,153,221,0.1)] shadow-[0_0_30px_rgba(0,0,0,0.5)]'
           : 'bg-transparent'
       }`}
     >
@@ -144,4 +144,5 @@ export default function Navbar() {
     </header>
   );
 }
+
 

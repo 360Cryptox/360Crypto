@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -25,7 +25,7 @@ const GUIDES: Guide[] = [
     category: 'Beginner',
     level: 'Beginner',
     readTime: '15 min read',
-    icon: '🌱',
+    icon: 'ðŸŒ±',
   },
   {
     slug: 'advanced-trading-strategies',
@@ -35,7 +35,7 @@ const GUIDES: Guide[] = [
     category: 'Trading',
     level: 'Advanced',
     readTime: '20 min read',
-    icon: '📊',
+    icon: 'ðŸ“Š',
   },
   {
     slug: 'pionex-grid-bot-setup',
@@ -45,7 +45,7 @@ const GUIDES: Guide[] = [
     category: 'Passive Income',
     level: 'Beginner',
     readTime: '12 min read',
-    icon: '🤖',
+    icon: 'ðŸ¤–',
   },
   {
     slug: 'memecoin-trading-on-solana',
@@ -55,7 +55,7 @@ const GUIDES: Guide[] = [
     category: 'Memecoins',
     level: 'Intermediate',
     readTime: '18 min read',
-    icon: '🚀',
+    icon: 'ðŸš€',
   },
   {
     slug: 'how-to-secure-your-crypto-assets',
@@ -65,17 +65,17 @@ const GUIDES: Guide[] = [
     category: 'Security',
     level: 'Beginner',
     readTime: '14 min read',
-    icon: '🔐',
+    icon: 'ðŸ”',
   },
   {
     slug: 'yield-farming-and-liquidity-pools',
     title: 'Yield Farming & Liquidity Pools Explained: How to Earn in DeFi (2026)',
     description:
-      'DeFi yield farming can generate yields that dwarf traditional finance — but the risks are equally outsized. This guide explains impermanent loss, LP token mechanics, how to evaluate protocol risk, and the best platforms for sustainable yield.',
+      'DeFi yield farming can generate yields that dwarf traditional finance â€” but the risks are equally outsized. This guide explains impermanent loss, LP token mechanics, how to evaluate protocol risk, and the best platforms for sustainable yield.',
     category: 'Passive Income',
     level: 'Intermediate',
     readTime: '16 min read',
-    icon: '🌾',
+    icon: 'ðŸŒ¾',
   },
 ];
 
@@ -96,7 +96,7 @@ const LEVEL_COLORS: Record<string, string> = {
 
 const CATEGORY_COLORS: Record<string, string> = {
   Beginner:         'text-emerald-400 bg-emerald-400/10 border-emerald-400/20',
-  Trading:          'text-[#7b5cf5] bg-[rgba(123,92,245,0.1)] border-[rgba(123,92,245,0.2)]',
+  Trading:          'text-[#5599dd] bg-[rgba(85,153,221,0.1)] border-[rgba(85,153,221,0.2)]',
   'Passive Income': 'text-purple-400 bg-purple-400/10 border-purple-400/20',
   Memecoins:        'text-orange-400 bg-orange-400/10 border-orange-400/20',
   Security:         'text-red-400 bg-red-400/10 border-red-400/20',
@@ -110,22 +110,22 @@ export default function GuidesPage() {
 
   return (
     <>
-      {/* ── HERO ──────────────────────────────────────────────────────────── */}
+      {/* â”€â”€ HERO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="relative overflow-hidden bg-[#0a0a0a] grid-bg">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 flex items-center justify-center"
         >
-          <div className="h-96 w-96 rounded-full bg-[#7b5cf5] opacity-[0.04] blur-[100px]" />
+          <div className="h-96 w-96 rounded-full bg-[#5599dd] opacity-[0.04] blur-[100px]" />
         </div>
         <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center py-20">
           <span className="badge-cyan mb-4 inline-block">Free Education</span>
           <h1 className="font-orbitron text-4xl md:text-5xl font-black text-white mb-5">
-            Crypto Guides — From Beginner to Pro
+            Crypto Guides â€” From Beginner to Pro
           </h1>
           <p className="text-[#a0a0a0] text-lg max-w-xl mx-auto leading-relaxed">
             Whether you just heard about Bitcoin or you&apos;re already trading Solana memecoins
-            with bots — our guides meet you exactly where you are and take you further.
+            with bots â€” our guides meet you exactly where you are and take you further.
           </p>
         </div>
         <div
@@ -136,7 +136,7 @@ export default function GuidesPage() {
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 space-y-16">
 
-        {/* ── CATEGORY TABS ────────────────────────────────────────────────── */}
+        {/* â”€â”€ CATEGORY TABS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
         <section>
           <div className="flex flex-wrap gap-2 justify-center mb-10">
             {CATEGORIES.map((cat) => (
@@ -145,8 +145,8 @@ export default function GuidesPage() {
                 onClick={() => setActiveCategory(cat)}
                 className={`font-orbitron text-xs font-bold uppercase tracking-wider px-5 py-2 rounded-lg border transition-all duration-200 ${
                   activeCategory === cat
-                    ? 'bg-[#7b5cf5] text-[#0a0a0a] border-[#7b5cf5]'
-                    : 'bg-[#1a1a1a] text-[#666] border-[rgba(255,255,255,0.08)] hover:text-white hover:border-[rgba(123,92,245,0.3)]'
+                    ? 'bg-[#5599dd] text-[#0a0a0a] border-[#5599dd]'
+                    : 'bg-[#1a1a1a] text-[#666] border-[rgba(255,255,255,0.08)] hover:text-white hover:border-[rgba(85,153,221,0.3)]'
                 }`}
               >
                 {cat}
@@ -156,7 +156,7 @@ export default function GuidesPage() {
 
           {filtered.length === 0 ? (
             <p className="text-center text-[#555] py-20">
-              No guides in this category yet — check back soon.
+              No guides in this category yet â€” check back soon.
             </p>
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -186,9 +186,9 @@ export default function GuidesPage() {
                     <span className="text-xs text-[#444]">{guide.readTime}</span>
                     <Link
                       href={`/guides/${guide.slug}`}
-                      className="text-xs text-[#7b5cf5] font-semibold font-orbitron hover:underline"
+                      className="text-xs text-[#5599dd] font-semibold font-orbitron hover:underline"
                     >
-                      Read Guide →
+                      Read Guide â†’
                     </Link>
                   </div>
                 </article>
@@ -197,7 +197,7 @@ export default function GuidesPage() {
           )}
         </section>
 
-        {/* ── AFFILIATE CTA ────────────────────────────────────────────────── */}
+        {/* â”€â”€ AFFILIATE CTA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
         <section>
           <div className="cyber-card-highlight px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
@@ -206,17 +206,17 @@ export default function GuidesPage() {
               </h2>
               <p className="text-[#666] text-sm max-w-lg leading-relaxed">
                 Our guides are only as good as the tools you use. We&apos;ve curated the best
-                platforms for every strategy — from your first exchange account to automated trading
+                platforms for every strategy â€” from your first exchange account to automated trading
                 bots.
               </p>
             </div>
             <Link href="/tools" className="cyber-btn shrink-0 text-sm py-3 px-8">
-              Check Recommended Tools →
+              Check Recommended Tools â†’
             </Link>
           </div>
         </section>
 
-        {/* ── NEWSLETTER ───────────────────────────────────────────────────── */}
+        {/* â”€â”€ NEWSLETTER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
         <section>
           <NewsletterInline
             title="New Guides Every Week"
@@ -227,3 +227,4 @@ export default function GuidesPage() {
     </>
   );
 }
+

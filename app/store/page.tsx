@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React, { useState, FormEvent } from 'react';
 import Link from 'next/link';
@@ -7,10 +7,10 @@ const PRODUCTS = [
   {
     id: 'apex-signal-bot',
     name: 'APEX Signal Bot',
-    description: 'Advanced Solana memecoin signal detector powered by on-chain analytics. Scans Pump.fun and Raydium launches in real time, filters by holder distribution, liquidity, and smart money activity — and alerts you before the crowd.',
+    description: 'Advanced Solana memecoin signal detector powered by on-chain analytics. Scans Pump.fun and Raydium launches in real time, filters by holder distribution, liquidity, and smart money activity â€” and alerts you before the crowd.',
     price: '$49',
     priceNote: 'One-time payment',
-    icon: '🤖',
+    icon: 'ðŸ¤–',
     features: [
       'Real-time Solana memecoin scanning',
       'Smart money wallet tracking',
@@ -23,10 +23,10 @@ const PRODUCTS = [
   {
     id: 'insider-wallet-list',
     name: 'Insider Wallet List',
-    description: 'A curated database of top-performing sniper and whale wallets on Solana. Updated weekly with verified profitable addresses — copy their moves before the rest of the market notices.',
+    description: 'A curated database of top-performing sniper and whale wallets on Solana. Updated weekly with verified profitable addresses â€” copy their moves before the rest of the market notices.',
     price: '$29',
     priceNote: 'One-time payment',
-    icon: '📋',
+    icon: 'ðŸ“‹',
     features: [
       '500+ verified profitable wallets',
       'Weekly update cadence',
@@ -42,7 +42,7 @@ const PRODUCTS = [
     description: 'Join our private signals channel where we share real-time trade entry and exit calls, upcoming launches, and exclusive alpha sourced from our on-chain monitoring tools.',
     price: '$19/mo',
     priceNote: 'Monthly subscription',
-    icon: '⚡',
+    icon: 'âš¡',
     features: [
       'Daily trade signals',
       'Memecoin launch alerts',
@@ -58,7 +58,7 @@ const PRODUCTS = [
     description: 'A step-by-step Pionex grid bot setup guide written by traders who\'ve been running grid strategies through bull and bear markets. Includes risk management frameworks, pair selection criteria, and profit optimization.',
     price: '$9',
     priceNote: 'One-time payment',
-    icon: '📈',
+    icon: 'ðŸ“ˆ',
     features: [
       'Complete Pionex setup walkthrough',
       'Risk management frameworks',
@@ -94,13 +94,13 @@ export default function StorePage() {
 
   return (
     <>
-      {/* ── HERO ──────────────────────────────────────────────────────────── */}
+      {/* â”€â”€ HERO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="relative overflow-hidden bg-[#0a0a0a] grid-bg pb-0">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 flex items-center justify-center"
         >
-          <div className="h-[500px] w-[500px] rounded-full bg-[#7b5cf5] opacity-[0.05] blur-[120px]" />
+          <div className="h-[500px] w-[500px] rounded-full bg-[#5599dd] opacity-[0.05] blur-[120px]" />
         </div>
         <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center py-20">
           <span className="badge-cyan mb-4 inline-block">Launching Soon</span>
@@ -108,12 +108,12 @@ export default function StorePage() {
             360Crypto Store
           </h1>
           <p className="text-[#a0a0a0] text-lg max-w-xl mx-auto leading-relaxed mb-8">
-            Premium digital products built for serious crypto traders. Signal bots, insider wallet lists, VIP access, and step-by-step guides — everything you need to trade at the next level.
+            Premium digital products built for serious crypto traders. Signal bots, insider wallet lists, VIP access, and step-by-step guides â€” everything you need to trade at the next level.
           </p>
 
           {/* Notify form */}
           {status === 'success' ? (
-            <div className="inline-flex items-center gap-3 rounded-xl bg-[rgba(123,92,245,0.1)] border border-[rgba(123,92,245,0.3)] px-6 py-4 text-[#7b5cf5] font-semibold text-sm">
+            <div className="inline-flex items-center gap-3 rounded-xl bg-[rgba(85,153,221,0.1)] border border-[rgba(85,153,221,0.3)] px-6 py-4 text-[#5599dd] font-semibold text-sm">
               <svg className="h-5 w-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
@@ -126,7 +126,7 @@ export default function StorePage() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="Get notified when we launch…"
+                placeholder="Get notified when we launchâ€¦"
                 className="cyber-input flex-1"
                 disabled={status === 'loading'}
               />
@@ -135,7 +135,7 @@ export default function StorePage() {
                 disabled={status === 'loading'}
                 className="cyber-btn shrink-0 disabled:opacity-60"
               >
-                {status === 'loading' ? 'Joining…' : 'Notify Me'}
+                {status === 'loading' ? 'Joiningâ€¦' : 'Notify Me'}
               </button>
             </form>
           )}
@@ -149,7 +149,7 @@ export default function StorePage() {
         />
       </section>
 
-      {/* ── PRODUCT GRID ───────────────────────────────────────────────────── */}
+      {/* â”€â”€ PRODUCT GRID â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-12">
           <h2 className="font-orbitron text-2xl md:text-3xl font-bold text-white mb-3">
@@ -181,7 +181,7 @@ export default function StorePage() {
               <ul className="space-y-1.5">
                 {product.features.map((f) => (
                   <li key={f} className="flex items-start gap-2 text-xs text-[#a0a0a0]">
-                    <svg className="h-3.5 w-3.5 text-[#7b5cf5] mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <svg className="h-3.5 w-3.5 text-[#5599dd] mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
                     {f}
@@ -199,7 +199,7 @@ export default function StorePage() {
                   disabled
                   aria-label="Notify me when available"
                 >
-                  Coming Soon — Notify Me
+                  Coming Soon â€” Notify Me
                 </button>
               </div>
             </div>
@@ -207,20 +207,21 @@ export default function StorePage() {
         </div>
       </section>
 
-      {/* ── WHILE YOU WAIT CTA ─────────────────────────────────────────────── */}
+      {/* â”€â”€ WHILE YOU WAIT CTA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pb-24">
         <div className="cyber-card p-10 text-center">
           <h2 className="font-orbitron text-xl md:text-2xl font-bold text-white mb-4">
-            While You Wait — Check Our Free Tools
+            While You Wait â€” Check Our Free Tools
           </h2>
           <p className="text-[#666] mb-6 max-w-lg mx-auto leading-relaxed">
-            We&apos;ve already curated the best exchanges, bots, and passive income platforms. Start building your edge today — for free.
+            We&apos;ve already curated the best exchanges, bots, and passive income platforms. Start building your edge today â€” for free.
           </p>
           <Link href="/tools" className="cyber-btn text-sm py-3 px-8 inline-flex">
-            Explore Free Tools →
+            Explore Free Tools â†’
           </Link>
         </div>
       </section>
     </>
   );
 }
+

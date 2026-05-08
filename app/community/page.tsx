@@ -1,41 +1,41 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import NewsletterInline from '@/components/NewsletterInline';
 import { SOCIAL } from '@/lib/affiliates';
 
 export const metadata: Metadata = {
-  title: 'Community — Join the 360Crypto Tribe',
+  title: 'Community â€” Join the 360Crypto Tribe',
   description:
     'Join 10,000+ crypto traders in the 360Crypto community. Real-time signals, expert discussions, and a community that grows together.',
 };
 
 const BENEFITS = [
   {
-    icon: '📡',
+    icon: 'ðŸ“¡',
     title: 'Trade Signals',
     description: 'Real-time entry and exit signals from our team of active traders. Vetted calls, not hype.',
   },
   {
-    icon: '🎓',
+    icon: 'ðŸŽ“',
     title: 'Expert Tips',
     description: 'Daily tips on trading psychology, technical analysis, risk management, and DeFi strategies.',
   },
   {
-    icon: '⚡',
+    icon: 'âš¡',
     title: 'Latest Crypto News',
     description: 'Breaking news filtered for signal vs noise. We share what matters and ignore the rest.',
   },
   {
-    icon: '📚',
+    icon: 'ðŸ“š',
     title: 'Educational Resources',
     description: 'Guides, tutorials, and explainers shared by the community. Learn from traders who\'ve been in the trenches.',
   },
   {
-    icon: '🤝',
+    icon: 'ðŸ¤',
     title: 'Networking',
     description: 'Connect with serious traders, developers, and early-stage project teams. Your network is your net worth.',
   },
   {
-    icon: '🚀',
+    icon: 'ðŸš€',
     title: 'Future Coin Releases',
     description: 'First access to early-stage projects, token launches, and exclusive presale opportunities.',
   },
@@ -47,7 +47,7 @@ const SOCIAL_CARDS = [
     handle: '@cryptox360x',
     url: SOCIAL.telegram,
     description: 'Our most active hub. Real-time signals, live market commentary, and a community of 10,000+ traders discussing every move.',
-    cta: 'Join Telegram →',
+    cta: 'Join Telegram â†’',
     color: '#229ED9',
     icon: (
       <svg className="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
@@ -60,7 +60,7 @@ const SOCIAL_CARDS = [
     handle: '@360CryptoSite',
     url: SOCIAL.twitter,
     description: 'Daily market insights, trend analysis, tool highlights, and the occasional hot take. Follow for the pulse of the crypto market.',
-    cta: 'Follow on X →',
+    cta: 'Follow on X â†’',
     color: '#1DA1F2',
     icon: (
       <svg className="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
@@ -73,7 +73,7 @@ const SOCIAL_CARDS = [
     handle: '360Crypto',
     url: SOCIAL.facebook,
     description: 'Join our Facebook community for longer-form educational content, weekly market recaps, and discussions for newer crypto traders.',
-    cta: 'Join Facebook →',
+    cta: 'Join Facebook â†’',
     color: '#1877F2',
     icon: (
       <svg className="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
@@ -86,8 +86,8 @@ const SOCIAL_CARDS = [
     handle: 'admin@360crypto.site',
     url: `mailto:${SOCIAL.email}`,
     description: 'Got a question, tool suggestion, or want to collaborate? Reach our team directly. We read every email and reply within 48 hours.',
-    cta: 'Send Email →',
-    color: '#7b5cf5',
+    cta: 'Send Email â†’',
+    color: '#5599dd',
     icon: (
       <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
@@ -99,13 +99,13 @@ const SOCIAL_CARDS = [
 export default function CommunityPage() {
   return (
     <>
-      {/* ── HERO ──────────────────────────────────────────────────────────── */}
+      {/* â”€â”€ HERO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="relative overflow-hidden bg-[#0a0a0a] grid-bg">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 flex items-center justify-center"
         >
-          <div className="h-[500px] w-[500px] rounded-full bg-[#7b5cf5] opacity-[0.05] blur-[120px]" />
+          <div className="h-[500px] w-[500px] rounded-full bg-[#5599dd] opacity-[0.05] blur-[120px]" />
         </div>
         <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center py-20">
           <span className="badge-cyan mb-4 inline-block">10,000+ Members</span>
@@ -113,7 +113,7 @@ export default function CommunityPage() {
             Join the <span className="glow-text">360Crypto</span> Community
           </h1>
           <p className="text-[#a0a0a0] text-lg max-w-2xl mx-auto leading-relaxed">
-            Crypto is more powerful when we trade together. Our community is built on shared knowledge, honest signals, and helping each other build real wealth — not pump-and-dump hype.
+            Crypto is more powerful when we trade together. Our community is built on shared knowledge, honest signals, and helping each other build real wealth â€” not pump-and-dump hype.
           </p>
         </div>
         <div
@@ -124,20 +124,20 @@ export default function CommunityPage() {
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 space-y-24">
 
-        {/* ── PPP CONCEPT ──────────────────────────────────────────────────── */}
+        {/* â”€â”€ PPP CONCEPT â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
         <section>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="badge-cyan mb-4 inline-block">Our Philosophy</span>
               <h2 className="font-orbitron text-2xl md:text-3xl font-bold text-white mb-5">
-                Player Pump Player — <span className="glow-text">PPP</span>
+                Player Pump Player â€” <span className="glow-text">PPP</span>
               </h2>
               <div className="space-y-4 text-[#a0a0a0] leading-relaxed">
                 <p>
                   Most crypto communities operate on fear and competition. Someone wins because someone else loses. 360Crypto is built on the opposite principle: <strong className="text-white">Player Pump Player (PPP)</strong>.
                 </p>
                 <p>
-                  PPP means we help each other. When a member finds a promising project, they share it — not after they&apos;ve already taken profits, but while there&apos;s still opportunity. When someone has a losing trade, the community helps them understand why, not mock them for it.
+                  PPP means we help each other. When a member finds a promising project, they share it â€” not after they&apos;ve already taken profits, but while there&apos;s still opportunity. When someone has a losing trade, the community helps them understand why, not mock them for it.
                 </p>
                 <p>
                   Crypto has enough sharks. We built 360Crypto to be a community of builders, learners, and genuine traders who understand that <strong className="text-white">a rising tide lifts all boats</strong>.
@@ -149,17 +149,17 @@ export default function CommunityPage() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               {[
-                { label: 'Compete', old: true, icon: '⚔️', desc: 'Information hoarded for personal gain' },
-                { label: 'Collaborate', old: false, icon: '🤝', desc: 'Alpha shared freely within the tribe' },
-                { label: 'Pump & Dump', old: true, icon: '💣', desc: 'Short-term plays that hurt newcomers' },
-                { label: 'Sustainable Gains', old: false, icon: '📈', desc: 'Long-term strategies that compound' },
+                { label: 'Compete', old: true, icon: 'âš”ï¸', desc: 'Information hoarded for personal gain' },
+                { label: 'Collaborate', old: false, icon: 'ðŸ¤', desc: 'Alpha shared freely within the tribe' },
+                { label: 'Pump & Dump', old: true, icon: 'ðŸ’£', desc: 'Short-term plays that hurt newcomers' },
+                { label: 'Sustainable Gains', old: false, icon: 'ðŸ“ˆ', desc: 'Long-term strategies that compound' },
               ].map((item) => (
                 <div
                   key={item.label}
-                  className={`cyber-card p-5 flex flex-col gap-2 ${!item.old ? 'border-[rgba(123,92,245,0.3)]' : ''}`}
+                  className={`cyber-card p-5 flex flex-col gap-2 ${!item.old ? 'border-[rgba(85,153,221,0.3)]' : ''}`}
                 >
                   <div className="text-2xl">{item.icon}</div>
-                  <div className={`font-orbitron text-xs font-bold uppercase tracking-wider ${item.old ? 'text-[#555] line-through' : 'text-[#7b5cf5]'}`}>
+                  <div className={`font-orbitron text-xs font-bold uppercase tracking-wider ${item.old ? 'text-[#555] line-through' : 'text-[#5599dd]'}`}>
                     {item.label}
                   </div>
                   <p className="text-xs text-[#666] leading-relaxed">{item.desc}</p>
@@ -169,7 +169,7 @@ export default function CommunityPage() {
           </div>
         </section>
 
-        {/* ── SOCIAL LINKS ─────────────────────────────────────────────────── */}
+        {/* â”€â”€ SOCIAL LINKS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
         <section>
           <div className="text-center mb-10">
             <h2 className="font-orbitron text-2xl md:text-3xl font-bold text-white mb-3">
@@ -215,7 +215,7 @@ export default function CommunityPage() {
           </div>
         </section>
 
-        {/* ── BENEFITS ─────────────────────────────────────────────────────── */}
+        {/* â”€â”€ BENEFITS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
         <section>
           <div className="text-center mb-10">
             <h2 className="font-orbitron text-2xl md:text-3xl font-bold text-white mb-3">
@@ -237,14 +237,15 @@ export default function CommunityPage() {
           </div>
         </section>
 
-        {/* ── NEWSLETTER ───────────────────────────────────────────────────── */}
+        {/* â”€â”€ NEWSLETTER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
         <section>
           <NewsletterInline
             title="Get the Weekly Alpha Digest"
-            subtitle="Every week we compile the best signals, tool updates, market insights, and community highlights — delivered straight to your inbox."
+            subtitle="Every week we compile the best signals, tool updates, market insights, and community highlights â€” delivered straight to your inbox."
           />
         </section>
       </div>
     </>
   );
 }
+
