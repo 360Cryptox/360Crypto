@@ -220,30 +220,28 @@ export default function HomePage() {
 
       {/* TREND CTA — RWA chromatic */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-10">
-        {/* Chromatic gradient border wrapper */}
-        <div className="relative p-px rounded-xl bg-gradient-to-r from-[#3b82f6] via-[#8b5cf6] to-[#ec4899]">
-          <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-[#0c0d18] via-[#0d0b16] to-[#0a080f]">
-            {/* Glossy top-edge shimmer */}
-            <div aria-hidden="true" className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-[#3b82f6] via-[#c4b5fd] to-[#f472b6] opacity-60" />
-            {/* Chromatic glow clouds */}
-            <div aria-hidden="true" className="pointer-events-none absolute -left-16 top-1/2 -translate-y-1/2 h-64 w-64 rounded-full bg-[#3b82f6] opacity-[0.08] blur-[70px]" />
-            <div aria-hidden="true" className="pointer-events-none absolute left-1/2 -translate-x-1/2 -top-6 h-40 w-80 rounded-full bg-[#8b5cf6] opacity-[0.10] blur-[55px]" />
-            <div aria-hidden="true" className="pointer-events-none absolute -right-16 bottom-0 h-60 w-60 rounded-full bg-[#ec4899] opacity-[0.07] blur-[65px]" />
+        {/* Thick chromatic border */}
+        <div className="relative p-[2px] rounded-2xl" style={{ background: 'linear-gradient(135deg, #3b82f6 0%, #a855f7 40%, #ec4899 70%, #f97316 100%)' }}>
+          <div className="relative overflow-hidden rounded-2xl bg-[#0b0a12]">
+            {/* Strong chromatic glow clouds */}
+            <div aria-hidden="true" className="pointer-events-none absolute -left-20 top-0 h-80 w-80 rounded-full bg-[#2563eb] opacity-[0.18] blur-[60px]" />
+            <div aria-hidden="true" className="pointer-events-none absolute -right-20 bottom-0 h-80 w-80 rounded-full bg-[#db2777] opacity-[0.16] blur-[60px]" />
+            <div aria-hidden="true" className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 h-40 w-96 rounded-full bg-[#9333ea] opacity-[0.10] blur-[50px]" />
 
             <div className="relative z-10 flex flex-col lg:flex-row lg:items-center gap-10 px-8 py-12 md:px-12 md:py-14">
               {/* Left */}
               <div className="flex-1">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="h-px w-10 bg-gradient-to-r from-[#3b82f6] via-[#8b5cf6] to-[#ec4899]" />
-                  <span className="text-[10px] font-orbitron font-bold tracking-[0.18em] uppercase bg-gradient-to-r from-[#60a5fa] via-[#a78bfa] to-[#f472b6] bg-clip-text text-transparent">
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="h-px w-10 rounded-full" style={{ background: 'linear-gradient(to right, #3b82f6, #ec4899)' }} />
+                  <span className="text-[10px] font-orbitron font-bold tracking-[0.18em] uppercase" style={{ background: 'linear-gradient(to right, #60a5fa, #f472b6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                     Trending in 2026
                   </span>
                 </div>
 
-                <h2 className="font-orbitron text-2xl md:text-3xl lg:text-4xl font-black text-white leading-tight mb-4">
+                <h2 className="font-orbitron text-3xl md:text-4xl font-black text-white leading-tight mb-4">
                   Wall Street Is Moving{' '}
                   <br className="hidden md:block" />
-                  <span className="bg-gradient-to-r from-[#60a5fa] via-[#c4b5fd] to-[#f9a8d4] bg-clip-text text-transparent">
+                  <span style={{ background: 'linear-gradient(90deg, #60a5fa 0%, #e879f9 50%, #fb923c 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                     On-Chain.
                   </span>
                 </h2>
@@ -254,26 +252,13 @@ export default function HomePage() {
 
                 <div className="flex flex-wrap gap-3">
                   {[
-                    { label: 'Total RWA TVL', value: '$15B+', from: '#3b82f6', to: '#6366f1' },
-                    { label: 'YoY Growth',    value: '785%',  from: '#8b5cf6', to: '#a855f7' },
-                    { label: 'Protocols',     value: '200+',  from: '#d946ef', to: '#ec4899' },
+                    { label: 'Total RWA TVL', value: '$15B+', color: '#60a5fa', bg: 'rgba(59,130,246,0.08)', border: 'rgba(59,130,246,0.2)' },
+                    { label: 'YoY Growth',    value: '785%',  color: '#e879f9', bg: 'rgba(232,121,249,0.08)', border: 'rgba(232,121,249,0.2)' },
+                    { label: 'Protocols',     value: '200+',  color: '#fb923c', bg: 'rgba(249,115,22,0.08)',  border: 'rgba(249,115,22,0.2)' },
                   ].map((s) => (
-                    <div
-                      key={s.label}
-                      className="px-4 py-2.5 rounded-lg bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.07)] relative overflow-hidden"
-                    >
-                      <div
-                        aria-hidden="true"
-                        className="absolute left-0 top-0 bottom-0 w-0.5 rounded-l-lg"
-                        style={{ background: `linear-gradient(to bottom, ${s.from}, ${s.to})` }}
-                      />
-                      <div className="text-[10px] font-orbitron text-[#555] uppercase tracking-wider mb-0.5 pl-1">{s.label}</div>
-                      <div
-                        className="text-sm font-bold font-orbitron pl-1 bg-clip-text text-transparent"
-                        style={{ backgroundImage: `linear-gradient(135deg, ${s.from}, ${s.to})` }}
-                      >
-                        {s.value}
-                      </div>
+                    <div key={s.label} className="px-4 py-2.5 rounded-lg" style={{ background: s.bg, border: `1px solid ${s.border}` }}>
+                      <div className="text-[10px] font-orbitron text-[#555] uppercase tracking-wider mb-0.5">{s.label}</div>
+                      <div className="text-sm font-bold font-orbitron" style={{ color: s.color }}>{s.value}</div>
                     </div>
                   ))}
                 </div>
@@ -283,14 +268,17 @@ export default function HomePage() {
               <div className="shrink-0 flex flex-col items-start lg:items-end gap-3">
                 <Link
                   href="/guides"
-                  className="group relative inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-orbitron text-sm font-bold text-white tracking-wider overflow-hidden shadow-[0_4px_24px_rgba(139,92,246,0.4),inset_0_1px_0_rgba(255,255,255,0.18)] transition-all duration-200 hover:shadow-[0_6px_32px_rgba(139,92,246,0.55)] hover:-translate-y-0.5"
-                  style={{ background: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%)' }}
+                  className="group relative inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-orbitron text-sm font-bold text-white tracking-wider overflow-hidden transition-all duration-200 hover:-translate-y-0.5"
+                  style={{
+                    background: 'linear-gradient(135deg, #2563eb 0%, #9333ea 45%, #db2777 80%, #ea580c 100%)',
+                    boxShadow: '0 4px 24px rgba(147,51,234,0.4), inset 0 1px 0 rgba(255,255,255,0.15)',
+                  }}
                 >
                   <span className="relative z-10">Read the RWA Guide</span>
                   <svg className="h-4 w-4 relative z-10 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
-                  <span aria-hidden="true" className="absolute inset-0 bg-white opacity-0 group-hover:opacity-[0.08] transition-opacity duration-200" />
+                  <span aria-hidden="true" className="absolute inset-0 bg-white opacity-0 group-hover:opacity-[0.07] transition-opacity" />
                 </Link>
                 <p className="text-[#444] text-[10px] font-orbitron tracking-widest uppercase">Free — No signup required</p>
               </div>
