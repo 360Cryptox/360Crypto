@@ -19,7 +19,7 @@ type GuideCategory = 'Beginner' | 'Trading' | 'Passive Income' | 'Memecoins' | '
 const GUIDES: Guide[] = [
   {
     slug: 'beginners-guide-to-cryptocurrency',
-    title: "Beginner's Complete Guide to Cryptocurrency (2025)",
+    title: "Beginner's Complete Guide to Cryptocurrency (2026)",
     description:
       "Everything you need to know to start your crypto journey. What is blockchain, how do wallets work, how to buy your first Bitcoin safely, and the core concepts every crypto trader must understand before putting money at risk.",
     category: 'Beginner',
@@ -39,7 +39,7 @@ const GUIDES: Guide[] = [
   },
   {
     slug: 'pionex-grid-bot-setup',
-    title: 'Pionex Grid Bot: Complete Setup Guide for Beginners (2025)',
+    title: 'Pionex Grid Bot: Complete Setup Guide for Beginners (2026)',
     description:
       'Step-by-step walkthrough of setting up your first Pionex grid trading bot. From creating your account and depositing funds to configuring grid parameters, selecting the right pair, and managing risk once the bot is live.',
     category: 'Passive Income',
@@ -49,7 +49,7 @@ const GUIDES: Guide[] = [
   },
   {
     slug: 'memecoin-trading-on-solana',
-    title: 'Memecoin Trading on Solana: The Complete 2025 Playbook',
+    title: 'Memecoin Trading on Solana: The Complete 2026 Playbook',
     description:
       'Solana memecoins move fast. This playbook covers how to find new launches on Pump.fun, assess token fundamentals, use DEX tools to spot smart money, size your positions for asymmetric upside, and how to exit profitably.',
     category: 'Memecoins',
@@ -69,7 +69,7 @@ const GUIDES: Guide[] = [
   },
   {
     slug: 'yield-farming-and-liquidity-pools',
-    title: 'Yield Farming & Liquidity Pools Explained: How to Earn in DeFi (2025)',
+    title: 'Yield Farming & Liquidity Pools Explained: How to Earn in DeFi (2026)',
     description:
       'DeFi yield farming can generate yields that dwarf traditional finance — but the risks are equally outsized. This guide explains impermanent loss, LP token mechanics, how to evaluate protocol risk, and the best platforms for sustainable yield.',
     category: 'Passive Income',
