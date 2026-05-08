@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -57,14 +57,14 @@ export default function Navbar() {
                   href={href}
                   className={`relative px-4 py-2 text-sm font-medium font-sans transition-colors duration-200 rounded-lg ${
                     active
-                      ? 'text-[#7b5cf5]'
+                      ? 'text-[#88ccff]'
                       : 'text-[#a0a0a0] hover:text-white'
                   }`}
                 >
                   {active && (
                     <span
                       aria-hidden="true"
-                      className="absolute inset-0 rounded-lg bg-[rgba(123,92,245,0.08)]"
+                      className="absolute inset-0 rounded-lg bg-[rgba(85,153,221,0.1)]"
                     />
                   )}
                   <span className="relative">{label}</span>
@@ -124,7 +124,7 @@ export default function Navbar() {
                 href={href}
                 className={`px-4 py-3 rounded-lg text-sm font-medium transition-colors duration-200 ${
                   active
-                    ? 'text-[#7b5cf5] bg-[rgba(123,92,245,0.08)]'
+                    ? 'text-[#88ccff] bg-[rgba(85,153,221,0.1)]'
                     : 'text-[#a0a0a0] hover:text-white hover:bg-[rgba(255,255,255,0.04)]'
                 }`}
               >
@@ -144,3 +144,4 @@ export default function Navbar() {
     </header>
   );
 }
+

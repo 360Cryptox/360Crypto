@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React, { useState, FormEvent } from 'react';
 
@@ -10,7 +10,7 @@ interface NewsletterInlineProps {
 
 export default function NewsletterInline({
   title = 'Stay Ahead of the Market',
-  subtitle = 'Get exclusive signals, early access to store products, and weekly alpha — straight to your inbox.',
+  subtitle = 'Get exclusive signals, early access to store products, and weekly alpha â€” straight to your inbox.',
   dark = true,
 }: NewsletterInlineProps) {
   const [email, setEmail] = useState('');
@@ -50,7 +50,7 @@ export default function NewsletterInline({
     <section
       id="newsletter"
       className={`relative overflow-hidden rounded-2xl px-6 py-12 md:px-12 ${
-        dark ? 'bg-[#1a1a1a] border border-[rgba(123,92,245,0.15)]' : 'bg-[#0a0a0a]'
+        dark ? 'bg-[#1a1a1a] border border-[rgba(85,153,221,0.15)]' : 'bg-[#0a0a0a]'
       }`}
     >
       {/* Subtle glow backdrop */}
@@ -58,7 +58,7 @@ export default function NewsletterInline({
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 flex items-center justify-center"
       >
-        <div className="h-64 w-64 rounded-full bg-[#7b5cf5] opacity-[0.04] blur-[80px]" />
+        <div className="h-64 w-64 rounded-full bg-[#5599dd] opacity-[0.04] blur-[80px]" />
       </div>
 
       <div className="relative z-10 flex flex-col items-center text-center gap-4">
@@ -73,7 +73,7 @@ export default function NewsletterInline({
         </p>
 
         {status === 'success' ? (
-          <div className="mt-4 flex items-center gap-3 rounded-xl bg-[rgba(123,92,245,0.1)] border border-[rgba(123,92,245,0.3)] px-6 py-4 text-[#7b5cf5] font-semibold">
+          <div className="mt-4 flex items-center gap-3 rounded-xl bg-[rgba(85,153,221,0.1)] border border-[rgba(85,153,221,0.35)] px-6 py-4 text-[#5599dd] font-semibold">
             <svg className="h-5 w-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
@@ -99,7 +99,7 @@ export default function NewsletterInline({
               disabled={status === 'loading'}
               className="cyber-btn shrink-0 disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              {status === 'loading' ? 'Subscribing…' : 'Subscribe'}
+              {status === 'loading' ? 'Subscribingâ€¦' : 'Subscribe'}
             </button>
           </form>
         )}
@@ -115,3 +115,4 @@ export default function NewsletterInline({
     </section>
   );
 }
+
