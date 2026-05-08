@@ -2,18 +2,19 @@
 
 @import "tailwindcss";
 
+/* ── Silver / Platinum / Steel Theme ── */
 :root {
-  --background: #0a0a0a;
-  --background-secondary: #1a1a1a;
-  --background-tertiary: #2a2a2a;
-  --foreground: #ededed;
-  --foreground-muted: #a0a0a0;
-  --accent: #7b5cf5;
-  --accent-dim: rgba(123, 92, 245, 0.15);
-  --accent-glow: rgba(123, 92, 245, 0.5);
-  --accent-glow-strong: rgba(123, 92, 245, 0.8);
-  --border: rgba(255, 255, 255, 0.08);
-  --border-accent: rgba(123, 92, 245, 0.3);
+  --background: #080808;
+  --background-secondary: #111115;
+  --background-tertiary: #1a1a20;
+  --foreground: #f0f2f5;
+  --foreground-muted: #7a8899;
+  --accent: #8899bb;
+  --accent-dim: rgba(136, 153, 187, 0.12);
+  --accent-glow: rgba(136, 153, 187, 0.35);
+  --accent-glow-strong: rgba(136, 153, 187, 0.65);
+  --border: rgba(255, 255, 255, 0.07);
+  --border-accent: rgba(136, 153, 187, 0.28);
 }
 
 @theme inline {
@@ -46,66 +47,69 @@ body {
 }
 
 .glow-text {
-  color: #7b5cf5;
-  text-shadow: 0 0 22px rgba(123, 92, 245, 0.45);
+  color: #c4d0e8;
+  text-shadow: 0 0 22px rgba(136, 153, 187, 0.4);
 }
 
 .glow-text-sm {
-  color: #7b5cf5;
-  text-shadow: 0 0 10px rgba(123, 92, 245, 0.3);
+  color: #c4d0e8;
+  text-shadow: 0 0 10px rgba(136, 153, 187, 0.3);
 }
 
 .cyber-card {
-  background: #1a1a1a;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #111115;
+  border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 12px;
   transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
 }
 
 .cyber-card:hover {
-  border-color: rgba(123, 92, 245, 0.4);
-  box-shadow: 0 0 24px rgba(123, 92, 245, 0.12), 0 8px 32px rgba(0, 0, 0, 0.4);
+  border-color: rgba(136, 153, 187, 0.28);
+  box-shadow: 0 0 24px rgba(136, 153, 187, 0.07), 0 8px 32px rgba(0, 0, 0, 0.5);
   transform: translateY(-2px);
 }
 
 .cyber-card-highlight {
-  background: #1a1a1a;
-  border: 1px solid rgba(123, 92, 245, 0.4);
+  background: #111115;
+  border: 1px solid rgba(136, 153, 187, 0.3);
   border-radius: 12px;
   box-shadow: none;
   transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
 }
 
 .cyber-card-highlight:hover {
-  border-color: rgba(123, 92, 245, 0.65);
-  box-shadow: 0 0 24px rgba(123, 92, 245, 0.18), 0 8px 32px rgba(0, 0, 0, 0.4);
+  border-color: rgba(136, 153, 187, 0.55);
+  box-shadow: 0 0 24px rgba(136, 153, 187, 0.12), 0 8px 32px rgba(0, 0, 0, 0.5);
   transform: translateY(-2px);
 }
 
+/* Premium steel button */
 .cyber-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   padding: 0.625rem 1.5rem;
-  background: #7b5cf5;
-  color: #ffffff;
+  background: linear-gradient(135deg, #1c2030 0%, #2a3048 100%);
+  color: #c4d0e8;
   font-family: 'Orbitron', system-ui, sans-serif;
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   border-radius: 8px;
-  border: none;
+  border: 1px solid rgba(136, 153, 187, 0.35);
   cursor: pointer;
   text-decoration: none;
-  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
   white-space: nowrap;
 }
 
 .cyber-btn:hover {
-  background: #9b7ff8;
-  box-shadow: 0 0 20px rgba(123, 92, 245, 0.6), 0 4px 16px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, #232840 0%, #323858 100%);
+  border-color: rgba(136, 153, 187, 0.65);
+  box-shadow: 0 0 20px rgba(136, 153, 187, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.08);
   transform: translateY(-1px);
 }
 
@@ -120,14 +124,14 @@ body {
   gap: 0.5rem;
   padding: 0.625rem 1.5rem;
   background: transparent;
-  color: #7b5cf5;
+  color: #c4d0e8;
   font-family: 'Orbitron', system-ui, sans-serif;
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   border-radius: 8px;
-  border: 1px solid rgba(123, 92, 245, 0.5);
+  border: 1px solid rgba(136, 153, 187, 0.35);
   cursor: pointer;
   text-decoration: none;
   transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
@@ -135,23 +139,23 @@ body {
 }
 
 .cyber-btn-outline:hover {
-  background: rgba(123, 92, 245, 0.1);
-  border-color: #7b5cf5;
-  box-shadow: 0 0 16px rgba(123, 92, 245, 0.3);
+  background: rgba(136, 153, 187, 0.08);
+  border-color: rgba(136, 153, 187, 0.6);
+  box-shadow: 0 0 16px rgba(136, 153, 187, 0.15);
   transform: translateY(-1px);
 }
 
 /* ── Grid Background Pattern ── */
 .grid-bg {
   background-image:
-    linear-gradient(rgba(123, 92, 245, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(123, 92, 245, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(136, 153, 187, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(136, 153, 187, 0.03) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
-/* ── Gradient Text ── */
+/* ── Platinum / Iridescent Gradient Text ── */
 .gradient-text {
-  background: linear-gradient(135deg, #7b5cf5 0%, #ffffff 60%, #9b7ff8 100%);
+  background: linear-gradient(135deg, #7788bb 0%, #b0c4e0 30%, #ffffff 55%, #ddd4f0 78%, #9999bb 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -160,7 +164,7 @@ body {
 /* ── Section Divider ── */
 .section-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(123, 92, 245, 0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(136, 153, 187, 0.25), transparent);
   border: none;
   margin: 0;
 }
@@ -170,26 +174,26 @@ body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: #080808;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(123, 92, 245, 0.3);
+  background: rgba(136, 153, 187, 0.25);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(123, 92, 245, 0.6);
+  background: rgba(136, 153, 187, 0.5);
 }
 
 /* ── Selection ── */
 ::selection {
-  background: rgba(123, 92, 245, 0.25);
+  background: rgba(136, 153, 187, 0.2);
   color: #ffffff;
 }
 
 /* ── Animations ── */
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 6px rgba(123, 92, 245, 0.2); }
-  50%       { box-shadow: 0 0 16px rgba(123, 92, 245, 0.5); }
+  0%, 100% { box-shadow: 0 0 6px rgba(136, 153, 187, 0.15); }
+  50%       { box-shadow: 0 0 16px rgba(136, 153, 187, 0.4); }
 }
 
 @keyframes float {
@@ -212,7 +216,7 @@ body {
 
 /* ── Prose / Article Styles ── */
 .prose-crypto {
-  color: #c0c0c0;
+  color: #b0b8c8;
   font-size: 1.0625rem;
   line-height: 1.8;
 }
@@ -225,14 +229,14 @@ body {
   margin-top: 2.5rem;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid rgba(123, 92, 245, 0.25);
+  border-bottom: 1px solid rgba(136, 153, 187, 0.2);
 }
 
 .prose-crypto h3 {
   font-family: 'Orbitron', system-ui, sans-serif;
   font-size: 1.05rem;
   font-weight: 700;
-  color: #e0e0e0;
+  color: #e0e8f0;
   margin-top: 2rem;
   margin-bottom: 0.75rem;
 }
@@ -241,7 +245,7 @@ body {
   font-family: 'Orbitron', system-ui, sans-serif;
   font-size: 0.9rem;
   font-weight: 700;
-  color: #9b7ff8;
+  color: #8899bb;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
@@ -253,14 +257,14 @@ body {
 }
 
 .prose-crypto a {
-  color: #9b7ff8;
+  color: #aabbd0;
   text-decoration: underline;
   text-underline-offset: 3px;
   transition: color 0.2s;
 }
 
 .prose-crypto a:hover {
-  color: #b8a2ff;
+  color: #c4d4e8;
 }
 
 .prose-crypto strong {
@@ -269,7 +273,7 @@ body {
 }
 
 .prose-crypto em {
-  color: #a0a0a0;
+  color: #8899aa;
   font-style: italic;
 }
 
@@ -289,7 +293,7 @@ body {
   content: '▸';
   position: absolute;
   left: 0;
-  color: #7b5cf5;
+  color: #8899bb;
   font-size: 0.75rem;
   top: 0.25rem;
 }
@@ -312,7 +316,7 @@ body {
   content: counter(ol-counter) '.';
   position: absolute;
   left: 0;
-  color: #7b5cf5;
+  color: #8899bb;
   font-family: 'Orbitron', system-ui, sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
@@ -320,26 +324,26 @@ body {
 }
 
 .prose-crypto blockquote {
-  border-left: 3px solid #7b5cf5;
+  border-left: 3px solid #8899bb;
   padding-left: 1.25rem;
   margin: 1.5rem 0;
-  color: #888;
+  color: #667788;
   font-style: italic;
 }
 
 .prose-crypto code {
-  background: rgba(123, 92, 245, 0.08);
-  border: 1px solid rgba(123, 92, 245, 0.2);
+  background: rgba(136, 153, 187, 0.08);
+  border: 1px solid rgba(136, 153, 187, 0.2);
   border-radius: 4px;
   padding: 0.15rem 0.4rem;
   font-family: 'Courier New', monospace;
   font-size: 0.875rem;
-  color: #9b7ff8;
+  color: #aabbd0;
 }
 
 .prose-crypto pre {
-  background: #111;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0d0d12;
+  border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 8px;
   padding: 1.25rem;
   overflow-x: auto;
@@ -350,7 +354,7 @@ body {
   background: none;
   border: none;
   padding: 0;
-  color: #a0a0a0;
+  color: #8899aa;
   font-size: 0.875rem;
 }
 
@@ -365,19 +369,19 @@ body {
   font-family: 'Orbitron', system-ui, sans-serif;
   font-size: 0.7rem;
   font-weight: 700;
-  color: #9b7ff8;
+  color: #8899bb;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  border-bottom: 2px solid rgba(123, 92, 245, 0.35);
+  border-bottom: 2px solid rgba(136, 153, 187, 0.3);
   padding: 0.6rem 0.75rem;
   text-align: left;
-  background: rgba(123, 92, 245, 0.05);
+  background: rgba(136, 153, 187, 0.04);
 }
 
 .prose-crypto table td {
   padding: 0.6rem 0.75rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  color: #b0b0b0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  color: #9aaabb;
 }
 
 .prose-crypto table tr:hover td {
@@ -387,7 +391,7 @@ body {
 .prose-crypto hr {
   border: none;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(123, 92, 245, 0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(136, 153, 187, 0.25), transparent);
   margin: 2.5rem 0;
 }
 
@@ -396,9 +400,9 @@ body {
   display: inline-flex;
   align-items: center;
   padding: 0.2rem 0.65rem;
-  background: rgba(123, 92, 245, 0.15);
-  color: #9b7ff8;
-  border: 1px solid rgba(123, 92, 245, 0.35);
+  background: rgba(136, 153, 187, 0.1);
+  color: #aabbd0;
+  border: 1px solid rgba(136, 153, 187, 0.3);
   border-radius: 999px;
   font-size: 0.65rem;
   font-family: 'Orbitron', system-ui, sans-serif;
@@ -410,10 +414,10 @@ body {
 
 /* ── Input ── */
 .cyber-input {
-  background: #2a2a2a;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #1a1a20;
+  border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: 8px;
-  color: #ededed;
+  color: #f0f2f5;
   font-family: 'Exo 2', system-ui, sans-serif;
   padding: 0.625rem 1rem;
   width: 100%;
@@ -422,10 +426,10 @@ body {
 }
 
 .cyber-input:focus {
-  border-color: rgba(123, 92, 245, 0.5);
-  box-shadow: 0 0 12px rgba(123, 92, 245, 0.15);
+  border-color: rgba(136, 153, 187, 0.5);
+  box-shadow: 0 0 12px rgba(136, 153, 187, 0.12);
 }
 
 .cyber-input::placeholder {
-  color: rgba(160, 160, 160, 0.6);
+  color: rgba(122, 136, 153, 0.6);
 }

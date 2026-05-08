@@ -88,13 +88,13 @@ export default function HomePage() {
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 flex items-center justify-center"
         >
-          <div className="h-[600px] w-[600px] rounded-full bg-[#7b5cf5] opacity-[0.04] blur-[140px]" />
+          <div className="h-[600px] w-[600px] rounded-full bg-[#8899bb] opacity-[0.04] blur-[140px]" />
         </div>
 
         <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center py-24">
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[rgba(123,92,245,0.25)] bg-[rgba(123,92,245,0.07)] px-4 py-1.5">
-            <span className="h-2 w-2 rounded-full bg-[#7b5cf5] animate-pulse-glow" aria-hidden="true" />
-            <span className="font-orbitron text-xs font-bold text-[#9b7ff8] tracking-wider uppercase">
+          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[rgba(136,153,187,0.25)] bg-[rgba(136,153,187,0.07)] px-4 py-1.5">
+            <span className="h-2 w-2 rounded-full bg-[#8899bb] animate-pulse-glow" aria-hidden="true" />
+            <span className="font-orbitron text-xs font-bold text-[#aabbd0] tracking-wider uppercase">
               Live — Join 10,000+ Traders
             </span>
           </div>
@@ -208,7 +208,7 @@ export default function HomePage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {FEATURES.map((f) => (
             <div key={f.title} className="cyber-card p-6 flex flex-col gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[rgba(123,92,245,0.1)] text-[#9b7ff8]">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[rgba(136,153,187,0.1)] text-[#aabbd0]">
                 {f.icon}
               </div>
               <h3 className="font-orbitron text-sm font-bold text-white">{f.title}</h3>
@@ -220,20 +220,19 @@ export default function HomePage() {
 
       {/* TREND CTA — RWA chromatic */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-10">
-        {/* Thick chromatic border — cyan · blue · rose · orange, zero purple */}
-        <div className="relative p-[2px] rounded-2xl" style={{ background: 'linear-gradient(135deg, #06b6d4 0%, #3b82f6 30%, #f472b6 65%, #f97316 100%)' }}>
-          <div className="relative overflow-hidden rounded-2xl" style={{ background: '#050a14' }}>
-            {/* Chromatic glow clouds — NO purple */}
-            <div aria-hidden="true" className="pointer-events-none absolute -left-16 -top-8 h-96 w-96 rounded-full bg-[#0891b2] opacity-[0.28] blur-[70px]" />
-            <div aria-hidden="true" className="pointer-events-none absolute -right-16 -bottom-8 h-96 w-96 rounded-full bg-[#f43f5e] opacity-[0.26] blur-[70px]" />
-            <div aria-hidden="true" className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-48 w-72 rounded-full bg-[#fb923c] opacity-[0.08] blur-[60px]" />
+        {/* Silver iridescent border */}
+        <div className="relative p-[2px] rounded-2xl" style={{ background: 'linear-gradient(135deg, #4a5570 0%, #8899cc 35%, #e8eef8 55%, #c4b8d8 75%, #5a6070 100%)' }}>
+          <div className="relative overflow-hidden rounded-2xl" style={{ background: '#0a0b10' }}>
+            {/* Steel glow clouds */}
+            <div aria-hidden="true" className="pointer-events-none absolute -left-16 -top-8 h-96 w-96 rounded-full bg-[#6677aa] opacity-[0.14] blur-[80px]" />
+            <div aria-hidden="true" className="pointer-events-none absolute -right-16 -bottom-8 h-96 w-96 rounded-full bg-[#9999cc] opacity-[0.10] blur-[80px]" />
 
             <div className="relative z-10 flex flex-col lg:flex-row lg:items-center gap-10 px-8 py-12 md:px-12 md:py-14">
               {/* Left */}
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-5">
-                  <div className="h-px w-10 rounded-full" style={{ background: 'linear-gradient(to right, #3b82f6, #ec4899)' }} />
-                  <span className="text-[10px] font-orbitron font-bold tracking-[0.18em] uppercase" style={{ background: 'linear-gradient(to right, #60a5fa, #f472b6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+                  <div className="h-px w-10 rounded-full" style={{ background: 'linear-gradient(to right, #6677aa, #aabbd0)' }} />
+                  <span className="text-[10px] font-orbitron font-bold tracking-[0.18em] uppercase" style={{ color: '#8899bb' }}>
                     Trending in 2026
                   </span>
                 </div>
@@ -241,24 +240,24 @@ export default function HomePage() {
                 <h2 className="font-orbitron text-3xl md:text-4xl font-black text-white leading-tight mb-4">
                   Wall Street Is Moving{' '}
                   <br className="hidden md:block" />
-                  <span style={{ background: 'linear-gradient(90deg, #38bdf8 0%, #f43f5e 55%, #fb923c 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+                  <span style={{ background: 'linear-gradient(135deg, #8899cc 0%, #c4d4f0 40%, #ffffff 60%, #ddd4f0 80%, #9999bb 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                     On-Chain.
                   </span>
                 </h2>
 
-                <p className="text-[#777] text-sm md:text-base leading-relaxed max-w-lg mb-8">
+                <p className="text-[#6a7888] text-sm md:text-base leading-relaxed max-w-lg mb-8">
                   BlackRock, Franklin Templeton, and JPMorgan are tokenizing trillions in bonds, real estate, and private credit. Real-World Assets are the fastest-growing sector in crypto — and early movers are already positioned.
                 </p>
 
                 <div className="flex flex-wrap gap-3">
                   {[
-                    { label: 'Total RWA TVL', value: '$15B+', color: '#60a5fa', bg: 'rgba(59,130,246,0.08)', border: 'rgba(59,130,246,0.2)' },
-                    { label: 'YoY Growth',    value: '785%',  color: '#f43f5e', bg: 'rgba(244,63,94,0.10)',   border: 'rgba(244,63,94,0.25)' },
-                    { label: 'Protocols',     value: '200+',  color: '#fb923c', bg: 'rgba(249,115,22,0.08)',  border: 'rgba(249,115,22,0.2)' },
+                    { label: 'Total RWA TVL', value: '$15B+' },
+                    { label: 'YoY Growth',    value: '785%'  },
+                    { label: 'Protocols',     value: '200+'  },
                   ].map((s) => (
-                    <div key={s.label} className="px-4 py-2.5 rounded-lg" style={{ background: s.bg, border: `1px solid ${s.border}` }}>
-                      <div className="text-[10px] font-orbitron text-[#555] uppercase tracking-wider mb-0.5">{s.label}</div>
-                      <div className="text-sm font-bold font-orbitron" style={{ color: s.color }}>{s.value}</div>
+                    <div key={s.label} className="px-4 py-2.5 rounded-lg" style={{ background: 'rgba(136,153,187,0.07)', border: '1px solid rgba(136,153,187,0.2)' }}>
+                      <div className="text-[10px] font-orbitron text-[#556677] uppercase tracking-wider mb-0.5">{s.label}</div>
+                      <div className="text-sm font-bold font-orbitron text-[#c4d0e8]">{s.value}</div>
                     </div>
                   ))}
                 </div>
@@ -270,8 +269,9 @@ export default function HomePage() {
                   href="/guides"
                   className="group relative inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-orbitron text-sm font-bold text-white tracking-wider overflow-hidden transition-all duration-200 hover:-translate-y-0.5"
                   style={{
-                    background: 'linear-gradient(135deg, #0891b2 0%, #f43f5e 55%, #ea580c 100%)',
-                    boxShadow: '0 4px 24px rgba(244,63,94,0.45), inset 0 1px 0 rgba(255,255,255,0.15)',
+                    background: 'linear-gradient(135deg, #1c2030 0%, #2a3048 100%)',
+                    border: '1px solid rgba(136,153,187,0.4)',
+                    boxShadow: '0 4px 24px rgba(136,153,187,0.12), inset 0 1px 0 rgba(255,255,255,0.08)',
                   }}
                 >
                   <span className="relative z-10">Read the RWA Guide</span>
@@ -289,17 +289,17 @@ export default function HomePage() {
 
       {/* â"€â"€ KRAKEN STRIP â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€ */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
-        <div className="relative overflow-hidden rounded-2xl bg-[#0d0a1a] border border-[rgba(87,65,217,0.35)] px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div aria-hidden="true" className="pointer-events-none absolute left-0 top-0 h-full w-48 bg-gradient-to-r from-[rgba(87,65,217,0.1)] to-transparent" />
-          <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 h-48 w-48 rounded-full bg-[#7b5cf5] opacity-[0.07] blur-[60px]" />
+        <div className="relative overflow-hidden rounded-2xl bg-[#0c0d12] border border-[rgba(136,153,187,0.2)] px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div aria-hidden="true" className="pointer-events-none absolute left-0 top-0 h-full w-48 bg-gradient-to-r from-[rgba(136,153,187,0.06)] to-transparent" />
+          <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 h-48 w-48 rounded-full bg-[#8899bb] opacity-[0.06] blur-[60px]" />
           <div className="relative z-10">
-            <p className="font-orbitron text-xs font-bold text-[#9b7ff8] uppercase tracking-widest mb-2">
+            <p className="font-orbitron text-xs font-bold text-[#8899bb] uppercase tracking-widest mb-2">
               Most Trusted US Exchange
             </p>
             <h2 className="font-orbitron text-xl md:text-2xl font-bold text-white mb-2">
               Trade on Kraken — Est. 2011
             </h2>
-            <p className="text-[#a0a0a0] text-sm max-w-lg leading-relaxed">
+            <p className="text-[#7a8899] text-sm max-w-lg leading-relaxed">
               America&apos;s most trusted regulated exchange. Never breached in 14 years. Low 0.25% maker fees, futures for US users, ETH staking, and a clean interface built for serious traders.
             </p>
           </div>
@@ -308,7 +308,8 @@ export default function HomePage() {
             affiliateName="kraken"
             category="exchanges_cex"
             placement="homepage-kraken-strip"
-            className="shrink-0 inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg font-orbitron font-bold text-sm text-white bg-[#5741d9] hover:bg-[#7b5cf5] border border-[rgba(87,65,217,0.5)] transition-all duration-200 hover:shadow-[0_0_24px_rgba(87,65,217,0.5)] whitespace-nowrap uppercase tracking-widest"
+            className="shrink-0 inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg font-orbitron font-bold text-sm text-[#c4d0e8] transition-all duration-200 whitespace-nowrap uppercase tracking-widest"
+            style={{ background: 'linear-gradient(135deg, #1c2030 0%, #2a3048 100%)', border: '1px solid rgba(136,153,187,0.35)', boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.06)' }}
           >
             Open Kraken →
           </TrackedAffiliateLink>
@@ -332,7 +333,7 @@ export default function HomePage() {
             <div key={product.name} className="cyber-card p-6 flex flex-col gap-4 relative overflow-hidden">
               <div
                 aria-hidden="true"
-                className="pointer-events-none absolute top-0 right-0 h-24 w-24 rounded-full bg-[#7b5cf5] opacity-[0.04] blur-[30px]"
+                className="pointer-events-none absolute top-0 right-0 h-24 w-24 rounded-full bg-[#8899bb] opacity-[0.04] blur-[30px]"
               />
               <div className="text-3xl">{product.icon}</div>
               <h3 className="font-orbitron text-sm font-bold text-white">{product.name}</h3>
@@ -343,7 +344,7 @@ export default function HomePage() {
                 </span>
                 <Link
                   href="/store"
-                  className="text-xs text-[#9b7ff8] font-semibold hover:underline"
+                  className="text-xs text-[#8899bb] font-semibold hover:underline"
                 >
                   Notify Me →
                 </Link>

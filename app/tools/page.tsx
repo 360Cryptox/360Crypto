@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import AffiliateCard from '@/components/AffiliateCard';
 import TrackedAffiliateLink from '@/components/TrackedAffiliateLink';
 import NewsletterInline from '@/components/NewsletterInline';
@@ -6,9 +6,9 @@ import { affiliates } from '@/lib/affiliates';
 import { SOCIAL } from '@/lib/affiliates';
 
 export const metadata: Metadata = {
-  title: 'Best Crypto Tools — Curated & Tested',
+  title: 'Best Crypto Tools â€” Curated & Tested',
   description:
-    'Every crypto tool you need in one place. Exchanges, trading bots, passive income platforms, hardware wallets, tax software, and research tools — all curated and tested by 360Crypto.',
+    'Every crypto tool you need in one place. Exchanges, trading bots, passive income platforms, hardware wallets, tax software, and research tools â€” all curated and tested by 360Crypto.',
 };
 
 const SECTION_IDS = ['exchanges', 'bots', 'passive', 'wallets', 'tax', 'research'] as const;
@@ -131,7 +131,7 @@ const HOT_WALLETS = [
   {
     name: 'MetaMask',
     url: 'https://metamask.io',
-    chains: 'EVM (Ethereum, BSC, Polygon…)',
+    chains: 'EVM (Ethereum, BSC, Polygonâ€¦)',
     description: 'The most widely used browser extension wallet for Ethereum and all EVM-compatible chains. Required for most DeFi protocols and NFT platforms.',
   },
   {
@@ -178,13 +178,13 @@ const FREE_TOOLS = [
 export default function ToolsPage() {
   return (
     <>
-      {/* ── HERO ──────────────────────────────────────────────────────────────────── */}
+      {/* â”€â”€ HERO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="relative overflow-hidden bg-[#0a0a0a] grid-bg pt-16 pb-16">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 flex items-center justify-center"
         >
-          <div className="h-96 w-96 rounded-full bg-[#7b5cf5] opacity-[0.03] blur-[120px]" />
+          <div className="h-96 w-96 rounded-full bg-[#8899bb] opacity-[0.03] blur-[120px]" />
         </div>
         <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center py-14">
           <span className="badge-cyan mb-4 inline-block">Curated & Tested</span>
@@ -192,7 +192,7 @@ export default function ToolsPage() {
             The Best Crypto Tools
           </h1>
           <p className="text-[#a0a0a0] text-lg max-w-xl mx-auto leading-relaxed">
-            We test every platform so you don&apos;t have to. From CEX exchanges to Telegram sniping bots, hardware wallets, and tax software — this is the complete toolkit of a serious crypto trader.
+            We test every platform so you don&apos;t have to. From CEX exchanges to Telegram sniping bots, hardware wallets, and tax software â€” this is the complete toolkit of a serious crypto trader.
           </p>
 
           {/* Jump links */}
@@ -201,7 +201,7 @@ export default function ToolsPage() {
               <a
                 key={label}
                 href={`#${SECTION_IDS[i]}`}
-                className="text-xs font-orbitron font-bold uppercase tracking-wider px-4 py-2 rounded-lg bg-[#1a1a1a] border border-[rgba(255,255,255,0.08)] text-[#a0a0a0] hover:text-[#9b7ff8] hover:border-[rgba(123,92,245,0.3)] transition-colors duration-200"
+                className="text-xs font-orbitron font-bold uppercase tracking-wider px-4 py-2 rounded-lg bg-[#1a1a1a] border border-[rgba(255,255,255,0.08)] text-[#a0a0a0] hover:text-[#aabbd0] hover:border-[rgba(136,153,187,0.25)] transition-colors duration-200"
               >
                 {label}
               </a>
@@ -216,12 +216,12 @@ export default function ToolsPage() {
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-24 pb-24">
 
-        {/* ── EXCHANGES ──────────────────────────────────────────────────────────── */}
+        {/* â”€â”€ EXCHANGES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
         <section id="exchanges" className="scroll-mt-24">
           <div className="mb-10">
             <span className="badge-cyan mb-3 inline-block">Exchanges</span>
             <h2 className="font-orbitron text-2xl md:text-3xl font-bold text-white mb-3">
-              CEX vs DEX — Know Your Options
+              CEX vs DEX â€” Know Your Options
             </h2>
             <p className="text-[#666] max-w-2xl leading-relaxed">
               Centralized exchanges (CEX) offer deep liquidity and advanced trading features. Decentralized exchanges (DEX) give you full custody and no KYC. Use both strategically.
@@ -229,32 +229,32 @@ export default function ToolsPage() {
           </div>
 
           {/* Kraken Spotlight */}
-          <div className="mb-10 relative overflow-hidden rounded-xl border border-[rgba(87,65,217,0.35)] bg-[#0d0a1a] p-8">
-            <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 h-72 w-72 rounded-full bg-[#5741d9] opacity-[0.08] blur-[80px]" />
-            <div aria-hidden="true" className="pointer-events-none absolute left-1/2 bottom-0 h-48 w-96 -translate-x-1/2 rounded-full bg-[#7b5cf5] opacity-[0.05] blur-[60px]" />
+          <div className="mb-10 relative overflow-hidden rounded-xl border border-[rgba(136,153,187,0.2)] bg-[#0a0b10] p-8">
+            <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 h-72 w-72 rounded-full bg-[#1c2030] opacity-[0.08] blur-[80px]" />
+            <div aria-hidden="true" className="pointer-events-none absolute left-1/2 bottom-0 h-48 w-96 -translate-x-1/2 rounded-full bg-[#8899bb] opacity-[0.05] blur-[60px]" />
             <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-8">
               <div className="flex-1">
                 <div className="flex flex-wrap items-center gap-2 mb-3">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-orbitron font-bold uppercase tracking-wider bg-[rgba(87,65,217,0.2)] text-[#9b7ff8] border border-[rgba(87,65,217,0.4)]">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-orbitron font-bold uppercase tracking-wider bg-[rgba(136,153,187,0.12)] text-[#aabbd0] border border-[rgba(136,153,187,0.3)]">
                     Most Trusted US Exchange
                   </span>
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-orbitron font-bold uppercase tracking-wider bg-[rgba(87,65,217,0.1)] text-[#7b5cf5] border border-[rgba(87,65,217,0.2)]">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-orbitron font-bold uppercase tracking-wider bg-[rgba(136,153,187,0.08)] text-[#8899bb] border border-[rgba(136,153,187,0.12)]">
                     Est. 2011
                   </span>
                 </div>
                 <h3 className="font-orbitron text-2xl md:text-3xl font-black text-white mb-3">Kraken</h3>
                 <p className="text-[#a0a0b0] leading-relaxed text-sm mb-6 max-w-xl">
-                  The exchange US institutions and serious traders trust. Regulated, never breached, with real futures access for American users. Lower fees than Coinbase — and a security record to match.
+                  The exchange US institutions and serious traders trust. Regulated, never breached, with real futures access for American users. Lower fees than Coinbase â€” and a security record to match.
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                   {[
                     { label: 'Maker Fee', value: '0.25%' },
                     { label: 'Coins Listed', value: '200+' },
                     { label: 'Founded', value: '2011' },
-                    { label: 'US Regulated', value: '✓ Yes' },
+                    { label: 'US Regulated', value: 'âœ“ Yes' },
                   ].map((stat) => (
-                    <div key={stat.label} className="rounded-lg bg-[rgba(87,65,217,0.1)] border border-[rgba(87,65,217,0.2)] px-4 py-3">
-                      <div className="text-[#7b5cf5] text-xs font-orbitron font-bold mb-1">{stat.label}</div>
+                    <div key={stat.label} className="rounded-lg bg-[rgba(136,153,187,0.08)] border border-[rgba(136,153,187,0.12)] px-4 py-3">
+                      <div className="text-[#8899bb] text-xs font-orbitron font-bold mb-1">{stat.label}</div>
                       <div className="text-white font-bold text-sm">{stat.value}</div>
                     </div>
                   ))}
@@ -266,9 +266,9 @@ export default function ToolsPage() {
                   affiliateName="kraken"
                   category="exchanges_cex"
                   placement="tools-kraken-spotlight"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg font-orbitron font-bold text-sm text-white bg-[#5741d9] hover:bg-[#6b52e8] border border-[rgba(87,65,217,0.5)] transition-all duration-200 hover:shadow-[0_0_24px_rgba(87,65,217,0.5)] whitespace-nowrap"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg font-orbitron font-bold text-sm text-white bg-[#1c2030] hover:bg-[#2a3048] border border-[rgba(136,153,187,0.4)] transition-all duration-200 hover:shadow-[0_0_24px_rgba(136,153,187,0.4)] whitespace-nowrap"
                 >
-                  Open Kraken →
+                  Open Kraken â†’
                 </TrackedAffiliateLink>
                 <p className="text-[#555] text-xs text-center">Earn 50% of their trading fees</p>
               </div>
@@ -278,7 +278,7 @@ export default function ToolsPage() {
           {/* CEX Comparison Table */}
           <div className="mb-10">
             <h3 className="font-orbitron text-lg font-bold text-white mb-4 flex items-center gap-2">
-              <span className="h-px w-8 bg-[#7b5cf5]" aria-hidden="true" />
+              <span className="h-px w-8 bg-[#8899bb]" aria-hidden="true" />
               Centralized Exchanges
             </h3>
             <div className="overflow-x-auto rounded-xl border border-[rgba(255,255,255,0.08)]">
@@ -298,7 +298,7 @@ export default function ToolsPage() {
                   {CEX_COMPARISON.map((ex) => (
                     <tr
                       key={ex.name}
-                      className={`transition-colors hover:bg-[rgba(123,92,245,0.03)] ${ex.highlight ? 'bg-[rgba(123,92,245,0.03)]' : ''}`}
+                      className={`transition-colors hover:bg-[rgba(136,153,187,0.03)] ${ex.highlight ? 'bg-[rgba(136,153,187,0.03)]' : ''}`}
                     >
                       <td className="px-5 py-4">
                         <div className="flex items-center gap-2">
@@ -310,7 +310,7 @@ export default function ToolsPage() {
                       <td className="px-5 py-4 text-[#a0a0a0]">{ex.coins}</td>
                       <td className="px-5 py-4 text-center">
                         {ex.futures ? (
-                          <svg className="h-4 w-4 text-[#9b7ff8] mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                          <svg className="h-4 w-4 text-[#aabbd0] mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                           </svg>
                         ) : (
@@ -321,7 +321,7 @@ export default function ToolsPage() {
                       </td>
                       <td className="px-5 py-4 text-center">
                         {ex.copy ? (
-                          <svg className="h-4 w-4 text-[#9b7ff8] mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                          <svg className="h-4 w-4 text-[#aabbd0] mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                           </svg>
                         ) : (
@@ -330,7 +330,7 @@ export default function ToolsPage() {
                           </svg>
                         )}
                       </td>
-                      <td className="px-5 py-4 text-[#9b7ff8] font-semibold text-xs">{ex.bonus}</td>
+                      <td className="px-5 py-4 text-[#aabbd0] font-semibold text-xs">{ex.bonus}</td>
                       <td className="px-5 py-4">
                         <TrackedAffiliateLink
                           href={ex.url}
@@ -339,7 +339,7 @@ export default function ToolsPage() {
                           placement="tools-cex-comparison"
                           className="cyber-btn text-xs py-1.5 px-4"
                         >
-                          Open →
+                          Open â†’
                         </TrackedAffiliateLink>
                       </td>
                     </tr>
@@ -352,7 +352,7 @@ export default function ToolsPage() {
           {/* DEX Comparison Table */}
           <div className="mb-10">
             <h3 className="font-orbitron text-lg font-bold text-white mb-4 flex items-center gap-2">
-              <span className="h-px w-8 bg-[#7b5cf5]" aria-hidden="true" />
+              <span className="h-px w-8 bg-[#8899bb]" aria-hidden="true" />
               Decentralized Exchanges
             </h3>
             <div className="overflow-x-auto rounded-xl border border-[rgba(255,255,255,0.08)]">
@@ -371,7 +371,7 @@ export default function ToolsPage() {
                   {DEX_COMPARISON.map((dex) => (
                     <tr
                       key={dex.name}
-                      className={`transition-colors hover:bg-[rgba(123,92,245,0.03)] ${dex.highlight ? 'bg-[rgba(123,92,245,0.03)]' : ''}`}
+                      className={`transition-colors hover:bg-[rgba(136,153,187,0.03)] ${dex.highlight ? 'bg-[rgba(136,153,187,0.03)]' : ''}`}
                     >
                       <td className="px-5 py-4">
                         <div className="flex items-center gap-2">
@@ -399,7 +399,7 @@ export default function ToolsPage() {
                           placement="tools-dex-comparison"
                           className="cyber-btn text-xs py-1.5 px-4"
                         >
-                          Swap Now →
+                          Swap Now â†’
                         </TrackedAffiliateLink>
                       </td>
                     </tr>
@@ -412,7 +412,7 @@ export default function ToolsPage() {
 
         <hr className="section-divider" />
 
-        {/* ── BOTS ───────────────────────────────────────────────────────────────── */}
+        {/* â”€â”€ BOTS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
         <section id="bots" className="scroll-mt-24">
           <div className="mb-10">
             <span className="badge-cyan mb-3 inline-block">Automated Trading</span>
@@ -420,12 +420,12 @@ export default function ToolsPage() {
               Trading Bots & Terminals
             </h2>
             <p className="text-[#666] max-w-2xl leading-relaxed">
-              From professional grid bots to Solana memecoin snipers — automate your edge and trade faster than any human can.
+              From professional grid bots to Solana memecoin snipers â€” automate your edge and trade faster than any human can.
             </p>
           </div>
 
           <h3 className="font-orbitron text-lg font-bold text-white mb-5 flex items-center gap-2">
-            <span className="h-px w-8 bg-[#7b5cf5]" aria-hidden="true" />
+            <span className="h-px w-8 bg-[#8899bb]" aria-hidden="true" />
             Bot Platforms
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
@@ -445,11 +445,11 @@ export default function ToolsPage() {
           </div>
 
           <h3 className="font-orbitron text-lg font-bold text-white mb-5 flex items-center gap-2">
-            <span className="h-px w-8 bg-[#7b5cf5]" aria-hidden="true" />
+            <span className="h-px w-8 bg-[#8899bb]" aria-hidden="true" />
             Telegram Trading Bots
           </h3>
           <p className="text-[#666] text-sm mb-6 max-w-2xl leading-relaxed">
-            Trade directly from Telegram — no app switching, no browser. These bots give you sniper-speed execution on Solana, ETH, TON, and BSC with a simple command interface.
+            Trade directly from Telegram â€” no app switching, no browser. These bots give you sniper-speed execution on Solana, ETH, TON, and BSC with a simple command interface.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
@@ -476,7 +476,7 @@ export default function ToolsPage() {
 
         <hr className="section-divider" />
 
-        {/* ── PASSIVE INCOME ─────────────────────────────────────────────────────── */}
+        {/* â”€â”€ PASSIVE INCOME â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
         <section id="passive" className="scroll-mt-24">
           <div className="mb-10">
             <span className="badge-cyan mb-3 inline-block">Passive Income</span>
@@ -484,7 +484,7 @@ export default function ToolsPage() {
               Earn Crypto Passively
             </h2>
             <p className="text-[#666] max-w-2xl leading-relaxed">
-              Your capital should work harder than you do. From automated grid bots to browser mining and faucets — here are the best ways to earn crypto without active trading.
+              Your capital should work harder than you do. From automated grid bots to browser mining and faucets â€” here are the best ways to earn crypto without active trading.
             </p>
           </div>
 
@@ -492,7 +492,7 @@ export default function ToolsPage() {
           <div className="cyber-card-highlight p-8 mb-8 relative overflow-hidden">
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute right-0 top-0 h-64 w-64 rounded-full bg-[#7b5cf5] opacity-[0.05] blur-[60px]"
+              className="pointer-events-none absolute right-0 top-0 h-64 w-64 rounded-full bg-[#8899bb] opacity-[0.05] blur-[60px]"
             />
             <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-6">
               <div className="flex-1">
@@ -505,13 +505,13 @@ export default function ToolsPage() {
                 </p>
                 <ul className="text-sm text-[#a0a0a0] space-y-1.5">
                   {[
-                    '16 free built-in trading bots — no subscription required',
+                    '16 free built-in trading bots â€” no subscription required',
                     'Over $5 billion in daily trading volume',
-                    'Works 24/7 — even when you\'re sleeping, traveling, or offline',
+                    'Works 24/7 â€” even when you\'re sleeping, traveling, or offline',
                     'Beginner-friendly setup takes less than 10 minutes',
                   ].map((point) => (
                     <li key={point} className="flex items-start gap-2">
-                      <svg className="h-4 w-4 text-[#9b7ff8] mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <svg className="h-4 w-4 text-[#aabbd0] mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                       </svg>
                       {point}
@@ -526,7 +526,7 @@ export default function ToolsPage() {
                 placement="tools-passive-strip"
                 className="cyber-btn shrink-0 text-sm py-3 px-8"
               >
-                Start Grid Bot →
+                Start Grid Bot â†’
               </TrackedAffiliateLink>
             </div>
           </div>
@@ -551,12 +551,12 @@ export default function ToolsPage() {
 
         <hr className="section-divider" />
 
-        {/* ── WALLETS ────────────────────────────────────────────────────────────── */}
+        {/* â”€â”€ WALLETS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
         <section id="wallets" className="scroll-mt-24">
           <div className="mb-10">
             <span className="badge-cyan mb-3 inline-block">Security First</span>
             <h2 className="font-orbitron text-2xl md:text-3xl font-bold text-white mb-3">
-              Wallets — Custody Your Assets
+              Wallets â€” Custody Your Assets
             </h2>
             <p className="text-[#666] max-w-2xl leading-relaxed">
               Not your keys, not your coins. The right wallet depends on what chains you&apos;re active on and your security tolerance. We cover both hot and cold options.
@@ -564,14 +564,14 @@ export default function ToolsPage() {
           </div>
 
           <h3 className="font-orbitron text-lg font-bold text-white mb-5 flex items-center gap-2">
-            <span className="h-px w-8 bg-[#7b5cf5]" aria-hidden="true" />
+            <span className="h-px w-8 bg-[#8899bb]" aria-hidden="true" />
             Hot Wallets (Free)
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-10">
             {HOT_WALLETS.map((w) => (
               <div key={w.name} className="cyber-card p-6 flex flex-col gap-3">
                 <h3 className="font-orbitron text-sm font-bold text-white">{w.name}</h3>
-                <p className="text-xs text-[#9b7ff8] font-semibold">{w.chains}</p>
+                <p className="text-xs text-[#aabbd0] font-semibold">{w.chains}</p>
                 <p className="text-sm text-[#666] leading-relaxed flex-1">{w.description}</p>
                 <TrackedAffiliateLink
                   href={w.url}
@@ -580,14 +580,14 @@ export default function ToolsPage() {
                   placement="tools-hot-wallets"
                   className="cyber-btn-outline text-xs py-2 w-full text-center mt-auto"
                 >
-                  Download Free →
+                  Download Free â†’
                 </TrackedAffiliateLink>
               </div>
             ))}
           </div>
 
           <h3 className="font-orbitron text-lg font-bold text-white mb-5 flex items-center gap-2">
-            <span className="h-px w-8 bg-[#7b5cf5]" aria-hidden="true" />
+            <span className="h-px w-8 bg-[#8899bb]" aria-hidden="true" />
             Cold Wallets (Hardware)
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -600,7 +600,7 @@ export default function ToolsPage() {
               badge={affiliates.ledger.badge}
               highlight={affiliates.ledger.highlight}
               placement="tools-cold-wallets"
-              ctaLabel="Shop Ledger →"
+              ctaLabel="Shop Ledger â†’"
             />
             <AffiliateCard
               name={affiliates.trezor.name}
@@ -609,14 +609,14 @@ export default function ToolsPage() {
               affiliateName="trezor"
               category="hardware_wallets"
               placement="tools-cold-wallets"
-              ctaLabel="Shop Trezor →"
+              ctaLabel="Shop Trezor â†’"
             />
           </div>
         </section>
 
         <hr className="section-divider" />
 
-        {/* ── TAX SOFTWARE ───────────────────────────────────────────────────────── */}
+        {/* â”€â”€ TAX SOFTWARE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
         <section id="tax" className="scroll-mt-24">
           <div className="mb-10">
             <span className="badge-cyan mb-3 inline-block">Tax & Compliance</span>
@@ -624,7 +624,7 @@ export default function ToolsPage() {
               Crypto Tax Software
             </h2>
             <p className="text-[#666] max-w-2xl leading-relaxed">
-              Ignore your taxes and the IRS won&apos;t ignore you. These tools auto-import your entire transaction history and generate compliant tax reports in minutes — not days.
+              Ignore your taxes and the IRS won&apos;t ignore you. These tools auto-import your entire transaction history and generate compliant tax reports in minutes â€” not days.
             </p>
           </div>
 
@@ -638,7 +638,7 @@ export default function ToolsPage() {
               badge={affiliates.koinly.badge}
               highlight={affiliates.koinly.highlight}
               placement="tools-tax"
-              ctaLabel="Try Koinly Free →"
+              ctaLabel="Try Koinly Free â†’"
             />
             <AffiliateCard
               name={affiliates.coinledger.name}
@@ -647,14 +647,14 @@ export default function ToolsPage() {
               affiliateName="coinledger"
               category="tax_software"
               placement="tools-tax"
-              ctaLabel="Try CoinLedger Free →"
+              ctaLabel="Try CoinLedger Free â†’"
             />
           </div>
         </section>
 
         <hr className="section-divider" />
 
-        {/* ── RESEARCH ───────────────────────────────────────────────────────────── */}
+        {/* â”€â”€ RESEARCH â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
         <section id="research" className="scroll-mt-24">
           <div className="mb-10">
             <span className="badge-cyan mb-3 inline-block">Analysis & Research</span>
@@ -662,7 +662,7 @@ export default function ToolsPage() {
               Research & Analytics Tools
             </h2>
             <p className="text-[#666] max-w-2xl leading-relaxed">
-              Data wins markets. The right analytics tools give you an asymmetric edge — see what others can&apos;t, act before the crowd.
+              Data wins markets. The right analytics tools give you an asymmetric edge â€” see what others can&apos;t, act before the crowd.
             </p>
           </div>
 
@@ -688,25 +688,25 @@ export default function ToolsPage() {
                   placement="tools-research-free"
                   className="cyber-btn-outline text-xs py-2 w-full text-center mt-auto"
                 >
-                  Open Free →
+                  Open Free â†’
                 </TrackedAffiliateLink>
               </div>
             ))}
           </div>
         </section>
 
-        {/* ── NEWSLETTER + CONTACT ───────────────────────────────────────────────── */}
+        {/* â”€â”€ NEWSLETTER + CONTACT â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
         <section>
           <NewsletterInline
             title="Get Notified About New Tools"
-            subtitle="We add new curated tools regularly. Subscribe to get notified the moment we recommend something new — and get exclusive discount codes for premium tools."
+            subtitle="We add new curated tools regularly. Subscribe to get notified the moment we recommend something new â€” and get exclusive discount codes for premium tools."
           />
           <div className="mt-6 text-center">
             <p className="text-sm text-[#555]">
               Missed a tool you love?{' '}
               <a
                 href={`mailto:${SOCIAL.email}`}
-                className="text-[#9b7ff8] hover:underline"
+                className="text-[#aabbd0] hover:underline"
               >
                 Email us at {SOCIAL.email}
               </a>{' '}
@@ -718,3 +718,4 @@ export default function ToolsPage() {
     </>
   );
 }
+
