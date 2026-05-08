@@ -218,24 +218,65 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* â"€â"€ MEMECOIN CTA â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€ */}
+      {/* TREND CTA — RWA */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-10">
-        <div className="relative overflow-hidden rounded-2xl bg-[#1a1a1a] border border-[rgba(123,92,245,0.2)] px-8 py-12 md:px-14">
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-[#7b5cf5] opacity-[0.05] blur-[80px]"
-          />
-          <div className="relative z-10 max-w-2xl">
-            <span className="badge-cyan mb-4 inline-block">Trending Now</span>
-            <h2 className="font-orbitron text-2xl md:text-3xl font-bold text-white mb-4">
-              The Memecoin Wave Is <span className="glow-text">Now</span>
-            </h2>
-            <p className="text-[#a0a0a0] mb-8 leading-relaxed">
-              Solana memecoins are creating life-changing returns for early movers. From Pump.fun launches to Raydium listings — the window is open right now. Learn how to identify, snipe, and exit winning memecoins before the crowd arrives.
-            </p>
-            <Link href="/guides" className="cyber-btn text-sm py-3 px-8 inline-flex">
-              Learn Memecoin Trading →
-            </Link>
+        <div className="relative overflow-hidden rounded-xl border border-[rgba(255,255,255,0.07)] bg-gradient-to-br from-[#13101e] via-[#0e0c18] to-[#09090f]">
+          {/* Glossy top edge */}
+          <div aria-hidden="true" className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[rgba(255,255,255,0.18)] to-transparent" />
+          {/* Glows */}
+          <div aria-hidden="true" className="pointer-events-none absolute -right-10 top-1/2 -translate-y-1/2 h-72 w-72 rounded-full bg-[#5741d9] opacity-[0.09] blur-[80px]" />
+          <div aria-hidden="true" className="pointer-events-none absolute left-1/3 -top-8 h-36 w-72 rounded-full bg-[#7b5cf5] opacity-[0.06] blur-[50px]" />
+
+          <div className="relative z-10 flex flex-col lg:flex-row lg:items-center gap-10 px-8 py-12 md:px-12 md:py-14">
+            {/* Left */}
+            <div className="flex-1">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="h-px w-8 bg-gradient-to-r from-[#5741d9] to-[#9b7ff8]" />
+                <span className="text-[10px] font-orbitron font-bold tracking-[0.18em] text-[#9b7ff8] uppercase">
+                  Trending in 2026
+                </span>
+              </div>
+
+              <h2 className="font-orbitron text-2xl md:text-3xl lg:text-4xl font-black text-white leading-tight mb-4">
+                Wall Street Is Moving{' '}
+                <br className="hidden md:block" />
+                <span className="bg-gradient-to-r from-[#7b5cf5] via-[#c4b5fd] to-[#9b7ff8] bg-clip-text text-transparent">
+                  On-Chain.
+                </span>
+              </h2>
+
+              <p className="text-[#808080] text-sm md:text-base leading-relaxed max-w-lg mb-8">
+                BlackRock, Franklin Templeton, and JPMorgan are tokenizing trillions in bonds, real estate, and private credit. Real-World Assets are the fastest-growing sector in crypto — and early movers are already positioned.
+              </p>
+
+              <div className="flex flex-wrap gap-3">
+                {[
+                  { label: 'Total RWA TVL', value: '$15B+' },
+                  { label: 'YoY Growth', value: '785%' },
+                  { label: 'Protocols', value: '200+' },
+                ].map((s) => (
+                  <div key={s.label} className="px-4 py-2.5 rounded-lg bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.06)]">
+                    <div className="text-[10px] font-orbitron text-[#555] uppercase tracking-wider mb-0.5">{s.label}</div>
+                    <div className="text-white text-sm font-bold font-orbitron">{s.value}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right */}
+            <div className="shrink-0 flex flex-col items-start lg:items-end gap-3">
+              <Link
+                href="/guides"
+                className="group relative inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-orbitron text-sm font-bold text-white tracking-wider overflow-hidden bg-gradient-to-br from-[#5741d9] via-[#6d52e8] to-[#9b7ff8] shadow-[0_4px_24px_rgba(87,65,217,0.45),inset_0_1px_0_rgba(255,255,255,0.15)] transition-all duration-200 hover:shadow-[0_4px_32px_rgba(87,65,217,0.65),inset_0_1px_0_rgba(255,255,255,0.2)] hover:-translate-y-0.5"
+              >
+                <span>Read the RWA Guide</span>
+                <svg className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+                <span aria-hidden="true" className="absolute inset-0 bg-white opacity-0 group-hover:opacity-[0.06] transition-opacity duration-200" />
+              </Link>
+              <p className="text-[#444] text-[10px] font-orbitron tracking-widest uppercase">Free — No signup required</p>
+            </div>
           </div>
         </div>
       </section>
