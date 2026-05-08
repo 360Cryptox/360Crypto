@@ -31,7 +31,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-[rgba(10,10,10,0.95)] backdrop-blur-md border-b border-[rgba(0,191,255,0.1)] shadow-[0_0_30px_rgba(0,0,0,0.5)]'
+          ? 'bg-[rgba(10,10,10,0.95)] backdrop-blur-md border-b border-[rgba(123,92,245,0.1)] shadow-[0_0_30px_rgba(0,0,0,0.5)]'
           : 'bg-transparent'
       }`}
     >
@@ -57,14 +57,14 @@ export default function Navbar() {
                   href={href}
                   className={`relative px-4 py-2 text-sm font-medium font-sans transition-colors duration-200 rounded-lg ${
                     active
-                      ? 'text-[#00bfff]'
+                      ? 'text-[#7b5cf5]'
                       : 'text-[#a0a0a0] hover:text-white'
                   }`}
                 >
                   {active && (
                     <span
                       aria-hidden="true"
-                      className="absolute inset-0 rounded-lg bg-[rgba(0,191,255,0.08)]"
+                      className="absolute inset-0 rounded-lg bg-[rgba(123,92,245,0.08)]"
                     />
                   )}
                   <span className="relative">{label}</span>
@@ -124,7 +124,7 @@ export default function Navbar() {
                 href={href}
                 className={`px-4 py-3 rounded-lg text-sm font-medium transition-colors duration-200 ${
                   active
-                    ? 'text-[#00bfff] bg-[rgba(0,191,255,0.08)]'
+                    ? 'text-[#7b5cf5] bg-[rgba(123,92,245,0.08)]'
                     : 'text-[#a0a0a0] hover:text-white hover:bg-[rgba(255,255,255,0.04)]'
                 }`}
               >

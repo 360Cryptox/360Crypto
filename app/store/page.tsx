@@ -100,7 +100,7 @@ export default function StorePage() {
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 flex items-center justify-center"
         >
-          <div className="h-[500px] w-[500px] rounded-full bg-[#00bfff] opacity-[0.05] blur-[120px]" />
+          <div className="h-[500px] w-[500px] rounded-full bg-[#7b5cf5] opacity-[0.05] blur-[120px]" />
         </div>
         <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center py-20">
           <span className="badge-cyan mb-4 inline-block">Launching Soon</span>
@@ -113,7 +113,7 @@ export default function StorePage() {
 
           {/* Notify form */}
           {status === 'success' ? (
-            <div className="inline-flex items-center gap-3 rounded-xl bg-[rgba(0,191,255,0.1)] border border-[rgba(0,191,255,0.3)] px-6 py-4 text-[#00bfff] font-semibold text-sm">
+            <div className="inline-flex items-center gap-3 rounded-xl bg-[rgba(123,92,245,0.1)] border border-[rgba(123,92,245,0.3)] px-6 py-4 text-[#7b5cf5] font-semibold text-sm">
               <svg className="h-5 w-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
@@ -181,7 +181,7 @@ export default function StorePage() {
               <ul className="space-y-1.5">
                 {product.features.map((f) => (
                   <li key={f} className="flex items-start gap-2 text-xs text-[#a0a0a0]">
-                    <svg className="h-3.5 w-3.5 text-[#00bfff] mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <svg className="h-3.5 w-3.5 text-[#7b5cf5] mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
                     {f}

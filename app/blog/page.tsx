@@ -19,7 +19,7 @@ const CATEGORY_COLORS: Record<string, string> = {
   Memecoins:        'text-orange-400 bg-orange-400/10 border-orange-400/20',
   'Passive Income': 'text-emerald-400 bg-emerald-400/10 border-emerald-400/20',
   Community:        'text-purple-400 bg-purple-400/10 border-purple-400/20',
-  'Trading Bots':   'text-[#00bfff] bg-[rgba(0,191,255,0.1)] border-[rgba(0,191,255,0.2)]',
+  'Trading Bots':   'text-[#7b5cf5] bg-[rgba(123,92,245,0.1)] border-[rgba(123,92,245,0.2)]',
   Exchanges:        'text-yellow-400 bg-yellow-400/10 border-yellow-400/20',
   Security:         'text-red-400 bg-red-400/10 border-red-400/20',
 };
@@ -50,7 +50,7 @@ export default function BlogPage() {
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 flex items-center justify-center"
         >
-          <div className="h-96 w-96 rounded-full bg-[#00bfff] opacity-[0.04] blur-[100px]" />
+          <div className="h-96 w-96 rounded-full bg-[#7b5cf5] opacity-[0.04] blur-[100px]" />
         </div>
         <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center py-20">
           <span className="badge-cyan mb-4 inline-block">360Crypto Blog</span>
@@ -73,7 +73,7 @@ export default function BlogPage() {
         {/* ── FEATURED POSTS ───────────────────────────────────────────────── */}
         {featured.length > 0 && (
           <section>
-            <h2 className="font-orbitron text-sm font-bold text-[#00bfff] uppercase tracking-widest mb-6">
+            <h2 className="font-orbitron text-sm font-bold text-[#7b5cf5] uppercase tracking-widest mb-6">
               Featured
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -91,7 +91,7 @@ export default function BlogPage() {
                     <span className="text-xs text-[#444]">{formatDate(post.date)}</span>
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="text-sm text-[#00bfff] font-semibold font-orbitron hover:underline"
+                      className="text-sm text-[#7b5cf5] font-semibold font-orbitron hover:underline"
                     >
                       Read More →
                     </Link>
@@ -104,7 +104,7 @@ export default function BlogPage() {
 
         {/* ── ALL POSTS ────────────────────────────────────────────────────── */}
         <section>
-          <h2 className="font-orbitron text-sm font-bold text-[#00bfff] uppercase tracking-widest mb-6">
+          <h2 className="font-orbitron text-sm font-bold text-[#7b5cf5] uppercase tracking-widest mb-6">
             Latest Posts
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -122,7 +122,7 @@ export default function BlogPage() {
                   <span className="text-xs text-[#444]">{formatDate(post.date)}</span>
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="text-xs text-[#00bfff] font-semibold font-orbitron hover:underline"
+                    className="text-xs text-[#7b5cf5] font-semibold font-orbitron hover:underline"
                   >
                     Read More →
                   </Link>

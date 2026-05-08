@@ -96,7 +96,7 @@ const LEVEL_COLORS: Record<string, string> = {
 
 const CATEGORY_COLORS: Record<string, string> = {
   Beginner:         'text-emerald-400 bg-emerald-400/10 border-emerald-400/20',
-  Trading:          'text-[#00bfff] bg-[rgba(0,191,255,0.1)] border-[rgba(0,191,255,0.2)]',
+  Trading:          'text-[#7b5cf5] bg-[rgba(123,92,245,0.1)] border-[rgba(123,92,245,0.2)]',
   'Passive Income': 'text-purple-400 bg-purple-400/10 border-purple-400/20',
   Memecoins:        'text-orange-400 bg-orange-400/10 border-orange-400/20',
   Security:         'text-red-400 bg-red-400/10 border-red-400/20',
@@ -116,7 +116,7 @@ export default function GuidesPage() {
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 flex items-center justify-center"
         >
-          <div className="h-96 w-96 rounded-full bg-[#00bfff] opacity-[0.04] blur-[100px]" />
+          <div className="h-96 w-96 rounded-full bg-[#7b5cf5] opacity-[0.04] blur-[100px]" />
         </div>
         <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center py-20">
           <span className="badge-cyan mb-4 inline-block">Free Education</span>
@@ -145,8 +145,8 @@ export default function GuidesPage() {
                 onClick={() => setActiveCategory(cat)}
                 className={`font-orbitron text-xs font-bold uppercase tracking-wider px-5 py-2 rounded-lg border transition-all duration-200 ${
                   activeCategory === cat
-                    ? 'bg-[#00bfff] text-[#0a0a0a] border-[#00bfff]'
-                    : 'bg-[#1a1a1a] text-[#666] border-[rgba(255,255,255,0.08)] hover:text-white hover:border-[rgba(0,191,255,0.3)]'
+                    ? 'bg-[#7b5cf5] text-[#0a0a0a] border-[#7b5cf5]'
+                    : 'bg-[#1a1a1a] text-[#666] border-[rgba(255,255,255,0.08)] hover:text-white hover:border-[rgba(123,92,245,0.3)]'
                 }`}
               >
                 {cat}
@@ -186,7 +186,7 @@ export default function GuidesPage() {
                     <span className="text-xs text-[#444]">{guide.readTime}</span>
                     <Link
                       href={`/guides/${guide.slug}`}
-                      className="text-xs text-[#00bfff] font-semibold font-orbitron hover:underline"
+                      className="text-xs text-[#7b5cf5] font-semibold font-orbitron hover:underline"
                     >
                       Read Guide →
                     </Link>

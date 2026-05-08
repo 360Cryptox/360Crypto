@@ -184,7 +184,7 @@ export default function ToolsPage() {
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 flex items-center justify-center"
         >
-          <div className="h-96 w-96 rounded-full bg-[#00bfff] opacity-[0.03] blur-[120px]" />
+          <div className="h-96 w-96 rounded-full bg-[#7b5cf5] opacity-[0.03] blur-[120px]" />
         </div>
         <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center py-14">
           <span className="badge-cyan mb-4 inline-block">Curated & Tested</span>
@@ -201,7 +201,7 @@ export default function ToolsPage() {
               <a
                 key={label}
                 href={`#${SECTION_IDS[i]}`}
-                className="text-xs font-orbitron font-bold uppercase tracking-wider px-4 py-2 rounded-lg bg-[#1a1a1a] border border-[rgba(255,255,255,0.08)] text-[#a0a0a0] hover:text-[#00bfff] hover:border-[rgba(0,191,255,0.3)] transition-colors duration-200"
+                className="text-xs font-orbitron font-bold uppercase tracking-wider px-4 py-2 rounded-lg bg-[#1a1a1a] border border-[rgba(255,255,255,0.08)] text-[#a0a0a0] hover:text-[#9b7ff8] hover:border-[rgba(123,92,245,0.3)] transition-colors duration-200"
               >
                 {label}
               </a>
@@ -278,7 +278,7 @@ export default function ToolsPage() {
           {/* CEX Comparison Table */}
           <div className="mb-10">
             <h3 className="font-orbitron text-lg font-bold text-white mb-4 flex items-center gap-2">
-              <span className="h-px w-8 bg-[#00bfff]" aria-hidden="true" />
+              <span className="h-px w-8 bg-[#7b5cf5]" aria-hidden="true" />
               Centralized Exchanges
             </h3>
             <div className="overflow-x-auto rounded-xl border border-[rgba(255,255,255,0.08)]">
@@ -298,7 +298,7 @@ export default function ToolsPage() {
                   {CEX_COMPARISON.map((ex) => (
                     <tr
                       key={ex.name}
-                      className={`transition-colors hover:bg-[rgba(0,191,255,0.03)] ${ex.highlight ? 'bg-[rgba(0,191,255,0.03)]' : ''}`}
+                      className={`transition-colors hover:bg-[rgba(123,92,245,0.03)] ${ex.highlight ? 'bg-[rgba(123,92,245,0.03)]' : ''}`}
                     >
                       <td className="px-5 py-4">
                         <div className="flex items-center gap-2">
@@ -310,7 +310,7 @@ export default function ToolsPage() {
                       <td className="px-5 py-4 text-[#a0a0a0]">{ex.coins}</td>
                       <td className="px-5 py-4 text-center">
                         {ex.futures ? (
-                          <svg className="h-4 w-4 text-[#00bfff] mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                          <svg className="h-4 w-4 text-[#9b7ff8] mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                           </svg>
                         ) : (
@@ -321,7 +321,7 @@ export default function ToolsPage() {
                       </td>
                       <td className="px-5 py-4 text-center">
                         {ex.copy ? (
-                          <svg className="h-4 w-4 text-[#00bfff] mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                          <svg className="h-4 w-4 text-[#9b7ff8] mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                           </svg>
                         ) : (
@@ -330,7 +330,7 @@ export default function ToolsPage() {
                           </svg>
                         )}
                       </td>
-                      <td className="px-5 py-4 text-[#00bfff] font-semibold text-xs">{ex.bonus}</td>
+                      <td className="px-5 py-4 text-[#9b7ff8] font-semibold text-xs">{ex.bonus}</td>
                       <td className="px-5 py-4">
                         <TrackedAffiliateLink
                           href={ex.url}
@@ -352,7 +352,7 @@ export default function ToolsPage() {
           {/* DEX Comparison Table */}
           <div className="mb-10">
             <h3 className="font-orbitron text-lg font-bold text-white mb-4 flex items-center gap-2">
-              <span className="h-px w-8 bg-[#00bfff]" aria-hidden="true" />
+              <span className="h-px w-8 bg-[#7b5cf5]" aria-hidden="true" />
               Decentralized Exchanges
             </h3>
             <div className="overflow-x-auto rounded-xl border border-[rgba(255,255,255,0.08)]">
@@ -371,7 +371,7 @@ export default function ToolsPage() {
                   {DEX_COMPARISON.map((dex) => (
                     <tr
                       key={dex.name}
-                      className={`transition-colors hover:bg-[rgba(0,191,255,0.03)] ${dex.highlight ? 'bg-[rgba(0,191,255,0.03)]' : ''}`}
+                      className={`transition-colors hover:bg-[rgba(123,92,245,0.03)] ${dex.highlight ? 'bg-[rgba(123,92,245,0.03)]' : ''}`}
                     >
                       <td className="px-5 py-4">
                         <div className="flex items-center gap-2">
@@ -425,7 +425,7 @@ export default function ToolsPage() {
           </div>
 
           <h3 className="font-orbitron text-lg font-bold text-white mb-5 flex items-center gap-2">
-            <span className="h-px w-8 bg-[#00bfff]" aria-hidden="true" />
+            <span className="h-px w-8 bg-[#7b5cf5]" aria-hidden="true" />
             Bot Platforms
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
@@ -445,7 +445,7 @@ export default function ToolsPage() {
           </div>
 
           <h3 className="font-orbitron text-lg font-bold text-white mb-5 flex items-center gap-2">
-            <span className="h-px w-8 bg-[#00bfff]" aria-hidden="true" />
+            <span className="h-px w-8 bg-[#7b5cf5]" aria-hidden="true" />
             Telegram Trading Bots
           </h3>
           <p className="text-[#666] text-sm mb-6 max-w-2xl leading-relaxed">
@@ -492,7 +492,7 @@ export default function ToolsPage() {
           <div className="cyber-card-highlight p-8 mb-8 relative overflow-hidden">
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute right-0 top-0 h-64 w-64 rounded-full bg-[#00bfff] opacity-[0.05] blur-[60px]"
+              className="pointer-events-none absolute right-0 top-0 h-64 w-64 rounded-full bg-[#7b5cf5] opacity-[0.05] blur-[60px]"
             />
             <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-6">
               <div className="flex-1">
@@ -511,7 +511,7 @@ export default function ToolsPage() {
                     'Beginner-friendly setup takes less than 10 minutes',
                   ].map((point) => (
                     <li key={point} className="flex items-start gap-2">
-                      <svg className="h-4 w-4 text-[#00bfff] mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <svg className="h-4 w-4 text-[#9b7ff8] mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                       </svg>
                       {point}
@@ -564,14 +564,14 @@ export default function ToolsPage() {
           </div>
 
           <h3 className="font-orbitron text-lg font-bold text-white mb-5 flex items-center gap-2">
-            <span className="h-px w-8 bg-[#00bfff]" aria-hidden="true" />
+            <span className="h-px w-8 bg-[#7b5cf5]" aria-hidden="true" />
             Hot Wallets (Free)
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-10">
             {HOT_WALLETS.map((w) => (
               <div key={w.name} className="cyber-card p-6 flex flex-col gap-3">
                 <h3 className="font-orbitron text-sm font-bold text-white">{w.name}</h3>
-                <p className="text-xs text-[#00bfff] font-semibold">{w.chains}</p>
+                <p className="text-xs text-[#9b7ff8] font-semibold">{w.chains}</p>
                 <p className="text-sm text-[#666] leading-relaxed flex-1">{w.description}</p>
                 <TrackedAffiliateLink
                   href={w.url}
@@ -587,7 +587,7 @@ export default function ToolsPage() {
           </div>
 
           <h3 className="font-orbitron text-lg font-bold text-white mb-5 flex items-center gap-2">
-            <span className="h-px w-8 bg-[#00bfff]" aria-hidden="true" />
+            <span className="h-px w-8 bg-[#7b5cf5]" aria-hidden="true" />
             Cold Wallets (Hardware)
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -706,7 +706,7 @@ export default function ToolsPage() {
               Missed a tool you love?{' '}
               <a
                 href={`mailto:${SOCIAL.email}`}
-                className="text-[#00bfff] hover:underline"
+                className="text-[#9b7ff8] hover:underline"
               >
                 Email us at {SOCIAL.email}
               </a>{' '}

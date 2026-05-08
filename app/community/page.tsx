@@ -87,7 +87,7 @@ const SOCIAL_CARDS = [
     url: `mailto:${SOCIAL.email}`,
     description: 'Got a question, tool suggestion, or want to collaborate? Reach our team directly. We read every email and reply within 48 hours.',
     cta: 'Send Email →',
-    color: '#00bfff',
+    color: '#7b5cf5',
     icon: (
       <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
@@ -105,7 +105,7 @@ export default function CommunityPage() {
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 flex items-center justify-center"
         >
-          <div className="h-[500px] w-[500px] rounded-full bg-[#00bfff] opacity-[0.05] blur-[120px]" />
+          <div className="h-[500px] w-[500px] rounded-full bg-[#7b5cf5] opacity-[0.05] blur-[120px]" />
         </div>
         <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center py-20">
           <span className="badge-cyan mb-4 inline-block">10,000+ Members</span>
@@ -156,10 +156,10 @@ export default function CommunityPage() {
               ].map((item) => (
                 <div
                   key={item.label}
-                  className={`cyber-card p-5 flex flex-col gap-2 ${!item.old ? 'border-[rgba(0,191,255,0.3)]' : ''}`}
+                  className={`cyber-card p-5 flex flex-col gap-2 ${!item.old ? 'border-[rgba(123,92,245,0.3)]' : ''}`}
                 >
                   <div className="text-2xl">{item.icon}</div>
-                  <div className={`font-orbitron text-xs font-bold uppercase tracking-wider ${item.old ? 'text-[#555] line-through' : 'text-[#00bfff]'}`}>
+                  <div className={`font-orbitron text-xs font-bold uppercase tracking-wider ${item.old ? 'text-[#555] line-through' : 'text-[#7b5cf5]'}`}>
                     {item.label}
                   </div>
                   <p className="text-xs text-[#666] leading-relaxed">{item.desc}</p>

@@ -8,12 +8,12 @@
   --background-tertiary: #2a2a2a;
   --foreground: #ededed;
   --foreground-muted: #a0a0a0;
-  --accent: #00bfff;
-  --accent-dim: rgba(0, 191, 255, 0.15);
-  --accent-glow: rgba(0, 191, 255, 0.5);
-  --accent-glow-strong: rgba(0, 191, 255, 0.8);
+  --accent: #7b5cf5;
+  --accent-dim: rgba(123, 92, 245, 0.15);
+  --accent-glow: rgba(123, 92, 245, 0.5);
+  --accent-glow-strong: rgba(123, 92, 245, 0.8);
   --border: rgba(255, 255, 255, 0.08);
-  --border-accent: rgba(0, 191, 255, 0.3);
+  --border-accent: rgba(123, 92, 245, 0.3);
 }
 
 @theme inline {
@@ -46,13 +46,13 @@ body {
 }
 
 .glow-text {
-  color: #00bfff;
-  text-shadow: 0 0 22px rgba(0, 191, 255, 0.35);
+  color: #7b5cf5;
+  text-shadow: 0 0 22px rgba(123, 92, 245, 0.45);
 }
 
 .glow-text-sm {
-  color: #00bfff;
-  text-shadow: 0 0 10px rgba(0, 191, 255, 0.25);
+  color: #7b5cf5;
+  text-shadow: 0 0 10px rgba(123, 92, 245, 0.3);
 }
 
 .cyber-card {
@@ -63,22 +63,22 @@ body {
 }
 
 .cyber-card:hover {
-  border-color: rgba(0, 191, 255, 0.35);
-  box-shadow: 0 0 24px rgba(0, 191, 255, 0.12), 0 8px 32px rgba(0, 0, 0, 0.4);
+  border-color: rgba(123, 92, 245, 0.4);
+  box-shadow: 0 0 24px rgba(123, 92, 245, 0.12), 0 8px 32px rgba(0, 0, 0, 0.4);
   transform: translateY(-2px);
 }
 
 .cyber-card-highlight {
   background: #1a1a1a;
-  border: 1px solid rgba(0, 191, 255, 0.35);
+  border: 1px solid rgba(123, 92, 245, 0.4);
   border-radius: 12px;
   box-shadow: none;
   transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
 }
 
 .cyber-card-highlight:hover {
-  border-color: rgba(0, 191, 255, 0.6);
-  box-shadow: 0 0 24px rgba(0, 191, 255, 0.18), 0 8px 32px rgba(0, 0, 0, 0.4);
+  border-color: rgba(123, 92, 245, 0.65);
+  box-shadow: 0 0 24px rgba(123, 92, 245, 0.18), 0 8px 32px rgba(0, 0, 0, 0.4);
   transform: translateY(-2px);
 }
 
@@ -88,8 +88,8 @@ body {
   justify-content: center;
   gap: 0.5rem;
   padding: 0.625rem 1.5rem;
-  background: #00bfff;
-  color: #0a0a0a;
+  background: #7b5cf5;
+  color: #ffffff;
   font-family: 'Orbitron', system-ui, sans-serif;
   font-size: 0.8rem;
   font-weight: 700;
@@ -104,8 +104,8 @@ body {
 }
 
 .cyber-btn:hover {
-  background: #33ccff;
-  box-shadow: 0 0 20px rgba(0, 191, 255, 0.6), 0 4px 16px rgba(0, 0, 0, 0.4);
+  background: #9b7ff8;
+  box-shadow: 0 0 20px rgba(123, 92, 245, 0.6), 0 4px 16px rgba(0, 0, 0, 0.4);
   transform: translateY(-1px);
 }
 
@@ -120,14 +120,14 @@ body {
   gap: 0.5rem;
   padding: 0.625rem 1.5rem;
   background: transparent;
-  color: #00bfff;
+  color: #7b5cf5;
   font-family: 'Orbitron', system-ui, sans-serif;
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   border-radius: 8px;
-  border: 1px solid rgba(0, 191, 255, 0.5);
+  border: 1px solid rgba(123, 92, 245, 0.5);
   cursor: pointer;
   text-decoration: none;
   transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
@@ -135,23 +135,23 @@ body {
 }
 
 .cyber-btn-outline:hover {
-  background: rgba(0, 191, 255, 0.1);
-  border-color: #00bfff;
-  box-shadow: 0 0 16px rgba(0, 191, 255, 0.3);
+  background: rgba(123, 92, 245, 0.1);
+  border-color: #7b5cf5;
+  box-shadow: 0 0 16px rgba(123, 92, 245, 0.3);
   transform: translateY(-1px);
 }
 
 /* ── Grid Background Pattern ── */
 .grid-bg {
   background-image:
-    linear-gradient(rgba(0, 191, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 191, 255, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(123, 92, 245, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(123, 92, 245, 0.04) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
 /* ── Gradient Text ── */
 .gradient-text {
-  background: linear-gradient(135deg, #00bfff 0%, #ffffff 60%, #00bfff 100%);
+  background: linear-gradient(135deg, #7b5cf5 0%, #ffffff 60%, #9b7ff8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -160,7 +160,7 @@ body {
 /* ── Section Divider ── */
 .section-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(0, 191, 255, 0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(123, 92, 245, 0.3), transparent);
   border: none;
   margin: 0;
 }
@@ -173,23 +173,23 @@ body {
   background: #0a0a0a;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 191, 255, 0.3);
+  background: rgba(123, 92, 245, 0.3);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 191, 255, 0.6);
+  background: rgba(123, 92, 245, 0.6);
 }
 
 /* ── Selection ── */
 ::selection {
-  background: rgba(0, 191, 255, 0.25);
+  background: rgba(123, 92, 245, 0.25);
   color: #ffffff;
 }
 
 /* ── Animations ── */
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 6px rgba(0, 191, 255, 0.2); }
-  50%       { box-shadow: 0 0 16px rgba(0, 191, 255, 0.4); }
+  0%, 100% { box-shadow: 0 0 6px rgba(123, 92, 245, 0.2); }
+  50%       { box-shadow: 0 0 16px rgba(123, 92, 245, 0.5); }
 }
 
 @keyframes float {
@@ -225,7 +225,7 @@ body {
   margin-top: 2.5rem;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid rgba(0, 191, 255, 0.2);
+  border-bottom: 1px solid rgba(123, 92, 245, 0.25);
 }
 
 .prose-crypto h3 {
@@ -241,7 +241,7 @@ body {
   font-family: 'Orbitron', system-ui, sans-serif;
   font-size: 0.9rem;
   font-weight: 700;
-  color: #00bfff;
+  color: #9b7ff8;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
@@ -253,14 +253,14 @@ body {
 }
 
 .prose-crypto a {
-  color: #00bfff;
+  color: #9b7ff8;
   text-decoration: underline;
   text-underline-offset: 3px;
   transition: color 0.2s;
 }
 
 .prose-crypto a:hover {
-  color: #33ccff;
+  color: #b8a2ff;
 }
 
 .prose-crypto strong {
@@ -289,7 +289,7 @@ body {
   content: '▸';
   position: absolute;
   left: 0;
-  color: #00bfff;
+  color: #7b5cf5;
   font-size: 0.75rem;
   top: 0.25rem;
 }
@@ -312,7 +312,7 @@ body {
   content: counter(ol-counter) '.';
   position: absolute;
   left: 0;
-  color: #00bfff;
+  color: #7b5cf5;
   font-family: 'Orbitron', system-ui, sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
@@ -320,7 +320,7 @@ body {
 }
 
 .prose-crypto blockquote {
-  border-left: 3px solid #00bfff;
+  border-left: 3px solid #7b5cf5;
   padding-left: 1.25rem;
   margin: 1.5rem 0;
   color: #888;
@@ -328,13 +328,13 @@ body {
 }
 
 .prose-crypto code {
-  background: rgba(0, 191, 255, 0.08);
-  border: 1px solid rgba(0, 191, 255, 0.15);
+  background: rgba(123, 92, 245, 0.08);
+  border: 1px solid rgba(123, 92, 245, 0.2);
   border-radius: 4px;
   padding: 0.15rem 0.4rem;
   font-family: 'Courier New', monospace;
   font-size: 0.875rem;
-  color: #00bfff;
+  color: #9b7ff8;
 }
 
 .prose-crypto pre {
@@ -365,13 +365,13 @@ body {
   font-family: 'Orbitron', system-ui, sans-serif;
   font-size: 0.7rem;
   font-weight: 700;
-  color: #00bfff;
+  color: #9b7ff8;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  border-bottom: 2px solid rgba(0, 191, 255, 0.3);
+  border-bottom: 2px solid rgba(123, 92, 245, 0.35);
   padding: 0.6rem 0.75rem;
   text-align: left;
-  background: rgba(0, 191, 255, 0.04);
+  background: rgba(123, 92, 245, 0.05);
 }
 
 .prose-crypto table td {
@@ -387,7 +387,7 @@ body {
 .prose-crypto hr {
   border: none;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(0, 191, 255, 0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(123, 92, 245, 0.3), transparent);
   margin: 2.5rem 0;
 }
 
@@ -396,9 +396,9 @@ body {
   display: inline-flex;
   align-items: center;
   padding: 0.2rem 0.65rem;
-  background: rgba(0, 191, 255, 0.15);
-  color: #00bfff;
-  border: 1px solid rgba(0, 191, 255, 0.35);
+  background: rgba(123, 92, 245, 0.15);
+  color: #9b7ff8;
+  border: 1px solid rgba(123, 92, 245, 0.35);
   border-radius: 999px;
   font-size: 0.65rem;
   font-family: 'Orbitron', system-ui, sans-serif;
@@ -422,8 +422,8 @@ body {
 }
 
 .cyber-input:focus {
-  border-color: rgba(0, 191, 255, 0.5);
-  box-shadow: 0 0 12px rgba(0, 191, 255, 0.15);
+  border-color: rgba(123, 92, 245, 0.5);
+  box-shadow: 0 0 12px rgba(123, 92, 245, 0.15);
 }
 
 .cyber-input::placeholder {

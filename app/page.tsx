@@ -75,26 +75,26 @@ const STORE_PREVIEWS = [
 ];
 
 export default function HomePage() {
-  const pionex = affiliates.pionex;
+  const kraken = affiliates.kraken;
   const bybit = affiliates.bybit;
   const bullx = affiliates.bullx;
 
   return (
     <>
-      {/* â”€â”€ HERO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+      {/* â"€â"€ HERO â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€ */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden grid-bg">
         {/* Radial glow */}
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 flex items-center justify-center"
         >
-          <div className="h-[600px] w-[600px] rounded-full bg-[#00bfff] opacity-[0.04] blur-[140px]" />
+          <div className="h-[600px] w-[600px] rounded-full bg-[#7b5cf5] opacity-[0.04] blur-[140px]" />
         </div>
 
         <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center py-24">
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[rgba(0,191,255,0.25)] bg-[rgba(0,191,255,0.07)] px-4 py-1.5">
-            <span className="h-2 w-2 rounded-full bg-[#00bfff] animate-pulse-glow" aria-hidden="true" />
-            <span className="font-orbitron text-xs font-bold text-[#00bfff] tracking-wider uppercase">
+          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[rgba(123,92,245,0.25)] bg-[rgba(123,92,245,0.07)] px-4 py-1.5">
+            <span className="h-2 w-2 rounded-full bg-[#7b5cf5] animate-pulse-glow" aria-hidden="true" />
+            <span className="font-orbitron text-xs font-bold text-[#9b7ff8] tracking-wider uppercase">
               Live — Join 10,000+ Traders
             </span>
           </div>
@@ -125,7 +125,7 @@ export default function HomePage() {
         />
       </section>
 
-      {/* â”€â”€ STATS BAR â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+      {/* â"€â"€ STATS BAR â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€ */}
       <section className="bg-[#111] border-y border-[rgba(255,255,255,0.06)]">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-3 divide-x divide-[rgba(255,255,255,0.06)]">
@@ -141,7 +141,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* â”€â”€ FEATURED TOOLS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+      {/* â"€â"€ FEATURED TOOLS â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€ */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-12">
           <span className="badge-cyan mb-4 inline-block">Top Picks</span>
@@ -155,13 +155,12 @@ export default function HomePage() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <AffiliateCard
-            name={pionex.name}
-            url={pionex.url}
-            description={pionex.description}
-            affiliateName="pionex"
-            category="passive_income"
-            badge={pionex.badge}
-            highlight={pionex.highlight}
+            name={kraken.name}
+            url={kraken.url}
+            description={kraken.description}
+            affiliateName="kraken"
+            category="exchanges_cex"
+            badge={kraken.badge}
             placement="homepage-featured"
           />
           <AffiliateCard
@@ -195,7 +194,7 @@ export default function HomePage() {
 
       <hr className="section-divider mx-auto max-w-7xl" />
 
-      {/* â”€â”€ WHY 360CRYPTO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+      {/* â"€â"€ WHY 360CRYPTO â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€ */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-12">
           <h2 className="font-orbitron text-3xl md:text-4xl font-bold text-white mb-4">
@@ -209,7 +208,7 @@ export default function HomePage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {FEATURES.map((f) => (
             <div key={f.title} className="cyber-card p-6 flex flex-col gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[rgba(0,191,255,0.1)] text-[#00bfff]">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[rgba(123,92,245,0.1)] text-[#9b7ff8]">
                 {f.icon}
               </div>
               <h3 className="font-orbitron text-sm font-bold text-white">{f.title}</h3>
@@ -219,12 +218,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* â”€â”€ MEMECOIN CTA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+      {/* â"€â"€ MEMECOIN CTA â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€ */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-10">
-        <div className="relative overflow-hidden rounded-2xl bg-[#1a1a1a] border border-[rgba(0,191,255,0.2)] px-8 py-12 md:px-14">
+        <div className="relative overflow-hidden rounded-2xl bg-[#1a1a1a] border border-[rgba(123,92,245,0.2)] px-8 py-12 md:px-14">
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-[#00bfff] opacity-[0.05] blur-[80px]"
+            className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-[#7b5cf5] opacity-[0.05] blur-[80px]"
           />
           <div className="relative z-10 max-w-2xl">
             <span className="badge-cyan mb-4 inline-block">Trending Now</span>
@@ -241,38 +240,35 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* â”€â”€ PASSIVE INCOME STRIP â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+      {/* â"€â"€ KRAKEN STRIP â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€ */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
-        <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#0d1a1f] to-[#0a1520] border border-[rgba(0,191,255,0.25)] px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute left-0 top-0 h-full w-40 bg-gradient-to-r from-[rgba(0,191,255,0.08)] to-transparent"
-          />
+        <div className="relative overflow-hidden rounded-2xl bg-[#0d0a1a] border border-[rgba(87,65,217,0.35)] px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div aria-hidden="true" className="pointer-events-none absolute left-0 top-0 h-full w-48 bg-gradient-to-r from-[rgba(87,65,217,0.1)] to-transparent" />
+          <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 h-48 w-48 rounded-full bg-[#7b5cf5] opacity-[0.07] blur-[60px]" />
           <div className="relative z-10">
-            <p className="font-orbitron text-xs font-bold text-[#00bfff] uppercase tracking-widest mb-2">
-              Passive Income
+            <p className="font-orbitron text-xs font-bold text-[#9b7ff8] uppercase tracking-widest mb-2">
+              Most Trusted US Exchange
             </p>
             <h2 className="font-orbitron text-xl md:text-2xl font-bold text-white mb-2">
-              Earn While You Sleep
+              Trade on Kraken — Est. 2011
             </h2>
             <p className="text-[#a0a0a0] text-sm max-w-lg leading-relaxed">
-              Pionex grid trading bots buy low and sell high automatically — 24/7. No manual trades. No emotion. Just consistent, compounding returns. Over $5 billion in daily trading volume processed by Pionex bots.
+              America&apos;s most trusted regulated exchange. Never breached in 14 years. Low 0.25% maker fees, futures for US users, ETH staking, and a clean interface built for serious traders.
             </p>
           </div>
-                    {/* tracked link — fires affiliate_click GA4 event */}
           <TrackedAffiliateLink
-            href={affiliates.pionex.url}
-            affiliateName="pionex"
-            category="passive_income"
-            placement="homepage-passive-strip"
-            className="cyber-btn shrink-0 text-sm py-3 px-8"
+            href={affiliates.kraken.url}
+            affiliateName="kraken"
+            category="exchanges_cex"
+            placement="homepage-kraken-strip"
+            className="shrink-0 inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg font-orbitron font-bold text-sm text-white bg-[#5741d9] hover:bg-[#7b5cf5] border border-[rgba(87,65,217,0.5)] transition-all duration-200 hover:shadow-[0_0_24px_rgba(87,65,217,0.5)] whitespace-nowrap uppercase tracking-widest"
           >
-            Start Grid Bot Trading →
+            Open Kraken →
           </TrackedAffiliateLink>
         </div>
       </section>
 
-      {/* â”€â”€ STORE TEASER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+      {/* â"€â"€ STORE TEASER â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€ */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-12">
           <span className="badge-cyan mb-4 inline-block">Coming Soon</span>
@@ -289,7 +285,7 @@ export default function HomePage() {
             <div key={product.name} className="cyber-card p-6 flex flex-col gap-4 relative overflow-hidden">
               <div
                 aria-hidden="true"
-                className="pointer-events-none absolute top-0 right-0 h-24 w-24 rounded-full bg-[#00bfff] opacity-[0.04] blur-[30px]"
+                className="pointer-events-none absolute top-0 right-0 h-24 w-24 rounded-full bg-[#7b5cf5] opacity-[0.04] blur-[30px]"
               />
               <div className="text-3xl">{product.icon}</div>
               <h3 className="font-orbitron text-sm font-bold text-white">{product.name}</h3>
@@ -300,7 +296,7 @@ export default function HomePage() {
                 </span>
                 <Link
                   href="/store"
-                  className="text-xs text-[#00bfff] font-semibold hover:underline"
+                  className="text-xs text-[#9b7ff8] font-semibold hover:underline"
                 >
                   Notify Me →
                 </Link>
@@ -316,7 +312,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* â”€â”€ NEWSLETTER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+      {/* â"€â"€ NEWSLETTER â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€ */}
       <section id="newsletter" className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pb-24">
         <NewsletterInline
           title="Get Exclusive Signals & Early Access"

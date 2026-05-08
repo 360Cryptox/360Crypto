@@ -43,7 +43,7 @@ const CATEGORY_COLORS: Record<string, string> = {
   Memecoins:        'text-orange-400 bg-orange-400/10 border-orange-400/20',
   'Passive Income': 'text-emerald-400 bg-emerald-400/10 border-emerald-400/20',
   Community:        'text-purple-400 bg-purple-400/10 border-purple-400/20',
-  'Trading Bots':   'text-[#00bfff] bg-[rgba(0,191,255,0.1)] border-[rgba(0,191,255,0.2)]',
+  'Trading Bots':   'text-[#7b5cf5] bg-[rgba(123,92,245,0.1)] border-[rgba(123,92,245,0.2)]',
   Exchanges:        'text-yellow-400 bg-yellow-400/10 border-yellow-400/20',
   Security:         'text-red-400 bg-red-400/10 border-red-400/20',
 };
@@ -82,12 +82,12 @@ export default async function BlogPostPage({ params }: Props) {
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 flex items-center justify-center"
         >
-          <div className="h-96 w-96 rounded-full bg-[#00bfff] opacity-[0.04] blur-[100px]" />
+          <div className="h-96 w-96 rounded-full bg-[#7b5cf5] opacity-[0.04] blur-[100px]" />
         </div>
         <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-xs text-[#555] font-orbitron uppercase tracking-wider hover:text-[#00bfff] transition-colors mb-8"
+            className="inline-flex items-center gap-2 text-xs text-[#555] font-orbitron uppercase tracking-wider hover:text-[#7b5cf5] transition-colors mb-8"
           >
             ← Back to Blog
           </Link>
@@ -119,7 +119,7 @@ export default async function BlogPostPage({ params }: Props) {
         <div className="mt-16 pt-8 border-t border-[rgba(255,255,255,0.06)] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <Link
             href="/blog"
-            className="text-sm text-[#00bfff] font-orbitron font-bold hover:underline"
+            className="text-sm text-[#7b5cf5] font-orbitron font-bold hover:underline"
           >
             ← All Posts
           </Link>
