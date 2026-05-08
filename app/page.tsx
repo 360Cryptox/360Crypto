@@ -220,13 +220,13 @@ export default function HomePage() {
 
       {/* TREND CTA — RWA chromatic */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-10">
-        {/* Thick chromatic border */}
-        <div className="relative p-[2px] rounded-2xl" style={{ background: 'linear-gradient(135deg, #3b82f6 0%, #a855f7 40%, #ec4899 70%, #f97316 100%)' }}>
-          <div className="relative overflow-hidden rounded-2xl bg-[#0b0a12]">
-            {/* Strong chromatic glow clouds */}
-            <div aria-hidden="true" className="pointer-events-none absolute -left-20 top-0 h-80 w-80 rounded-full bg-[#2563eb] opacity-[0.18] blur-[60px]" />
-            <div aria-hidden="true" className="pointer-events-none absolute -right-20 bottom-0 h-80 w-80 rounded-full bg-[#db2777] opacity-[0.16] blur-[60px]" />
-            <div aria-hidden="true" className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 h-40 w-96 rounded-full bg-[#9333ea] opacity-[0.10] blur-[50px]" />
+        {/* Thick chromatic border — cyan · blue · rose · orange, zero purple */}
+        <div className="relative p-[2px] rounded-2xl" style={{ background: 'linear-gradient(135deg, #06b6d4 0%, #3b82f6 30%, #f472b6 65%, #f97316 100%)' }}>
+          <div className="relative overflow-hidden rounded-2xl" style={{ background: '#050a14' }}>
+            {/* Chromatic glow clouds — NO purple */}
+            <div aria-hidden="true" className="pointer-events-none absolute -left-16 -top-8 h-96 w-96 rounded-full bg-[#0891b2] opacity-[0.28] blur-[70px]" />
+            <div aria-hidden="true" className="pointer-events-none absolute -right-16 -bottom-8 h-96 w-96 rounded-full bg-[#f43f5e] opacity-[0.26] blur-[70px]" />
+            <div aria-hidden="true" className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-48 w-72 rounded-full bg-[#fb923c] opacity-[0.08] blur-[60px]" />
 
             <div className="relative z-10 flex flex-col lg:flex-row lg:items-center gap-10 px-8 py-12 md:px-12 md:py-14">
               {/* Left */}
@@ -241,7 +241,7 @@ export default function HomePage() {
                 <h2 className="font-orbitron text-3xl md:text-4xl font-black text-white leading-tight mb-4">
                   Wall Street Is Moving{' '}
                   <br className="hidden md:block" />
-                  <span style={{ background: 'linear-gradient(90deg, #60a5fa 0%, #e879f9 50%, #fb923c 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+                  <span style={{ background: 'linear-gradient(90deg, #38bdf8 0%, #f43f5e 55%, #fb923c 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                     On-Chain.
                   </span>
                 </h2>
@@ -253,7 +253,7 @@ export default function HomePage() {
                 <div className="flex flex-wrap gap-3">
                   {[
                     { label: 'Total RWA TVL', value: '$15B+', color: '#60a5fa', bg: 'rgba(59,130,246,0.08)', border: 'rgba(59,130,246,0.2)' },
-                    { label: 'YoY Growth',    value: '785%',  color: '#e879f9', bg: 'rgba(232,121,249,0.08)', border: 'rgba(232,121,249,0.2)' },
+                    { label: 'YoY Growth',    value: '785%',  color: '#f43f5e', bg: 'rgba(244,63,94,0.10)',   border: 'rgba(244,63,94,0.25)' },
                     { label: 'Protocols',     value: '200+',  color: '#fb923c', bg: 'rgba(249,115,22,0.08)',  border: 'rgba(249,115,22,0.2)' },
                   ].map((s) => (
                     <div key={s.label} className="px-4 py-2.5 rounded-lg" style={{ background: s.bg, border: `1px solid ${s.border}` }}>
@@ -270,8 +270,8 @@ export default function HomePage() {
                   href="/guides"
                   className="group relative inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-orbitron text-sm font-bold text-white tracking-wider overflow-hidden transition-all duration-200 hover:-translate-y-0.5"
                   style={{
-                    background: 'linear-gradient(135deg, #2563eb 0%, #9333ea 45%, #db2777 80%, #ea580c 100%)',
-                    boxShadow: '0 4px 24px rgba(147,51,234,0.4), inset 0 1px 0 rgba(255,255,255,0.15)',
+                    background: 'linear-gradient(135deg, #0891b2 0%, #f43f5e 55%, #ea580c 100%)',
+                    boxShadow: '0 4px 24px rgba(244,63,94,0.45), inset 0 1px 0 rgba(255,255,255,0.15)',
                   }}
                 >
                   <span className="relative z-10">Read the RWA Guide</span>
