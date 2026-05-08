@@ -83,6 +83,14 @@ export const affiliates: Record<string, Affiliate> = {
       'The #1 copy trading exchange. One-click mirror elite traders with verified track records, $5B+ daily volume, and a full suite of spot and futures markets. Top choice for beginners entering the market.',
     category: 'exchanges_cex',
   },
+  kraken: {
+    name: 'Kraken',
+    url: 'https://link.360crypto.site/kraken',
+    description:
+      'The most trusted regulated exchange in the US since 2011. Low maker fees, US futures access, ETH staking, and an unbroken security record. The go-to on-ramp for serious crypto traders.',
+    category: 'exchanges_cex',
+    badge: 'Best US Exchange',
+  },
 
   // â”€â”€ DEX / Swaps â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   simpleswap: {

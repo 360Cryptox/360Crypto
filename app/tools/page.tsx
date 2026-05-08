@@ -26,6 +26,17 @@ const CEX_COMPARISON = [
     badge: 'Best CEX',
   },
   {
+    name: 'Kraken',
+    url: affiliates.kraken.url,
+    fees: '0.25% / 0.40%',
+    coins: '200+',
+    futures: true,
+    copy: false,
+    bonus: '50% fee share (referral)',
+    highlight: false,
+    badge: 'Best US Exchange',
+  },
+  {
     name: 'Binance',
     url: affiliates.binance.url,
     fees: '0.10% / 0.10%',
@@ -215,6 +226,53 @@ export default function ToolsPage() {
             <p className="text-[#666] max-w-2xl leading-relaxed">
               Centralized exchanges (CEX) offer deep liquidity and advanced trading features. Decentralized exchanges (DEX) give you full custody and no KYC. Use both strategically.
             </p>
+          </div>
+
+          {/* Kraken Spotlight */}
+          <div className="mb-10 relative overflow-hidden rounded-xl border border-[rgba(87,65,217,0.35)] bg-[#0d0a1a] p-8">
+            <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 h-72 w-72 rounded-full bg-[#5741d9] opacity-[0.08] blur-[80px]" />
+            <div aria-hidden="true" className="pointer-events-none absolute left-1/2 bottom-0 h-48 w-96 -translate-x-1/2 rounded-full bg-[#7b5cf5] opacity-[0.05] blur-[60px]" />
+            <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-8">
+              <div className="flex-1">
+                <div className="flex flex-wrap items-center gap-2 mb-3">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-orbitron font-bold uppercase tracking-wider bg-[rgba(87,65,217,0.2)] text-[#9b7ff8] border border-[rgba(87,65,217,0.4)]">
+                    Most Trusted US Exchange
+                  </span>
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-orbitron font-bold uppercase tracking-wider bg-[rgba(87,65,217,0.1)] text-[#7b5cf5] border border-[rgba(87,65,217,0.2)]">
+                    Est. 2011
+                  </span>
+                </div>
+                <h3 className="font-orbitron text-2xl md:text-3xl font-black text-white mb-3">Kraken</h3>
+                <p className="text-[#a0a0b0] leading-relaxed text-sm mb-6 max-w-xl">
+                  The exchange US institutions and serious traders trust. Regulated, never breached, with real futures access for American users. Lower fees than Coinbase — and a security record to match.
+                </p>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                  {[
+                    { label: 'Maker Fee', value: '0.25%' },
+                    { label: 'Coins Listed', value: '200+' },
+                    { label: 'Founded', value: '2011' },
+                    { label: 'US Regulated', value: '✓ Yes' },
+                  ].map((stat) => (
+                    <div key={stat.label} className="rounded-lg bg-[rgba(87,65,217,0.1)] border border-[rgba(87,65,217,0.2)] px-4 py-3">
+                      <div className="text-[#7b5cf5] text-xs font-orbitron font-bold mb-1">{stat.label}</div>
+                      <div className="text-white font-bold text-sm">{stat.value}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="flex flex-col gap-3 shrink-0 items-center">
+                <TrackedAffiliateLink
+                  href={affiliates.kraken.url}
+                  affiliateName="kraken"
+                  category="exchanges_cex"
+                  placement="tools-kraken-spotlight"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg font-orbitron font-bold text-sm text-white bg-[#5741d9] hover:bg-[#6b52e8] border border-[rgba(87,65,217,0.5)] transition-all duration-200 hover:shadow-[0_0_24px_rgba(87,65,217,0.5)] whitespace-nowrap"
+                >
+                  Open Kraken →
+                </TrackedAffiliateLink>
+                <p className="text-[#555] text-xs text-center">Earn 50% of their trading fees</p>
+              </div>
+            </div>
           </div>
 
           {/* CEX Comparison Table */}
