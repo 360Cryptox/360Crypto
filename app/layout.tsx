@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   },
 };
 
-const GA_ID = 'G-0MXFRFKXZC';
+const GA_ID = 'G-X5Y8F9F5FM';
 
 export default function RootLayout({
   children,
