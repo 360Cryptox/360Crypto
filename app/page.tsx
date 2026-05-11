@@ -118,6 +118,75 @@ export default function HomePage() {
           </div>
         </div>
 
+        {/* Futuristic ship — blueprint/holographic schematic, right side */}
+        <div aria-hidden="true" className="pointer-events-none absolute right-[-4%] top-1/2 -translate-y-[48%] w-[58%] max-w-[700px] hidden lg:block" style={{ opacity: 0.22 }}>
+          <svg viewBox="0 0 700 250" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full animate-float">
+            <defs>
+              <filter id="sg" x="-25%" y="-25%" width="150%" height="150%">
+                <feGaussianBlur stdDeviation="3.5" result="b"/>
+                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <filter id="sgs" x="-40%" y="-40%" width="180%" height="180%">
+                <feGaussianBlur stdDeviation="7" result="b"/>
+                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+
+            {/* Main hull */}
+            <path d="M 55,132 L 580,104 L 650,120 L 580,136 L 55,164 L 16,148 Z"
+              stroke="#5599dd" strokeWidth="1.5" fill="rgba(85,153,221,0.05)" filter="url(#sg)"/>
+            {/* Upper deck layer */}
+            <path d="M 95,132 L 555,108 L 580,120 L 555,132 L 95,158 Z"
+              stroke="#5599dd" strokeWidth="0.75" fill="rgba(85,153,221,0.03)"/>
+            {/* Command bridge */}
+            <path d="M 200,132 L 232,78 L 400,74 L 428,100 L 428,132 Z"
+              stroke="#5599dd" strokeWidth="1.5" fill="rgba(85,153,221,0.08)" filter="url(#sg)"/>
+            {/* Bridge windows */}
+            <path d="M 252,104 L 252,90 L 400,86 L 400,100 Z"
+              stroke="#88ccff" strokeWidth="1.5" fill="rgba(136,204,255,0.12)" filter="url(#sg)"/>
+            {/* Bow sharp tip */}
+            <path d="M 580,104 L 652,120 L 580,136"
+              stroke="#88ccff" strokeWidth="2" fill="rgba(136,204,255,0.1)" filter="url(#sg)"/>
+            {/* Engine nacelle top */}
+            <path d="M 16,118 L 55,116 L 55,132 L 16,130 Z"
+              stroke="#5599dd" strokeWidth="1.5" fill="rgba(85,153,221,0.1)"/>
+            {/* Engine nacelle bottom */}
+            <path d="M 16,142 L 55,140 L 55,156 L 16,154 Z"
+              stroke="#5599dd" strokeWidth="1.5" fill="rgba(85,153,221,0.1)"/>
+            {/* Thruster glow top */}
+            <circle cx="11" cy="124" r="8" fill="#88ccff" opacity="0.65" filter="url(#sgs)"/>
+            <circle cx="11" cy="124" r="3.5" fill="white" opacity="0.95"/>
+            {/* Thruster glow bottom */}
+            <circle cx="11" cy="148" r="8" fill="#88ccff" opacity="0.65" filter="url(#sgs)"/>
+            <circle cx="11" cy="148" r="3.5" fill="white" opacity="0.95"/>
+            {/* Hull structural ribs */}
+            <line x1="155" y1="108" x2="155" y2="160" stroke="#5599dd" strokeWidth="0.6" opacity="0.45"/>
+            <line x1="260" y1="104" x2="260" y2="156" stroke="#5599dd" strokeWidth="0.6" opacity="0.45"/>
+            <line x1="360" y1="102" x2="360" y2="150" stroke="#5599dd" strokeWidth="0.6" opacity="0.45"/>
+            <line x1="460" y1="100" x2="460" y2="140" stroke="#5599dd" strokeWidth="0.6" opacity="0.45"/>
+            <line x1="530" y1="100" x2="530" y2="130" stroke="#5599dd" strokeWidth="0.6" opacity="0.45"/>
+            {/* Center deck dashed line */}
+            <line x1="95" y1="145" x2="565" y2="120" stroke="#5599dd" strokeWidth="0.8" opacity="0.5" strokeDasharray="5 4"/>
+            {/* Mast / comm antenna */}
+            <line x1="300" y1="74" x2="288" y2="30" stroke="#88ccff" strokeWidth="1.5" opacity="0.85"/>
+            <circle cx="286" cy="27" r="4.5" fill="#88ccff" opacity="0.9" filter="url(#sg)"/>
+            <line x1="262" y1="50" x2="315" y2="48" stroke="#5599dd" strokeWidth="0.8" opacity="0.55"/>
+            {/* Second antenna */}
+            <line x1="370" y1="74" x2="380" y2="40" stroke="#5599dd" strokeWidth="1" opacity="0.6"/>
+            <circle cx="381" cy="37" r="3" fill="#5599dd" opacity="0.8"/>
+            {/* Sensor array */}
+            <circle cx="490" cy="122" r="5.5" stroke="#88ccff" strokeWidth="1.5" fill="rgba(136,204,255,0.14)"/>
+            <circle cx="516" cy="120" r="4" stroke="#88ccff" strokeWidth="1.5" fill="rgba(136,204,255,0.12)"/>
+            <circle cx="538" cy="118" r="3" stroke="#88ccff" strokeWidth="1.5" fill="rgba(136,204,255,0.12)"/>
+            {/* Hull accent lines */}
+            <line x1="95" y1="122" x2="430" y2="108" stroke="#5599dd" strokeWidth="0.6" opacity="0.35"/>
+            <line x1="95" y1="152" x2="540" y2="130" stroke="#5599dd" strokeWidth="0.6" opacity="0.28"/>
+            {/* Wake lines */}
+            <path d="M 42,172 Q 22,184 42,196 Q 62,208 82,196" stroke="#5599dd" strokeWidth="0.75" opacity="0.22" fill="none"/>
+            <path d="M 65,178 Q 38,192 65,206 Q 92,220 118,206" stroke="#5599dd" strokeWidth="0.5" opacity="0.14" fill="none"/>
+          </svg>
+        </div>
+
         {/* Bottom fade */}
         <div
           aria-hidden="true"
