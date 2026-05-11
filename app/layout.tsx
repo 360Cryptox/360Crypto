@@ -101,6 +101,7 @@ export default function RootLayout({
             gtag('config', '${GA_ID}', { page_path: window.location.pathname });
           `}
         </Script>
+        <Script src="https://ga4-connect.vercel.app/tracker.js" strategy="afterInteractive" />
       </head>
       <body className="bg-[#0a0a0a] text-[#ededed] antialiased flex flex-col min-h-screen">
         <Navbar />
