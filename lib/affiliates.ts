@@ -26,7 +26,7 @@ export const affiliates: Record<string, Affiliate> = {
   // â”€â”€ CEX Exchanges â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   bybit: {
     name: 'Bybit',
-    url: 'https://link.360crypto.site/56f',
+    url: 'https://www.bybit.com/invite?ref=KBJY1WO',
     description:
       'One of the world\'s largest crypto derivatives exchanges. Up to $30,000 in deposit bonuses for new users. Low fees, deep liquidity, and a full suite of spot, futures, and copy trading.',
     category: 'exchanges_cex',
@@ -35,7 +35,7 @@ export const affiliates: Record<string, Affiliate> = {
   },
   kucoin: {
     name: 'KuCoin',
-    url: 'https://link.360crypto.site/13m',
+    url: 'https://www.kucoin.com/r/rf/QBAYXX17',
     description:
       '"The People\'s Exchange" â€” 700+ altcoins including early-stage gems before they hit mainstream platforms. Great for discovering low-cap opportunities with strong trading tools.',
     category: 'exchanges_cex',
@@ -49,7 +49,7 @@ export const affiliates: Record<string, Affiliate> = {
   },
   gateio: {
     name: 'Gate.io',
-    url: 'https://link.360crypto.site/im9',
+    url: 'https://www.gate.io/signup/AQQRBFEJ?ref_type=103',
     description:
       'Access 1,700+ trading pairs including the smallest altcoins and new project listings. Gate.io is the go-to for early-stage gem hunters and high-volume altcoin traders.',
     category: 'exchanges_cex',
@@ -85,7 +85,7 @@ export const affiliates: Record<string, Affiliate> = {
   },
   kraken: {
     name: 'Kraken',
-    url: 'https://link.360crypto.site/kraken',
+    url: 'https://www.kraken.com/sign-up?referral=dhtbfq28',
     description:
       'The most trusted regulated exchange in the US since 2011. Low maker fees, US futures access, ETH staking, and an unbroken security record. The go-to on-ramp for serious crypto traders.',
     category: 'exchanges_cex',
@@ -95,7 +95,7 @@ export const affiliates: Record<string, Affiliate> = {
   // â”€â”€ DEX / Swaps â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   simpleswap: {
     name: 'SimpleSwap',
-    url: 'https://link.360crypto.site/4hh',
+    url: 'https://simpleswap.io/?ref=62601ac50714',
     description:
       'No account, no KYC, no limits. Swap 600+ crypto pairs instantly at the best available rates. The simplest and most private way to exchange crypto on-chain.',
     category: 'exchanges_dex',
@@ -115,7 +115,7 @@ export const affiliates: Record<string, Affiliate> = {
   // â”€â”€ Passive Income â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   pionex: {
     name: 'Pionex',
-    url: 'https://link.360crypto.site/jkw',
+    url: 'https://accounts.pionex.com/en/signUp?r=04XSzuoSmiC',
     description:
       'The #1 platform for crypto grid trading bots. 16 free built-in bots let you automate buying low and selling high 24/7 â€” no coding required. The easiest hands-off income strategy in crypto.',
     category: 'passive_income',
@@ -179,7 +179,7 @@ export const affiliates: Record<string, Affiliate> = {
   },
   threecommas: {
     name: '3Commas',
-    url: 'https://link.360crypto.site/cf6',
+    url: 'https://app.3commas.io/auth/registration?utm_source=referral&utm_medium=cabinet&c=tc1727013',
     description:
       'Professional trading automation platform trusted by 150,000+ traders. DCA bots, grid bots, signal bots, and portfolio management â€” all connected to your existing exchange via API.',
     category: 'trading_bots',
@@ -193,7 +193,7 @@ export const affiliates: Record<string, Affiliate> = {
   },
   coinrule: {
     name: 'Coinrule',
-    url: 'https://link.360crypto.site/qcx',
+    url: 'https://coinrule.com/ref.html?fpr=8d9xp',
     description:
       'Build powerful trading rules without a single line of code. 250+ rule templates, if-this-then-that logic, and seamless integration with Binance, Coinbase, Kraken, and more.',
     category: 'trading_bots',
@@ -253,7 +253,7 @@ export const affiliates: Record<string, Affiliate> = {
   // â”€â”€ Research / Analytics â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   tradingview: {
     name: 'TradingView',
-    url: 'https://link.360crypto.site/p67',
+    url: 'https://www.tradingview.com/?aff_id=140833',
     description:
       'The world\'s leading charting platform. Professional-grade technical analysis tools, 100+ indicators, real-time data across all markets, and a massive community of traders sharing ideas.',
     category: 'research',
@@ -275,7 +275,7 @@ export const affiliates: Record<string, Affiliate> = {
   // Replace URL with affiliate link once approved
   trezor: {
     name: 'Trezor',
-    url: 'https://trezor.io',
+    url: 'https://affil.trezor.io/aff_c?offer_id=133&aff_id=141635',
     description:
       'The original hardware wallet — 100% open-source since 2014. Every line of firmware is publicly auditable. Trezor is the choice for maximum transparency and serious self-custody advocates.',
     category: 'hardware_wallets',
