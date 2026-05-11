@@ -118,129 +118,116 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Pirate ship — tall ship with masts, sails, rigging */}
-        <div aria-hidden="true" className="pointer-events-none absolute inset-0 flex items-end justify-center pb-0" style={{ opacity: 0.2 }}>
-          <svg viewBox="0 0 860 340" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full max-w-[1000px] animate-float">
+        {/* Tall sailing ship — portrait SVG fills hero height */}
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 flex items-center justify-center" style={{ opacity: 0.28 }}>
+          <svg viewBox="0 0 500 700" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-full max-h-[88vh] animate-float" style={{ maxWidth: '55vw' }}>
             <defs>
-              <filter id="sg" x="-20%" y="-20%" width="140%" height="140%">
-                <feGaussianBlur stdDeviation="2.5" result="b"/>
+              <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+                <feGaussianBlur stdDeviation="3" result="b"/>
                 <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
               </filter>
-              <filter id="sgs" x="-60%" y="-60%" width="220%" height="220%">
-                <feGaussianBlur stdDeviation="6" result="b"/>
+              <filter id="glowStrong" x="-80%" y="-80%" width="260%" height="260%">
+                <feGaussianBlur stdDeviation="8" result="b"/>
                 <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
               </filter>
             </defs>
 
-            {/* ── HULL ── classic tall ship, curved wooden hull */}
-            <path d="M 155,218 Q 170,260 220,272 L 660,272 Q 710,268 730,248 L 740,232 Q 700,215 660,210 L 220,210 Q 180,212 155,218 Z"
-              stroke="#5599dd" strokeWidth="1.6" fill="rgba(85,153,221,0.07)" filter="url(#sg)"/>
-            {/* Hull bottom keel curve */}
-            <path d="M 160,218 Q 150,265 185,278 L 650,278 Q 698,275 730,252"
-              stroke="#5599dd" strokeWidth="1" fill="none" opacity="0.5"/>
-            {/* Waterline */}
-            <path d="M 158,238 Q 180,248 220,246 L 660,246 Q 700,244 728,238"
-              stroke="#88ccff" strokeWidth="0.8" fill="none" opacity="0.45" strokeDasharray="6 4"/>
-            {/* Hull plank lines */}
-            <path d="M 160,224 Q 420,222 728,232" stroke="#5599dd" strokeWidth="0.5" fill="none" opacity="0.3"/>
-            <path d="M 162,231 Q 420,229 729,240" stroke="#5599dd" strokeWidth="0.5" fill="none" opacity="0.25"/>
-            <path d="M 164,254 Q 420,254 728,254" stroke="#5599dd" strokeWidth="0.5" fill="none" opacity="0.25"/>
-            <path d="M 168,263 Q 420,264 724,262" stroke="#5599dd" strokeWidth="0.5" fill="none" opacity="0.2"/>
-            {/* Cannon ports */}
-            {[250, 320, 390, 460, 530, 600].map((x, i) => (
-              <rect key={i} x={x} y={222} width={14} height={10} rx={2}
-                stroke="#5599dd" strokeWidth="0.8" fill="rgba(85,153,221,0.15)" opacity={0.6}/>
-            ))}
-            {/* Stern castle (raised back) */}
-            <path d="M 155,218 L 148,185 L 195,178 L 220,210"
-              stroke="#5599dd" strokeWidth="1.4" fill="rgba(85,153,221,0.1)" filter="url(#sg)"/>
-            <path d="M 148,185 L 148,160 L 200,155 L 200,178"
-              stroke="#5599dd" strokeWidth="1.4" fill="rgba(85,153,221,0.12)" filter="url(#sg)"/>
-            {/* Stern windows */}
-            <rect x="155" y="162" width="10" height="8" rx="5" stroke="#88ccff" strokeWidth="1" fill="rgba(136,204,255,0.2)"/>
-            <rect x="172" y="160" width="10" height="8" rx="5" stroke="#88ccff" strokeWidth="1" fill="rgba(136,204,255,0.2)"/>
-            {/* Forecastle (raised front) */}
-            <path d="M 660,210 L 680,196 L 720,196 L 730,210"
-              stroke="#5599dd" strokeWidth="1.2" fill="rgba(85,153,221,0.08)"/>
-            {/* Bowsprit — diagonal mast forward */}
-            <line x1="700" y1="200" x2="800" y2="148" stroke="#5599dd" strokeWidth="2" opacity="0.8"/>
-            <line x1="800" y1="148" x2="820" y2="136" stroke="#5599dd" strokeWidth="1.5" opacity="0.6"/>
-            {/* Bowsprit sail (jib) */}
-            <path d="M 710,196 Q 770,168 812,138 L 700,200 Z"
-              stroke="#88ccff" strokeWidth="0.8" fill="rgba(85,153,221,0.06)" opacity="0.6"/>
-
-            {/* ── MIZZENMAST (rear, shortest) x=235 ── */}
-            <line x1="235" y1="210" x2="235" y2="78" stroke="#5599dd" strokeWidth="2" opacity="0.85"/>
-            {/* Mizzen yard */}
-            <line x1="188" y1="98" x2="282" y2="94" stroke="#5599dd" strokeWidth="1.5" opacity="0.8"/>
-            {/* Mizzen sail (billowing) */}
-            <path d="M 190,98 Q 238,118 280,94 L 275,138 Q 238,148 198,138 Z"
-              stroke="#5599dd" strokeWidth="1" fill="rgba(85,153,221,0.09)"/>
-            {/* Crow's nest mizzen */}
-            <rect x="226" y="82" width="18" height="10" rx="2" stroke="#5599dd" strokeWidth="1" fill="rgba(85,153,221,0.15)"/>
-
-            {/* ── MAINMAST (center, tallest) x=430 ── */}
-            <line x1="430" y1="212" x2="430" y2="18" stroke="#5599dd" strokeWidth="2.2" opacity="0.9" filter="url(#sg)"/>
-            {/* Main top yard */}
-            <line x1="362" y1="38" x2="498" y2="34" stroke="#5599dd" strokeWidth="1.5" opacity="0.85"/>
-            {/* Main top sail */}
-            <path d="M 364,38 Q 430,52 496,34 L 490,82 Q 430,88 370,82 Z"
-              stroke="#5599dd" strokeWidth="1" fill="rgba(85,153,221,0.1)"/>
-            {/* Main mid yard */}
-            <line x1="340" y1="90" x2="520" y2="84" stroke="#5599dd" strokeWidth="1.5" opacity="0.8"/>
-            {/* Main mid sail (large, billowing) */}
-            <path d="M 342,90 Q 432,112 518,84 L 510,148 Q 432,158 350,148 Z"
-              stroke="#5599dd" strokeWidth="1.2" fill="rgba(85,153,221,0.11)"/>
-            {/* Crow's nest main */}
-            <path d="M 416,58 L 444,58 L 448,72 L 412,72 Z" stroke="#88ccff" strokeWidth="1.2" fill="rgba(85,153,221,0.2)" filter="url(#sg)"/>
+            {/* ── MAINMAST (x=250, tallest) ── */}
+            <line x1="250" y1="28" x2="250" y2="558" stroke="#88ccff" strokeWidth="4" filter="url(#glow)"/>
+            {/* Top royal yard + sail */}
+            <line x1="218" y1="52" x2="282" y2="52" stroke="#5599dd" strokeWidth="2.5"/>
+            <path d="M 219,52 Q 250,64 281,52 L 279,98 Q 250,105 221,98 Z" stroke="#5599dd" strokeWidth="1.5" fill="rgba(85,153,221,0.16)"/>
+            {/* Topsail yard + sail */}
+            <line x1="204" y1="112" x2="296" y2="112" stroke="#5599dd" strokeWidth="2.5"/>
+            <path d="M 205,112 Q 250,128 295,112 L 291,192 Q 250,203 211,192 Z" stroke="#5599dd" strokeWidth="1.6" fill="rgba(85,153,221,0.17)"/>
+            {/* Mainsail yard + sail (largest) */}
+            <line x1="190" y1="206" x2="310" y2="206" stroke="#5599dd" strokeWidth="3"/>
+            <path d="M 192,206 Q 250,228 308,206 L 303,342 Q 250,360 199,342 Z" stroke="#5599dd" strokeWidth="2" fill="rgba(85,153,221,0.19)"/>
+            {/* Course (lower) yard + sail */}
+            <line x1="184" y1="358" x2="316" y2="358" stroke="#5599dd" strokeWidth="2.5"/>
+            <path d="M 185,358 Q 250,374 315,358 L 310,458 Q 250,472 192,458 Z" stroke="#5599dd" strokeWidth="1.8" fill="rgba(85,153,221,0.16)"/>
+            {/* Crow's nest */}
+            <path d="M 233,75 L 267,75 L 271,92 L 229,92 Z" stroke="#88ccff" strokeWidth="2" fill="rgba(85,153,221,0.25)" filter="url(#glow)"/>
             {/* Masthead light */}
-            <circle cx="430" cy="16" r="4" fill="#88ccff" opacity="0.9" filter="url(#sgs)"/>
-            <circle cx="430" cy="16" r="2" fill="white" opacity="1"/>
+            <circle cx="250" cy="22" r="7" fill="#88ccff" filter="url(#glowStrong)"/>
+            <circle cx="250" cy="22" r="3" fill="white"/>
 
-            {/* ── FOREMAST (front) x=600 ── */}
-            <line x1="600" y1="210" x2="600" y2="58" stroke="#5599dd" strokeWidth="2" opacity="0.85"/>
-            {/* Fore top yard */}
-            <line x1="546" y1="72" x2="654" y2="68" stroke="#5599dd" strokeWidth="1.4" opacity="0.8"/>
-            {/* Fore top sail */}
-            <path d="M 548,72 Q 600,84 652,68 L 646,108 Q 600,114 554,108 Z"
-              stroke="#5599dd" strokeWidth="1" fill="rgba(85,153,221,0.09)"/>
-            {/* Fore main yard */}
-            <line x1="534" y1="116" x2="666" y2="110" stroke="#5599dd" strokeWidth="1.4" opacity="0.75"/>
-            {/* Fore main sail */}
-            <path d="M 536,116 Q 600,132 664,110 L 658,162 Q 600,168 542,162 Z"
-              stroke="#5599dd" strokeWidth="1" fill="rgba(85,153,221,0.1)"/>
+            {/* ── FOREMAST (x=375) ── */}
+            <line x1="375" y1="68" x2="375" y2="558" stroke="#88ccff" strokeWidth="3.5" filter="url(#glow)"/>
+            {/* Fore topsail yard + sail */}
+            <line x1="344" y1="88" x2="406" y2="88" stroke="#5599dd" strokeWidth="2.2"/>
+            <path d="M 345,88 Q 375,100 405,88 L 402,155 Q 375,163 348,155 Z" stroke="#5599dd" strokeWidth="1.5" fill="rgba(85,153,221,0.15)"/>
+            {/* Foresail yard + sail */}
+            <line x1="332" y1="170" x2="418" y2="170" stroke="#5599dd" strokeWidth="2.5"/>
+            <path d="M 333,170 Q 375,186 417,170 L 413,280 Q 375,292 337,280 Z" stroke="#5599dd" strokeWidth="1.7" fill="rgba(85,153,221,0.16)"/>
+            {/* Fore lower yard + sail */}
+            <line x1="326" y1="295" x2="424" y2="295" stroke="#5599dd" strokeWidth="2"/>
+            <path d="M 327,295 Q 375,309 423,295 L 418,398 Q 375,410 332,398 Z" stroke="#5599dd" strokeWidth="1.5" fill="rgba(85,153,221,0.14)"/>
 
-            {/* ── RIGGING NETWORK ── */}
-            {/* Forestay: bow to mainmast */}
-            <line x1="798" y1="148" x2="430" y2="22" stroke="#5599dd" strokeWidth="0.7" opacity="0.4"/>
-            {/* Backstay: mainmast to stern */}
-            <line x1="430" y1="20" x2="165" y2="165" stroke="#5599dd" strokeWidth="0.7" opacity="0.35"/>
-            {/* Between masts */}
-            <line x1="430" y1="34" x2="600" y2="62" stroke="#5599dd" strokeWidth="0.7" opacity="0.4"/>
-            <line x1="430" y1="88" x2="600" y2="114" stroke="#5599dd" strokeWidth="0.6" opacity="0.3"/>
-            <line x1="235" y1="92" x2="430" y2="34" stroke="#5599dd" strokeWidth="0.6" opacity="0.35"/>
-            {/* Shrouds (mast to hull sides) */}
-            <line x1="430" y1="34" x2="350" y2="210" stroke="#5599dd" strokeWidth="0.5" opacity="0.3"/>
-            <line x1="430" y1="34" x2="510" y2="210" stroke="#5599dd" strokeWidth="0.5" opacity="0.3"/>
-            <line x1="600" y1="68" x2="540" y2="210" stroke="#5599dd" strokeWidth="0.5" opacity="0.28"/>
-            <line x1="600" y1="68" x2="660" y2="210" stroke="#5599dd" strokeWidth="0.5" opacity="0.28"/>
-            <line x1="235" y1="92" x2="188" y2="210" stroke="#5599dd" strokeWidth="0.5" opacity="0.28"/>
-            <line x1="235" y1="92" x2="282" y2="210" stroke="#5599dd" strokeWidth="0.5" opacity="0.28"/>
-            {/* Ratlines (horizontal rungs on shrouds) */}
-            {[150,168,186,204].map((y,i) => (
-              <line key={i} x1={350+i*4} y1={y} x2={510-i*4} y2={y-2} stroke="#5599dd" strokeWidth="0.4" opacity="0.25"/>
+            {/* ── MIZZENMAST (x=130) ── */}
+            <line x1="130" y1="188" x2="130" y2="558" stroke="#88ccff" strokeWidth="3" filter="url(#glow)"/>
+            {/* Mizzen topsail yard + sail */}
+            <line x1="104" y1="208" x2="156" y2="208" stroke="#5599dd" strokeWidth="1.9"/>
+            <path d="M 105,208 Q 130,220 155,208 L 153,272 Q 130,280 107,272 Z" stroke="#5599dd" strokeWidth="1.3" fill="rgba(85,153,221,0.13)"/>
+            {/* Mizzensail yard + sail */}
+            <line x1="94" y1="285" x2="166" y2="285" stroke="#5599dd" strokeWidth="2.2"/>
+            <path d="M 95,285 Q 130,300 165,285 L 161,392 Q 130,404 99,392 Z" stroke="#5599dd" strokeWidth="1.5" fill="rgba(85,153,221,0.15)"/>
+
+            {/* ── BOWSPRIT (diagonal front mast) ── */}
+            <line x1="443" y1="538" x2="530" y2="455" stroke="#5599dd" strokeWidth="3" opacity="0.85" filter="url(#glow)"/>
+            {/* Jib sail */}
+            <path d="M 447,536 Q 498,490 528,457 L 452,550 Z" stroke="#5599dd" strokeWidth="1.3" fill="rgba(85,153,221,0.13)" opacity="0.8"/>
+
+            {/* ── HULL ── */}
+            {/* Stern castle (left raised) */}
+            <path d="M 38,518 L 38,558 L 122,558 L 122,540 L 78,536 L 70,508 Z" stroke="#5599dd" strokeWidth="2" fill="rgba(85,153,221,0.1)" filter="url(#glow)"/>
+            <ellipse cx="52" cy="528" rx="7" ry="9" stroke="#88ccff" strokeWidth="1.2" fill="rgba(136,204,255,0.22)"/>
+            <ellipse cx="70" cy="526" rx="7" ry="9" stroke="#88ccff" strokeWidth="1.2" fill="rgba(136,204,255,0.22)"/>
+            {/* Forecastle (right raised) */}
+            <path d="M 462,522 L 457,558 L 378,558 L 378,540 L 422,538 L 442,516 Z" stroke="#5599dd" strokeWidth="2" fill="rgba(85,153,221,0.1)" filter="url(#glow)"/>
+            {/* Deck line */}
+            <path d="M 38,558 L 462,558" stroke="#88ccff" strokeWidth="2" opacity="0.75"/>
+            {/* Main hull body */}
+            <path d="M 38,558 Q 28,622 72,648 L 428,648 Q 472,640 462,558" stroke="#5599dd" strokeWidth="2.5" fill="rgba(85,153,221,0.09)" filter="url(#glow)"/>
+            {/* Keel */}
+            <path d="M 70,648 Q 250,662 430,648" stroke="#5599dd" strokeWidth="1.5" opacity="0.5"/>
+            {/* Waterline */}
+            <path d="M 40,592 Q 250,602 460,592" stroke="#88ccff" strokeWidth="1" opacity="0.4" strokeDasharray="8 5"/>
+            {/* Hull planks */}
+            <path d="M 44,612 Q 250,620 456,612" stroke="#5599dd" strokeWidth="0.9" opacity="0.3"/>
+            <path d="M 50,630 Q 250,636 450,630" stroke="#5599dd" strokeWidth="0.9" opacity="0.25"/>
+            {/* Cannon ports */}
+            {[155, 215, 275, 335].map((x, i) => (
+              <rect key={i} x={x} y={567} width={22} height={15} rx={3} stroke="#5599dd" strokeWidth="1.3" fill="rgba(85,153,221,0.2)" opacity={0.75}/>
             ))}
 
-            {/* ── FLAG / SKULL ── at mainmast top */}
-            <path d="M 430,18 L 464,24 L 430,32 Z" stroke="#88ccff" strokeWidth="0.8" fill="rgba(136,204,255,0.2)" filter="url(#sg)"/>
+            {/* ── RIGGING ── */}
+            {/* Forestay (bowsprit tip to mainmast top) */}
+            <line x1="528" y1="457" x2="250" y2="28" stroke="#5599dd" strokeWidth="1" opacity="0.38"/>
+            {/* Backstay (mainmast to stern) */}
+            <line x1="250" y1="52" x2="52" y2="512" stroke="#5599dd" strokeWidth="0.9" opacity="0.28"/>
+            {/* Main to fore stays */}
+            <line x1="250" y1="52" x2="375" y2="88" stroke="#5599dd" strokeWidth="0.9" opacity="0.35"/>
+            <line x1="250" y1="112" x2="375" y2="170" stroke="#5599dd" strokeWidth="0.8" opacity="0.28"/>
+            {/* Main to mizzen stays */}
+            <line x1="250" y1="52" x2="130" y2="208" stroke="#5599dd" strokeWidth="0.9" opacity="0.3"/>
+            <line x1="250" y1="112" x2="130" y2="285" stroke="#5599dd" strokeWidth="0.7" opacity="0.24"/>
+            {/* Main shrouds */}
+            <line x1="250" y1="52" x2="178" y2="558" stroke="#5599dd" strokeWidth="0.8" opacity="0.24"/>
+            <line x1="250" y1="52" x2="322" y2="558" stroke="#5599dd" strokeWidth="0.8" opacity="0.24"/>
+            {/* Fore shrouds */}
+            <line x1="375" y1="88" x2="318" y2="558" stroke="#5599dd" strokeWidth="0.7" opacity="0.2"/>
+            <line x1="375" y1="88" x2="430" y2="558" stroke="#5599dd" strokeWidth="0.7" opacity="0.2"/>
+            {/* Mizzen shrouds */}
+            <line x1="130" y1="208" x2="74" y2="558" stroke="#5599dd" strokeWidth="0.7" opacity="0.2"/>
+            <line x1="130" y1="208" x2="186" y2="558" stroke="#5599dd" strokeWidth="0.7" opacity="0.2"/>
+
+            {/* ── FLAG ── */}
+            <path d="M 250,22 L 286,32 L 250,44" stroke="#88ccff" strokeWidth="1.5" fill="rgba(85,153,221,0.45)"/>
 
             {/* ── WAVES ── */}
-            <path d="M 100,290 Q 140,282 180,290 Q 220,298 260,290 Q 300,282 340,290 Q 380,298 420,290 Q 460,282 500,290 Q 540,298 580,290 Q 620,282 660,290 Q 700,298 740,290 Q 770,284 790,290"
-              stroke="#5599dd" strokeWidth="1.2" fill="none" opacity="0.4" filter="url(#sg)"/>
-            <path d="M 80,304 Q 130,296 180,304 Q 230,312 280,304 Q 330,296 380,304 Q 430,312 480,304 Q 530,296 580,304 Q 630,312 680,304 Q 720,298 760,304"
-              stroke="#5599dd" strokeWidth="0.8" fill="none" opacity="0.25"/>
-            <path d="M 130,318 Q 200,310 270,318 Q 340,326 410,318 Q 480,310 550,318 Q 620,326 690,318"
-              stroke="#5599dd" strokeWidth="0.6" fill="none" opacity="0.15"/>
+            <path d="M -20,662 Q 80,652 180,660 Q 280,668 380,658 Q 460,650 520,656 L 520,720 L -20,720 Z" fill="rgba(85,153,221,0.07)" stroke="#5599dd" strokeWidth="1.2" opacity="0.6"/>
+            <path d="M -20,676 Q 100,666 220,674 Q 340,682 440,672 Q 490,667 520,670 L 520,720 L -20,720 Z" fill="rgba(85,153,221,0.05)" stroke="#88ccff" strokeWidth="0.8" opacity="0.4"/>
           </svg>
         </div>
 
