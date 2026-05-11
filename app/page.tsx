@@ -120,7 +120,7 @@ export default function HomePage() {
 
         {/* Tall sailing ship — AI-generated PNG */}
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 flex items-center justify-center">
-          <img src="/hero-ship.png" alt="" className="h-full max-h-[90vh] w-auto animate-float" style={{ opacity: 0.32, mixBlendMode: 'screen', maxWidth: '60vw' }} />
+          <img src="/hero-ship-v2.png" alt="" className="h-full max-h-[90vh] w-auto animate-float" style={{ opacity: 0.32, mixBlendMode: 'screen', maxWidth: '60vw' }} />
         </div>
 
         {/* Bottom fade */}
