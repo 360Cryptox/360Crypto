@@ -10,7 +10,7 @@ interface NewsletterInlineProps {
 
 export default function NewsletterInline({
   title = 'Stay Ahead of the Market',
-  subtitle = 'Get exclusive signals, early access to store products, and weekly alpha â€” straight to your inbox.',
+  subtitle = 'Get exclusive signals, early access to store products, and weekly alpha — straight to your inbox.',
   dark = true,
 }: NewsletterInlineProps) {
   const [email, setEmail] = useState('');
@@ -99,7 +99,7 @@ export default function NewsletterInline({
               disabled={status === 'loading'}
               className="cyber-btn shrink-0 disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              {status === 'loading' ? 'Subscribingâ€¦' : 'Subscribe'}
+              {status === 'loading' ? 'Subscribing…' : 'Subscribe'}
             </button>
           </form>
         )}

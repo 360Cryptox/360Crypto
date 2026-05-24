@@ -6,9 +6,9 @@ import { affiliates } from '@/lib/affiliates';
 import { SOCIAL } from '@/lib/affiliates';
 
 export const metadata: Metadata = {
-  title: 'Best Crypto Tools â€” Curated & Tested',
+  title: 'Best Crypto Tools — Curated & Tested',
   description:
-    'Every crypto tool you need in one place. Exchanges, trading bots, passive income platforms, hardware wallets, tax software, and research tools â€” all curated and tested by 360Crypto.',
+    'Every crypto tool you need in one place. Exchanges, trading bots, passive income platforms, hardware wallets, tax software, and research tools — all curated and tested by 360Crypto.',
 };
 
 const SECTION_IDS = ['exchanges', 'bots', 'passive', 'wallets', 'tax', 'research'] as const;
@@ -131,7 +131,7 @@ const HOT_WALLETS = [
   {
     name: 'MetaMask',
     url: 'https://metamask.io',
-    chains: 'EVM (Ethereum, BSC, Polygonâ€¦)',
+    chains: 'EVM (Ethereum, BSC, Polygon…)',
     description: 'The most widely used browser extension wallet for Ethereum and all EVM-compatible chains. Required for most DeFi protocols and NFT platforms.',
   },
   {
@@ -178,7 +178,7 @@ const FREE_TOOLS = [
 export default function ToolsPage() {
   return (
     <>
-      {/* â”€â”€ HERO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+      {/* ── HERO ──────────────────────────────────────────────────────────────────── */}
       <section className="relative overflow-hidden bg-[#0a0a0a] grid-bg pt-16 pb-16">
         <div
           aria-hidden="true"
@@ -192,7 +192,7 @@ export default function ToolsPage() {
             The Best Crypto Tools
           </h1>
           <p className="text-[#a0a0a0] text-lg max-w-xl mx-auto leading-relaxed">
-            We test every platform so you don&apos;t have to. From CEX exchanges to Telegram sniping bots, hardware wallets, and tax software â€” this is the complete toolkit of a serious crypto trader.
+            We test every platform so you don&apos;t have to. From CEX exchanges to Telegram sniping bots, hardware wallets, and tax software — this is the complete toolkit of a serious crypto trader.
           </p>
 
           {/* Jump links */}
@@ -216,12 +216,12 @@ export default function ToolsPage() {
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-24 pb-24">
 
-        {/* â”€â”€ EXCHANGES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+        {/* ── EXCHANGES ──────────────────────────────────────────────────────────── */}
         <section id="exchanges" className="scroll-mt-24">
           <div className="mb-10">
             <span className="badge-cyan mb-3 inline-block">Exchanges</span>
             <h2 className="font-orbitron text-2xl md:text-3xl font-bold text-white mb-3">
-              CEX vs DEX â€” Know Your Options
+              CEX vs DEX — Know Your Options
             </h2>
             <p className="text-[#666] max-w-2xl leading-relaxed">
               Centralized exchanges (CEX) offer deep liquidity and advanced trading features. Decentralized exchanges (DEX) give you full custody and no KYC. Use both strategically.
@@ -244,14 +244,14 @@ export default function ToolsPage() {
                 </div>
                 <h3 className="font-orbitron text-2xl md:text-3xl font-black text-white mb-3">Kraken</h3>
                 <p className="text-[#a0a0b0] leading-relaxed text-sm mb-6 max-w-xl">
-                  The exchange US institutions and serious traders trust. Regulated, never breached, with real futures access for American users. Lower fees than Coinbase â€” and a security record to match.
+                  The exchange US institutions and serious traders trust. Regulated, never breached, with real futures access for American users. Lower fees than Coinbase — and a security record to match.
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                   {[
                     { label: 'Maker Fee', value: '0.25%' },
                     { label: 'Coins Listed', value: '200+' },
                     { label: 'Founded', value: '2011' },
-                    { label: 'US Regulated', value: 'âœ“ Yes' },
+                    { label: 'US Regulated', value: '✓ Yes' },
                   ].map((stat) => (
                     <div key={stat.label} className="rounded-lg bg-[rgba(85,153,221,0.09)] border border-[rgba(85,153,221,0.13)] px-4 py-3">
                       <div className="text-[#5599dd] text-xs font-orbitron font-bold mb-1">{stat.label}</div>
@@ -268,7 +268,7 @@ export default function ToolsPage() {
                   placement="tools-kraken-spotlight"
                   className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg font-orbitron font-bold text-sm text-white bg-[#0d1a30] hover:bg-[#1a2e50] border border-[rgba(85,153,221,0.45)] transition-all duration-200 hover:shadow-[0_0_24px_rgba(85,153,221,0.45)] whitespace-nowrap"
                 >
-                  Open Kraken â†’
+                  Open Kraken →
                 </TrackedAffiliateLink>
                 <p className="text-[#555] text-xs text-center">Earn 50% of their trading fees</p>
               </div>
@@ -339,7 +339,7 @@ export default function ToolsPage() {
                           placement="tools-cex-comparison"
                           className="cyber-btn text-xs py-1.5 px-4"
                         >
-                          Open â†’
+                          Open →
                         </TrackedAffiliateLink>
                       </td>
                     </tr>
@@ -399,7 +399,7 @@ export default function ToolsPage() {
                           placement="tools-dex-comparison"
                           className="cyber-btn text-xs py-1.5 px-4"
                         >
-                          Swap Now â†’
+                          Swap Now →
                         </TrackedAffiliateLink>
                       </td>
                     </tr>
@@ -412,7 +412,7 @@ export default function ToolsPage() {
 
         <hr className="section-divider" />
 
-        {/* â”€â”€ BOTS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+        {/* ── BOTS ───────────────────────────────────────────────────────────────── */}
         <section id="bots" className="scroll-mt-24">
           <div className="mb-10">
             <span className="badge-cyan mb-3 inline-block">Automated Trading</span>
@@ -420,7 +420,7 @@ export default function ToolsPage() {
               Trading Bots & Terminals
             </h2>
             <p className="text-[#666] max-w-2xl leading-relaxed">
-              From professional grid bots to Solana memecoin snipers â€” automate your edge and trade faster than any human can.
+              From professional grid bots to Solana memecoin snipers — automate your edge and trade faster than any human can.
             </p>
           </div>
 
@@ -449,7 +449,7 @@ export default function ToolsPage() {
             Telegram Trading Bots
           </h3>
           <p className="text-[#666] text-sm mb-6 max-w-2xl leading-relaxed">
-            Trade directly from Telegram â€” no app switching, no browser. These bots give you sniper-speed execution on Solana, ETH, TON, and BSC with a simple command interface.
+            Trade directly from Telegram — no app switching, no browser. These bots give you sniper-speed execution on Solana, ETH, TON, and BSC with a simple command interface.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
@@ -476,7 +476,7 @@ export default function ToolsPage() {
 
         <hr className="section-divider" />
 
-        {/* â”€â”€ PASSIVE INCOME â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+        {/* ── PASSIVE INCOME ─────────────────────────────────────────────────────── */}
         <section id="passive" className="scroll-mt-24">
           <div className="mb-10">
             <span className="badge-cyan mb-3 inline-block">Passive Income</span>
@@ -484,7 +484,7 @@ export default function ToolsPage() {
               Earn Crypto Passively
             </h2>
             <p className="text-[#666] max-w-2xl leading-relaxed">
-              Your capital should work harder than you do. From automated grid bots to browser mining and faucets â€” here are the best ways to earn crypto without active trading.
+              Your capital should work harder than you do. From automated grid bots to browser mining and faucets — here are the best ways to earn crypto without active trading.
             </p>
           </div>
 
@@ -505,9 +505,9 @@ export default function ToolsPage() {
                 </p>
                 <ul className="text-sm text-[#a0a0a0] space-y-1.5">
                   {[
-                    '16 free built-in trading bots â€” no subscription required',
+                    '16 free built-in trading bots — no subscription required',
                     'Over $5 billion in daily trading volume',
-                    'Works 24/7 â€” even when you\'re sleeping, traveling, or offline',
+                    'Works 24/7 — even when you\'re sleeping, traveling, or offline',
                     'Beginner-friendly setup takes less than 10 minutes',
                   ].map((point) => (
                     <li key={point} className="flex items-start gap-2">
@@ -526,7 +526,7 @@ export default function ToolsPage() {
                 placement="tools-passive-strip"
                 className="cyber-btn shrink-0 text-sm py-3 px-8"
               >
-                Start Grid Bot â†’
+                Start Grid Bot →
               </TrackedAffiliateLink>
             </div>
           </div>
@@ -551,12 +551,12 @@ export default function ToolsPage() {
 
         <hr className="section-divider" />
 
-        {/* â”€â”€ WALLETS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+        {/* ── WALLETS ────────────────────────────────────────────────────────────── */}
         <section id="wallets" className="scroll-mt-24">
           <div className="mb-10">
             <span className="badge-cyan mb-3 inline-block">Security First</span>
             <h2 className="font-orbitron text-2xl md:text-3xl font-bold text-white mb-3">
-              Wallets â€” Custody Your Assets
+              Wallets — Custody Your Assets
             </h2>
             <p className="text-[#666] max-w-2xl leading-relaxed">
               Not your keys, not your coins. The right wallet depends on what chains you&apos;re active on and your security tolerance. We cover both hot and cold options.
@@ -580,7 +580,7 @@ export default function ToolsPage() {
                   placement="tools-hot-wallets"
                   className="cyber-btn-outline text-xs py-2 w-full text-center mt-auto"
                 >
-                  Download Free â†’
+                  Download Free →
                 </TrackedAffiliateLink>
               </div>
             ))}
@@ -600,7 +600,7 @@ export default function ToolsPage() {
               badge={affiliates.ledger.badge}
               highlight={affiliates.ledger.highlight}
               placement="tools-cold-wallets"
-              ctaLabel="Shop Ledger â†’"
+              ctaLabel="Shop Ledger →"
             />
             <AffiliateCard
               name={affiliates.trezor.name}
@@ -609,14 +609,14 @@ export default function ToolsPage() {
               affiliateName="trezor"
               category="hardware_wallets"
               placement="tools-cold-wallets"
-              ctaLabel="Shop Trezor â†’"
+              ctaLabel="Shop Trezor →"
             />
           </div>
         </section>
 
         <hr className="section-divider" />
 
-        {/* â”€â”€ TAX SOFTWARE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+        {/* ── TAX SOFTWARE ───────────────────────────────────────────────────────── */}
         <section id="tax" className="scroll-mt-24">
           <div className="mb-10">
             <span className="badge-cyan mb-3 inline-block">Tax & Compliance</span>
@@ -624,7 +624,7 @@ export default function ToolsPage() {
               Crypto Tax Software
             </h2>
             <p className="text-[#666] max-w-2xl leading-relaxed">
-              Ignore your taxes and the IRS won&apos;t ignore you. These tools auto-import your entire transaction history and generate compliant tax reports in minutes â€” not days.
+              Ignore your taxes and the IRS won&apos;t ignore you. These tools auto-import your entire transaction history and generate compliant tax reports in minutes — not days.
             </p>
           </div>
 
@@ -638,7 +638,7 @@ export default function ToolsPage() {
               badge={affiliates.koinly.badge}
               highlight={affiliates.koinly.highlight}
               placement="tools-tax"
-              ctaLabel="Try Koinly Free â†’"
+              ctaLabel="Try Koinly Free →"
             />
             <AffiliateCard
               name={affiliates.coinledger.name}
@@ -647,14 +647,14 @@ export default function ToolsPage() {
               affiliateName="coinledger"
               category="tax_software"
               placement="tools-tax"
-              ctaLabel="Try CoinLedger Free â†’"
+              ctaLabel="Try CoinLedger Free →"
             />
           </div>
         </section>
 
         <hr className="section-divider" />
 
-        {/* â”€â”€ RESEARCH â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+        {/* ── RESEARCH ───────────────────────────────────────────────────────────── */}
         <section id="research" className="scroll-mt-24">
           <div className="mb-10">
             <span className="badge-cyan mb-3 inline-block">Analysis & Research</span>
@@ -662,7 +662,7 @@ export default function ToolsPage() {
               Research & Analytics Tools
             </h2>
             <p className="text-[#666] max-w-2xl leading-relaxed">
-              Data wins markets. The right analytics tools give you an asymmetric edge â€” see what others can&apos;t, act before the crowd.
+              Data wins markets. The right analytics tools give you an asymmetric edge — see what others can&apos;t, act before the crowd.
             </p>
           </div>
 
@@ -688,18 +688,18 @@ export default function ToolsPage() {
                   placement="tools-research-free"
                   className="cyber-btn-outline text-xs py-2 w-full text-center mt-auto"
                 >
-                  Open Free â†’
+                  Open Free →
                 </TrackedAffiliateLink>
               </div>
             ))}
           </div>
         </section>
 
-        {/* â”€â”€ NEWSLETTER + CONTACT â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+        {/* ── NEWSLETTER + CONTACT ───────────────────────────────────────────────── */}
         <section>
           <NewsletterInline
             title="Get Notified About New Tools"
-            subtitle="We add new curated tools regularly. Subscribe to get notified the moment we recommend something new â€” and get exclusive discount codes for premium tools."
+            subtitle="We add new curated tools regularly. Subscribe to get notified the moment we recommend something new — and get exclusive discount codes for premium tools."
           />
           <div className="mt-6 text-center">
             <p className="text-sm text-[#555]">

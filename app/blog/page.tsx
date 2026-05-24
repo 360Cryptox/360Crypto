@@ -4,13 +4,13 @@ import NewsletterInline from '@/components/NewsletterInline';
 import { getAllBlogPosts, formatDate } from '@/lib/content';
 
 export const metadata: Metadata = {
-  title: 'Blog â€” Crypto Alpha & Insights',
+  title: 'Blog — Crypto Alpha & Insights',
   description:
     'In-depth crypto articles, trading guides, and market insights from the 360Crypto team. Memecoins, passive income, exchange reviews, trading bots, and more.',
   openGraph: {
-    title: 'Blog â€” Crypto Alpha & Insights | 360Crypto',
+    title: 'Blog — Crypto Alpha & Insights | 360Crypto',
     description:
-      'In-depth crypto articles, trading guides, and market insights. No hype â€” just actionable alpha.',
+      'In-depth crypto articles, trading guides, and market insights. No hype — just actionable alpha.',
     url: 'https://360crypto.site/blog',
   },
 };
@@ -44,7 +44,7 @@ export default function BlogPage() {
 
   return (
     <>
-      {/* â”€â”€ HERO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+      {/* ── HERO ──────────────────────────────────────────────────────────── */}
       <section className="relative overflow-hidden bg-[#0a0a0a] grid-bg">
         <div
           aria-hidden="true"
@@ -70,7 +70,7 @@ export default function BlogPage() {
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 space-y-16">
 
-        {/* â”€â”€ FEATURED POSTS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+        {/* ── FEATURED POSTS ───────────────────────────────────────────────── */}
         {featured.length > 0 && (
           <section>
             <h2 className="font-orbitron text-sm font-bold text-[#5599dd] uppercase tracking-widest mb-6">
@@ -93,7 +93,7 @@ export default function BlogPage() {
                       href={`/blog/${post.slug}`}
                       className="text-sm text-[#5599dd] font-semibold font-orbitron hover:underline"
                     >
-                      Read More â†’
+                      Read More →
                     </Link>
                   </div>
                 </article>
@@ -102,7 +102,7 @@ export default function BlogPage() {
           </section>
         )}
 
-        {/* â”€â”€ ALL POSTS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+        {/* ── ALL POSTS ────────────────────────────────────────────────────── */}
         <section>
           <h2 className="font-orbitron text-sm font-bold text-[#5599dd] uppercase tracking-widest mb-6">
             Latest Posts
@@ -124,7 +124,7 @@ export default function BlogPage() {
                     href={`/blog/${post.slug}`}
                     className="text-xs text-[#5599dd] font-semibold font-orbitron hover:underline"
                   >
-                    Read More â†’
+                    Read More →
                   </Link>
                 </div>
               </article>
@@ -132,11 +132,11 @@ export default function BlogPage() {
           </div>
         </section>
 
-        {/* â”€â”€ NEWSLETTER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+        {/* ── NEWSLETTER ───────────────────────────────────────────────────── */}
         <section>
           <NewsletterInline
             title="Never Miss a Post"
-            subtitle="Get new articles, market insights, and tool reviews delivered directly to your inbox. No spam â€” just quality crypto content."
+            subtitle="Get new articles, market insights, and tool reviews delivered directly to your inbox. No spam — just quality crypto content."
           />
         </section>
       </div>

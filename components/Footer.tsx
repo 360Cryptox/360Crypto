@@ -47,7 +47,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
         {/* Top grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-          {/* Column 1 â€” Brand */}
+          {/* Column 1 — Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-3">
               <span className="font-orbitron text-xl font-black glow-text">
@@ -104,7 +104,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 2 â€” Navigation */}
+          {/* Column 2 — Navigation */}
           <div>
             <h4 className="font-orbitron text-xs font-bold text-white uppercase tracking-widest mb-4">
               Navigation
@@ -123,7 +123,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3 â€” Tools */}
+          {/* Column 3 — Tools */}
           <div>
             <h4 className="font-orbitron text-xs font-bold text-white uppercase tracking-widest mb-4">
               Tools
@@ -142,7 +142,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 4 â€” Newsletter */}
+          {/* Column 4 — Newsletter */}
           <div>
             <h4 className="font-orbitron text-xs font-bold text-white uppercase tracking-widest mb-4">
               Newsletter
@@ -152,7 +152,7 @@ export default function Footer() {
             </p>
             {status === 'success' ? (
               <p className="text-sm text-[#5599dd] font-semibold">
-                âœ“ You&apos;re subscribed!
+                ✓ You&apos;re subscribed!
               </p>
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col gap-2">
@@ -170,7 +170,7 @@ export default function Footer() {
                   disabled={status === 'loading'}
                   className="cyber-btn text-xs py-2 disabled:opacity-60"
                 >
-                  {status === 'loading' ? 'Subscribingâ€¦' : 'Subscribe'}
+                  {status === 'loading' ? 'Subscribing…' : 'Subscribe'}
                 </button>
               </form>
             )}
@@ -183,7 +183,7 @@ export default function Footer() {
         {/* Bottom row */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#444]">
           <p>
-            Â© 2026 360Crypto Â· All rights reserved
+            © 2026 360Crypto · All rights reserved
           </p>
           <p className="text-center sm:text-right max-w-md leading-relaxed">
             <strong className="text-[#555]">Affiliate Disclosure:</strong> Some links on this site are affiliate links. We may earn a commission at no extra cost to you. We only recommend tools we genuinely use and trust.

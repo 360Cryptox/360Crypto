@@ -25,7 +25,7 @@ const GUIDES: Guide[] = [
     category: 'Beginner',
     level: 'Beginner',
     readTime: '15 min read',
-    icon: 'ðŸŒ±',
+    icon: '🌱',
   },
   {
     slug: 'advanced-trading-strategies',
@@ -35,7 +35,7 @@ const GUIDES: Guide[] = [
     category: 'Trading',
     level: 'Advanced',
     readTime: '20 min read',
-    icon: 'ðŸ“Š',
+    icon: '📊',
   },
   {
     slug: 'pionex-grid-bot-setup',
@@ -45,7 +45,7 @@ const GUIDES: Guide[] = [
     category: 'Passive Income',
     level: 'Beginner',
     readTime: '12 min read',
-    icon: 'ðŸ¤–',
+    icon: '🤖',
   },
   {
     slug: 'memecoin-trading-on-solana',
@@ -55,7 +55,7 @@ const GUIDES: Guide[] = [
     category: 'Memecoins',
     level: 'Intermediate',
     readTime: '18 min read',
-    icon: 'ðŸš€',
+    icon: '🚀',
   },
   {
     slug: 'how-to-secure-your-crypto-assets',
@@ -65,17 +65,17 @@ const GUIDES: Guide[] = [
     category: 'Security',
     level: 'Beginner',
     readTime: '14 min read',
-    icon: 'ðŸ”',
+    icon: '🔐',
   },
   {
     slug: 'yield-farming-and-liquidity-pools',
     title: 'Yield Farming & Liquidity Pools Explained: How to Earn in DeFi (2026)',
     description:
-      'DeFi yield farming can generate yields that dwarf traditional finance â€” but the risks are equally outsized. This guide explains impermanent loss, LP token mechanics, how to evaluate protocol risk, and the best platforms for sustainable yield.',
+      'DeFi yield farming can generate yields that dwarf traditional finance — but the risks are equally outsized. This guide explains impermanent loss, LP token mechanics, how to evaluate protocol risk, and the best platforms for sustainable yield.',
     category: 'Passive Income',
     level: 'Intermediate',
     readTime: '16 min read',
-    icon: 'ðŸŒ¾',
+    icon: '🌾',
   },
 ];
 
@@ -110,7 +110,7 @@ export default function GuidesPage() {
 
   return (
     <>
-      {/* â”€â”€ HERO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+      {/* ── HERO ──────────────────────────────────────────────────────────── */}
       <section className="relative overflow-hidden bg-[#0a0a0a] grid-bg">
         <div
           aria-hidden="true"
@@ -121,11 +121,11 @@ export default function GuidesPage() {
         <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center py-20">
           <span className="badge-cyan mb-4 inline-block">Free Education</span>
           <h1 className="font-orbitron text-4xl md:text-5xl font-black text-white mb-5">
-            Crypto Guides â€” From Beginner to Pro
+            Crypto Guides — From Beginner to Pro
           </h1>
           <p className="text-[#a0a0a0] text-lg max-w-xl mx-auto leading-relaxed">
             Whether you just heard about Bitcoin or you&apos;re already trading Solana memecoins
-            with bots â€” our guides meet you exactly where you are and take you further.
+            with bots — our guides meet you exactly where you are and take you further.
           </p>
         </div>
         <div
@@ -136,7 +136,7 @@ export default function GuidesPage() {
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 space-y-16">
 
-        {/* â”€â”€ CATEGORY TABS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+        {/* ── CATEGORY TABS ────────────────────────────────────────────────── */}
         <section>
           <div className="flex flex-wrap gap-2 justify-center mb-10">
             {CATEGORIES.map((cat) => (
@@ -156,7 +156,7 @@ export default function GuidesPage() {
 
           {filtered.length === 0 ? (
             <p className="text-center text-[#555] py-20">
-              No guides in this category yet â€” check back soon.
+              No guides in this category yet — check back soon.
             </p>
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -188,7 +188,7 @@ export default function GuidesPage() {
                       href={`/guides/${guide.slug}`}
                       className="text-xs text-[#5599dd] font-semibold font-orbitron hover:underline"
                     >
-                      Read Guide â†’
+                      Read Guide →
                     </Link>
                   </div>
                 </article>
@@ -197,7 +197,7 @@ export default function GuidesPage() {
           )}
         </section>
 
-        {/* â”€â”€ AFFILIATE CTA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+        {/* ── AFFILIATE CTA ────────────────────────────────────────────────── */}
         <section>
           <div className="cyber-card-highlight px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
@@ -206,17 +206,17 @@ export default function GuidesPage() {
               </h2>
               <p className="text-[#666] text-sm max-w-lg leading-relaxed">
                 Our guides are only as good as the tools you use. We&apos;ve curated the best
-                platforms for every strategy â€” from your first exchange account to automated trading
+                platforms for every strategy — from your first exchange account to automated trading
                 bots.
               </p>
             </div>
             <Link href="/tools" className="cyber-btn shrink-0 text-sm py-3 px-8">
-              Check Recommended Tools â†’
+              Check Recommended Tools →
             </Link>
           </div>
         </section>
 
-        {/* â”€â”€ NEWSLETTER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+        {/* ── NEWSLETTER ───────────────────────────────────────────────────── */}
         <section>
           <NewsletterInline
             title="New Guides Every Week"

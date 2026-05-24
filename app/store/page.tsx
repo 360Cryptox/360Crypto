@@ -7,10 +7,10 @@ const PRODUCTS = [
   {
     id: 'apex-signal-bot',
     name: 'APEX Signal Bot',
-    description: 'Advanced Solana memecoin signal detector powered by on-chain analytics. Scans Pump.fun and Raydium launches in real time, filters by holder distribution, liquidity, and smart money activity â€” and alerts you before the crowd.',
+    description: 'Advanced Solana memecoin signal detector powered by on-chain analytics. Scans Pump.fun and Raydium launches in real time, filters by holder distribution, liquidity, and smart money activity — and alerts you before the crowd.',
     price: '$49',
     priceNote: 'One-time payment',
-    icon: 'ðŸ¤–',
+    icon: '🤖',
     features: [
       'Real-time Solana memecoin scanning',
       'Smart money wallet tracking',
@@ -23,10 +23,10 @@ const PRODUCTS = [
   {
     id: 'insider-wallet-list',
     name: 'Insider Wallet List',
-    description: 'A curated database of top-performing sniper and whale wallets on Solana. Updated weekly with verified profitable addresses â€” copy their moves before the rest of the market notices.',
+    description: 'A curated database of top-performing sniper and whale wallets on Solana. Updated weekly with verified profitable addresses — copy their moves before the rest of the market notices.',
     price: '$29',
     priceNote: 'One-time payment',
-    icon: 'ðŸ“‹',
+    icon: '📋',
     features: [
       '500+ verified profitable wallets',
       'Weekly update cadence',
@@ -58,7 +58,7 @@ const PRODUCTS = [
     description: 'A step-by-step Pionex grid bot setup guide written by traders who\'ve been running grid strategies through bull and bear markets. Includes risk management frameworks, pair selection criteria, and profit optimization.',
     price: '$9',
     priceNote: 'One-time payment',
-    icon: 'ðŸ“ˆ',
+    icon: '📈',
     features: [
       'Complete Pionex setup walkthrough',
       'Risk management frameworks',
@@ -94,7 +94,7 @@ export default function StorePage() {
 
   return (
     <>
-      {/* â”€â”€ HERO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+      {/* ── HERO ──────────────────────────────────────────────────────────── */}
       <section className="relative overflow-hidden bg-[#0a0a0a] grid-bg pb-0">
         <div
           aria-hidden="true"
@@ -108,7 +108,7 @@ export default function StorePage() {
             360Crypto Store
           </h1>
           <p className="text-[#a0a0a0] text-lg max-w-xl mx-auto leading-relaxed mb-8">
-            Premium digital products built for serious crypto traders. Signal bots, insider wallet lists, VIP access, and step-by-step guides â€” everything you need to trade at the next level.
+            Premium digital products built for serious crypto traders. Signal bots, insider wallet lists, VIP access, and step-by-step guides — everything you need to trade at the next level.
           </p>
 
           {/* Notify form */}
@@ -126,7 +126,7 @@ export default function StorePage() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="Get notified when we launchâ€¦"
+                placeholder="Get notified when we launch…"
                 className="cyber-input flex-1"
                 disabled={status === 'loading'}
               />
@@ -135,7 +135,7 @@ export default function StorePage() {
                 disabled={status === 'loading'}
                 className="cyber-btn shrink-0 disabled:opacity-60"
               >
-                {status === 'loading' ? 'Joiningâ€¦' : 'Notify Me'}
+                {status === 'loading' ? 'Joining…' : 'Notify Me'}
               </button>
             </form>
           )}
@@ -149,7 +149,7 @@ export default function StorePage() {
         />
       </section>
 
-      {/* â”€â”€ PRODUCT GRID â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+      {/* ── PRODUCT GRID ───────────────────────────────────────────────────── */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-12">
           <h2 className="font-orbitron text-2xl md:text-3xl font-bold text-white mb-3">
@@ -199,7 +199,7 @@ export default function StorePage() {
                   disabled
                   aria-label="Notify me when available"
                 >
-                  Coming Soon â€” Notify Me
+                  Coming Soon — Notify Me
                 </button>
               </div>
             </div>
@@ -207,17 +207,17 @@ export default function StorePage() {
         </div>
       </section>
 
-      {/* â”€â”€ WHILE YOU WAIT CTA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+      {/* ── WHILE YOU WAIT CTA ─────────────────────────────────────────────── */}
       <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pb-24">
         <div className="cyber-card p-10 text-center">
           <h2 className="font-orbitron text-xl md:text-2xl font-bold text-white mb-4">
-            While You Wait â€” Check Our Free Tools
+            While You Wait — Check Our Free Tools
           </h2>
           <p className="text-[#666] mb-6 max-w-lg mx-auto leading-relaxed">
-            We&apos;ve already curated the best exchanges, bots, and passive income platforms. Start building your edge today â€” for free.
+            We&apos;ve already curated the best exchanges, bots, and passive income platforms. Start building your edge today — for free.
           </p>
           <Link href="/tools" className="cyber-btn text-sm py-3 px-8 inline-flex">
-            Explore Free Tools â†’
+            Explore Free Tools →
           </Link>
         </div>
       </section>
